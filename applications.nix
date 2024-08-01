@@ -1,8 +1,6 @@
-{ pkgs, ... }:
+{pkgs, ...}: {
+  nixpkgs.config.allowUnfree = true;
 
-{
-	nixpkgs.config.allowUnfree = true;
-
-	programs.firefox.enable = true;
-	programs.steam.enable = true;
+  programs.firefox.enable = true;
+  programs.steam.enable = true;
 }

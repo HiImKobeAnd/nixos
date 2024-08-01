@@ -1,9 +1,7 @@
-{ pkgs, ... }:
-
-{
-	users.users.hiimkobeand = {
-	isNormalUser = true;
-	description = "Kobe";
-	extraGroups = ["networkmanager" "wheel" ];
-	};
+{pkgs, ...}: {
+  users.users.hiimkobeand = {
+    isNormalUser = true;
+    description = "Kobe";
+    extraGroups = ["networkmanager" "wheel"];
+  };
 }
