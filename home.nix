@@ -18,6 +18,13 @@
 
   programs.vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [vim-lsp-settings vim-lsp vim-airline auto-pairs];
+    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs];
+    extraConfig = "
+    let g:ale_fix_on_save = 1
+    autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
+    ";
+  };
+  programs.firefox = {
+    enable = true;
   };
 }

@@ -10,7 +10,7 @@
 # As I hope was clear from the video, I am new to nixos, and there may be other, better, options, in which case I'd love to know them! (I'll update the gist if so)
 
 # A rebuild script that commits on a successful build
-set -e
+set -x
 
 # cd to your config dir
 pushd /home/hiimkobeand/dotfiles/nixos/
@@ -30,7 +30,9 @@ echo "NixOS Rebuilding..."
 sudo nixos-rebuild switch --flake ./ &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
 
 # Get current generation metadata
-current=$(nixos-rebuild list-generations | grep current)
+current=$(sudo nix-env -p /nix/var/nix/profiles/system --list-generations | grep current)
+
+echo $current
 
 # Commit all changes witih the generation metadata
 git commit -am "$current"
