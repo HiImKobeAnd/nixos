@@ -24,7 +24,7 @@
         ./system/sound.nix
         ./system/users.nix
         ./system/nix-settings.nix
-        ./system/nvidia.nix
+        # ./system/nvidia.nix
         ./system/fonts.nix
         ./system/auto-upgrade.nix
 
