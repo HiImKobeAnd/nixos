@@ -24,10 +24,11 @@
         ./system/sound.nix
         ./system/users.nix
         ./system/nix-settings.nix
+        ./system/nvidia.nix
 
-        ./hardware-configuration.nix
-        ./configuration.nix
-        ./locale.nix
+        ./system/hardware-configuration.nix
+        ./system/configuration.nix
+        ./system/locale.nix
 
         ./gnome.nix
         ./applications.nix
