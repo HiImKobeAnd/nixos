@@ -4,12 +4,12 @@
 
     git
     wget
-    #ripgrep
-    #eza
-    #zoxide
-    #btop
-    #dua
+    ripgrep
+    eza
+    zoxide
+    btop
+    dua
     alejandra
-    #manix
+    manix
   ];
 }
