@@ -36,6 +36,7 @@
         # ./hyprland.nix
         ./applications.nix
         ./terminal-utils.nix
+        ./services.nix
 
         home-manager.nixosModules.home-manager
         {
