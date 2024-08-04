@@ -25,12 +25,15 @@
         ./system/users.nix
         ./system/nix-settings.nix
         ./system/nvidia.nix
+        ./system/fonts.nix
+        ./system/auto-upgrade.nix
 
         ./system/hardware-configuration.nix
         ./system/configuration.nix
         ./system/locale.nix
 
         ./gnome.nix
+        # ./hyprland.nix
         ./applications.nix
         ./terminal-utils.nix
 
