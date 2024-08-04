@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   lib,
   ...
@@ -7,8 +8,12 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false;
     open = false;
     nvidiaSettings = true;
+
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }
