@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     nil
-
+    curl
     git
     wget
     ripgrep
