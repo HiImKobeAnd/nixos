@@ -3,4 +3,9 @@
     jetbrains-mono
     nerd-font-patcher
   ];
+  fonts = {
+    fontconfig = {
+      antialias = true;
+    };
+  };
 }
