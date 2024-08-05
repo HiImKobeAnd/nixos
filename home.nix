@@ -65,7 +65,7 @@
   programs.eza = {
     enable = true;
     enableFishIntegration = true;
-    extraOptions = ["icons=auto"];
+    extraOptions = ["--icons=auto"];
   };
   dconf.settings = {
     "org/gnome/shell" = {
