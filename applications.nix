@@ -10,7 +10,6 @@
     vesktop
     youtube-music
     geary
-    cosmic-store
     alacritty
   ];
 }

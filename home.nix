@@ -47,16 +47,16 @@
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       custom-keybindings = [
-        "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom0"
-        "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom1"
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0"
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1"
       ];
     };
-    "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom0" = {
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Open Browser";
       command = "firefox";
       binding = "<Ctrl>n";
     };
-    "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom1" = {
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       name = "Open Terminal";
       command = "alacritty";
       binding = "<Super>t";
