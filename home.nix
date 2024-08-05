@@ -40,10 +40,12 @@
       font-hinting = "slight";
     };
     "org/gnome/desktop/wm/keybindings" = {
-      maximize = ["<Super>Up"];
-      hide = ["<Super>Down"];
-      move-to-workspace-left = ["<Ctrl><Super>Left"];
-      move-to-workspace-right = ["<Ctrl><Super>Right"];
+      maximize = ["<Super>m"];
+      minimize = ["<Super>h"];
+      move-to-workspace-left = ["<Ctrl><Shift><Super>Left"];
+      move-to-workspace-right = ["<Ctrl><Shift><Super>Right"];
+      switch-to-workspace-left = ["<Ctrl><Super>Left"];
+      switch-to-workspace-right = ["<Ctrl><Super>Left"];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       next = ["<Shift><Control>n"];
