@@ -7,6 +7,8 @@
     ripgrep
     eza
     zoxide
+    fzf
+    bat
     btop
     dua
     alejandra

@@ -28,6 +28,14 @@
     enable = true;
   };
 
+  programs.bash = {
+    enable = true;
+  };
+
+  programs.zoxide.enableBashIntegration = true;
+  programs.fzf.enableBashIntegration = true;
+  programs.eza.enableBashIntegration = true;
+
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
