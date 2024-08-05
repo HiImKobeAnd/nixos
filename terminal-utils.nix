@@ -6,6 +6,7 @@
     wget
     ripgrep
     eza
+    fish
     zoxide
     fzf
     bat
