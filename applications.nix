@@ -12,5 +12,6 @@
     geary
     alacritty
     thunderbird
+    vscode
   ];
 }
