@@ -9,7 +9,8 @@
     xkb.layout = "dk";
     xkb.variant = "";
   };
+
   environment.systemPackages = with pkgs; [
-    gnomeExtensions.another-window-session-manager
+    gnomeExtensions.paperwm
   ];
 }

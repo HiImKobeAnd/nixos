@@ -8,7 +8,6 @@
     steam
     lutris
     discord
-    vencord
     youtube-music
     geary
     alacritty

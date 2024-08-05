@@ -67,6 +67,7 @@
     enableFishIntegration = true;
     extraOptions = ["--icons=auto"];
   };
+
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
