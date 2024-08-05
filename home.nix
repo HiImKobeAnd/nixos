@@ -45,6 +45,12 @@
       move-to-workspace-left = ["<Ctrl><Super>Left"];
       move-to-workspace-right = ["<Ctrl><Super>Right"];
     };
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      custom-keybindings = [
+        "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom0"
+        "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom1"
+      ];
+    };
     "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom0" = {
       name = "Open Browser";
       command = "firefox";

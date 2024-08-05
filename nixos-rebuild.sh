@@ -21,11 +21,10 @@ pushd /home/hiimkobeand/.dotfiles/nixos/
 # Autoformat your nix files
 alejandra . >/dev/null
 
-git add *
-
 # Shows your changes
 git diff -U0 *.nix
 
+git add *
 echo "NixOS Rebuilding..."
 
 # Rebuild, output simplified errors, log trackebacks
