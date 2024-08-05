@@ -12,5 +12,6 @@
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.paperwm
+    gnomeExtensions.tray-icons-reloaded
   ];
 }
