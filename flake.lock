@@ -20,6 +20,21 @@
         "type": "github"
       }
     },
+    "nixcord": {
+      "locked": {
+        "lastModified": 1722479608,
+        "narHash": "sha256-1z2NJWSYXAVCFL2M1yd6PIlQld/HmipGFty3WS2OOPs=",
+        "owner": "kaylorben",
+        "repo": "nixcord",
+        "rev": "983a2796d06930e64f60fb3906ad95c09bdbaa58",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kaylorben",
+        "repo": "nixcord",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1722421184,
@@ -39,6 +54,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "nixcord": "nixcord",
         "nixpkgs": "nixpkgs"
       }
     }

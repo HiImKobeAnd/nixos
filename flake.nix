@@ -7,6 +7,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
   };
 
   outputs = {
@@ -43,6 +46,8 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.hiimkobeand = import ./home/home.nix;
+
+          home-manager.sharedModules = [inputs.nixcord.homeManagerModules.nixcord];
         }
       ];
     };

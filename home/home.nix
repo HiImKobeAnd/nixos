@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  nixcord,
   ...
 }: {
   home.username = "hiimkobeand";
@@ -66,6 +67,32 @@
     enable = true;
     enableFishIntegration = true;
     extraOptions = ["--icons=auto"];
+  };
+
+  programs.nixcord = {
+    enable = true;
+    config = {
+      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css"];
+      plugins = {
+        betterFolders = {
+          enable = true;
+          sidebarAnim = false;
+          closeAllFolders = true;
+          closeAllHomeButton = true;
+          closeOthers = true;
+        };
+        callTimer.enable = true;
+        clearURLs.enable = true;
+        fakeNitro.enable = true;
+        moreKaomoji.enable = true;
+        mutualGroupDMs.enable = true;
+        watchTogetherAdblock.enable = true;
+        messageClickActions.enable = true;
+        noTrack.enable = true;
+        shikiCodeblocks.enable = true;
+        volumeBooster.enable = true;
+      };
+    };
   };
 
   imports = [./dconf.nix];
