@@ -35,11 +35,11 @@
 
   programs.fish = {
     shellAliases = {
-      ls = "eza --group-directories-first";
-      la = "eza --all";
-      lt = "eza -R --level=1";
-      ltt = "eza -R --level=2";
-      lttt = "eza -R --level=3";
+      "ls" = "eza --group-directories-first";
+      "la" = "eza --all";
+      "lt" = "eza -R --level=1";
+      "ltt" = "eza -R --level=2";
+      "lttt" = "eza -R --level=3";
     };
   };
 
