@@ -43,6 +43,10 @@
       ltt = "eza -R --level=2";
       lttt = "eza -R --level=3";
     };
+    shellInit = "
+    set fish_gretting
+    set -g fish_prompt_pwd_dir_length 0
+    ";
   };
 
   programs.zoxide = {
@@ -53,11 +57,15 @@
     ];
   };
 
-  programs.fzf.enableFishIntegration = true;
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 
   programs.eza = {
+    enable = true;
     enableFishIntegration = true;
-    extraOptions = "icons=auto";
+    extraOptions = ["icons=auto"];
   };
   dconf.settings = {
     "org/gnome/shell" = {
