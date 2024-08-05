@@ -42,7 +42,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.hiimkobeand = import ./home.nix;
+          home-manager.users.hiimkobeand = import ./home/home.nix;
         }
       ];
     };
