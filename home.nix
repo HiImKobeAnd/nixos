@@ -24,22 +24,23 @@
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
   };
+
   programs.firefox = {
     enable = true;
   };
 
   programs.bash = {
-    enable = true;
     initExtra = "fish";
   };
 
   programs.fish = {
+    enable = true;
     shellAliases = {
-      "ls" = "eza --group-directories-first";
-      "la" = "eza --all";
-      "lt" = "eza -R --level=1";
-      "ltt" = "eza -R --level=2";
-      "lttt" = "eza -R --level=3";
+      ls = "eza --group-directories-first";
+      la = "eza --all";
+      lt = "eza -R --level=1";
+      ltt = "eza -R --level=2";
+      lttt = "eza -R --level=3";
     };
   };
 
@@ -50,7 +51,9 @@
       "--cmd cd"
     ];
   };
+
   programs.fzf.enableFishIntegration = true;
+
   programs.eza = {
     enableFishIntegration = true;
     extraOptions = "icons=auto";
