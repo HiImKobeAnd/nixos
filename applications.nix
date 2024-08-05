@@ -11,5 +11,6 @@
     youtube-music
     geary
     alacritty
+    thunderbird
   ];
 }

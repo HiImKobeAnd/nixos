@@ -88,6 +88,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/shell/extensions/paperwm" = {
       animation-time = 10;
+      default-focus-mode = 2;
       disable-topbar-styling = true;
       edge-preview-enable = true;
       edge-preview-scale = 0.15;
@@ -175,7 +176,7 @@ with lib.hm.gvariant; {
       switch-up-or-else-workspace = ["<Control><Super>Up"];
       switch-up-workspace = [""];
       take-window = [""];
-      toggle-maximize-width = [""];
+      toggle-maximize-width = ["<Super>m"];
       toggle-scratch = [""];
       toggle-scratch-layer = [""];
       toggle-scratch-window = [""];

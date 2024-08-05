@@ -11,6 +11,7 @@
     fzf
     bat
     btop
+    gh
     dua
     alejandra
     manix
