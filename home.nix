@@ -45,7 +45,7 @@
       move-to-workspace-left = ["<Ctrl><Shift><Super>Left"];
       move-to-workspace-right = ["<Ctrl><Shift><Super>Right"];
       switch-to-workspace-left = ["<Ctrl><Super>Left"];
-      switch-to-workspace-right = ["<Ctrl><Super>Left"];
+      switch-to-workspace-right = ["<Ctrl><Super>Right"];
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
       next = ["<Shift><Control>n"];
