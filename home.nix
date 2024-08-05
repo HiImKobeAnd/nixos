@@ -30,12 +30,31 @@
 
   programs.bash = {
     enable = true;
+    initExtra = "fish";
   };
 
-  programs.zoxide.enableBashIntegration = true;
-  programs.fzf.enableBashIntegration = true;
-  programs.eza.enableBashIntegration = true;
+  programs.fish = {
+    shellAliases = {
+      ls = "eza --group-directories-first";
+      la = "eza --all";
+      lt = "eza -R --level=1";
+      ltt = "eza -R --level=2";
+      lttt = "eza -R --level=3";
+    };
+  };
 
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+    options = [
+      "--cmd cd"
+    ];
+  };
+  programs.fzf.enableFishIntegration = true;
+  programs.eza = {
+    enableFishIntegration = true;
+    extraOptions = "icons=auto";
+  };
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
