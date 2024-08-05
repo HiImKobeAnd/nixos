@@ -7,7 +7,8 @@
     firefox
     steam
     lutris
-    vesktop
+    discord
+    vencord
     youtube-music
     geary
     alacritty
