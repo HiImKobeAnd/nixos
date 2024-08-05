@@ -21,6 +21,8 @@ pushd /home/hiimkobeand/.dotfiles/nixos/
 # Autoformat your nix files
 alejandra . >/dev/null
 
+git add *
+
 # Shows your changes
 git diff -U0 *.nix
 
