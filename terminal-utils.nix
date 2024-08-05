@@ -14,5 +14,6 @@
     dua
     alejandra
     manix
+    dconf2nix
   ];
 }
