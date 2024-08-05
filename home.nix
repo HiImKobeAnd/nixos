@@ -31,8 +31,7 @@
   dconf.settings = {
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      enabled-extensions = ["pop-shell@system76.com
-      gsconnect@andyholmes.github.io"];
+      enabled-extensions = ["gsconnect@andyholmes.github.io"];
     };
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -41,20 +40,20 @@
       font-hinting = "slight";
     };
     "org/gnome/desktop/wm/keybindings" = {
-      close = ["<Super>q"];
       maximize = ["<Super>Up"];
-      minimize = ["<Super>Down"];
-      move-to-workspace-down = ["<Ctrl><Super>Down"];
-      move-to-workspace-up = ["<Ctrl><Super>Up"];
+      hide = ["<Super>Down"];
+      move-to-workspace-left = ["<Ctrl><Super>Left"];
+      move-to-workspace-right = ["<Ctrl><Super>Right"];
     };
-    "org/gnome/shell/extesions/pop-shell" = {
-      tile-by-default = true;
-    };
-
     "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom0" = {
-      name = "Open Terminal";
+      name = "Open Browser";
       command = "firefox";
       binding = "<Ctrl>n";
+    };
+    "org/gnome/settings-daemon/plugnis/media-keys/custom-keybindings/custom1" = {
+      name = "Open Terminal";
+      command = "alacritty";
+      binding = "<Super>t";
     };
   };
 }
