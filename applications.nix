@@ -14,5 +14,6 @@
     thunderbird
     vscode
     prismlauncher
+    gnomeExtensions.gsconnect
   ];
 }
