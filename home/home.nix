@@ -38,6 +38,7 @@
 
   programs.fish = {
     enable = true;
+    catppuccin.enable = true;
     shellAliases = {
       ls = "eza --group-directories-first";
       la = "eza --all";
@@ -99,6 +100,7 @@
   catppuccin = {
     enable = true;
     flavor = "macchiato";
+    accent = "flamingo";
   };
 
   imports = [./dconf.nix];
