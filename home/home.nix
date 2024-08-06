@@ -38,7 +38,6 @@
 
   programs.fish = {
     enable = true;
-    catppuccin.enable = true;
     shellAliases = {
       ls = "eza --group-directories-first";
       la = "eza --all";
