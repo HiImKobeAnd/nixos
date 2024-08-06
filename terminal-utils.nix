@@ -16,5 +16,6 @@
     alejandra
     manix
     dconf2nix
+    nh
   ];
 }

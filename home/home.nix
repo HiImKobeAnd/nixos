@@ -2,6 +2,7 @@
   config,
   pkgs,
   nixcord,
+  catppuccin,
   ...
 }: {
   home.username = "hiimkobeand";
@@ -93,6 +94,11 @@
         volumeBooster.enable = true;
       };
     };
+  };
+
+  catppuccin = {
+    enable = true;
+    flavor = "macchiato";
   };
 
   imports = [./dconf.nix];
