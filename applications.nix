@@ -13,5 +13,6 @@
     alacritty
     thunderbird
     vscode
+    prismlauncher
   ];
 }
