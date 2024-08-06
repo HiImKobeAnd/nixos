@@ -40,6 +40,7 @@
         ./applications.nix
         ./terminal-utils.nix
         ./services.nix
+        ./development.nix
 
         home-manager.nixosModules.home-manager
         {
