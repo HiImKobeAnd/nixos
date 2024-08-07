@@ -21,7 +21,6 @@
     dconf2nix
     nil
     nh
-
-    flatpak
   ];
+  services.flatpak.enable = true;
 }
