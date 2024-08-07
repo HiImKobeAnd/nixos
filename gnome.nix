@@ -10,6 +10,11 @@
     xkb.variant = "";
   };
 
+  programs.kdeconnect = {
+    enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+  };
+
   environment.systemPackages = with pkgs; [
     gnomeExtensions.paperwm
     gnomeExtensions.tray-icons-reloaded
