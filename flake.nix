@@ -9,13 +9,11 @@
     };
     nixcord.url = "github:kaylorben/nixcord";
     stylix.url = "github:danth/stylix";
-    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
-    nixvim,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -44,7 +42,6 @@
         ./development.nix
         ./theme.nix
         inputs.stylix.nixosModules.stylix
-        inputs.nixvim.nixosModules.nixvim
 
         home-manager.nixosModules.home-manager
         {

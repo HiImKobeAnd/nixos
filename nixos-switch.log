@@ -1,61 +1,32 @@
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
 warning: updating lock file '/home/hiimkobeand/.dotfiles/nixos/flake.lock':
-• Added input 'nixvim':
-    'github:nix-community/nixvim/c9a855fe680a62ed25d848d5a8f80cb5479cd0ae' (2024-08-07)
-• Added input 'nixvim/devshell':
-    'github:numtide/devshell/67cce7359e4cd3c45296fb4aaf6a19e2a9c757ae' (2024-07-27)
-• Added input 'nixvim/devshell/nixpkgs':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/flake-compat':
-    'https://api.flakehub.com/f/pinned/edolstra/flake-compat/1.0.1/018afb31-abd1-7bff-a5e4-cff7e18efb7a/source.tar.gz?narHash=sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U%3D' (2023-10-04)
-• Added input 'nixvim/flake-parts':
-    'github:hercules-ci/flake-parts/8471fe90ad337a8074e957b69ca4d0089218391d' (2024-08-01)
-• Added input 'nixvim/flake-parts/nixpkgs-lib':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/git-hooks':
-    'github:cachix/git-hooks.nix/06939f6b7ec4d4f465bf3132a05367cccbbf64da' (2024-08-05)
-• Added input 'nixvim/git-hooks/flake-compat':
-    follows 'nixvim/flake-compat'
-• Added input 'nixvim/git-hooks/gitignore':
-    'github:hercules-ci/gitignore.nix/637db329424fd7e46cf4185293b9cc8c88c95394' (2024-02-28)
-• Added input 'nixvim/git-hooks/gitignore/nixpkgs':
-    follows 'nixvim/git-hooks/nixpkgs'
-• Added input 'nixvim/git-hooks/nixpkgs':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/git-hooks/nixpkgs-stable':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/home-manager':
-    'github:nix-community/home-manager/afc892db74d65042031a093adb6010c4c3378422' (2024-08-02)
-• Added input 'nixvim/home-manager/nixpkgs':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/nix-darwin':
-    'github:lnl7/nix-darwin/91010a5613ffd7ee23ee9263213157a1c422b705' (2024-08-06)
-• Added input 'nixvim/nix-darwin/nixpkgs':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/nixpkgs':
-    'github:NixOS/nixpkgs/cb9a96f23c491c081b38eab96d22fa958043c9fa' (2024-08-04)
-• Added input 'nixvim/nuschtosSearch':
-    'github:NuschtOS/search/aa5f6246565cc9b1e697d2c9d6ed2c842b17fff6' (2024-08-04)
-• Added input 'nixvim/nuschtosSearch/flake-utils':
-    'github:numtide/flake-utils/b1d9ab70662946ef0850d488da1c9019f3a9752a' (2024-03-11)
-• Added input 'nixvim/nuschtosSearch/flake-utils/systems':
-    'github:nix-systems/default/da67096a3b9bf56a91d16901293e51ba5b49a27e' (2023-04-09)
-• Added input 'nixvim/nuschtosSearch/nixpkgs':
-    follows 'nixvim/nixpkgs'
-• Added input 'nixvim/treefmt-nix':
-    'github:numtide/treefmt-nix/768acdb06968e53aa1ee8de207fd955335c754b7' (2024-07-30)
-• Added input 'nixvim/treefmt-nix/nixpkgs':
-    follows 'nixvim/nixpkgs'
+• Removed input 'nixvim'
+• Removed input 'nixvim/devshell'
+• Removed input 'nixvim/devshell/nixpkgs'
+• Removed input 'nixvim/flake-compat'
+• Removed input 'nixvim/flake-parts'
+• Removed input 'nixvim/flake-parts/nixpkgs-lib'
+• Removed input 'nixvim/git-hooks'
+• Removed input 'nixvim/git-hooks/flake-compat'
+• Removed input 'nixvim/git-hooks/gitignore'
+• Removed input 'nixvim/git-hooks/gitignore/nixpkgs'
+• Removed input 'nixvim/git-hooks/nixpkgs'
+• Removed input 'nixvim/git-hooks/nixpkgs-stable'
+• Removed input 'nixvim/home-manager'
+• Removed input 'nixvim/home-manager/nixpkgs'
+• Removed input 'nixvim/nix-darwin'
+• Removed input 'nixvim/nix-darwin/nixpkgs'
+• Removed input 'nixvim/nixpkgs'
+• Removed input 'nixvim/nuschtosSearch'
+• Removed input 'nixvim/nuschtosSearch/flake-utils'
+• Removed input 'nixvim/nuschtosSearch/flake-utils/systems'
+• Removed input 'nixvim/nuschtosSearch/nixpkgs'
+• Removed input 'nixvim/treefmt-nix'
+• Removed input 'nixvim/treefmt-nix/nixpkgs'
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-copying path '/nix/store/4cpakzyvfw1rmm9v5i3387x6jd2h1v86-source' from 'https://cache.nixos.org'...
 building the system configuration...
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-stopping the following units: accounts-daemon.service
-NOT restarting the following changed units: display-manager.service
 activating the configuration...
 setting up /etc...
 reloading user units for hiimkobeand...
 restarting sysinit-reactivation.target
-reloading the following units: dbus.service
-restarting the following units: home-manager-hiimkobeand.service, polkit.service
-starting the following units: accounts-daemon.service
