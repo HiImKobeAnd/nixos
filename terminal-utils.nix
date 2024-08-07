@@ -1,21 +1,25 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    nil
     curl
-    git
     wget
-    ripgrep
-    eza
+
     fish
-    zoxide
+
     fzf
+    eza
     bat
     btop
-    gh
     dua
+    zoxide
+    ripgrep
+
+    gh
+    git
+
     alejandra
     manix
     dconf2nix
+    nil
     nh
   ];
 }

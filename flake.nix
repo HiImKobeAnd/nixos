@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:kaylorben/nixcord";
-    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {
@@ -49,7 +48,6 @@
 
           home-manager.sharedModules = [
             inputs.nixcord.homeManagerModules.nixcord
-            inputs.catppuccin.homeManagerModules.catppuccin
           ];
         }
       ];

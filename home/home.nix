@@ -96,11 +96,5 @@
     };
   };
 
-  catppuccin = {
-    enable = true;
-    flavor = "macchiato";
-    accent = "flamingo";
-  };
-
   imports = [./dconf.nix];
 }
