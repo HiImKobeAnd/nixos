@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   stylix.enable = true;
   stylix.autoEnable = true;
+  stylix.polarity = "dark";
   stylix.image = ./background-image.jpg;
   stylix.base16Scheme = {
     base00 = "24273a"; # base
