@@ -1,7 +1,12 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  aagl,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   programs.steam.enable = true;
+  programs.honkers-railway-launcher.enable = true;
 
   environment.systemPackages = with pkgs; [
     firefox

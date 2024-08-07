@@ -9,11 +9,16 @@
     };
     nixcord.url = "github:kaylorben/nixcord";
     stylix.url = "github:danth/stylix";
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    aagl,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -42,6 +47,7 @@
         ./development.nix
         ./theme.nix
         inputs.stylix.nixosModules.stylix
+        aagl.nixosModules.default
 
         home-manager.nixosModules.home-manager
         {
