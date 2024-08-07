@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  stylix.enable = true;
+  stylix.autoEnable = true;
+  stylix.image = ./background-image.jpg;
   stylix.base16Scheme = {
     base00 = "24273a"; # base
     base01 = "1e2030"; # mantle
