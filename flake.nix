@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:kaylorben/nixcord";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -39,6 +40,8 @@
         ./terminal-utils.nix
         ./services.nix
         ./development.nix
+        ./theme.nix
+        inputs.stylix.nixosModules.stylix
 
         home-manager.nixosModules.home-manager
         {
