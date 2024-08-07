@@ -14,6 +14,5 @@
     thunderbird
     vscode
     prismlauncher
-    adwaita-icon-theme
   ];
 }
