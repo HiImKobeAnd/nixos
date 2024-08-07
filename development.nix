@@ -7,5 +7,6 @@
     rustup
     cargo-watch
     cargo-audit
+    bun
   ];
 }
