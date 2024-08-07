@@ -1,32 +1,47 @@
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-warning: updating lock file '/home/hiimkobeand/.dotfiles/nixos/flake.lock':
-• Removed input 'nixvim'
-• Removed input 'nixvim/devshell'
-• Removed input 'nixvim/devshell/nixpkgs'
-• Removed input 'nixvim/flake-compat'
-• Removed input 'nixvim/flake-parts'
-• Removed input 'nixvim/flake-parts/nixpkgs-lib'
-• Removed input 'nixvim/git-hooks'
-• Removed input 'nixvim/git-hooks/flake-compat'
-• Removed input 'nixvim/git-hooks/gitignore'
-• Removed input 'nixvim/git-hooks/gitignore/nixpkgs'
-• Removed input 'nixvim/git-hooks/nixpkgs'
-• Removed input 'nixvim/git-hooks/nixpkgs-stable'
-• Removed input 'nixvim/home-manager'
-• Removed input 'nixvim/home-manager/nixpkgs'
-• Removed input 'nixvim/nix-darwin'
-• Removed input 'nixvim/nix-darwin/nixpkgs'
-• Removed input 'nixvim/nixpkgs'
-• Removed input 'nixvim/nuschtosSearch'
-• Removed input 'nixvim/nuschtosSearch/flake-utils'
-• Removed input 'nixvim/nuschtosSearch/flake-utils/systems'
-• Removed input 'nixvim/nuschtosSearch/nixpkgs'
-• Removed input 'nixvim/treefmt-nix'
-• Removed input 'nixvim/treefmt-nix/nixpkgs'
-warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
 building the system configuration...
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
+these 15 derivations will be built:
+  /nix/store/i306hcdycd10ai8hhc7qfqkr9zxchz4c-system-path.drv
+  /nix/store/5q48hsm5zkasbd5snmk84f2fyvy652ms-dbus-1.drv
+  /nix/store/vnmasld1kgjl6yfpw1n98nkskbbfqxdb-X-Restart-Triggers-dbus.drv
+  /nix/store/1shxjjpaxanvb64fnb47r2fywsyyh7cz-unit-dbus.service.drv
+  /nix/store/3pcwcm487gk08qral71wcc4vcfwghr9p-set-environment.drv
+  /nix/store/3y1k8iwhnn8mcarrc2pcimzgf0fw7mxc-unit-dbus.service.drv
+  /nix/store/69a22yizr2hkgriw2ja5hj1s7yw5ll4h-unit-accounts-daemon.service.drv
+  /nix/store/8sjraabf06mln04hpls555dqplcsi37k-etc-profile.drv
+  /nix/store/fzpniy1x7xlnr3r9ic41l1af364hdb37-user-units.drv
+  /nix/store/lzgix6kfl0zs66mplfvy7zm2sw8b8ls6-etc-pam-environment.drv
+  /nix/store/yd8qqqyvgiv6ppjyxb4c397h2an321p3-X-Restart-Triggers-polkit.drv
+  /nix/store/vij92xksifxd1h3np3i2d1gsqn4yzq47-unit-polkit.service.drv
+  /nix/store/v8a13spwn624zri5araw0iksza7qgzq7-system-units.drv
+  /nix/store/i20mljlankf3gac1fs51a5g1ncc48dnn-etc.drv
+  /nix/store/wzigiskx109i4jr7kmnjqgyafzb57ywz-nixos-system-nixos-24.11.20240731.9f918d6.drv
+these 2 paths will be fetched (0.13 MiB download, 0.51 MiB unpacked):
+  /nix/store/iz9jjxb9lagzz9wkxgc7sizl9kq56ic5-flatpak-1.14.8-doc
+  /nix/store/d9w8kwyly6fmr7z3w3ylkfp8sw94illh-flatpak-1.14.8-man
+copying path '/nix/store/d9w8kwyly6fmr7z3w3ylkfp8sw94illh-flatpak-1.14.8-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/iz9jjxb9lagzz9wkxgc7sizl9kq56ic5-flatpak-1.14.8-doc' from 'https://cache.nixos.org'...
+building '/nix/store/i306hcdycd10ai8hhc7qfqkr9zxchz4c-system-path.drv'...
+building '/nix/store/yd8qqqyvgiv6ppjyxb4c397h2an321p3-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/5q48hsm5zkasbd5snmk84f2fyvy652ms-dbus-1.drv'...
+building '/nix/store/lzgix6kfl0zs66mplfvy7zm2sw8b8ls6-etc-pam-environment.drv'...
+building '/nix/store/3pcwcm487gk08qral71wcc4vcfwghr9p-set-environment.drv'...
+building '/nix/store/69a22yizr2hkgriw2ja5hj1s7yw5ll4h-unit-accounts-daemon.service.drv'...
+building '/nix/store/8sjraabf06mln04hpls555dqplcsi37k-etc-profile.drv'...
+building '/nix/store/vij92xksifxd1h3np3i2d1gsqn4yzq47-unit-polkit.service.drv'...
+building '/nix/store/vnmasld1kgjl6yfpw1n98nkskbbfqxdb-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/1shxjjpaxanvb64fnb47r2fywsyyh7cz-unit-dbus.service.drv'...
+building '/nix/store/3y1k8iwhnn8mcarrc2pcimzgf0fw7mxc-unit-dbus.service.drv'...
+building '/nix/store/fzpniy1x7xlnr3r9ic41l1af364hdb37-user-units.drv'...
+building '/nix/store/v8a13spwn624zri5araw0iksza7qgzq7-system-units.drv'...
+building '/nix/store/i20mljlankf3gac1fs51a5g1ncc48dnn-etc.drv'...
+building '/nix/store/wzigiskx109i4jr7kmnjqgyafzb57ywz-nixos-system-nixos-24.11.20240731.9f918d6.drv'...
+stopping the following units: accounts-daemon.service
 activating the configuration...
 setting up /etc...
 reloading user units for hiimkobeand...
 restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+starting the following units: accounts-daemon.service

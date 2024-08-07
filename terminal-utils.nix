@@ -21,5 +21,7 @@
     dconf2nix
     nil
     nh
+
+    flatpak
   ];
 }
