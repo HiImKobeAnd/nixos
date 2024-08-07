@@ -7,6 +7,7 @@
     rustup
     cargo-watch
     cargo-audit
-    bun
+    nodejs_22
+    nodePackages.pnpm
   ];
 }
