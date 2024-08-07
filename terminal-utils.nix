@@ -22,5 +22,4 @@
     nil
     nh
   ];
-  services.flatpak.enable = true;
 }
