@@ -5,6 +5,9 @@
     polarity = "dark";
     image = ./background-image.jpg;
     cursor.size = 20;
+    fonts.sizes.desktop = 8;
+    fonts.sizes.applications = 10;
+    fonts.sizes.popups = 8;
     base16Scheme = {
       base00 = "24273a"; # base
       base01 = "1e2030"; # mantle
