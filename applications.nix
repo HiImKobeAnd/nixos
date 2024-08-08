@@ -4,15 +4,19 @@
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
-    firefox
-    steam
-    lutris
+    element
     discord
-    youtube-music
-    geary
-    alacritty
+    firefox
     thunderbird
+    youtube-music
+
     vscode
+    alacritty
+
+    lutris
+    steam
     prismlauncher
+
+    geary
   ];
 }

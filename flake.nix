@@ -10,11 +10,16 @@
     nixcord.url = "github:kaylorben/nixcord";
     stylix.url = "github:danth/stylix";
     rust-overlay.url = "github:oxalica/rust-overlay";
+    #nixos-cosmic = {
+    #  url = "github:lilyinstarlight/nixos-cosmic";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    # nixos-cosmic,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -42,7 +47,15 @@
         ./services.nix
         ./development.nix
         ./theme.nix
+        #./cosmic-de.nix
+        #{
+        #  nix.settings = {
+        #    substituters = ["https://cosmic.cachix.org/"];
+        #    trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
+        #  };
+        #}
         inputs.stylix.nixosModules.stylix
+        #nixos-cosmic.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
