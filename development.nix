@@ -7,6 +7,8 @@
     nodejs_22
     nodePackages.pnpm
 
+    gcc14
+    mold
     lldb_18
     rustup
     cargo-watch
