@@ -9,6 +9,7 @@
     };
     nixcord.url = "github:kaylorben/nixcord";
     stylix.url = "github:danth/stylix";
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
   outputs = {
