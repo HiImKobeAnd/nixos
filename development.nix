@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  virtualisation.docker.enable = true;
+
   environment.systemPackages = with pkgs; [
     nodejs_22
     nodePackages.pnpm
