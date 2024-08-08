@@ -7,6 +7,9 @@
     nodejs_22
     nodePackages.pnpm
 
+    sqlite
+    sqlx-cli
+
     gcc14
     mold
     lldb_18
