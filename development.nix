@@ -9,6 +9,7 @@
 
     sqlite
     sqlx-cli
+    postgresql_16
 
     gcc14
     mold
