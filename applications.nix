@@ -4,7 +4,7 @@
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
-    element
+    element-desktop
     discord
     firefox
     thunderbird
