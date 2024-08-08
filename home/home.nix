@@ -73,7 +73,7 @@
   programs.nixcord = {
     enable = true;
     config = {
-      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato.theme.css"];
+      themeLinks = ["https://raw.githubusercontent.com/jack-mil/gruvy-discord/master/gruvbox-desktop.css"];
       plugins = {
         betterFolders = {
           enable = true;
