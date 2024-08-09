@@ -97,6 +97,8 @@
   };
 
   wayland.windowManager.hyprland.settings = {
+    enable = true;
+    systemd.enableXdgAutostart = true;
     input.kb_layout = "dk";
     "$mod" = "SUPER";
     bind = [
