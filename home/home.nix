@@ -97,9 +97,6 @@
   };
 
   wayland.windowManager.hyprland.settings = {
-    input = {
-      kb_layout = "dk";
-    };
     "$mod" = "SUPER";
     bind = [
       "$mod,t,exec,alacritty"
