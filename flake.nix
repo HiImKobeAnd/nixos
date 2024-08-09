@@ -41,7 +41,7 @@
         ./system/locale.nix
 
         ./gnome.nix
-        # ./hyprland.nix
+        ./hyprland.nix
         ./applications.nix
         ./terminal-utils.nix
         ./services.nix

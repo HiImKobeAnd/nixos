@@ -7,6 +7,7 @@
     hyprpaper
     xwayland
 
+    tofi
     alacritty
   ];
 }
