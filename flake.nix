@@ -30,6 +30,7 @@
         ./system/nvidia.nix
         ./system/fonts.nix
         ./system/auto-upgrade.nix
+        ./system/bluetooth.nix
 
         ./system/hardware-configuration.nix
         ./system/configuration.nix

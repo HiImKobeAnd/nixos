@@ -1,53 +1,9 @@
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-warning: updating lock file '/home/hiimkobeand/.dotfiles/nixos/flake.lock':
-• Removed input 'hyprland'
-• Removed input 'hyprland/aquamarine'
-• Removed input 'hyprland/aquamarine/hyprutils'
-• Removed input 'hyprland/aquamarine/hyprwayland-scanner'
-• Removed input 'hyprland/aquamarine/nixpkgs'
-• Removed input 'hyprland/aquamarine/systems'
-• Removed input 'hyprland/hyprcursor'
-• Removed input 'hyprland/hyprcursor/hyprlang'
-• Removed input 'hyprland/hyprcursor/nixpkgs'
-• Removed input 'hyprland/hyprcursor/systems'
-• Removed input 'hyprland/hyprlang'
-• Removed input 'hyprland/hyprlang/hyprutils'
-• Removed input 'hyprland/hyprlang/nixpkgs'
-• Removed input 'hyprland/hyprlang/systems'
-• Removed input 'hyprland/hyprutils'
-• Removed input 'hyprland/hyprutils/nixpkgs'
-• Removed input 'hyprland/hyprutils/systems'
-• Removed input 'hyprland/hyprwayland-scanner'
-• Removed input 'hyprland/hyprwayland-scanner/nixpkgs'
-• Removed input 'hyprland/hyprwayland-scanner/systems'
-• Removed input 'hyprland/nixpkgs'
-• Removed input 'hyprland/systems'
-• Removed input 'hyprland/xdph'
-• Removed input 'hyprland/xdph/hyprland-protocols'
-• Removed input 'hyprland/xdph/hyprland-protocols/nixpkgs'
-• Removed input 'hyprland/xdph/hyprland-protocols/systems'
-• Removed input 'hyprland/xdph/hyprlang'
-• Removed input 'hyprland/xdph/nixpkgs'
-• Removed input 'hyprland/xdph/systems'
-warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
 building the system configuration...
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-trace: evaluation warning: The option `hardware.opengl.enable' defined in `/nix/store/qdbv7wwqz8f710iq5r2k72pdhcbw0w5w-source/system/nvidia.nix' has been renamed to `hardware.graphics.enable'.
-stopping the following units: systemd-modules-load.service, systemd-sysctl.service, systemd-tmpfiles-resetup.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, systemd-udevd.service
+trace: evaluation warning: The option `hardware.opengl.enable' defined in `/nix/store/7w2lg1wilhrw3irjvflra64gsxk054mj-source/system/nvidia.nix' has been renamed to `hardware.graphics.enable'.
 activating the configuration...
-reviving group 'avahi' with GID 999
-reviving group 'colord' with GID 998
-reviving group 'geoclue' with GID 997
-reviving group 'gnome-remote-desktop' with GID 996
-reviving user 'avahi' with UID 999
-reviving user 'colord' with UID 998
-reviving user 'geoclue' with UID 997
-reviving user 'gnome-remote-desktop' with UID 996
 setting up /etc...
-removing obsolete symlink ‘/etc/pam.d/swaylock’...
 reloading user units for hiimkobeand...
 restarting sysinit-reactivation.target
-reloading the following units: dbus.service, firewall.service
-restarting the following units: polkit.service
-starting the following units: systemd-modules-load.service, systemd-sysctl.service, systemd-tmpfiles-resetup.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket
-the following new units were started: accounts-daemon.service, avahi-daemon.service, avahi-daemon.socket, bluetooth.service, display-manager.service, machine.slice, run-user-132.mount, systemd-hostnamed.service, systemd-machined.service, user-132.slice, user-runtime-dir@132.service, user@132.service
+the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
