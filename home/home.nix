@@ -95,19 +95,6 @@
       };
     };
   };
-  #wayland.windowManager.hyprland = {
-  # enable = true;
-  #systemd.enableXdgAutostart = true;
-  #settings = {
-  #  input = {
-  #    kb_layout = "dk";
-  #  };
-  #  "$mod" = "SUPER";
-  #  bind = [
-  #    "$mod,t,exec,alacritty"
-  #"$mod,exec,rofi"
-  #  ];
-  #};
-  #};
-  #imports = [./dconf.nix];
+
+  imports = [./dconf.nix];
 }
