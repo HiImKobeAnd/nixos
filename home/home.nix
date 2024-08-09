@@ -96,5 +96,12 @@
     };
   };
 
+  wayland.windowManager.hyprland.settings = {
+    "$mod" = "SUPER";
+    bindm = [
+      "$mod,t,exec,alacritty"
+    ];
+  };
+
   imports = [./dconf.nix];
 }

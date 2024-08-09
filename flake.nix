@@ -40,7 +40,7 @@
         ./system/configuration.nix
         ./system/locale.nix
 
-        ./gnome.nix
+        #./gnome.nix
         ./hyprland.nix
         ./applications.nix
         ./terminal-utils.nix
