@@ -16,6 +16,7 @@
     lutris
     steam
     prismlauncher
+    heroic
 
     geary
   ];
