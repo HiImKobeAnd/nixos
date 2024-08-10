@@ -14,6 +14,8 @@
     nodejs_22
     nodePackages.pnpm
 
+    jdk17
+
     sqlite
     sqlx-cli
     postgresql_16
