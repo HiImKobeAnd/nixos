@@ -17,6 +17,7 @@
     steam
     prismlauncher
     heroic
+    parsec-bin
 
     geary
   ];
