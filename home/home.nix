@@ -20,10 +20,13 @@
 
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
     plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive deoplete-nvim];
     extraConfig = "
-    let g:mapleader = ' '
     let g:ale_fix_on_save = 1
+    set number relativenumber
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
   };
