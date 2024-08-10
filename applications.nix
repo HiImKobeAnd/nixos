@@ -2,6 +2,7 @@
   nixpkgs.config.allowUnfree = true;
 
   programs.steam.enable = true;
+  programs.steam.remotePlay.openFirewall = true;
 
   environment.systemPackages = with pkgs; [
     element-desktop
