@@ -20,7 +20,7 @@
 
   programs.neovim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive deoplete-nvim];
+    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive deoplete-nvim vim-easymotion];
     extraConfig = "
     let g:ale_fix_on_save = 1
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
@@ -45,9 +45,11 @@
       ltt = "eza -R --level=2";
       lttt = "eza -R --level=3";
     };
+    interactiveShellInit = "
+    set fish_gretting ''
+	    ";
     shellInit = "
-    set fish_gretting
-    set -g fish_prompt_pwd_dir_length 0
+    set fish_prompt_pwd_dir_length 0
     ";
   };
 
