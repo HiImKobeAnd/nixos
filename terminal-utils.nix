@@ -13,7 +13,6 @@
     zoxide
     ripgrep
 
-    gh
     git
 
     alejandra
