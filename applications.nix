@@ -19,6 +19,7 @@
     prismlauncher
     heroic
     parsec-bin
+    gamemode
 
     geary
   ];
