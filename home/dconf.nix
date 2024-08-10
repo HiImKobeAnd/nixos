@@ -65,6 +65,11 @@ with lib.hm.gvariant; {
       command = "alacritty";
       name = "Open Terminal";
     };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+      binding = "<Super>g";
+      command = "geary";
+      name = "Open Mail Client";
+    };
 
     "org/gnome/settings-daemon/plugins/power" = {
       sleep-inactive-ac-type = "nothing";

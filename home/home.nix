@@ -27,6 +27,8 @@
     extraConfig = "
     let g:ale_fix_on_save = 1
     set number relativenumber
+    set ignorecase
+    set smartcase
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
   };
