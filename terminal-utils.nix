@@ -14,7 +14,7 @@
     ripgrep
 
     git
-    gh
+    git-credential-manager
 
     alejandra
     manix
