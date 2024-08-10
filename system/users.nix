@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   users.users.hiimkobeand = {
     isNormalUser = true;
     description = "Kobe";
