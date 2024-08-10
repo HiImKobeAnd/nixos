@@ -46,13 +46,15 @@
         inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.hiimkobeand = import ./home/home.nix;
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.hiimkobeand = import ./home/home.nix;
 
-          home-manager.sharedModules = [
-            inputs.nixcord.homeManagerModules.nixcord
-          ];
+            sharedModules = [
+              inputs.nixcord.homeManagerModules.nixcord
+            ];
+          };
         }
       ];
     };

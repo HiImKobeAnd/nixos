@@ -5,9 +5,11 @@
     polarity = "dark";
     image = ./background-image.jpg;
     cursor.size = 20;
-    fonts.sizes.desktop = 8;
-    fonts.sizes.applications = 10;
-    fonts.sizes.popups = 8;
+    fonts.sizes = {
+      desktop = 8;
+      applications = 10;
+      popups = 8;
+    };
     base16Scheme = {
       base00 = "32302f"; # ----
       base01 = "3c3836"; # ---

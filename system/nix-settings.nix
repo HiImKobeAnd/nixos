@@ -1,5 +1,7 @@
 _: {
-  nix.optimise.automatic = true;
-  nix.settings.auto-optimise-store = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix = {
+    optimise.automatic = true;
+    settings.auto-optimise-store = true;
+    settings.experimental-features = ["nix-command" "flakes"];
+  };
 }
