@@ -22,7 +22,7 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive deoplete-nvim];
     extraConfig = "
-    vim.g.mapleader = ' '
+    let vim.g.mapleader = ' '
     let g:ale_fix_on_save = 1
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
