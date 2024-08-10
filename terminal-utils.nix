@@ -14,6 +14,7 @@
     ripgrep
 
     git
+    gh
 
     alejandra
     manix
