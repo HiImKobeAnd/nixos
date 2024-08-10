@@ -82,6 +82,8 @@
     extraOptions = ["--icons=auto"];
   };
 
+  programs.gh.enable = true;
+
   programs.nixcord = {
     enable = true;
     config = {
