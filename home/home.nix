@@ -23,9 +23,11 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive deoplete-nvim];
+    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive];
     extraConfig = "
     let g:ale_fix_on_save = 1
+    let g:ale_compeltion_enabled = 1
+    let g:ale_use_neovim_diagnostics_api = 1
     set number relativenumber
     set ignorecase
     set smartcase
