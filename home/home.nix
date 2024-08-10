@@ -18,12 +18,11 @@
     userEmail = "hiimkobeand@gmail.com";
   };
 
-  programs.vim = {
+  programs.neovim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive];
+    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive deoplete-nvim];
     extraConfig = "
     let g:ale_fix_on_save = 1
-    let g:ale_completion_enabled = 1
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
   };
