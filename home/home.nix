@@ -20,7 +20,7 @@
 
   programs.vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp];
+    plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive];
     extraConfig = "
     let g:ale_fix_on_save = 1
     let g:ale_completion_enabled = 1
