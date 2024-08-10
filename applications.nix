@@ -16,7 +16,6 @@
     lutris
     steam
     prismlauncher
-    lunar-client
     heroic
 
     geary
