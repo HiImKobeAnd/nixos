@@ -12,6 +12,7 @@
     youtube-music
 
     vscode
+    putty
     alacritty
 
     lutris
