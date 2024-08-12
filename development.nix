@@ -19,6 +19,9 @@
     sqlx-cli
     postgresql_16
 
+    lua-language-server
+    nil
+
     gcc14
     mold
     lldb_18

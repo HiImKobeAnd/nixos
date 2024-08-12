@@ -26,7 +26,6 @@
       vimAlias = true;
       extraPackages = with pkgs; [
         xclip
-        nil
       ];
       plugins = with pkgs.vimPlugins; [
         comment-nvim
