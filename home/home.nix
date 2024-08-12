@@ -24,7 +24,7 @@
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-      plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive vim-prettier];
+      plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive vim-prettier nvim-comment];
       extraConfig = "
     let g:ale_fix_on_save = 1
     let g:ale_compeltion_enabled = 1
