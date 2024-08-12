@@ -24,25 +24,58 @@
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-      plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive vim-prettier nerdcommenter];
-      extraConfig = "
-    let g:ale_fix_on_save = 1
-    let g:ale_compeltion_enabled = 1
-    let g:ale_use_neovim_diagnostics_api = 1
-    set number relativenumber
-    set ignorecase
-    set smartcase
-    set expandtab
-    set tabstop=2
-    set shiftwidth=2
+      plugins = with pkgs.vimPlugins; [
+        {
+          plugin = comment-nvim;
+          type = "lua";
+          config = "require(\"Comment\").setup()";
+        }
 
-    let g:prettier#autoformat = 1
-    let g:prettier#autoformat_require_pragma = 0
+        {
+          plugin = nvim-lspconfig;
+          type = "lua";
+          config = ".nvim/plugin/lsp.lua";
+        }
 
-    nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-    nmap <silent> <C-j> <Plug>(ale_next_wrap)
-    autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
-    ";
+        {
+          plugin = nvim-cmp;
+          type = "lua";
+          config = "./nvim/plugin/cmp.lua";
+        }
+
+        cmp-buffer
+        cmp-path
+        cmp-nvim-lsp
+
+        {
+          plugin = telescope-nvim;
+          type = "lua";
+          config = "./nvim/plugin/telescope.lua";
+        }
+
+        telescope-fzf-native-nvim
+
+        luasnip
+        friendly-snippets
+        lualine-nvim
+        auto-pairs
+        ctrlp
+        fugitive
+        vim-nix
+
+        (nvim-treesitter.withPlugins (p: [
+          p.tree-sitter-nix
+          p.tree-sitter-vim
+          p.tree-sitter-bash
+          p.tree-sitter-lua
+          p.tree-sitter-javascript
+          p.tree-sitter-rust
+        ]))
+      ];
+      extraLuaConfig = "
+      ${builtins.readFile ./nvim/options.lua}
+      ${builtins.readFile ./nvim/other.lua}
+        ";
     };
 
     firefox = {
