@@ -19,9 +19,6 @@
     sqlx-cli
     postgresql_16
 
-    python3
-    pipx
-
     gcc14
     mold
     lldb_18
