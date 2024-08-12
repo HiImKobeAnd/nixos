@@ -37,7 +37,7 @@
     set shiftwidth=2
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
-    autocmd let b:ale_fixers = ['prettier']
+    autocmd let b:ale_fixers = ['vim-prettier']
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
     };
