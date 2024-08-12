@@ -46,6 +46,7 @@
         ctrlp
         fugitive
         vim-nix
+        neodev-nvim
         {
           plugin = nvim-treesitter.withPlugins (p: [
             p.tree-sitter-nix
