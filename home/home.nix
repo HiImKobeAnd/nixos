@@ -34,7 +34,7 @@
         {
           plugin = nvim-lspconfig;
           type = "lua";
-          config = ".nvim/plugin/lsp.lua";
+          config = "./nvim/plugin/lsp.lua";
         }
 
         {
