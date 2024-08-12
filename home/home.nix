@@ -33,8 +33,8 @@
     set ignorecase
     set smartcase
     set expandtab
-    set tabstop = 2
-    set shiftwidth = 2
+    set tabstop=2
+    set shiftwidth=2
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
     autocmd let b:ale_fixers = ['prettier']
