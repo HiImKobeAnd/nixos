@@ -24,7 +24,7 @@
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-      plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive];
+      plugins = with pkgs.vimPlugins; [ale vim-airline auto-pairs ctrlp fugitive vim-prettier];
       extraConfig = "
     let g:ale_fix_on_save = 1
     let g:ale_compeltion_enabled = 1
@@ -34,7 +34,7 @@
     set smartcase
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
-    autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
+    autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra'], 'javascript': [prettier]}
     ";
     };
 

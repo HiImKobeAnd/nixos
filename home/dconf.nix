@@ -131,7 +131,7 @@ with lib.hm.gvariant; {
       close-window = ["<Super>q" "<Alt>F4"];
       cycle-height = [""];
       cycle-height-backwards = [""];
-      cycle-width = [""];
+      cycle-width = ["<Super>r"];
       cycle-width-backwards = [""];
       live-alt-tab = ["<Alt>Tab"];
       live-alt-tab-backward = [""];
