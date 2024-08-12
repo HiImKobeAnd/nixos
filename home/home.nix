@@ -32,9 +32,13 @@
     set number relativenumber
     set ignorecase
     set smartcase
+    set expandtab
+    set tabstop = 2
+    set shiftwidth = 2
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
-    autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra'], 'javascript': [prettier]}
+    autocmd let b:ale_fixers = ['prettier']
+    autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
     ";
     };
 

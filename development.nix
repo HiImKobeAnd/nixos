@@ -13,6 +13,7 @@
   environment.systemPackages = with pkgs; [
     nodejs_22
     nodePackages.pnpm
+    nodePackages.prettier
 
     sqlite
     sqlx-cli
