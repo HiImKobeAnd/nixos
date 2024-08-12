@@ -62,15 +62,18 @@
         ctrlp
         fugitive
         vim-nix
-
-        (nvim-treesitter.withPlugins (p: [
-          p.tree-sitter-nix
-          p.tree-sitter-vim
-          p.tree-sitter-bash
-          p.tree-sitter-lua
-          p.tree-sitter-javascript
-          p.tree-sitter-rust
-        ]))
+        {
+          plugin = nvim-treesitter.withPlugins (p: [
+            p.tree-sitter-nix
+            p.tree-sitter-vim
+            p.tree-sitter-bash
+            p.tree-sitter-lua
+            p.tree-sitter-javascript
+            p.tree-sitter-rust
+          ]);
+          type = "lua";
+          config = "./nvim/plugin/treesitter.lua";
+        }
       ];
       extraLuaConfig = "
       ${builtins.readFile ./nvim/options.lua}
