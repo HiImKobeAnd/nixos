@@ -26,6 +26,8 @@
       vimAlias = true;
       extraPackages = with pkgs; [
         xclip
+        lua-language-server
+        nil
       ];
       plugins = with pkgs.vimPlugins; [
         comment-nvim
