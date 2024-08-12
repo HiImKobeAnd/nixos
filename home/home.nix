@@ -35,6 +35,10 @@
     set expandtab
     set tabstop=2
     set shiftwidth=2
+
+    let g:prettier#autoformat = 1
+    let g:prettier#autoformat_require_pragma = 0
+
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
     nmap <silent> <C-j> <Plug>(ale_next_wrap)
     autocmd FileType nix let b:ale_fixers = {'nix': ['alejandra']}
