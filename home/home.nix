@@ -25,33 +25,17 @@
       viAlias = true;
       vimAlias = true;
       plugins = with pkgs.vimPlugins; [
-        {
-          plugin = comment-nvim;
-          type = "lua";
-          config = "require(\"Comment\").setup()";
-        }
+        comment-nvim
 
-        {
-          plugin = nvim-lspconfig;
-          type = "lua";
-          config = "require './nvim/plugin/lsp.lua'";
-        }
+        nvim-lspconfig
 
-        {
-          plugin = nvim-cmp;
-          type = "lua";
-          config = "require './nvim/plugin/cmp.lua'";
-        }
+        nvim-cmp
 
         cmp-buffer
         cmp-path
         cmp-nvim-lsp
 
-        {
-          plugin = telescope-nvim;
-          type = "lua";
-          config = "require './nvim/plugin/telescope.lua'";
-        }
+        telescope-nvim
 
         telescope-fzf-native-nvim
 
@@ -71,13 +55,15 @@
             p.tree-sitter-javascript
             p.tree-sitter-rust
           ]);
-          type = "lua";
-          config = "require './nvim/plugin/treesitter.lua'";
         }
       ];
       extraLuaConfig = "
       ${builtins.readFile ./nvim/options.lua}
       ${builtins.readFile ./nvim/other.lua}
+      ${builtins.readFile ./nvim/plugin/lsp.lua}
+      ${builtins.readFile ./nvim/plugin/cmp.lua}
+      ${builtins.readFile ./nvim/plugin/telescope.lua}
+      ${builtins.readFile ./nvim/plugin/treesitter.lua}
         ";
     };
 
