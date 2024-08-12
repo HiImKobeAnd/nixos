@@ -43,4 +43,5 @@ require('lspconfig').lua_ls.setup {
 }
 
 
-require('lspconfig').nil.setup {}
+require'lspconfig'.nil_ls.setup{}
+require'lspconfig'.rust_analyzer.setup{}
