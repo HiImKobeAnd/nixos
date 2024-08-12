@@ -34,13 +34,13 @@
         {
           plugin = nvim-lspconfig;
           type = "lua";
-          config = "./nvim/plugin/lsp.lua";
+          config = "require './nvim/plugin/lsp.lua'";
         }
 
         {
           plugin = nvim-cmp;
           type = "lua";
-          config = "./nvim/plugin/cmp.lua";
+          config = "require './nvim/plugin/cmp.lua'";
         }
 
         cmp-buffer
@@ -50,7 +50,7 @@
         {
           plugin = telescope-nvim;
           type = "lua";
-          config = "./nvim/plugin/telescope.lua";
+          config = "require './nvim/plugin/telescope.lua'";
         }
 
         telescope-fzf-native-nvim
@@ -72,7 +72,7 @@
             p.tree-sitter-rust
           ]);
           type = "lua";
-          config = " require './nvim/plugin/treesitter.lua'";
+          config = "require './nvim/plugin/treesitter.lua'";
         }
       ];
       extraLuaConfig = "
