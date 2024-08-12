@@ -72,7 +72,7 @@
             p.tree-sitter-rust
           ]);
           type = "lua";
-          config = "./nvim/plugin/treesitter.lua";
+          config = " require './nvim/plugin/treesitter.lua'";
         }
       ];
       extraLuaConfig = "
