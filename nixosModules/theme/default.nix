@@ -45,8 +45,8 @@
         // lib.mkIf (config.theme == "catppuccin") {
           base00 = "24273a"; # base
           base01 = "1e2030"; # mantle
-          base02 = "949cbb"; # surface0
-          base03 = "494d64"; # surface1
+          base02 = "838ba7"; # overlay1
+          base03 = "949cbb"; # overlay2
           base04 = "5b6078"; #surface2
           base05 = "cad3f5"; # text
           base06 = "f4dbd6"; # rosewater
