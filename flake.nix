@@ -25,24 +25,9 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./system/bootloader.nix
-        ./system/networking.nix
-        ./system/sound.nix
-        ./system/users.nix
-        ./system/nix-settings.nix
-        ./system/nvidia.nix
-        ./system/fonts.nix
-        ./system/auto-upgrade.nix
-        ./system/bluetooth.nix
+        ./nixosModules
+        ./hosts/desktop/configuration.nix
 
-        ./system/hardware-configuration.nix
-        ./system/configuration.nix
-        ./system/locale.nix
-
-        ./gnome.nix
-        #./cosmic-de.nix
-        #./hyprland.nix
-        ./applications.nix
         ./terminal-utils.nix
         ./services.nix
         ./development.nix
