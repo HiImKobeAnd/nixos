@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./auto-upgrade.nix
     ./garbage-collection.nix
@@ -10,4 +10,5 @@
     ./services.nix
     ./nvidia.nix
   ];
+  nvidia.enable = lib.mkDefault true;
 }

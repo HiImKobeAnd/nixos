@@ -51,7 +51,6 @@
           };
         }
       ];
-      system.nvidia.enable = true;
     };
   };
 }
