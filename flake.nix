@@ -21,8 +21,7 @@
     home-manager,
     nixos-cosmic,
     ...
-  } @ inputs: let
-  in {
+  } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
