@@ -40,7 +40,7 @@
         ./system/locale.nix
 
         ./gnome.nix
-        ./cosmic-de.nix
+        #./cosmic-de.nix
         #./hyprland.nix
         ./applications.nix
         ./terminal-utils.nix

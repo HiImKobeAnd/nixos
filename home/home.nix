@@ -122,6 +122,7 @@
 
     nixcord = {
       enable = true;
+      openASAR.enable = false;
       config = {
         themeLinks = ["https://raw.githubusercontent.com/jack-mil/gruvy-discord/master/gruvbox-desktop.css"];
         plugins = {
