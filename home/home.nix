@@ -124,7 +124,7 @@
       enable = true;
       openASAR.enable = false;
       config = {
-        themeLinks = ["https://raw.githubusercontent.com/jack-mil/gruvy-discord/master/gruvbox-desktop.css"];
+        themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
         plugins = {
           betterFolders = {
             enable = true;
