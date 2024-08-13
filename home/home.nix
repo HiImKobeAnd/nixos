@@ -1,9 +1,13 @@
 {
-  config,
   pkgs,
-  nixcord,
+  inputs,
   ...
 }: {
+  imports = [
+    inputs.nixcord.homeManagerModules.nixcord
+    ./dconf.nix
+  ];
+
   home = {
     username = "hiimkobeand";
     homeDirectory = "/home/hiimkobeand";
@@ -147,5 +151,4 @@
       };
     };
   };
-  imports = [./dconf.nix];
 }

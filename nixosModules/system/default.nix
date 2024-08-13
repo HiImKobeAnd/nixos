@@ -9,6 +9,7 @@
     ./bluetooth.nix
     ./services.nix
     ./nvidia.nix
+    ./input.nix
   ];
   nvidia.enable = lib.mkDefault true;
 }

@@ -19,7 +19,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    nixos-cosmic,
     ...
   } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -36,18 +35,15 @@
           };
         }
 
-        inputs.stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
-        nixos-cosmic.nixosModules.default
+        inputs.stylix.nixosModules.stylix
+        inputs.nixos-cosmic.nixosModules.default
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
             users.hiimkobeand = import ./home/home.nix;
-
-            sharedModules = [
-              inputs.nixcord.homeManagerModules.nixcord
-            ];
+            extraSpecialArgs = {inherit inputs;};
           };
         }
       ];
