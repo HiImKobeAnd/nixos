@@ -7,7 +7,7 @@
     ./locale.nix
     ./sound.nix
     ./bluetooth.nix
-
+    ./services.nix
     ./nvidia.nix
   ];
 }

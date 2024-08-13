@@ -29,10 +29,6 @@
         ./hosts/desktop/configuration.nix
 
         ./terminal-utils.nix
-        ./services.nix
-        ./development.nix
-        ./theme.nix
-
         {
           nix.settings = {
             substituters = ["https://cosmic.cachix.org/"];

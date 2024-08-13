@@ -1,9 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: {
+{lib, ...}: {
   imports = [
     ./gnome.nix
     ./cosmic-de.nix
