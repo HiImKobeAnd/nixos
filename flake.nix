@@ -14,6 +14,10 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -38,6 +42,7 @@
         home-manager.nixosModules.home-manager
         inputs.stylix.nixosModules.stylix
         inputs.nixos-cosmic.nixosModules.default
+        inputs.aagl.nixosModules.default
         {
           home-manager = {
             useGlobalPkgs = true;
