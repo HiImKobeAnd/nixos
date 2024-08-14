@@ -1,96 +1,22 @@
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-warning: updating lock file '/home/hiimkobeand/.dotfiles/nixos/flake.lock':
-• Removed input 'xremap-flake'
-• Removed input 'xremap-flake/crane'
-• Removed input 'xremap-flake/crane/nixpkgs'
-• Removed input 'xremap-flake/devshell'
-• Removed input 'xremap-flake/devshell/flake-utils'
-• Removed input 'xremap-flake/devshell/flake-utils/systems'
-• Removed input 'xremap-flake/devshell/nixpkgs'
-• Removed input 'xremap-flake/flake-parts'
-• Removed input 'xremap-flake/flake-parts/nixpkgs-lib'
-• Removed input 'xremap-flake/home-manager'
-• Removed input 'xremap-flake/home-manager/nixpkgs'
-• Removed input 'xremap-flake/hyprland'
-• Removed input 'xremap-flake/hyprland/hyprcursor'
-• Removed input 'xremap-flake/hyprland/hyprcursor/hyprlang'
-• Removed input 'xremap-flake/hyprland/hyprcursor/nixpkgs'
-• Removed input 'xremap-flake/hyprland/hyprcursor/systems'
-• Removed input 'xremap-flake/hyprland/hyprlang'
-• Removed input 'xremap-flake/hyprland/hyprlang/hyprutils'
-• Removed input 'xremap-flake/hyprland/hyprlang/nixpkgs'
-• Removed input 'xremap-flake/hyprland/hyprlang/systems'
-• Removed input 'xremap-flake/hyprland/hyprutils'
-• Removed input 'xremap-flake/hyprland/hyprutils/nixpkgs'
-• Removed input 'xremap-flake/hyprland/hyprutils/systems'
-• Removed input 'xremap-flake/hyprland/hyprwayland-scanner'
-• Removed input 'xremap-flake/hyprland/hyprwayland-scanner/nixpkgs'
-• Removed input 'xremap-flake/hyprland/hyprwayland-scanner/systems'
-• Removed input 'xremap-flake/hyprland/nixpkgs'
-• Removed input 'xremap-flake/hyprland/systems'
-• Removed input 'xremap-flake/hyprland/xdph'
-• Removed input 'xremap-flake/hyprland/xdph/hyprland-protocols'
-• Removed input 'xremap-flake/hyprland/xdph/hyprland-protocols/nixpkgs'
-• Removed input 'xremap-flake/hyprland/xdph/hyprland-protocols/systems'
-• Removed input 'xremap-flake/hyprland/xdph/hyprlang'
-• Removed input 'xremap-flake/hyprland/xdph/nixpkgs'
-• Removed input 'xremap-flake/hyprland/xdph/systems'
-• Removed input 'xremap-flake/nixpkgs'
-• Removed input 'xremap-flake/treefmt-nix'
-• Removed input 'xremap-flake/treefmt-nix/nixpkgs'
-• Removed input 'xremap-flake/xremap'
-warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
 building the system configuration...
 warning: Git tree '/home/hiimkobeand/.dotfiles/nixos' is dirty
-these 22 derivations will be built:
-  /nix/store/422r9pcq1h2z2ny4jk5a54byf92n06fg-users-groups.json.drv
-  /nix/store/b8bq1fsfz7f1wfqlr3hp97hzjyhhg1nw-home-manager-path.drv
-  /nix/store/7arivl7agi754hy7vdzh1sfwdllbl41c-user-environment.drv
-  /nix/store/98nw786xk5fh71dlnrb4mhldfcc5vlbj-nixos.conf.drv
-  /nix/store/qnw8yp7zq5bl28vrm4sar6yvq541wz8a-extra-udev-rules.drv
-  /nix/store/bwbp00hbmigkdb8fali2m4w632npvk57-hwdb.bin.drv
-  /nix/store/bf37f666fmwdlvgsnd7hdfrh35xqfswi-X-Restart-Triggers-systemd-modules-load.drv
-  /nix/store/dg2wbfpa5xgic6jkc5sysg6nkp7vw2mg-unit-systemd-modules-load.service.drv
-  /nix/store/n1j5fnsvz3haxq1ch4wqh4gw8c0ig686-hm_fontconfigconf.d10hmfonts.conf.drv
-  /nix/store/a8pqyx3qzhv5rln460hzb8swwv2blr0x-man-paths.drv
-  /nix/store/m2jpn1ldk4izq4013r8n7dwqbdzag17v-man-cache.drv
-  /nix/store/r3gz04g34ixk4sm9niykcn8l9w0ssw32-hm_.manpath.drv
-  /nix/store/xa8q1zala5068h1w5ibvpi4mq9fh5wm2-hiimkobeand-fish-completions.drv
-  /nix/store/w1xvazdk33a14q0mg2qgwpszfss8k59v-home-manager-files.drv
-  /nix/store/ilij29wp9d4qp3v2lad1jv2if1y6vnff-home-manager-generation.drv
-  /nix/store/lhbsx3q7jxhji2bnd460b1dm9ajax80b-unit-home-manager-hiimkobeand.service.drv
-  /nix/store/w2b3y8301gk6q6rdkjqqbhmw8b0f94sf-X-Restart-Triggers-systemd-udevd.drv
-  /nix/store/njnd23i2bjrgilgc6k08c64s89kkf1fn-unit-systemd-udevd.service.drv
-  /nix/store/d3lamscvvmqikndvnhdxsdl7ix8328w3-system-units.drv
-  /nix/store/mx7dgzbs5nlzs7i2lydnryrfqcbqngf9-udev-rules.drv
-  /nix/store/gd8byvl4jqlgq0pqzjla9a5ff1l0wqm1-etc.drv
-  /nix/store/4sfacc7yr15pi7pmbqmf4izar5i2kc95-nixos-system-nixos-24.11.20240811.a58bc8a.drv
-building '/nix/store/422r9pcq1h2z2ny4jk5a54byf92n06fg-users-groups.json.drv'...
-building '/nix/store/98nw786xk5fh71dlnrb4mhldfcc5vlbj-nixos.conf.drv'...
-building '/nix/store/qnw8yp7zq5bl28vrm4sar6yvq541wz8a-extra-udev-rules.drv'...
-building '/nix/store/b8bq1fsfz7f1wfqlr3hp97hzjyhhg1nw-home-manager-path.drv'...
-building '/nix/store/xa8q1zala5068h1w5ibvpi4mq9fh5wm2-hiimkobeand-fish-completions.drv'...
-building '/nix/store/a8pqyx3qzhv5rln460hzb8swwv2blr0x-man-paths.drv'...
-building '/nix/store/bf37f666fmwdlvgsnd7hdfrh35xqfswi-X-Restart-Triggers-systemd-modules-load.drv'...
-building '/nix/store/w2b3y8301gk6q6rdkjqqbhmw8b0f94sf-X-Restart-Triggers-systemd-udevd.drv'...
-building '/nix/store/bwbp00hbmigkdb8fali2m4w632npvk57-hwdb.bin.drv'...
-building '/nix/store/mx7dgzbs5nlzs7i2lydnryrfqcbqngf9-udev-rules.drv'...
-building '/nix/store/m2jpn1ldk4izq4013r8n7dwqbdzag17v-man-cache.drv'...
-building '/nix/store/dg2wbfpa5xgic6jkc5sysg6nkp7vw2mg-unit-systemd-modules-load.service.drv'...
-building '/nix/store/njnd23i2bjrgilgc6k08c64s89kkf1fn-unit-systemd-udevd.service.drv'...
-building '/nix/store/r3gz04g34ixk4sm9niykcn8l9w0ssw32-hm_.manpath.drv'...
-building '/nix/store/n1j5fnsvz3haxq1ch4wqh4gw8c0ig686-hm_fontconfigconf.d10hmfonts.conf.drv'...
-building '/nix/store/7arivl7agi754hy7vdzh1sfwdllbl41c-user-environment.drv'...
-building '/nix/store/w1xvazdk33a14q0mg2qgwpszfss8k59v-home-manager-files.drv'...
-building '/nix/store/ilij29wp9d4qp3v2lad1jv2if1y6vnff-home-manager-generation.drv'...
-building '/nix/store/lhbsx3q7jxhji2bnd460b1dm9ajax80b-unit-home-manager-hiimkobeand.service.drv'...
-building '/nix/store/d3lamscvvmqikndvnhdxsdl7ix8328w3-system-units.drv'...
-building '/nix/store/gd8byvl4jqlgq0pqzjla9a5ff1l0wqm1-etc.drv'...
-building '/nix/store/4sfacc7yr15pi7pmbqmf4izar5i2kc95-nixos-system-nixos-24.11.20240811.a58bc8a.drv'...
-stopping the following units: systemd-modules-load.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket, systemd-udevd.service
+these 6 derivations will be built:
+  /nix/store/ycgpzldswzqq1pvdyibzrqcdj15v695m-nix.conf.drv
+  /nix/store/99b6129i6hfrfh4m6a5m0mvgig3w3j00-X-Restart-Triggers-nix-daemon.drv
+  /nix/store/l6p8xa30mk1pjn9rgcmy6yg4gxfqbb0m-unit-nix-daemon.service.drv
+  /nix/store/yj084cf63fhn5mrav1jv92w5ga43r9x0-system-units.drv
+  /nix/store/63lfx3hrpgg8ksdha47g1ybbqqs0wb6k-etc.drv
+  /nix/store/nj579wwaycv7c7d5z9xdiqf499jjlx4z-nixos-system-nixos-24.11.20240811.a58bc8a.drv
+building '/nix/store/ycgpzldswzqq1pvdyibzrqcdj15v695m-nix.conf.drv'...
+building '/nix/store/99b6129i6hfrfh4m6a5m0mvgig3w3j00-X-Restart-Triggers-nix-daemon.drv'...
+building '/nix/store/l6p8xa30mk1pjn9rgcmy6yg4gxfqbb0m-unit-nix-daemon.service.drv'...
+building '/nix/store/yj084cf63fhn5mrav1jv92w5ga43r9x0-system-units.drv'...
+building '/nix/store/63lfx3hrpgg8ksdha47g1ybbqqs0wb6k-etc.drv'...
+building '/nix/store/nj579wwaycv7c7d5z9xdiqf499jjlx4z-nixos-system-nixos-24.11.20240811.a58bc8a.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for hiimkobeand...
 restarting sysinit-reactivation.target
-restarting the following units: home-manager-hiimkobeand.service
-starting the following units: systemd-modules-load.service, systemd-udevd-control.socket, systemd-udevd-kernel.socket
+restarting the following units: nix-daemon.service
+the following new units were started: libvirtd.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
