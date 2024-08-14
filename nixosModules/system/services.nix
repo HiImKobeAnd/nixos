@@ -6,8 +6,9 @@
     enable = true;
     overrideDevices = true;
     overrideFolders = true;
+    user = "hiimkobeand";
 
-    #wqdataDir = "/home/hiimkobeand";
+    dataDir = "/home/hiimkobeand";
     #configDir = "/home/hiimkobeand/.config/syncthing";
 
     devices = {
