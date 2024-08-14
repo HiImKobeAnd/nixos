@@ -7,6 +7,7 @@
     overrideDevices = true;
     overrideFolders = true;
     user = "hiimkobeand";
+    openDefaultPorts = true;
 
     dataDir = "/home/hiimkobeand";
     #configDir = "/home/hiimkobeand/.config/syncthing";
