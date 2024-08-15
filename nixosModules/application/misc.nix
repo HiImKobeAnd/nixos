@@ -3,5 +3,6 @@
     firefox
     youtube-music
     geary
+    libreoffice
   ];
 }
