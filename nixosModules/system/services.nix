@@ -12,4 +12,5 @@
     dataDir = "/home/hiimkobeand";
     configDir = "/home/hiimkobeand/.config/syncthing";
   };
+  services.flatpak.enable = true;
 }

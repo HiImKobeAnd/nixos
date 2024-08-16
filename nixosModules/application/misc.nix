@@ -4,6 +4,5 @@
     youtube-music
     geary
     libreoffice
-    flatpak
   ];
 }
