@@ -124,6 +124,14 @@
 
     gh.enable = true;
 
+    zathura = {
+      enable = true;
+      options = {
+        continuous-hist-save = true;
+        database = "sqlite";
+      };
+    };
+
     nixcord = {
       enable = true;
       openASAR.enable = false;
