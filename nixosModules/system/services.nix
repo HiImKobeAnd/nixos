@@ -13,4 +13,19 @@
     configDir = "/home/hiimkobeand/.config/syncthing";
   };
   services.flatpak.enable = true;
+
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            "pageup" = "playpause";
+            "pagedown" = "nextsong";
+          };
+        };
+      };
+    };
+  };
 }
