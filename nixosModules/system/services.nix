@@ -23,12 +23,15 @@
           main = {
             "pageup" = "playpause";
             "pagedown" = "nextsong";
+            "home" = "f23";
             "end" = "f24";
             rightalt = "layer(rightalt)";
           };
           rightalt = {
             "pageup" = "pageup";
             "pagedown" = "pagedown";
+            "home" = "home";
+            "end" = "end";
           };
         };
       };
