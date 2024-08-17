@@ -23,6 +23,7 @@
           main = {
             "pageup" = "playpause";
             "pagedown" = "nextsong";
+            fn = "layer(fn)";
           };
           fn = {
             "pageup" = "pageup";
