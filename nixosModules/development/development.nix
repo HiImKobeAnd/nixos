@@ -22,10 +22,11 @@
     gcc14
     mold
     lldb_18
-    rustup
     cargo-watch
     cargo-audit
-    (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
+    rustup
+    rust-bin.stable.latest.default
+    #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
   ];
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default
