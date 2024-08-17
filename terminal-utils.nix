@@ -15,6 +15,7 @@
 
     git
     gh
+    koji
 
     alejandra
     manix
