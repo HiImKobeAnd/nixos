@@ -96,7 +96,10 @@
         lttt = "eza -R --level=3";
 
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
-        zathura = "zathura -d ~/Documents/Bøger/zathura --fork";
+        zathura = "zathura -d ~/Documents/Bøger/zathura";
+      };
+      functions = {
+        zathura = "command zathura --fork -d ~/Documents/Bøger/zathura";
       };
       interactiveShellInit = "
     set fish_gretting ''
