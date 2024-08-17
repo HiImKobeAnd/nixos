@@ -129,8 +129,10 @@
       options = {
         continuous-hist-save = "true";
         database = "sqlite";
-        data-directory = "~/Documents/Bøger/zathura";
       };
+      extraConfig = "
+        set data-directory ~/Documents/Bøger/zathura/
+        ";
     };
 
     nixcord = {
