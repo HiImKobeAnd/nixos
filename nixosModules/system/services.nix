@@ -23,6 +23,7 @@
           main = {
             "pageup" = "playpause";
             "pagedown" = "nextsong";
+            "end" = "f24";
             rightalt = "layer(rightalt)";
           };
           rightalt = {
