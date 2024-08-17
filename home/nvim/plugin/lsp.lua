@@ -42,6 +42,12 @@ require('lspconfig').lua_ls.setup {
     }
 }
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  buffer = buffer,
+  callback = function()
+    vim.lsp.buf.format { async = false }
+  end
+})
 
 require'lspconfig'.nil_ls.setup{}
 require'lspconfig'.rust_analyzer.setup{}
