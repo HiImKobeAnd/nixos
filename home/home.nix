@@ -98,11 +98,10 @@
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
         zathura = "zathura -d ~/Documents/Bøger/zathura";
       };
-      interactiveShellInit = "
-    set -U fish_gretting \"Hello\" ";
       shellInit = "
-    set fish_prompt_pwd_dir_length 0
-    ";
+      set -U fish_greeting 
+      set fish_prompt_pwd_dir_length 0
+      ";
     };
 
     zoxide = {
