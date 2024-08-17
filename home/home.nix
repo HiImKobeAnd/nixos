@@ -101,7 +101,7 @@
       plugins = [
         {
           name = "colored-man-pages";
-          src = pkgs.fishPlugins.colored-man-pages;
+          src = pkgs.fishPlugins.colored-man-pages.src;
         }
       ];
       shellInit = "
