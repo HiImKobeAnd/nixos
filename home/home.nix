@@ -99,8 +99,7 @@
         zathura = "zathura -d ~/Documents/Bøger/zathura";
       };
       interactiveShellInit = "
-    set fish_gretting ''
-	    ";
+    set -U fish_gretting \"\" ";
       shellInit = "
     set fish_prompt_pwd_dir_length 0
     ";
