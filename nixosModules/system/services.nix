@@ -24,6 +24,10 @@
             "pageup" = "playpause";
             "pagedown" = "nextsong";
           };
+          ctrl = {
+            "pageup" = "pageup";
+            "pagedown" = "pagedown";
+          };
         };
       };
     };
