@@ -25,8 +25,8 @@
     cargo-watch
     cargo-audit
     rustup
-    rust-bin.stable.latest.default
-    #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
+    #rust-bin.stable.latest.default
+    (rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
   ];
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default
