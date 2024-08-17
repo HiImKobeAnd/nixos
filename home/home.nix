@@ -127,7 +127,7 @@
     zathura = {
       enable = true;
       options = {
-        continuous-hist-save = true;
+        #continuous-hist-save = true;
         database = "sqlite";
       };
     };
