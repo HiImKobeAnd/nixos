@@ -98,6 +98,12 @@
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
         zathura = "zathura --fork -d ~/Documents/Bøger/zathura";
       };
+      plugins = [
+        {
+          name = "colored-man-pages";
+          src = pkgs.fishPlugins.colored-man-pages;
+        }
+      ];
       shellInit = "
       set -U fish_greeting 
       set fish_prompt_pwd_dir_length 0
