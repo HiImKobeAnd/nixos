@@ -23,9 +23,9 @@
           main = {
             "pageup" = "playpause";
             "pagedown" = "nextsong";
-            fn = "layer(fn)";
+            rightalt = "layer(rightalt)";
           };
-          fn = {
+          rightalt = {
             "pageup" = "pageup";
             "pagedown" = "pagedown";
           };
