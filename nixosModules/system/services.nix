@@ -24,7 +24,7 @@
             "pageup" = "playpause";
             "pagedown" = "nextsong";
           };
-          ctrl = {
+          "ctrl:C" = {
             "pageup" = "pageup";
             "pagedown" = "pagedown";
           };
