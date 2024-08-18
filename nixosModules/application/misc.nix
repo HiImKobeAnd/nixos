@@ -5,5 +5,6 @@
     geary
     libreoffice
     zathura
+    porsmo
   ];
 }
