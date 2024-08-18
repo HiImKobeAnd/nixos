@@ -12,6 +12,7 @@
     dua
     zoxide
     ripgrep
+    tldr
 
     git
     gh
