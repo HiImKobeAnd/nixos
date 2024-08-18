@@ -25,7 +25,7 @@
             "pagedown" = "nextsong";
             "home" = "f23";
             "end" = "f24";
-            rightalt = "layer(rightalt)";
+            #rightalt = "layer(rightalt)";
           };
           rightalt = {
             "pageup" = "pageup";
