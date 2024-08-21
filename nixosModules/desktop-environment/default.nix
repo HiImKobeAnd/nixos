@@ -4,5 +4,6 @@
     ./cosmic-de.nix
   ];
 
-  gnome.enable = lib.mkDefault true;
+  gnome.enable = true;
+  cosmic-de.enable = true;
 }

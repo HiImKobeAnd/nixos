@@ -23,7 +23,7 @@
     mold
     lldb_18
     cargo-watch
-    cargo-audit
+    #cargo-audit
     rustup
     #rust-bin.stable.latest.default
     #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)

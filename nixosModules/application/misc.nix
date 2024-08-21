@@ -6,5 +6,6 @@
     libreoffice
     zathura
     porsmo
+    obsidian
   ];
 }
