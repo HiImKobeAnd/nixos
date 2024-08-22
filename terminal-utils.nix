@@ -23,6 +23,5 @@
     dconf2nix
     nil
     nh
-    comma
   ];
 }
