@@ -4,6 +4,6 @@
     ./cosmic-de.nix
   ];
 
-  gnome.enable = false;
-  cosmic-de.enable = true;
+  gnome.enable = true;
+  cosmic-de.enable = false;
 }
