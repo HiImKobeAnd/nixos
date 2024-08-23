@@ -151,11 +151,15 @@
           fakeNitro.enable = true;
           moreKaomoji.enable = true;
           mutualGroupDMs.enable = true;
-          watchTogetherAdblock.enable = true;
+          youtubeAdblock.enable = true;
           messageClickActions.enable = true;
           noTrack.enable = true;
           shikiCodeblocks.enable = true;
           volumeBooster.enable = true;
+          dearrow.enable = true;
+          dearrow.hideButton = true;
+          moreCommands.enable = true;
+          reverseImageSearch.enable = true;
         };
       };
     };
