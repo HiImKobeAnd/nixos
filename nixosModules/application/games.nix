@@ -12,6 +12,7 @@
     environment.systemPackages = with pkgs; [
       lutris
       steam
+      steam-tui
       prismlauncher
       heroic
       gamemode
