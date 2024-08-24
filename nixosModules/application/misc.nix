@@ -7,5 +7,6 @@
     zathura
     porsmo
     obsidian
+    calibre
   ];
 }
