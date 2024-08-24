@@ -26,7 +26,9 @@
     device = "/dev/disk/by-uuid/8be8a434-5206-45a2-b162-fa1d058f7368";
     fsType = "ext4";
     options = [
-      "allow_other"
+      "defaults"
+      "user"
+      "rw"
       "nofail"
     ];
   };
