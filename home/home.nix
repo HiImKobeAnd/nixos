@@ -21,6 +21,10 @@
       enable = true;
       userName = "hiimkobeand";
       userEmail = "hiimkobeand@gmail.com";
+      aliases = {
+        st = "status";
+        aa = "add -A";
+      };
     };
 
     neovim = {
