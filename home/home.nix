@@ -24,6 +24,9 @@
       aliases = {
         st = "status";
         aa = "add -A";
+        cc = "!koji";
+        last = "log -1 HEAD";
+        unstage = "reset HEAD --";
       };
     };
 
