@@ -25,6 +25,7 @@
         st = "status";
         aa = "add -A";
         cc = "!koji";
+        ll = "log --online --decorate --graph --all";
         last = "log -1 HEAD";
         unstage = "reset HEAD --";
       };
