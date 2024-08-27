@@ -17,10 +17,12 @@
       gamemode
       parsec-bin
     ];
-    programs.steam.enable = true;
-    programs.steam.remotePlay.openFirewall = true;
+    programs = {
+      steam.enable = true;
+      steam.remotePlay.openFirewall = true;
 
-    programs.sleepy-launcher.enable = true;
-    programs.honkers-railway-launcher.enable = true;
+      sleepy-launcher.enable = true;
+      honkers-railway-launcher.enable = true;
+    };
   };
 }
