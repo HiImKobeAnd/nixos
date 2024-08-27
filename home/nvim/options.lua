@@ -19,3 +19,5 @@ vim.o.mouse = 'a'
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+vim.keymap.set('n', '<C-p>', ':FZF<CR>', {noremap = true, silent = true})

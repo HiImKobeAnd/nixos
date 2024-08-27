@@ -60,7 +60,6 @@
         friendly-snippets
         lualine-nvim
         auto-pairs
-        ctrlp
         fugitive
         vim-nix
         neodev-nvim

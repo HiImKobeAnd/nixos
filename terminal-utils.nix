@@ -18,6 +18,8 @@
     gh
     koji
 
+    lua-language-server
+
     alejandra
     manix
     dconf2nix
