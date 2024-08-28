@@ -14,6 +14,8 @@
     ripgrep
     tldr
 
+    quickemu
+
     git
     gh
     koji
