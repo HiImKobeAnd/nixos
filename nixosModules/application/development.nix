@@ -2,6 +2,5 @@
   environment.systemPackages = with pkgs; [
     alacritty
     vscode
-    jetbrains.rider
   ];
 }
