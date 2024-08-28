@@ -10,5 +10,6 @@
     calibre
     virt-manager
     qemu
+    swtpm
   ];
 }
