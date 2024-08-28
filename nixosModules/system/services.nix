@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     syncthing
+    spice
   ];
   services.syncthing = {
     enable = true;
@@ -13,6 +14,8 @@
     configDir = "/home/hiimkobeand/.config/syncthing";
   };
   services.flatpak.enable = true;
+
+  services.spice-vdagentd.enable = true;
 
   services.keyd = {
     enable = true;
