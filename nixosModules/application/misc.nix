@@ -9,5 +9,6 @@
     obsidian
     calibre
     virt-manager
+    qemu
   ];
 }
