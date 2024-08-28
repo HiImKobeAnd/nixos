@@ -8,5 +8,6 @@
     porsmo
     obsidian
     calibre
+    virt-manager
   ];
 }

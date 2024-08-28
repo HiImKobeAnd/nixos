@@ -11,4 +11,5 @@
     ./nvidia.nix
   ];
   nvidia.enable = lib.mkDefault true;
+  virtualisation.libvirtd.enable = true;
 }

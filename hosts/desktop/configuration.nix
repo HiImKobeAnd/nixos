@@ -29,7 +29,7 @@
   users.users.hiimkobeand = {
     isNormalUser = true;
     description = "Kobe Andersen";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "libvirtd"];
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
