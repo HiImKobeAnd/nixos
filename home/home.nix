@@ -15,11 +15,10 @@
   };
 
   xdg.desktopEntries = {
-    windows11 = {
+    windows = {
       name = "windows 11";
       genericName = "Virtual machine";
       exec = "/home/hiimkobeand/VM/quickemu/quickemu-wrapped --vm windows-11.conf --display spice";
-      icon = "qemu";
       terminal = false;
       categories = ["Utility"];
     };
