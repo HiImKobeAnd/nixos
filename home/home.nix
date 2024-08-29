@@ -18,7 +18,7 @@
     windows = {
       name = "windows 11";
       genericName = "Virtual machine";
-      exec = "/home/hiimkobeand/VM/quickemu/quickemu-wrapped --vm windows-11.conf --display spice";
+      exec = "quickemu --vm /home/hiimkobeand/VM/quickemu/windows-11.conf --display spice";
       terminal = false;
       categories = ["Utility"];
     };
