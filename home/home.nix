@@ -14,6 +14,17 @@
     stateVersion = "24.05";
   };
 
+  xdg.desktopEntries = {
+    windows11 = {
+      name = "windows 11";
+      genericName = "Virtual machine";
+      exec = "/home/hiimkobeand/VM/quickemu/quickemu-wrapped --vm windows-11.conf --display spice";
+      icon = "qemu";
+      terminal = false;
+      categories = ["Utility"];
+    };
+  };
+
   programs = {
     home-manager.enable = true;
 
