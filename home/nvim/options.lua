@@ -2,6 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.o.clipboard = 'unnamedplus'
+vim.o.undofile = true
 
 vim.o.relativenumber = true
 
@@ -20,4 +21,4 @@ vim.o.mouse = 'a'
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.keymap.set('n', '<C-p>', ':FZF<CR>', {noremap = true, silent = true})
+vim.keymap.set('n', '<C-p>', ':FZF<CR>', { noremap = true, silent = true })
