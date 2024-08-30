@@ -11,6 +11,5 @@
     virt-manager
     qemu
     swtpm
-    obs-studio
   ];
 }
