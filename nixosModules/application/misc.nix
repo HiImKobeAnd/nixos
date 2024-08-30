@@ -11,6 +11,6 @@
     virt-manager
     qemu
     swtpm
-    vmware-workstation
+    virtualbox
   ];
 }
