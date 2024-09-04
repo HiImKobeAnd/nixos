@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     firefox
+    thunderbird
     youtube-music
     geary
     libreoffice
