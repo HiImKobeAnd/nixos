@@ -8,6 +8,8 @@
     fzf
     eza
     bat
+    bat-extras.batman
+    bat-extras.batdiff
     btop
     dua
     zoxide
