@@ -12,5 +12,6 @@
     virt-manager
     qemu
     swtpm
+    noisetorch
   ];
 }
