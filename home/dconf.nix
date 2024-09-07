@@ -66,7 +66,7 @@ with lib.hm.gvariant; {
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       binding = "<Super>g";
-      command = "geary";
+      command = "thunderbird";
       name = "Open Mail Client";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
