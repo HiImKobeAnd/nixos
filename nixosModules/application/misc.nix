@@ -15,5 +15,6 @@
     qemu
     swtpm
     noisetorch
+    denaro
   ];
 }
