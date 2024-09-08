@@ -5,6 +5,9 @@
 
     fish
 
+    dolphin
+    nemo
+
     fzf
     eza
     bat
