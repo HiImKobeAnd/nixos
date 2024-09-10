@@ -111,6 +111,7 @@
         lt = "eza -R --level=1";
         ltt = "eza -R --level=2";
         lttt = "eza -R --level=3";
+        c2odt = "libreoffice --headless --convert-to odt *.docx";
 
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
         zathura = "zathura --fork -d ~/Documents/Bøger/zathura";
