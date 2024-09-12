@@ -23,8 +23,17 @@
       gnomeExtensions.paperwm
       gnomeExtensions.tray-icons-reloaded
     ];
-    environment.gnome.excludePackages = [
-      pkgs.geary
-    ];
+    environment.gnome.excludePackages =
+      (with pkgs.gnome; [
+        geary
+        evince
+        cheese
+        gnome-music
+        gnome-terminal
+        epiphany
+      ])
+      ++ (with pkgs; [
+        gnome-tour
+      ]);
   };
 }
