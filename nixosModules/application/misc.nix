@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  programs.geary.enable = false;
   programs.noisetorch.enable = true;
   environment.systemPackages = with pkgs; [
     firefox

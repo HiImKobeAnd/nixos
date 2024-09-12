@@ -23,5 +23,8 @@
       gnomeExtensions.paperwm
       gnomeExtensions.tray-icons-reloaded
     ];
+    environment.gnome.excludePackages = [
+      pkgs.geary
+    ];
   };
 }
