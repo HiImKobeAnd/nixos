@@ -5,6 +5,8 @@
 
     fish
 
+    pandoc
+
     fzf
     eza
     bat
