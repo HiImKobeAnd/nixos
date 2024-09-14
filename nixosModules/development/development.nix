@@ -19,6 +19,8 @@
     sqlx-cli
     postgresql_16
 
+    jdk
+
     gcc14
     mold
     lldb_18
