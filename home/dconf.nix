@@ -75,8 +75,8 @@ with lib.hm.gvariant; {
       name = "Open Note Taking App";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
-      binding = "<C-D-S>";
-      command = "~/home/Documents/Scripts/switch_audio_devices.sh";
+      binding = "<Super>a";
+      command = "~/Documents/Scripts/switch_audio_device.sh";
       name = "Switches audio devices";
     };
 
