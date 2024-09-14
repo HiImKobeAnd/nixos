@@ -23,6 +23,9 @@
     gh
     koji
 
+    unzip
+    zip
+
     lua-language-server
 
     alejandra
