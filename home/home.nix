@@ -38,6 +38,23 @@
         ll = "log --oneline --decorate --graph";
         last = "log -1 HEAD";
         unstage = "reset HEAD --";
+        opgaver = "#!/etc/profiles/per-user/hiimkobeand/bin/bash
+
+set -e
+
+cp /home/hiimkobeand/Downloads/Opgaver.zip ./
+
+unzip ./Opgaver.zip
+
+for file in *.docx; do
+    pandoc \"$file\" -o \"\${file%.docx}.odt\"
+done
+
+rm ./*.docx
+
+rm ./Opgaver.zip
+
+rm /home/hiimkobeand/Downloads/Opgaver.zip";
       };
     };
 
