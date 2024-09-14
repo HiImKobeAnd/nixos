@@ -76,7 +76,7 @@ with lib.hm.gvariant; {
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
       binding = "<Super>a";
-      command = "~/Documents/Scripts/switch_audio_device.sh";
+      command = "/home/hiimkobeand/Documents/Scripts/switch_audio_device.sh";
       name = "Switches audio devices";
     };
 
