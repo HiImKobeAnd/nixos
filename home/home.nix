@@ -153,7 +153,7 @@
 
     nixcord = {
       enable = true;
-      openASAR.enable = false;
+      discord.openASAR.enable = false;
       config = {
         themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
         plugins = {
