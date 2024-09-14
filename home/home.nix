@@ -113,6 +113,7 @@
         lttt = "eza -R --level=3";
         c2odt = "libreoffice --headless --convert-to odt *.docx";
         opgaver = "~/Documents/Scripts/convert_opgaver.sh";
+        o = "xdg-open";
 
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
         zathura = "zathura --fork -d ~/Documents/Bøger/zathura";
