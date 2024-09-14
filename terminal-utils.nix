@@ -19,6 +19,7 @@
     quickemu
 
     git
+    lazygit
     gh
     koji
 
