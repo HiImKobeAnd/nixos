@@ -18,6 +18,7 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser.url = "github:ch4og/zen-browser-flake";
   };
 
   outputs = {
