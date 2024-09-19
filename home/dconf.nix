@@ -56,7 +56,7 @@ with lib.hm.gvariant; {
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Ctrl>n";
-      command = "firefox";
+      command = "zen";
       name = "Open Browser";
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
