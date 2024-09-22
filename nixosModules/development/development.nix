@@ -21,6 +21,8 @@
 
     jdk
 
+    doctl
+
     gcc14
     mold
     lldb_18
