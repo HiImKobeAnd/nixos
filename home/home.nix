@@ -12,6 +12,7 @@
     username = "hiimkobeand";
     homeDirectory = "/home/hiimkobeand";
     stateVersion = "24.05";
+    sessionPath = ["/home/hiimkobeand/documents/scripts/protonhax"];
   };
 
   xdg.desktopEntries = {
