@@ -21,5 +21,6 @@
     swtpm
     noisetorch
     denaro
+    gimp
   ];
 }
