@@ -13,6 +13,7 @@
     geary
     libreoffice
     zathura
+    sioyek
     porsmo
     obsidian
     calibre

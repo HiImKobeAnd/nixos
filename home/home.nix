@@ -153,6 +153,13 @@
       };
     };
 
+    sioyek = {
+      enable = true;
+      config = {
+        "shared_database_path" = "/home/hiimkobeand/Documents/Bøger/sioyek";
+      };
+    };
+
     nixcord = {
       enable = true;
       discord.openASAR.enable = false;
