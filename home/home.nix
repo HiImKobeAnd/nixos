@@ -117,8 +117,6 @@
 
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
         zathura = "zathura --fork -d ~/Documents/Bøger/zathura";
-
-        sioyek = "nohup sioyek &";
       };
       shellInit = "
       set -U fish_greeting 
