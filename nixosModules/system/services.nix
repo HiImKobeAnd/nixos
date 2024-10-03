@@ -17,6 +17,8 @@
 
   services.spice-vdagentd.enable = true;
 
+  services.system76-scheduler.enable = true;
+
   services.keyd = {
     enable = true;
     keyboards = {
