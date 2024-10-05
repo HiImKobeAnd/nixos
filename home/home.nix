@@ -156,7 +156,7 @@
     sioyek = {
       enable = true;
       config = {
-        "shared_database_path" = "/home/hiimkobeand/Documents/Books/sioyek";
+        "shared_database_path" = "/home/hiimkobeand/sioyek";
       };
     };
 
