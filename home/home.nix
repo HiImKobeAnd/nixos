@@ -116,7 +116,7 @@
         o = "xdg-open";
 
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
-        zathura = "zathura --fork -d ~/Documents/Bøger/zathura";
+        zathura = "zathura --fork -d ~/Documents/Books/zathura";
       };
       shellInit = "
       set -U fish_greeting 
@@ -156,7 +156,7 @@
     sioyek = {
       enable = true;
       config = {
-        "shared_database_path" = "/home/hiimkobeand/Documents/Bøger/sioyek";
+        "shared_database_path" = "/home/hiimkobeand/Documents/Books/sioyek";
       };
     };
 
