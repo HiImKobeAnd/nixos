@@ -23,5 +23,6 @@
     noisetorch
     denaro
     gimp
+    netflix
   ];
 }
