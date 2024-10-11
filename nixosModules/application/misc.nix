@@ -24,5 +24,6 @@
     denaro
     gimp
     netflix
+    microsoft-edge
   ];
 }
