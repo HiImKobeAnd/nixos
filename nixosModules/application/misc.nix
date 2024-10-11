@@ -23,7 +23,10 @@
     noisetorch
     denaro
     gimp
-    netflix
-    microsoft-edge
+    (vivaldi.override {
+      proprietaryCodecs = true;
+      enableWidevine = true;
+    })
+    (chromium.override {enableWideVine = true;})
   ];
 }
