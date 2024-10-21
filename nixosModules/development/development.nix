@@ -32,14 +32,6 @@
     rustup
     #rust-bin.stable.latest.default
     #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
-
-    # Tauri
-    cargo-tauri
-    dioxus-cli
-    webkitgtk_4_1
-    webkitgtk_4_1.dev
-    librsvg
-    libsoup_3
   ];
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default
