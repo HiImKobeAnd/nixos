@@ -34,6 +34,7 @@
     #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
 
     # Tauri
+    cargo-tauri
     dioxus-cli
     webkitgtk_4_1
     webkitgtk_4_1.dev
