@@ -21,7 +21,6 @@
 
     environment.systemPackages = with pkgs; [
       gnomeExtensions.pop-shell
-      gnomeExtensions.pop-launcher-super-key
       gnomeExtensions.tray-icons-reloaded
     ];
     environment.gnome.excludePackages = with pkgs; [
