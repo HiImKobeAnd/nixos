@@ -22,6 +22,7 @@
     noisetorch
     denaro
     gimp
+    komikku
     (vivaldi.override {
       proprietaryCodecs = true;
       enableWidevine = true;
