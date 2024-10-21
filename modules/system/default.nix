@@ -1,9 +1,8 @@
 {lib, ...}: {
   imports = [
     ./auto-upgrade.nix
-    ./garbage-collection.nix
-    ./package.nix
     ./fonts.nix
+    ./package.nix
     ./locale.nix
     ./sound.nix
     ./bluetooth.nix

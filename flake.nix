@@ -28,13 +28,15 @@
   } @ inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+        };
         modules = [
-          ./nixosModules/application
-          ./nixosModules/desktop-environment
-          ./nixosModules/development
-          ./nixosModules/system
-          ./nixosModules/theme
+          ./modules/application
+          ./modules/desktop-environment
+          ./modules/development
+          ./modules/system
+          ./modules/theme
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
           (
@@ -46,8 +48,17 @@
               config = {
                 nix = {
                   settings = {
+                    auto-optimise-store = true;
                     substituters = ["https://cosmic.cachix.org/" "https://ezkea.cachix.org"];
                     trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="];
+                  };
+                  gc = {
+                    automatic = true;
+                    dates = "daily";
+                    options = "--delete-older-than 30d";
+                  };
+                  optimise = {
+                    automatic = true;
                   };
                 };
                 nvidia.enable = true;
