@@ -16,7 +16,6 @@
     sioyek
     porsmo
     obsidian
-    calibre
     virt-manager
     qemu
     swtpm

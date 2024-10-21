@@ -14,6 +14,7 @@
       steam
       prismlauncher
       heroic
+      airshipper
       gamemode
       parsec-bin
     ];
