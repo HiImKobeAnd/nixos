@@ -26,33 +26,51 @@
     home-manager,
     ...
   } @ inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./nixosModules
-        ./hosts/desktop/configuration.nix
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./nixosModules/application
+          ./nixosModules/desktop-environment
+          ./nixosModules/development
+          ./nixosModules/system
+          ./nixosModules/theme
+          ./hosts/desktop/configuration.nix
+          ./terminal-utils.nix
+          (
+            {
+              config,
+              lib,
+              ...
+            }: {
+              config = {
+                nix = {
+                  settings = {
+                    substituters = ["https://cosmic.cachix.org/" "https://ezkea.cachix.org"];
+                    trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="];
+                  };
+                };
+                nvidia.enable = true;
+                gnome.enable = true;
+                cosmic-de.enable = false;
+              };
+            }
+          )
+          home-manager.nixosModules.home-manager
+          inputs.stylix.nixosModules.stylix
+          inputs.nixos-cosmic.nixosModules.default
+          inputs.aagl.nixosModules.default
 
-        ./terminal-utils.nix
-        {
-          nix.settings = {
-            substituters = ["https://cosmic.cachix.org/" "https://ezkea.cachix.org"];
-            trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="];
-          };
-        }
-        home-manager.nixosModules.home-manager
-        inputs.stylix.nixosModules.stylix
-        inputs.nixos-cosmic.nixosModules.default
-        inputs.aagl.nixosModules.default
-
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.hiimkobeand = import ./home/home.nix;
-            extraSpecialArgs = {inherit inputs;};
-          };
-        }
-      ];
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.hiimkobeand = import ./home/home.nix;
+              extraSpecialArgs = {inherit inputs;};
+            };
+          }
+        ];
+      };
     };
   };
 }
