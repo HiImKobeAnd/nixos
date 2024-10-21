@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:kaylorben/nixcord";
-    stylix.url = "github:danth/stylix";
+    #stylix.url = "github:danth/stylix";
     rust-overlay.url = "github:oxalica/rust-overlay";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
@@ -36,7 +36,7 @@
           ./modules/desktop-environment
           ./modules/development
           ./modules/system
-          ./modules/theme
+          #./modules/theme
           ./services
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
@@ -69,7 +69,7 @@
             }
           )
           home-manager.nixosModules.home-manager
-          inputs.stylix.nixosModules.stylix
+          #inputs.stylix.nixosModules.stylix
           inputs.nixos-cosmic.nixosModules.default
           inputs.aagl.nixosModules.default
 

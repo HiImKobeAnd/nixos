@@ -5,7 +5,7 @@
 }: {
   imports = [
     inputs.nixcord.homeManagerModules.nixcord
-    ./dconf.nix
+    #./dconf.nix
   ];
 
   home = {
