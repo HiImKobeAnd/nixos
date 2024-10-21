@@ -20,7 +20,7 @@
     };
 
     environment.systemPackages = with pkgs; [
-      gnomeExtensions.paperwm
+      gnomeExtensions.pop-shell
       gnomeExtensions.tray-icons-reloaded
     ];
     environment.gnome.excludePackages = with pkgs; [

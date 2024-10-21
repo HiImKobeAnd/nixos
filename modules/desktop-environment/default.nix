@@ -5,5 +5,5 @@
   ];
 
   gnome.enable = lib.mkDefault true;
-  cosmic-de.enable = false;
+  cosmic-de.enable = lib.mkDefault false;
 }
