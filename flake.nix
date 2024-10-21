@@ -39,11 +39,11 @@
             trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="];
           };
         }
-
         home-manager.nixosModules.home-manager
         inputs.stylix.nixosModules.stylix
         inputs.nixos-cosmic.nixosModules.default
         inputs.aagl.nixosModules.default
+
         {
           home-manager = {
             useGlobalPkgs = true;

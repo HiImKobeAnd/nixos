@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+  ];
+
   programs.noisetorch.enable = true;
   environment.systemPackages = with pkgs; [
     firefox
