@@ -6,7 +6,6 @@
     ./locale.nix
     ./sound.nix
     ./bluetooth.nix
-    ./services.nix
     ./nvidia.nix
   ];
   nvidia.enable = lib.mkDefault true;

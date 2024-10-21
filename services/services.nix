@@ -1,18 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    syncthing
     spice
   ];
-  services.syncthing = {
-    enable = true;
-    overrideDevices = false;
-    overrideFolders = false;
-    user = "hiimkobeand";
-    openDefaultPorts = true;
-
-    dataDir = "/home/hiimkobeand";
-    configDir = "/home/hiimkobeand/.config/syncthing";
-  };
   services.flatpak.enable = true;
 
   services.spice-vdagentd.enable = true;

@@ -37,6 +37,7 @@
           ./modules/development
           ./modules/system
           ./modules/theme
+          ./services
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
           (
