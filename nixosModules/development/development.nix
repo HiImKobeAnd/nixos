@@ -31,6 +31,8 @@
     rustup
     #rust-bin.stable.latest.default
     #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
+
+    bun
   ];
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default
