@@ -15,6 +15,7 @@
     nodePackages.pnpm
     nodePackages.prettier
     deno
+    flutter
 
     sqlite
     sqlx-cli
