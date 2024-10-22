@@ -35,6 +35,6 @@
     dconf2nix
     nil
     nh
-    (pkgs.writeScriptBin "protonhax" ''echo "Hello!"'')
+    (pkgs.writeScriptBin "protonhax" "${builtins.readFile ./protonhax.sh}")
   ];
 }
