@@ -4,6 +4,7 @@
   ...
 }: {
   programs.noisetorch.enable = true;
+  virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
     firefox
     inputs.zen-browser.packages."x86_64-linux".default
@@ -23,10 +24,6 @@
     denaro
     gimp
     komikku
-    (vivaldi.override {
-      proprietaryCodecs = true;
-      enableWidevine = true;
-    })
     (chromium.override {enableWideVine = true;})
   ];
 }
