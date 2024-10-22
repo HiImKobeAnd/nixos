@@ -35,5 +35,6 @@
     dconf2nix
     nil
     nh
+    (pkgs.writeScriptBin "protonhax" ''echo "Hello!"'')
   ];
 }
