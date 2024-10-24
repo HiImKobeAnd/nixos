@@ -25,5 +25,6 @@
     gimp
     komikku
     (chromium.override {enableWideVine = true;})
+    widevine-cdm
   ];
 }
