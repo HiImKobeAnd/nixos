@@ -17,6 +17,7 @@
       airshipper
       gamemode
       parsec-bin
+      protontricks
     ];
     programs = {
       steam.enable = true;
