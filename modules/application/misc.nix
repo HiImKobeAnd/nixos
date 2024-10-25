@@ -26,5 +26,7 @@
     komikku
     (chromium.override {enableWideVine = true;})
     widevine-cdm
+    waydroid
+    suwayomi-server
   ];
 }

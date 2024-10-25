@@ -35,5 +35,7 @@
     dconf2nix
     nil
     nh
+
+    any-nix-shell
   ];
 }

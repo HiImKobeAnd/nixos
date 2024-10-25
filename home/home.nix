@@ -118,9 +118,10 @@
         #Since I can't find an option to change the directory where my data is stored, I need to use the following alias:
         zathura = "zathura --fork -d ~/Documents/Books/zathura";
       };
-      shellInit = "
+      interactiveShellInit = "
       set -U fish_greeting 
       set fish_prompt_pwd_dir_length 0
+      any-nix-shell fish --info-right | source
       ";
     };
 
@@ -161,7 +162,7 @@
     };
 
     nixcord = {
-      enable = true;
+      enable = false;
       discord.openASAR.enable = false;
       config = {
         themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
