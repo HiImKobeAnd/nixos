@@ -38,4 +38,11 @@
 
     any-nix-shell
   ];
+
+  programs.fish.enable = true;
+  programs.fish.interactiveShellInit = ''
+      set -U fish_greeting
+      set fish_prompt_pwd_dir_length 0
+    ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-left | source
+  '';
 }

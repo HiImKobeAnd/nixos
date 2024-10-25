@@ -9,7 +9,7 @@ alejandra . >/dev/null
 
 echo "NixOS Rebuilding..."
 
-nh os switch --update ~/.dotfiles/nixos/
+nh os switch ~/.dotfiles/nixos/
 
 # Get current generation metadata
 current=$(sudo nix-env -p /nix/var/nix/profiles/system --list-generations | grep current)
