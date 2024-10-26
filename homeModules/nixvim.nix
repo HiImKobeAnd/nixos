@@ -115,7 +115,7 @@
             "<Down>" = "cmp.mapping.select_next_item()";
             "<C-p>" = "cmp.mapping.select_prev_item()";
             "<C-n>" = "cmp.mapping.select_next_item()";
-            "<CR>" = "cmp.mapping.confirm({select = false})";
+            "<CR>" = "cmp.mapping.confirm({select = true})";
           };
           sources = [
             {name = "nvim_lsp";}
