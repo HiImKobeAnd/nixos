@@ -106,11 +106,22 @@
       cmp = {
         enable = true;
         autoEnableSources = true;
-        settings.sources = [
-          {name = "nvim_lsp";}
-          {name = "path";}
-          {name = "buffer";}
-        ];
+
+        settings = {
+          mapping = {
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<Up>" = "cmp.mapping.select_prev_item()";
+            "<Down>" = "cmp.mapping.select_next_item()";
+            "<C-p>" = "cmp.mapping.select_prev_item()";
+            "<C-n>" = "cmp.mapping.select_next_item()";
+            "<CR>" = "cmp.mapping.confirm({select = false})";
+          };
+          sources = [
+            {name = "nvim_lsp";}
+            {name = "path";}
+            {name = "buffer";}
+          ];
+        };
       };
     };
   };
