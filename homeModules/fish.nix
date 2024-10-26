@@ -36,6 +36,7 @@
     eza = {
       enable = true;
       enableFishIntegration = true;
+      enableBashIntegration = true;
       extraOptions = ["--icons=auto"];
     };
     direnv = {

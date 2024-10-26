@@ -39,11 +39,7 @@
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
           (
-            {
-              config,
-              lib,
-              ...
-            }: {
+            {config, ...}: {
               config = {
                 nix = {
                   settings = {
