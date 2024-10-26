@@ -73,7 +73,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.hiimkobeand = import ./home/home.nix;
+              users.hiimkobeand = import ./hosts/desktop/home.nix;
               extraSpecialArgs = {inherit inputs;};
             };
           }

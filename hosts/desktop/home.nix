@@ -1,7 +1,7 @@
 {...}: {
   imports = [
-    ./homeModules/nixvim.nix
-    ./homeModules/nixcord.nix
+    ../../homeModules/nixvim.nix
+    ../../homeModules/nixcord.nix
   ];
   home = {
     username = "hiimkobeand";
