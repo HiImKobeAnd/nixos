@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     curl
     wget
+    sshfs
 
     fish
 
