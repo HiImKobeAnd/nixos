@@ -28,10 +28,29 @@
       lualine.enable = true;
       nvim-autopairs.enable = true;
       luasnip.enable = true;
-      lsp.enable = true;
       lsp-format.enable = true;
       comment.enable = true;
       web-devicons.enable = true;
+      lsp = {
+        enable = true;
+        inlayHints = true;
+        servers = {
+          html.enable = true;
+          lua_ls.enable = true;
+          nil_ls.enable = true;
+          ts_ls.enable = true;
+          jsonls.enable = true;
+          yamlls.enable = true;
+          rust_analyzer = {
+            enable = true;
+            installCargo = false;
+            installRustc = false;
+          };
+          texlab.enable = true;
+          htmx.enable = true;
+          eslint.enable = true;
+        };
+      };
       telescope = {
         enable = true;
         extensions = {
