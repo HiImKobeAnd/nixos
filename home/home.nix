@@ -1,15 +1,8 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{...}: {
   imports = [
-    inputs.nixcord.homeManagerModules.nixcord
-    inputs.nixvim.homeManagerModules.nixvim
-    ./nixvim.nix
-    #./dconf.nix
+    ./homeModules/nixvim.nix
+    ./homeModules/nixcord.nix
   ];
-
   home = {
     username = "hiimkobeand";
     homeDirectory = "/home/hiimkobeand";
@@ -41,68 +34,6 @@
         last = "log -1 HEAD";
         unstage = "reset HEAD --";
       };
-    };
-
-    neovim = {
-      enable = false;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      extraPackages = with pkgs; [
-        xclip
-        lua-language-server
-        nil
-      ];
-      plugins = with pkgs.vimPlugins; [
-        comment-nvim
-
-        nvim-lspconfig
-
-        nvim-cmp
-
-        cmp-buffer
-        cmp-path
-        cmp-nvim-lsp
-
-        telescope-nvim
-
-        telescope-fzf-native-nvim
-
-        luasnip
-        friendly-snippets
-        lualine-nvim
-        auto-pairs
-        fugitive
-        vim-nix
-        neodev-nvim
-        {
-          plugin = nvim-treesitter.withPlugins (p: [
-            p.tree-sitter-nix
-            p.tree-sitter-vim
-            p.tree-sitter-bash
-            p.tree-sitter-lua
-            p.tree-sitter-javascript
-            p.tree-sitter-rust
-          ]);
-        }
-      ];
-      extraLuaConfig = "
-      ${builtins.readFile ./nvim/options.lua}
-      ${builtins.readFile ./nvim/other.lua}
-      ${builtins.readFile ./nvim/plugin/lsp.lua}
-      ${builtins.readFile ./nvim/plugin/cmp.lua}
-      ${builtins.readFile ./nvim/plugin/telescope.lua}
-      ${builtins.readFile ./nvim/plugin/treesitter.lua}
-        ";
-    };
-
-    firefox = {
-      enable = true;
-    };
-
-    bash = {
-      enable = true;
-      initExtra = "fish";
     };
 
     fish = {
@@ -159,37 +90,6 @@
       enable = true;
       config = {
         "shared_database_path" = "/home/hiimkobeand/sioyek";
-      };
-    };
-
-    nixcord = {
-      enable = false;
-      discord.openASAR.enable = false;
-      config = {
-        themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
-        plugins = {
-          betterFolders = {
-            enable = true;
-            sidebarAnim = false;
-            closeAllFolders = true;
-            closeAllHomeButton = true;
-            closeOthers = true;
-          };
-          callTimer.enable = true;
-          clearURLs.enable = true;
-          fakeNitro.enable = true;
-          moreKaomoji.enable = true;
-          mutualGroupDMs.enable = true;
-          youtubeAdblock.enable = true;
-          messageClickActions.enable = true;
-          noTrack.enable = true;
-          shikiCodeblocks.enable = true;
-          volumeBooster.enable = true;
-          dearrow.enable = true;
-          dearrow.hideButton = true;
-          moreCommands.enable = true;
-          reverseImageSearch.enable = true;
-        };
       };
     };
   };

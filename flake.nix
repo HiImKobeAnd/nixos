@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:kaylorben/nixcord";
-    #stylix.url = "github:danth/stylix";
     rust-overlay.url = "github:oxalica/rust-overlay";
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
@@ -25,11 +24,7 @@
     };
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: {
+  outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -40,7 +35,6 @@
           ./modules/desktop-environment
           ./modules/development
           ./modules/system
-          #./modules/theme
           ./services
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
@@ -72,8 +66,7 @@
               };
             }
           )
-          home-manager.nixosModules.home-manager
-          #inputs.stylix.nixosModules.stylix
+          inputs.home-manager.nixosModules.home-manager
           inputs.nixos-cosmic.nixosModules.default
           inputs.aagl.nixosModules.default
           {
