@@ -4,6 +4,7 @@
     wget
 
     fish
+    any-nix-shell
 
     pandoc
 

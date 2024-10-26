@@ -54,7 +54,7 @@
       interactiveShellInit = ''
         set -U fish_greeting
         set fish_prompt_pwd_dir_length 0
-        ${pkgs.any-nix-shell}any-nix-shell fish --info-right | source
+        any-nix-shell fish --info-right | source
       '';
     };
 
