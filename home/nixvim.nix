@@ -5,8 +5,10 @@
     viAlias = true;
     vimAlias = true;
     clipboard.providers.wl-copy.enable = true;
+    globals.mapleader = " ";
     opts = {
       undofile = true;
+      undolevels = 10000;
 
       number = true;
 
@@ -82,6 +84,9 @@
         settings = {
           formatters_by_ft = {
             nix = "alejandra";
+            javascript = "prettier";
+            typescript = "prettier";
+            rust = "rustfmt";
           };
           format_on_save = "fallback";
         };
