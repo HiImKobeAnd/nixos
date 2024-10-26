@@ -7,6 +7,8 @@ alejandra . >/dev/null
 # Shows your changes
 #git diff -U0 *.nix
 
+git add .
+
 echo "NixOS Rebuilding..."
 
 nh os switch ~/.dotfiles/nixos/
