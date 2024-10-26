@@ -87,10 +87,15 @@
         enable = true;
         settings = {
           formatters_by_ft = {
-            nix = "alejandra";
+            nix = "nixfmt";
             javascript = "prettier";
             typescript = "prettier";
             rust = "rustfmt";
+            yaml = "yamlfmt";
+            css = "prettier";
+            html = "prettier";
+            json = "prettier";
+            lua = "stylua";
           };
           format_on_save = "fallback";
         };
