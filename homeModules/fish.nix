@@ -38,5 +38,10 @@
       enableFishIntegration = true;
       extraOptions = ["--icons=auto"];
     };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+    starship.enable = true;
   };
 }
