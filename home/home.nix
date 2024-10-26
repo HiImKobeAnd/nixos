@@ -5,6 +5,8 @@
 }: {
   imports = [
     inputs.nixcord.homeManagerModules.nixcord
+    inputs.nixvim.homeManagerModules.nixvim
+    ./nixvim.nix
     #./dconf.nix
   ];
 
@@ -42,7 +44,7 @@
     };
 
     neovim = {
-      enable = true;
+      enable = false;
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;

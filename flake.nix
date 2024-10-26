@@ -19,6 +19,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser.url = "github:ch4og/zen-browser-flake";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -72,7 +76,6 @@
           #inputs.stylix.nixosModules.stylix
           inputs.nixos-cosmic.nixosModules.default
           inputs.aagl.nixosModules.default
-
           {
             home-manager = {
               useGlobalPkgs = true;
