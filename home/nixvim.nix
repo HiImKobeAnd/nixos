@@ -24,13 +24,21 @@
       smartcase = true;
     };
     plugins = {
-      fzf-lua.enable = true;
       lualine.enable = true;
       nvim-autopairs.enable = true;
       luasnip.enable = true;
       lsp-format.enable = true;
       comment.enable = true;
       web-devicons.enable = true;
+      fzf-lua = {
+        enable = true;
+        profile = "default";
+        keymaps = {
+          "<C-p>" = "files";
+          "<leader>fg" = "live_grep";
+        };
+      };
+
       lsp = {
         enable = true;
         inlayHints = true;
@@ -46,7 +54,6 @@
             installCargo = false;
             installRustc = false;
           };
-          texlab.enable = true;
           htmx.enable = true;
           eslint.enable = true;
         };
@@ -73,6 +80,9 @@
       conform-nvim = {
         enable = true;
         settings = {
+          formatters_by_ft = {
+            nix = "alejandra";
+          };
           format_on_save = "fallback";
         };
       };
