@@ -52,8 +52,9 @@
         zathura = "zathura --fork -d ~/Documents/Books/zathura";
       };
       interactiveShellInit = ''
-        set -U fish_greeting
-        set fish_prompt_pwd_dir_length 0
+                set -U fish_greeting
+                set fish_prompt_pwd_dir_length 0
+        ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
       '';
     };
 
