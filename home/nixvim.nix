@@ -38,6 +38,10 @@
         keymaps = {
           "<C-p>" = "files";
           "<leader>fg" = "live_grep";
+          "<leader>km" = "keymaps";
+          "<leader>gs" = "git_status";
+          "<leader>sd" = "diagnostics_document";
+          "<leader>sD" = "diagnostics_workspace";
         };
       };
 
