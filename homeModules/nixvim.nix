@@ -54,7 +54,7 @@
 
       lsp = {
         enable = true;
-        inlayHints = false;
+        inlayHints = true;
         servers = {
           html.enable = true;
           lua_ls.enable = true;
@@ -87,7 +87,7 @@
         settings = {
           auto_install = true;
           highlight.enable = true;
-          indent.enable = true;
+          indent.enable = false;
         };
       };
       conform-nvim = {
