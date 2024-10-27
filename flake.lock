@@ -200,11 +200,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1730011532,
-        "narHash": "sha256-srazPOwpu+hCB/Ny8r2Ixxq+nBREylIuBnRVJyW7vzc=",
+        "lastModified": 1730016908,
+        "narHash": "sha256-bFCxJco7d8IgmjfNExNz9knP8wvwbXU4s/d53KOK6U0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "05d9bee4a5155758aec3c3807c0e342b9f253522",
+        "rev": "e83414058edd339148dc142a8437edb9450574c8",
         "type": "github"
       },
       "original": {
@@ -289,15 +289,15 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1729751982,
-        "narHash": "sha256-Lu2rqD1O7YC8IUOH2i9ovv3wrpVwuVmW+LAz3sr23Wk=",
-        "owner": "kaylorben",
+        "lastModified": 1729868250,
+        "narHash": "sha256-Ohwk5/RGhGjDXaD4v0Yc40J/79gHRcD92mKWY+6qHJU=",
+        "owner": "AwesomeQubic",
         "repo": "nixcord",
-        "rev": "47041f7810f9195f88262934edb79e306479e616",
+        "rev": "1db989dea26944682d7513ff135e6a1ae6abe644",
         "type": "github"
       },
       "original": {
-        "owner": "kaylorben",
+        "owner": "AwesomeQubic",
         "repo": "nixcord",
         "type": "github"
       }

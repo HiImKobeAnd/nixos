@@ -3,7 +3,7 @@
     inputs.nixcord.homeManagerModules.nixcord
   ];
   programs.nixcord = {
-    enable = false;
+    enable = true;
     discord.openASAR.enable = false;
     config = {
       themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
