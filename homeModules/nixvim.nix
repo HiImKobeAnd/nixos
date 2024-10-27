@@ -83,11 +83,11 @@
         };
       };
       treesitter = {
-        enable = true;
+        enable = false;
         settings = {
           auto_install = true;
           highlight.enable = true;
-          indent.enable = false;
+          indent.enable = true;
         };
       };
       conform-nvim = {
