@@ -54,7 +54,7 @@
 
       lsp = {
         enable = true;
-        inlayHints = true;
+        inlayHints = false;
         servers = {
           html.enable = true;
           lua_ls.enable = true;
