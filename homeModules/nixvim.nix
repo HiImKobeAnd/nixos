@@ -27,6 +27,8 @@
 
       ignorecase = true;
       smartcase = true;
+
+      signcolumn = "yes";
     };
     extraConfigLua = ''
       require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
