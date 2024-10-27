@@ -28,13 +28,17 @@
       ignorecase = true;
       smartcase = true;
     };
+    extraConfigLua = ''
+      require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
+    '';
     plugins = {
       lualine.enable = true;
-      nvim-autopairs.enable = true;
       luasnip.enable = true;
       lsp-format.enable = true;
       comment.enable = true;
       web-devicons.enable = true;
+      auto-session.enable = true;
+      nvim-autopairs.enable = true;
       fzf-lua = {
         enable = true;
         profile = "default";
@@ -106,7 +110,6 @@
       cmp = {
         enable = true;
         autoEnableSources = true;
-
         settings = {
           preselect = "cmp.PreselectMode.Item";
           mapping = {
