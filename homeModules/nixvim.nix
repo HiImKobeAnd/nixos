@@ -72,7 +72,7 @@
         };
       };
       telescope = {
-        enable = true;
+        enable = false;
         extensions = {
           fzf-native.settings = {
             case_mode = "smart_case";
@@ -83,7 +83,7 @@
         };
       };
       treesitter = {
-        enable = false;
+        enable = true;
         settings = {
           auto_install = true;
           highlight.enable = true;
