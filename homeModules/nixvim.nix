@@ -53,7 +53,7 @@
       };
 
       lsp = {
-        enable = true;
+        enable = false;
         inlayHints = true;
         servers = {
           html.enable = true;
@@ -72,7 +72,7 @@
         };
       };
       telescope = {
-        enable = false;
+        enable = true;
         extensions = {
           fzf-native.settings = {
             case_mode = "smart_case";
