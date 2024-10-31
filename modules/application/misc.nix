@@ -21,5 +21,6 @@
     (chromium.override {enableWideVine = true;})
     widevine-cdm
     waydroid
+    drawio
   ];
 }
