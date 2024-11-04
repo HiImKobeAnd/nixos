@@ -41,6 +41,7 @@
       web-devicons.enable = true;
       auto-session.enable = true;
       nvim-autopairs.enable = true;
+      undotree.enable = true;
       fzf-lua = {
         enable = true;
         profile = "default";

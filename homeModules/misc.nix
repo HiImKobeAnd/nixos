@@ -17,12 +17,5 @@
         database = "sqlite";
       };
     };
-
-    sioyek = {
-      enable = true;
-      config = {
-        "shared_database_path" = "/home/hiimkobeand/sioyek";
-      };
-    };
   };
 }

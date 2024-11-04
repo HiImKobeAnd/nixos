@@ -15,7 +15,6 @@
     nodePackages.pnpm
     nodePackages.prettier
     deno
-    flutter
 
     sqlite
     sqlx-cli
@@ -31,8 +30,6 @@
     cargo-watch
     #cargo-audit
     rustup
-    #rust-bin.stable.latest.default
-    #(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
   ];
   nixpkgs.overlays = [
     inputs.rust-overlay.overlays.default

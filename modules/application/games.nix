@@ -10,13 +10,12 @@
 
   config = lib.mkIf config.games.enable {
     environment.systemPackages = with pkgs; [
-      lutris
       steam
       prismlauncher
       heroic
       airshipper
       gamemode
-      parsec-bin
+      #parsec-bin
     ];
     programs = {
       steam.enable = true;
