@@ -15,6 +15,7 @@
       heroic
       airshipper
       gamemode
+      xivlauncher
       #parsec-bin
     ];
     programs = {
