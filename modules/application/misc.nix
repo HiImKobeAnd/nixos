@@ -18,5 +18,6 @@
     gimp
     (chromium.override {enableWideVine = true;})
     waydroid
+    smokeping
   ];
 }
