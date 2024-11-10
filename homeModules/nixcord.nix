@@ -3,6 +3,7 @@
     inputs.nixcord.homeManagerModules.nixcord
   ];
   programs.nixcord = {
+    vesktop.enable = true;
     enable = true;
     discord.openASAR.enable = false;
     config = {
