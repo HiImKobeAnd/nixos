@@ -18,3 +18,5 @@ current=$(sudo nix-env -p /nix/var/nix/profiles/system --list-generations | grep
 
 # Commit all changes witih the generation metadata
 git commit -am "$current"
+
+notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
