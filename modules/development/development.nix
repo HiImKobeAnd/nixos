@@ -10,8 +10,6 @@
     setSocketVariable = true;
   };
 
-  programs.nix-ld.enable = true;
-
   environment.systemPackages = with pkgs; [
     nodejs_22
     nodePackages.pnpm
