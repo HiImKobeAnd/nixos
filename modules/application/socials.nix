@@ -9,8 +9,7 @@
   };
   config = lib.mkIf config.socials.enable {
     environment.systemPackages = with pkgs; [
-      #element-desktop
-      legcord
+      element-desktop
       discord-screenaudio
     ];
   };

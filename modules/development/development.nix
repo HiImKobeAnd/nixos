@@ -11,18 +11,11 @@
   };
 
   environment.systemPackages = with pkgs; [
-    nodejs_22
-    nodePackages.pnpm
-    nodePackages.prettier
-    deno
-
     sqlite
     sqlx-cli
     postgresql_16
 
     jdk
-
-    doctl
 
     gcc14
     mold

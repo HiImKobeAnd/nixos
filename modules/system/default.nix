@@ -1,6 +1,5 @@
 {lib, ...}: {
   imports = [
-    ./auto-upgrade.nix
     ./fonts.nix
     ./package.nix
     ./locale.nix

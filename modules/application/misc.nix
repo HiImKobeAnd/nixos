@@ -11,7 +11,6 @@
     youtube-music
     libreoffice
     obsidian
-    virt-manager
     qemu
     swtpm
     noisetorch

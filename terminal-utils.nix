@@ -5,9 +5,6 @@
 
     fish
 
-    pandoc
-    texliveFull
-
     fzf
     eza
     bat
