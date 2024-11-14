@@ -43,6 +43,7 @@
       nvim-autopairs.enable = true;
       undotree.enable = true;
       lsp-signature.enable = true;
+      lsp-signature.settings.toggle_key = "<leader>k";
       fzf-lua = {
         enable = true;
         profile = "default";
