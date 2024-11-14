@@ -42,6 +42,7 @@
       auto-session.enable = true;
       nvim-autopairs.enable = true;
       undotree.enable = true;
+      lsp-signature.enable = true;
       fzf-lua = {
         enable = true;
         profile = "default";
