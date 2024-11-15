@@ -16,6 +16,7 @@
       airshipper
       gamemode
       xivlauncher
+      lutris
       #parsec-bin
     ];
     programs = {
