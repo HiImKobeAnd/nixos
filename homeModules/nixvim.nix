@@ -7,7 +7,7 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    clipboard.providers.wl-copy.enable = true;
+    clipboard.register = "unnamedplus";
     globals.mapleader = " ";
     opts = {
       undofile = true;
@@ -30,6 +30,18 @@
 
       signcolumn = "yes";
     };
+    keymaps = [
+      {
+        action = "<cmd> vim.lsp.buf.declaration()";
+        mode = "n";
+        key = "gD";
+      }
+      {
+        action = "<cmd> vim.lsp.buf.definition()";
+        mode = "n";
+        key = "gd";
+      }
+    ];
     extraConfigLua = ''
       require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
     '';

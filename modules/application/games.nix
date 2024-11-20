@@ -13,10 +13,8 @@
       steam
       prismlauncher
       heroic
-      airshipper
       gamemode
       xivlauncher
-      lutris
       #parsec-bin
     ];
     programs = {

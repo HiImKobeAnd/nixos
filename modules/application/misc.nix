@@ -14,7 +14,8 @@
     qemu
     swtpm
     noisetorch
-    gimp
+    krita
+    openvpn
     (chromium.override {enableWideVine = true;})
     waydroid
   ];
