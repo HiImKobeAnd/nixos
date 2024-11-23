@@ -16,6 +16,7 @@
       gamemode
       xivlauncher
       #parsec-bin
+      protonup-qt
     ];
     programs = {
       steam.enable = true;
