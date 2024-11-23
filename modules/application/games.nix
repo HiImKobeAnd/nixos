@@ -17,6 +17,7 @@
       xivlauncher
       #parsec-bin
       protonup-qt
+      protontricks
     ];
     programs = {
       steam.enable = true;
