@@ -18,6 +18,5 @@
     openvpn
     (chromium.override {enableWideVine = true;})
     waydroid
-    valent
   ];
 }
