@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  programs.kdeconnect.enable = true;
   programs.noisetorch.enable = true;
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
