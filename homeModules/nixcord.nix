@@ -4,6 +4,7 @@
   ];
   programs.nixcord = {
     enable = true;
+    vesktop.enable = true;
     discord.openASAR.enable = true;
     config = {
       themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
