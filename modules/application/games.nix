@@ -10,7 +10,7 @@
 
   config = lib.mkIf config.games.enable {
     environment.systemPackages = with pkgs; [
-      #steam
+      steam
       prismlauncher
       heroic
       gamemode
