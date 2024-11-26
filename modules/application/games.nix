@@ -23,8 +23,7 @@
       steam.enable = true;
       steam.remotePlay.openFirewall = true;
 
-      sleepy-launcher.enable = true;
-      honkers-railway-launcher.enable = true;
+      anime-games-launcher.enable = true;
     };
   };
 }
