@@ -3,6 +3,6 @@
     ./services.nix
     ./flatpak.nix
     ./syncthing.nix
-    ./ollama.nix
+    #./ollama.nix
   ];
 }
