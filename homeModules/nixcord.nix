@@ -1,16 +1,10 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.nixcord.homeManagerModules.nixcord
   ];
   programs.nixcord = {
     enable = true;
-    discord.package = pkgs.discord-canary;
-    discord.openASAR.enable = false;
-    discord.vencord.enable = false;
+    discord.openASAR.enable = true;
     config = {
       themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
       plugins = {
