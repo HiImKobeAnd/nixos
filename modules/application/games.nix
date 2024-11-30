@@ -25,5 +25,6 @@
 
       anime-games-launcher.enable = true;
     };
+    hardware.steam-hardware.enable = true;
   };
 }

@@ -2,7 +2,8 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
-    nerdfonts
+    nerd-fonts.noto
+    nerd-fonts.symbols-only
     nerd-font-patcher
   ];
   fonts = {

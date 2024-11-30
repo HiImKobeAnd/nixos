@@ -19,7 +19,5 @@
     (chromium.override {enableWideVine = true;})
     waydroid
     calibre
-    hakuneko
-    mokuro
   ];
 }
