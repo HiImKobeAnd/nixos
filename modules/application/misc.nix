@@ -19,5 +19,6 @@
     (chromium.override {enableWideVine = true;})
     waydroid
     valent
+    libsForQt5.kdeconnect-kde
   ];
 }
