@@ -8,7 +8,7 @@
     fzf
     eza
     bat
-    bat-extras.batman
+    #bat-extras.batman
     btop
     dua
     zoxide
