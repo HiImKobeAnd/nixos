@@ -1,16 +1,24 @@
 {...}: {
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  #hardware.pulseaudio.enable = true;
+  #hardware.pulseaudio.support32Bit = true;
+  #hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    extraConfig.pipewire-pulse = {
-      pulse.cmd = [
+    extraConfig.pipewire."91-combine-bluetooth-inputs" = {
+      "context.modules" = [
         {
-          cmd = "load-module";
-          args = "module-combine-sink";
+          name = "libpipewire-module-combine-sink";
+          args = {
+            "combine.mode" = "sink";
+            "node.name" = "combined_output";
+            "node.description" = "Combined Output";
+            "combine.latency-compensate" = false;
+            "filter.media.class" = "Audio/Sink";
+          };
         }
       ];
     };
