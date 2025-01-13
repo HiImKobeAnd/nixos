@@ -5,6 +5,7 @@
     policies = {
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
+      DisablePocket = true;
       Preferences = {
         "cookiebanners.service.mode.privateBrowsing" = 2;
         "cookiebanners.service.mode" = 2;
@@ -34,6 +35,32 @@
           (extension "sponsorblock" "sponsorBlocker@ajay.app")
           (extension "ublock-origin" "uBlock0@raymondhill.net")
         ];
+      "uBlock0@raymondhill.net" = {
+        userSettings = {
+          cloudStorageEnabled = false;
+          selectedFilterLists = [
+            "adguard-generic"
+            "adguard-annoyance"
+            "adguard-social"
+            "adguard-spyware-url"
+            "ublock-abuse"
+            "ublock-badware"
+            "ublock-filters"
+            "ublock-privacy"
+            "ublock-quick-fixes"
+            "ublock-unbreak"
+          ];
+        };
+        SearchEngines = {
+          PreventInstalls = true;
+          Default = "DuckDuckGo";
+          Remove = [
+            "Amazon.com"
+            "Bing"
+            "Google"
+          ];
+        };
+      };
     };
   };
 }
