@@ -13,6 +13,7 @@
       steam
       prismlauncher
       heroic
+      pokemmo-installer
       gamemode
       xivlauncher
       #parsec-bin
