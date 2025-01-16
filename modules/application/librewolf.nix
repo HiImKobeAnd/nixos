@@ -16,6 +16,7 @@
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.fingerprinting.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
+        "sidebar.verticalTabs" = true;
       };
       ExtensionSettings = with builtins; let
         extension = shortId: uuid: {
