@@ -18,6 +18,7 @@
       #parsec-bin
       protonup-qt
       protontricks
+      xdg-desktop-portal-gtk
     ];
     programs = {
       steam.enable = true;
@@ -27,5 +28,9 @@
       anime-games-launcher.enable = true;
     };
     hardware.steam-hardware.enable = true;
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [xdg-desktop-portal-gtk];
+    };
   };
 }
