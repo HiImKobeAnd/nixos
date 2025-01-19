@@ -19,5 +19,6 @@
     openvpn
     (chromium.override {enableWideVine = true;})
     waydroid
+    mokuro
   ];
 }
