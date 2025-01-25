@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
@@ -21,10 +20,7 @@
     mold
     lldb_18
     cargo-watch
-    #cargo-audit
+    cargo-audit
     rustup
-  ];
-  nixpkgs.overlays = [
-    #inputs.rust-overlay.overlays.default
   ];
 }
