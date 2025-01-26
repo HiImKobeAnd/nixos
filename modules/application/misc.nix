@@ -20,6 +20,5 @@
     (chromium.override {enableWideVine = true;})
     waydroid
     mokuro
-    koreader
   ];
 }
