@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   virtualisation.docker.enable = true;
   users.users.hiimkobeand.extraGroups = ["docker"];
   virtualisation.docker.rootless = {
