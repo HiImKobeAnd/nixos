@@ -8,13 +8,10 @@
     fzf
     eza
     bat
-    #bat-extras.batman
     btop
     dua
     zoxide
     ripgrep
-    tldr
-    cht-sh
 
     quickemu
 
