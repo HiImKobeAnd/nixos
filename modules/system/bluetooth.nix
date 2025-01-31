@@ -3,7 +3,7 @@
     enable = true;
     powerOnBoot = true;
     settings.General = {
-      Experimental = false;
+      Experimental = true;
     };
   };
   services.blueman.enable = false;
