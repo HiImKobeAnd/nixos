@@ -6,5 +6,4 @@
       Experimental = false;
     };
   };
-  services.blueman.enable = true;
 }
