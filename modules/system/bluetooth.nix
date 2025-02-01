@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -6,5 +6,5 @@
       Experimental = false;
     };
   };
-  services.blueman.enable = false;
+  services.blueman.enable = true;
 }
