@@ -13,6 +13,7 @@
       steam
       prismlauncher
       heroic
+      lutris
       gamemode
       xivlauncher
       #parsec-bin
