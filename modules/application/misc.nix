@@ -12,6 +12,7 @@
     youtube-music
     libreoffice
     obsidian
+    #logseq
     qemu
     swtpm
     noisetorch
