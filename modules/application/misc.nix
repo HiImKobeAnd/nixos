@@ -12,7 +12,7 @@
     youtube-music
     libreoffice
     obsidian
-    #logseq
+    logseq
     qemu
     swtpm
     noisetorch
@@ -21,5 +21,9 @@
     (chromium.override {enableWideVine = true;})
     waydroid
     mokuro
+  ];
+  # For Logseq
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
   ];
 }
