@@ -13,7 +13,6 @@
     libreoffice
     obsidian
     qemu
-    bottles
     swtpm
     noisetorch
     krita
