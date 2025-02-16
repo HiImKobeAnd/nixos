@@ -14,6 +14,7 @@
     obsidian
     qemu
     swtpm
+    anki
     noisetorch
     krita
     openvpn
