@@ -15,6 +15,7 @@
     qemu
     swtpm
     anki
+    forecast
     noisetorch
     krita
     openvpn
