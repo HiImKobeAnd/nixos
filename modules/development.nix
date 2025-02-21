@@ -7,17 +7,14 @@
   };
 
   environment.systemPackages = with pkgs; [
-    sqlite
-    sqlx-cli
-    postgresql_16
+    #sqlite
+    #sqlx-cli
+    #postgresql_16
 
-    jdk
+    #jdk
 
-    gcc14
-    mold
-    lldb_18
-    cargo-watch
-    cargo-audit
-    rustup
+    #gcc14
+    #mold
+    #lldb_18
   ];
 }
