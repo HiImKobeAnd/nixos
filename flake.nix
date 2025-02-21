@@ -32,7 +32,7 @@
         modules = [
           ./modules/application
           ./modules/desktop-environment
-          ./modules/development
+          ./modules/development.nix
           ./modules/system
           ./services
           ./hosts/desktop/configuration.nix
