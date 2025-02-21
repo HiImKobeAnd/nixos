@@ -23,7 +23,6 @@
     };
     zoxide = {
       enable = true;
-      enableFishIntegration = true;
       options = [
         "--cmd cd"
       ];
@@ -37,8 +36,11 @@
     eza = {
       enable = true;
       enableFishIntegration = true;
-      enableBashIntegration = true;
       extraOptions = ["--icons=auto"];
+    };
+    starship = {
+      enable = true;
+      enableFishIntegration = true;
     };
   };
 }
