@@ -6,4 +6,7 @@
       Experimental = true;
     };
   };
+  environment.systemPackages = with pkgs; [
+    bluez
+  ];
 }
