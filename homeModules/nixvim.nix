@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
   ];
@@ -9,7 +13,7 @@
     vimAlias = true;
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
-    globals.mapleader = " ";
+    #globals.mapleader = " ";
     opts = {
       undofile = true;
       undolevels = 10000;
@@ -103,10 +107,22 @@
       treesitter = {
         enable = true;
         settings = {
-          auto_install = true;
+          auto_install = false;
           highlight.enable = true;
           indent.enable = true;
         };
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          json
+          lua
+          markdown
+          nix
+          toml
+          rust
+          yaml
+          xml
+          html
+          sql
+        ];
       };
       conform-nvim = {
         enable = true;
