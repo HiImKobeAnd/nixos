@@ -55,8 +55,8 @@
                     automatic = true;
                   };
                 };
-                nvidia.enable = true;
-                gnome.enable = false;
+                nvidia.enable = false;
+                gnome.enable = true;
                 cosmic-de.enable = true;
               };
             }
