@@ -122,6 +122,18 @@
           xml
           html
           sql
+          jsdoc
+          javascript
+          gitignore
+          gitcommit
+          gitattributes
+          git_rebase
+          git_config
+          fish
+          dockerfile
+          desktop
+          csv
+          css
         ];
       };
       conform-nvim = {
