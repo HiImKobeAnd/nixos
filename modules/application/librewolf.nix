@@ -35,6 +35,7 @@
           (extension "modern-for-wikipedia" "{e9090647-32ff-48e4-9c3c-1361e8fd270e}")
           (extension "sponsorblock" "sponsorBlocker@ajay.app")
           (extension "ublock-origin" "uBlock0@raymondhill.net")
+          (extension "yang-addon" "0a3250b1-58e0-48cb-9383-428f5adc3dc1")
         ];
       "uBlock0@raymondhill.net" = {
         userSettings = {
@@ -54,7 +55,7 @@
         };
         SearchEngines = {
           PreventInstalls = true;
-          Default = "DuckDuckGo";
+          Default = "Startpage";
           Remove = [
             "Amazon.com"
             "Bing"
