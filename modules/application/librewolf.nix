@@ -53,15 +53,6 @@
             "ublock-unbreak"
           ];
         };
-        SearchEngines = {
-          PreventInstalls = true;
-          Default = "Startpage";
-          Remove = [
-            "Amazon.com"
-            "Bing"
-            "Google"
-          ];
-        };
       };
     };
   };
