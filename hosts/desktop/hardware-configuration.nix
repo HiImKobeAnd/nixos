@@ -28,7 +28,6 @@
     options = [
       "users"
       "nofail"
-      "gid=users"
       "fmask=113"
       "dmask=002"
     ];
