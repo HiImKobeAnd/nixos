@@ -19,6 +19,7 @@
       #parsec-bin
       protonup-qt
       protontricks
+      gamescope
     ];
     programs = {
       steam.enable = true;
