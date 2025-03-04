@@ -19,10 +19,10 @@
       #parsec-bin
       protonup-qt
       protontricks
-      gamescope
     ];
     programs = {
       steam.enable = true;
+      steam.gamescopeSession.enable = true;
       steam.remotePlay.openFirewall = true;
 
       honkers-railway-launcher.enable = true;
