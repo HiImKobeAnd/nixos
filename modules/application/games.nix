@@ -11,7 +11,6 @@
   config = lib.mkIf config.games.enable {
     environment.systemPackages = with pkgs; [
       steam
-      prismlauncher
       heroic
       lutris
       gamemode
@@ -19,6 +18,12 @@
       #parsec-bin
       protonup-qt
       protontricks
+      (prismlauncher.override {
+        additionalPrograms = [ffmpeg];
+        jdks = [
+          temurin-bin
+        ];
+      })
     ];
     programs = {
       steam.enable = true;
