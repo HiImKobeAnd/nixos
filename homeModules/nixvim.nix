@@ -77,7 +77,7 @@
         servers = {
           html.enable = true;
           lua_ls.enable = true;
-          nil_ls.enable = true;
+          nixd.enable = true;
           ts_ls.enable = true;
           jsonls.enable = true;
           yamlls.enable = true;
@@ -86,6 +86,7 @@
             installCargo = true;
             installRustc = true;
             installRustfmt = true;
+            settings.checkOnSave = true;
           };
           htmx.enable = true;
           eslint.enable = true;
