@@ -14,6 +14,7 @@
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
     globals.mapleader = ",";
+    colorschemes.gruvbox.enable = true;
     opts = {
       undofile = true;
       undolevels = 10000;
@@ -124,23 +125,6 @@
           indent.enable = true;
         };
       };
-      # conform-nvim = {
-      #  enable = true;
-      #  settings = {
-      #    formatters_by_ft = {
-      #      nix = "nixfmt";
-      #      javascript = "prettier";
-      #      typescript = "prettier";
-      #       rust = "rustfmt";
-      #      yaml = "yamlfmt";
-      #      css = "prettier";
-      #      html = "prettier";
-      #      json = "prettier";
-      #       lua = "stylua";
-      #    };
-      #     format_on_save = "fallback";
-      #   };
-      #  };
       cmp = {
         enable = true;
         autoEnableSources = true;
