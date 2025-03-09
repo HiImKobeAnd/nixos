@@ -16,7 +16,7 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    #zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,8 +43,14 @@
                 nix = {
                   settings = {
                     auto-optimise-store = true;
-                    substituters = ["https://cosmic.cachix.org/" "https://ezkea.cachix.org"];
-                    trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="];
+                    substituters = [
+                      "https://cosmic.cachix.org/"
+                      "https://ezkea.cachix.org"
+                    ];
+                    trusted-public-keys = [
+                      "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+                      "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
+                    ];
                   };
                   gc = {
                     automatic = true;
