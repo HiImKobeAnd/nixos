@@ -99,7 +99,10 @@
       lsp-signature = {
         enable = true;
         settings = {
+          bind = true;
+          floating_window = true;
           always_trigger = true;
+          time_interval = 200;
         };
       };
       telescope = {
