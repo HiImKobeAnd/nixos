@@ -1,8 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
   ];
@@ -125,6 +121,8 @@
           indent.enable = true;
         };
       };
+      cmp-nvim-lsp.enable = true;
+      cmp-nvim-lsp-signature-help.enable = true;
       cmp = {
         enable = true;
         autoEnableSources = true;
@@ -139,6 +137,9 @@
           sources = [
             {name = "nvim_lsp";}
             {name = "path";}
+            {name = "nvim_lsp";}
+            {name = "nvim_lsp_signature_help";}
+            {name = "luasnip";}
             {name = "buffer";}
           ];
         };
