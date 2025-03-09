@@ -77,7 +77,7 @@
         servers = {
           html.enable = true;
           lua_ls.enable = true;
-          nixd.enable = true;
+          nil_ls.enable = true;
           ts_ls.enable = true;
           jsonls.enable = true;
           yamlls.enable = true;
