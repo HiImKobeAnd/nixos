@@ -21,7 +21,7 @@
       shiftwidth = 2;
       expandtab = true;
 
-      updatetime = 200;
+      updatetime = 50;
 
       termguicolors = true;
 
