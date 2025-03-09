@@ -77,8 +77,11 @@
         servers = {
           html.enable = true;
           lua_ls.enable = true;
-          nil_ls.enable = true;
           ts_ls.enable = true;
+          nil_ls = {
+            enable = true;
+            settings.formatting.command = ["nixfmt"];
+          };
           jsonls.enable = true;
           yamlls.enable = true;
           rust_analyzer = {
