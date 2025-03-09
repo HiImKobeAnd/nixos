@@ -28,7 +28,6 @@
     options = [
       "users"
       "nofail"
-      "fmask=113"
       "dmask=002"
     ];
   };
