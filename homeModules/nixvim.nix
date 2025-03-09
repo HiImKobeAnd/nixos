@@ -136,7 +136,7 @@
         enable = true;
         autoEnableSources = true;
         settings = {
-          preselect = "cmp.PreselectMode.Item";
+          #preselect = "cmp.PreselectMode.Item";
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
             "<C-p>" = "cmp.mapping.select_prev_item()";
