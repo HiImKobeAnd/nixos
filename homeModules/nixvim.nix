@@ -58,8 +58,6 @@
       auto-session.enable = true;
       nvim-autopairs.enable = true;
       undotree.enable = true;
-      lsp-signature.enable = true;
-      lsp-signature.settings.toggle_key = "<leader>k";
       fzf-lua = {
         enable = true;
         profile = "default";
@@ -95,6 +93,13 @@
       lsp-format = {
         enable = true;
         lspServersToEnable = "all";
+      };
+      lsp-signature = {
+        enable = true;
+        settings = {
+          always_trigger = true;
+          floating_window = true;
+        };
       };
       telescope = {
         enable = true;
