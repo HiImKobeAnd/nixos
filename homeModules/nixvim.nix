@@ -13,7 +13,7 @@
     vimAlias = true;
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
-    #globals.mapleader = " ";
+    globals.mapleader = ",";
     opts = {
       undofile = true;
       undolevels = 10000;
@@ -139,11 +139,9 @@
           preselect = "cmp.PreselectMode.Item";
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
-            "<Up>" = "cmp.mapping.select_prev_item()";
-            "<Down>" = "cmp.mapping.select_next_item()";
             "<C-p>" = "cmp.mapping.select_prev_item()";
             "<C-n>" = "cmp.mapping.select_next_item()";
-            "<CR>" = "cmp.mapping.confirm({select = true})";
+            "<C-y>" = "cmp.mapping.confirm({select = true})";
           };
           sources = [
             {name = "nvim_lsp";}
