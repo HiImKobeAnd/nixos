@@ -98,7 +98,6 @@
         enable = true;
         settings = {
           always_trigger = true;
-          floating_window = true;
         };
       };
       telescope = {
