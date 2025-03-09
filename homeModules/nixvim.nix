@@ -18,7 +18,7 @@
       undofile = true;
       undolevels = 10000;
 
-      number = true;
+      relativenumber = true;
 
       tabstop = 2;
       shiftwidth = 2;
@@ -53,7 +53,6 @@
     plugins = {
       lualine.enable = true;
       luasnip.enable = true;
-      lsp-format.enable = true;
       comment.enable = true;
       web-devicons.enable = true;
       auto-session.enable = true;
@@ -93,6 +92,10 @@
           eslint.enable = true;
         };
       };
+      lsp-format = {
+        enable = true;
+        lspServersToEnable = "all";
+      };
       telescope = {
         enable = true;
         extensions = {
@@ -107,52 +110,28 @@
       treesitter = {
         enable = true;
         settings = {
-          auto_install = false;
+          ensure_installed = "all";
           highlight.enable = true;
           indent.enable = true;
         };
-        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-          json
-          lua
-          markdown
-          nix
-          toml
-          rust
-          yaml
-          xml
-          html
-          sql
-          jsdoc
-          javascript
-          gitignore
-          gitcommit
-          gitattributes
-          git_rebase
-          git_config
-          fish
-          dockerfile
-          desktop
-          csv
-          css
-        ];
       };
-      conform-nvim = {
-        enable = true;
-        settings = {
-          formatters_by_ft = {
-            nix = "nixfmt";
-            javascript = "prettier";
-            typescript = "prettier";
-            rust = "rustfmt";
-            yaml = "yamlfmt";
-            css = "prettier";
-            html = "prettier";
-            json = "prettier";
-            lua = "stylua";
-          };
-          format_on_save = "fallback";
-        };
-      };
+      # conform-nvim = {
+      #  enable = true;
+      #  settings = {
+      #    formatters_by_ft = {
+      #      nix = "nixfmt";
+      #      javascript = "prettier";
+      #      typescript = "prettier";
+      #       rust = "rustfmt";
+      #      yaml = "yamlfmt";
+      #      css = "prettier";
+      #      html = "prettier";
+      #      json = "prettier";
+      #       lua = "stylua";
+      #    };
+      #     format_on_save = "fallback";
+      #   };
+      #  };
       cmp = {
         enable = true;
         autoEnableSources = true;
