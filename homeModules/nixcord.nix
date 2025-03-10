@@ -7,7 +7,7 @@
     discord.openASAR.enable = false;
     vesktop.enable = false;
     config = {
-      themeLinks = ["https://catppuccin.github.io/discord/dist/catppuccin-macchiato-flamingo.theme.css"];
+      themeLinks = ["https://raw.githubusercontent.com/Costeer/Gruvbox-Material-Themes/refs/heads/main/Discord%20Theme/materialgruvbox-2.theme.css"];
       plugins = {
         betterFolders = {
           enable = true;
