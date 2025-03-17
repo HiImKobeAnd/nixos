@@ -15,6 +15,7 @@
       lutris
       gamemode
       xivlauncher
+      osu-lazer
       #parsec-bin
       protonup-qt
       protontricks
