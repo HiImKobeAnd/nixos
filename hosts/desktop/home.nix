@@ -5,7 +5,6 @@
     ../../homeModules/git.nix
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
-    ../../homeModules/style.nix
   ];
   home = {
     username = "hiimkobeand";

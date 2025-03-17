@@ -34,6 +34,7 @@
           ./modules/desktop-environment
           ./modules/development.nix
           ./modules/system
+          ./modules/style.nix
           ./services
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
