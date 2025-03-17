@@ -20,7 +20,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
+    #stylix.url = "github:danth/stylix";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {
@@ -34,7 +34,7 @@
           ./modules/desktop-environment
           ./modules/development.nix
           ./modules/system
-          ./modules/style.nix
+          #./modules/style.nix
           ./services
           ./hosts/desktop/configuration.nix
           ./terminal-utils.nix
@@ -71,7 +71,7 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.nixos-cosmic.nixosModules.default
           inputs.aagl.nixosModules.default
-          inputs.stylix.nixosModules.stylix
+          #inputs.stylix.nixosModules.stylix
           {
             home-manager = {
               useGlobalPkgs = true;
