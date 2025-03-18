@@ -25,7 +25,7 @@
 
     lua-language-server
 
-    alejandra
+    #alejandra
     nixfmt-rfc-style
     manix
     dconf2nix
