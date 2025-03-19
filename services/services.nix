@@ -25,9 +25,9 @@
             "home" = "home";
             "end" = "end";
           };
-          leftmeta = {
-            "f12" = "brightnessdown";
-            "f11" = "brightnessup";
+          meta = {
+            "f1" = "brightnessdown";
+            "f2" = "brightnessup";
           };
         };
       };
