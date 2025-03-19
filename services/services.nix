@@ -25,7 +25,7 @@
             "home" = "home";
             "end" = "end";
           };
-          super = {
+          leftmeta = {
             "f12" = "brightnessdown";
             "f11" = "brightnessup";
           };
