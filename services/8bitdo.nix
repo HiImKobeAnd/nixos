@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   hardware.uinput.enable = true;
   services = {
     udev = {

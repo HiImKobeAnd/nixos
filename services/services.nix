@@ -25,6 +25,10 @@
             "home" = "home";
             "end" = "end";
           };
+          meta = {
+            "f12" = "brightnessdown";
+            "f11" = "brightnessup";
+          };
         };
       };
     };
