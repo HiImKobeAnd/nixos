@@ -23,66 +23,77 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          ./modules/application
-          ./modules/desktop-environment
-          ./modules/development.nix
-          ./modules/system
-          ./modules/style.nix
-          ./services
-          ./hosts/desktop/configuration.nix
-          ./terminal-utils.nix
-          (
-            {config, ...}: {
-              config = {
-                nix = {
-                  settings = {
-                    auto-optimise-store = true;
-                    substituters = [
-                      "https://cosmic.cachix.org/"
-                      "https://ezkea.cachix.org"
-                    ];
-                    trusted-public-keys = [
-                      "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
-                      "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
-                    ];
+  outputs =
+    { nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            ./modules/application
+            ./modules/desktop-environment
+            ./modules/development.nix
+            ./modules/system
+            ./modules/style.nix
+            ./services
+            ./hosts/desktop/configuration.nix
+            ./terminal-utils.nix
+            (
+              { config, ... }:
+              {
+                config = {
+                  nix = {
+                    settings = {
+                      substituters = [
+                        "https://cosmic.cachix.org/"
+                        "https://ezkea.cachix.org"
+                      ];
+                      trusted-public-keys = [
+                        "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+                        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
+                      ];
+                    };
                   };
-                  gc = {
-                    automatic = true;
-                    dates = "daily";
-                    options = "--delete-older-than 30d";
-                  };
-                  optimise = {
-                    automatic = true;
-                  };
+                  nvidia.enable = true;
+                  gnome.enable = false;
+                  cosmic-de.enable = true;
                 };
-                nvidia.enable = true;
-                gnome.enable = false;
-                cosmic-de.enable = true;
+              }
+            )
+            inputs.home-manager.nixosModules.home-manager
+            inputs.nixos-cosmic.nixosModules.default
+            inputs.aagl.nixosModules.default
+            inputs.stylix.nixosModules.stylix
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.hiimkobeand = import ./hosts/desktop/home.nix;
+                extraSpecialArgs = { inherit inputs; };
+                backupFileExtension = "hm-backup";
               };
             }
-          )
-          inputs.home-manager.nixosModules.home-manager
-          inputs.nixos-cosmic.nixosModules.default
-          inputs.aagl.nixosModules.default
-          inputs.stylix.nixosModules.stylix
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.hiimkobeand = import ./hosts/desktop/home.nix;
-              extraSpecialArgs = {inherit inputs;};
-              backupFileExtension = "hm-backup2";
-            };
-          }
-        ];
+          ];
+        };
+        server = nixpkgs.lib.nixosSystem {
+          modules = [
+            ./modules/terminal-utils
+            ./modules/system/package.nix
+            ./hosts/server/configuration.nix
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.server = import ./hosts/server/home.nix;
+                extraSpecialArgs = { inherit inputs; };
+                backupFileExtension = "hm-backup";
+              };
+            }
+          ];
+        };
       };
     };
-  };
 }
