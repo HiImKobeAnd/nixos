@@ -19,6 +19,7 @@
       #parsec-bin
       protonup-qt
       protontricks
+      mcaselector
       (prismlauncher.override {
         additionalPrograms = [ffmpeg];
         jdks = [

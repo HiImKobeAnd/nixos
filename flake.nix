@@ -82,6 +82,9 @@
             ./modules/terminal-utils
             ./modules/system/package.nix
             ./hosts/server/configuration.nix
+            ./services/cloudflared.nix
+            ./services/pufferpanel.nix
+
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager = {
