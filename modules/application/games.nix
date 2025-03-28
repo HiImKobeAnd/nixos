@@ -16,6 +16,7 @@
       gamemode
       xivlauncher
       osu-lazer
+      path-of-building
       #parsec-bin
       protonup-qt
       protontricks
