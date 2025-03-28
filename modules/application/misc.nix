@@ -2,7 +2,8 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   programs.noisetorch.enable = true;
   programs.kdeconnect.enable = true;
   virtualisation.waydroid.enable = true;
@@ -16,9 +17,9 @@
     anki
     noisetorch
     krita
-    openvpn
-    (chromium.override {enableWideVine = true;})
+    #openvpn
+    (chromium.override { enableWideVine = true; })
     waydroid
-    mokuro
+    #mokuro
   ];
 }

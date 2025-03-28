@@ -11,15 +11,15 @@
   config = lib.mkIf config.games.enable {
     environment.systemPackages = with pkgs; [
       steam
-      heroic
-      lutris
-      gamemode
+      #heroic
+      #lutris
+      #gamemode
       xivlauncher
-      osu-lazer
-      path-of-building
+      #osu-lazer
+      #path-of-building
       #parsec-bin
-      protonup-qt
-      protontricks
+      #protonup-qt
+      #protontricks
       mcaselector
       (prismlauncher.override {
         additionalPrograms = [ffmpeg];
