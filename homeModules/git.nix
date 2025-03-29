@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs = {
     git = {
       enable = true;
@@ -13,7 +14,5 @@
         unstage = "reset HEAD --";
       };
     };
-
-    gh.enable = true;
   };
 }

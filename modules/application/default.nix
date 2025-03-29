@@ -1,6 +1,8 @@
-{lib, ...}: {
+{ lib, ... }:
+{
   imports = [
     ./development.nix
+    ./terminal-utils.nix
     ./games.nix
     ./socials.nix
     ./misc.nix

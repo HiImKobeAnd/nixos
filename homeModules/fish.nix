@@ -1,4 +1,5 @@
-{...}: {
+{ pkgs, ... }:
+{
   programs = {
     bash.enable = true;
     fish = {
@@ -21,6 +22,7 @@
         set fish_prompt_pwd_dir_length 0
       '';
     };
+
     zoxide = {
       enable = true;
       options = [
@@ -36,8 +38,9 @@
     eza = {
       enable = true;
       enableFishIntegration = true;
-      extraOptions = ["--icons=auto"];
+      extraOptions = [ "--icons=auto" ];
     };
+
     starship = {
       enable = true;
       enableFishIntegration = true;
