@@ -15,6 +15,7 @@
       #lutris
       #gamemode
       xivlauncher
+      runelite
       #osu-lazer
       #path-of-building
       #parsec-bin
