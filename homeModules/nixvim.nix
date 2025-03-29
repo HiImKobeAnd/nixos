@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
   ];
@@ -77,7 +78,7 @@
           ts_ls.enable = true;
           nil_ls = {
             enable = true;
-            settings.formatting.command = ["nixfmt"];
+            settings.formatting.command = [ "nixfmt" ];
           };
           jsonls.enable = true;
           yamlls.enable = true;
@@ -108,6 +109,7 @@
       telescope = {
         enable = true;
         extensions = {
+          manix.enable = true;
           fzf-native.settings = {
             case_mode = "smart_case";
             fuzzy = true;
@@ -138,12 +140,12 @@
             "<C-y>" = "cmp.mapping.confirm({select = true})";
           };
           sources = [
-            {name = "nvim_lsp";}
-            {name = "path";}
-            {name = "nvim_lsp";}
-            {name = "nvim_lsp_signature_help";}
-            {name = "luasnip";}
-            {name = "buffer";}
+            { name = "nvim_lsp"; }
+            { name = "path"; }
+            { name = "nvim_lsp"; }
+            { name = "nvim_lsp_signature_help"; }
+            { name = "luasnip"; }
+            { name = "buffer"; }
           ];
         };
       };
