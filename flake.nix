@@ -70,7 +70,7 @@
                 useUserPackages = true;
                 users.hiimkobeand = import ./hosts/desktop/home.nix;
                 extraSpecialArgs = { inherit inputs; };
-                backupFileExtension = "hm-backup";
+                backupFileExtension = "hm-backup-ext";
               };
             }
           ];
