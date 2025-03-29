@@ -5,5 +5,6 @@
     ./syncthing.nix
     #./ollama.nix
     ./8bitdo.nix
+    ./docker.nix
   ];
 }

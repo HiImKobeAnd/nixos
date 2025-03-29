@@ -34,12 +34,10 @@
           modules = [
             ./modules/application
             ./modules/desktop-environment
-            ./modules/development.nix
             ./modules/system
             ./modules/style.nix
             ./services
             ./hosts/desktop/configuration.nix
-            ./terminal-utils.nix
             (
               { config, ... }:
               {
@@ -79,7 +77,7 @@
         };
         server = nixpkgs.lib.nixosSystem {
           modules = [
-            ./modules/terminal-utils
+            ./modules/application/terminal-utils.nix
             ./modules/system/package.nix
             ./hosts/server/configuration.nix
             ./services/cloudflared.nix

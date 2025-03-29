@@ -4,17 +4,24 @@
     curl
     wget
     zip
-    unzip
-    any-nix-shell
-    #dconf2nix
-    nil
-    nh
+    unzip 
     ripgrep
     dua
     btop
     bat
+
     gh
-    koji
+    koji    
+
+    nil
+    nh
+    any-nix-shell
+    #dconf2nix
+
+    lua-language-server
+    nixfmt-rfc-style
+    
+    quickemu
   ];
   programs = {
     bash = {
@@ -26,5 +33,5 @@
         fi
       '';
     };
-  };
+      };
 }
