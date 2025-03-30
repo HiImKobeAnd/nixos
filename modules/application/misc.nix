@@ -11,6 +11,7 @@
     thunderbird
     youtube-music
     libreoffice
+    jre_minimal # For libreoffice see issue #344494 on github
     obsidian
     qemu
     swtpm
