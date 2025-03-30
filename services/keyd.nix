@@ -11,7 +11,7 @@
             "pagedown" = "nextsong";
             "home" = "f23";
             "end" = "f24";
-            "capslock" = "layer(capslayer)";
+            "capslock" = "overload(navlayer,oneshot(codingchars))";
             #rightalt = "layer(rightalt)";
           };
           rightalt = {
@@ -24,11 +24,19 @@
             "f1" = "brightnessdown";
             "f2" = "brightnessup";
           };
-          "capslayer" = {
+          "navlayer" = {
             "a" = "left";
             "d" = "right";
             "w" = "up";
             "s" = "down";
+          };
+          "codingchars" = {
+            "a" = "{";
+            "q" = "}";
+            "s" = "(";
+            "w" = ")";
+            "d" = "[";
+            "e" = "]";
           };
         };
       };
