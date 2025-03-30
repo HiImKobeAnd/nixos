@@ -11,7 +11,7 @@
             "pagedown" = "nextsong";
             "home" = "f23";
             "end" = "f24";
-            "capslock" = "capslayer";
+            "capslock" = "layer(capslayer)";
             #rightalt = "layer(rightalt)";
           };
           rightalt = {
@@ -26,9 +26,9 @@
           };
           "capslayer" = {
             "a" = "left";
+            "d" = "right";
+            "w" = "up";
             "s" = "down";
-            "d" = "up";
-            "f" = "right";
           };
         };
       };
