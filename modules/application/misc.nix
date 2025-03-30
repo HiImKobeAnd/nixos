@@ -10,8 +10,9 @@
   environment.systemPackages = with pkgs; [
     thunderbird
     youtube-music
-    libreoffice
-    jre_minimal # For libreoffice see issue #344494 on github
+    onlyoffice-desktopeditors
+    #libreoffice
+    libreoffice-fresh
     obsidian
     qemu
     swtpm
