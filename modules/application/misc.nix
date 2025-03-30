@@ -11,7 +11,6 @@
     thunderbird
     youtube-music
     #libreoffice
-    masterpdfeditor4
     libreoffice-fresh
     obsidian
     qemu
