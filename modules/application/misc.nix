@@ -10,8 +10,8 @@
   environment.systemPackages = with pkgs; [
     thunderbird
     youtube-music
-    onlyoffice-desktopeditors
     #libreoffice
+    masterpdfeditor4
     libreoffice-fresh
     obsidian
     qemu
