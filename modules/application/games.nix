@@ -14,6 +14,7 @@
       steam
       #heroic
       lutris
+      wine
       #gamemode
       xivlauncher
       runelite
