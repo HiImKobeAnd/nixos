@@ -3,7 +3,8 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   options = {
     games.enable = lib.mkEnableOption "enables games, steam, lutris, etc";
   };
@@ -23,7 +24,7 @@
       #protontricks
       mcaselector
       (prismlauncher.override {
-        additionalPrograms = [ffmpeg];
+        additionalPrograms = [ ffmpeg ];
         jdks = [
           temurin-bin
           temurin-jre-bin-17
@@ -34,9 +35,6 @@
       steam.enable = true;
       steam.gamescopeSession.enable = true;
       steam.remotePlay.openFirewall = true;
-
-      honkers-railway-launcher.enable = true;
-      anime-games-launcher.enable = true;
     };
     hardware.steam-hardware.enable = true;
   };

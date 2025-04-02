@@ -12,10 +12,6 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -62,7 +58,6 @@
             )
             inputs.home-manager.nixosModules.home-manager
             inputs.nixos-cosmic.nixosModules.default
-            inputs.aagl.nixosModules.default
             inputs.stylix.nixosModules.stylix
             {
               home-manager = {
