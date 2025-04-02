@@ -12,7 +12,7 @@
     environment.systemPackages = with pkgs; [
       steam
       #heroic
-      #lutris
+      lutris
       #gamemode
       xivlauncher
       runelite
@@ -26,6 +26,7 @@
         additionalPrograms = [ffmpeg];
         jdks = [
           temurin-bin
+          temurin-jre-bin-17
         ];
       })
     ];
