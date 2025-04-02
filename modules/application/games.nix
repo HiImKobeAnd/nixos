@@ -13,8 +13,6 @@
     environment.systemPackages = with pkgs; [
       steam
       #heroic
-      lutris
-      wine
       #gamemode
       xivlauncher
       runelite
