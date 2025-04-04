@@ -18,7 +18,10 @@
         };
         callTimer.enable = true;
         clearURLs.enable = true;
-        fakeNitro.enable = true;
+        fakeNitro = {
+          enable = true;
+          enableEmojiBypass = false;
+        };
         moreKaomoji.enable = true;
         mutualGroupDMs.enable = true;
         youtubeAdblock.enable = true;
