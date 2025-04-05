@@ -17,13 +17,16 @@
       xivlauncher
       runelite
       #osu-lazer
-      lutris
-      wine
       #path-of-building
       #parsec-bin
       #protonup-qt
       #protontricks
       mcaselector
+      (lutris.override {
+        extraPkgs = pkgs: [
+          wine
+        ];
+      })
       (prismlauncher.override {
         additionalPrograms = [ ffmpeg ];
         jdks = [
