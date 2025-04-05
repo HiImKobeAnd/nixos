@@ -18,6 +18,7 @@
       runelite
       #osu-lazer
       lutris
+      wine
       #path-of-building
       #parsec-bin
       #protonup-qt
