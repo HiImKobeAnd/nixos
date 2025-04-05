@@ -17,6 +17,7 @@
       xivlauncher
       runelite
       #osu-lazer
+      lutris
       #path-of-building
       #parsec-bin
       #protonup-qt
