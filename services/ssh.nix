@@ -1,7 +1,7 @@
 {...}: {
   services.openssh = {
     enable = true;
-    settings.PasswordAuthentication = true;
-    settings.KbdInteractiveAuthentication = true;
+    settings.PasswordAuthentication = false;
+    settings.KbdInteractiveAuthentication = false;
   };
 }
