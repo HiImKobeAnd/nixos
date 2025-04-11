@@ -14,5 +14,9 @@
         unstage = "reset HEAD --";
       };
     };
+    gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+    };
   };
 }
