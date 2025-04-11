@@ -10,7 +10,6 @@
     btop
     bat
 
-    gh
     koji    
 
     nil
