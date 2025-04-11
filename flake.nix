@@ -23,7 +23,7 @@
     { nixpkgs, ... }@inputs:
     {
       nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
+        hiimkobeand = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
           };
