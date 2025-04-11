@@ -1,7 +1,7 @@
 {...}: {
   xdg.desktopEntries = {
     windows = {
-      name = "windows 11";
+      name = "Windows 11";
       genericName = "Virtual machine";
       exec = "quickemu --vm /home/hiimkobeand/VM/quickemu/windows-11.conf --display spice";
       terminal = false;

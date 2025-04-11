@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = [
     inputs.nixcord.homeManagerModules.nixcord
   ];
@@ -7,7 +8,9 @@
     discord.openASAR.enable = false;
     vesktop.enable = false;
     config = {
-      themeLinks = ["https://raw.githubusercontent.com/Costeer/Gruvbox-Material-Themes/refs/heads/main/Discord%20Theme/materialgruvbox-2.theme.css"];
+      themeLinks = [
+        "https://raw.githubusercontent.com/Costeer/Gruvbox-Material-Themes/refs/heads/main/Discord%20Theme/materialgruvbox-2.theme.css"
+      ];
       plugins = {
         betterFolders = {
           enable = true;
