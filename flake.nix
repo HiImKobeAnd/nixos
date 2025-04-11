@@ -74,6 +74,8 @@
           modules = [
             ./modules/application/terminal-utils.nix
             ./modules/system/package.nix
+	    ./modules/system/locale.nix
+	    ./modules/system/fonts.nix
             ./hosts/server/configuration.nix
             ./services/cloudflared.nix
             ./services/pufferpanel.nix
