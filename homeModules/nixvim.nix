@@ -11,7 +11,7 @@
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
     globals.mapleader = ",";
-    colorschemes.gruvbox.enable = true;
+    #colorschemes.gruvbox.enable = true;
     opts = {
       undofile = true;
       undolevels = 10000;
@@ -24,7 +24,7 @@
 
       updatetime = 50;
 
-      termguicolors = true;
+      #termguicolors = true;
 
       mouse = "a";
 
