@@ -2,7 +2,7 @@
 {
   imports = [
     ../../homeModules/git.nix
-    #../../homeModules/nixvim.nix
+    ../../homeModules/nixvim.nix
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
   ];
