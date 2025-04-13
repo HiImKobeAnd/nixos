@@ -101,7 +101,6 @@
           ./hosts/wsl/configuration.nix
           ./modules/application/terminal-utils.nix
           ./modules/system/package.nix
-          ./modules/system/fonts.nix
 
           inputs.nixos-wsl.nixosModules.default
           inputs.home-manager.nixosModules.home-manager
