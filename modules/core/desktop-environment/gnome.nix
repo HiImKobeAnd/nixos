@@ -3,22 +3,15 @@
   lib,
   config,
   ...
-}: {
-  options = {
-    gnome.enable = lib.mkEnableOption "enable gnome";
-  };
-  config = lib.mkIf config.gnome.enable {
+}:
+{
+  config = lib.mkIf (config.modules.desktop == "gnome") {
     services.xserver = {
       enable = true;
       displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
-      displayManager.gdm.wayland = false;
+      displayManager.gdm.wayland = true;
     };
-    programs.kdeconnect = {
-      enable = true;
-      package = pkgs.gnomeExtensions.gsconnect;
-    };
-
     environment.systemPackages = with pkgs; [
       gnomeExtensions.pop-shell
       gnomeExtensions.tray-icons-reloaded

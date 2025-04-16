@@ -1,4 +1,4 @@
-{ ... }:
+_:
 {
   services.conduwuit = {
     enable = true;
