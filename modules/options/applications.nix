@@ -1,27 +1,27 @@
 { lib, ... }:
 {
   options.modules.applications = {
-    essentials = lib.mkOption {
+    essentials.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
-    games = lib.mkOption {
+    games.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
-    librewolf = lib.mkOption {
+    librewolf.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
-    misc = lib.mkOption {
+    misc.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
-    waydroid = lib.mkOption {
+    waydroid.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };
-    quickemu = lib.mkOption {
+    quickemu.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };

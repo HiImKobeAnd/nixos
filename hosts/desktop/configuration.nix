@@ -7,15 +7,15 @@
   # Setup
   config.modules = {
     desktop = "cosmic";
-    sound = true;
-    nvidia = true;
+    sound.enable = true;
+    nvidia.enable = true;
     applications = {
-      essentials = true;
-      games = true;
-      librewolf = true;
-      quickemu = true;
-      waydroid = true;
-      misc = true;
+      essentials.enable = true;
+      games.enable = true;
+      librewolf.enable = true;
+      quickemu.enable = true;
+      waydroid.enable = true;
+      misc.enable = true;
     };
   };
   # Nixpkgs

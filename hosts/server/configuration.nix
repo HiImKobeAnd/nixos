@@ -7,7 +7,7 @@
   ];
   # Setup
   config.modules.desktop = "gnome";
-  config.modules.applications.librewolf = true;
+  config.modules.applications.librewolf.enable = true;
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;

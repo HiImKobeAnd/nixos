@@ -8,14 +8,17 @@
 { ... }:
 
 {
-  wsl.enable = true;
-  wsl.defaultUser = "wsl";
-
-  imports = [ ../../modules ];
+  imports = [
+    ../../modules
+  ];
+  # Config
+  modules.applications.games.enable = false;
 
   # Nixpkgs
-  nixpkgs.config.allowUnfree = true; # Nixpkgs
   nixpkgs.config.allowUnfree = true;
+
+  wsl.enable = true;
+  wsl.defaultUser = "wsl";
 
   nix.settings.experimental-features = [
     "nix-command"

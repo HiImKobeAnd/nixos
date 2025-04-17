@@ -23,11 +23,9 @@
       })
     ];
     programs = {
-      steam = {
-        enable = true;
-        gamescopeSession.enable = true;
-        remotePlay.openFirewall = true;
-      };
+      steam.enable = true;
+      steam.gamescopeSession.enable = true;
+      steam.remotePlay.openFirewall = true;
     };
     nix.settings.substituters = [ "https://ezkea.cachix.org" ];
     nix.settings.trusted-public-keys = [
