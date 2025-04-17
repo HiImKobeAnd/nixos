@@ -17,7 +17,15 @@
       waydroid.enable = true;
       misc.enable = true;
     };
+    services = {
+      keyd.enable = true;
+      controller.enable = true;
+      misc.enable = true;
+      syncthing.enable = true;
+    };
   };
+  services.flatpak.enable = true;
+
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;
 

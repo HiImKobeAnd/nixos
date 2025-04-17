@@ -6,8 +6,16 @@
     ../../modules
   ];
   # Setup
-  config.modules.desktop = "gnome";
-  config.modules.applications.librewolf.enable = true;
+  config.modules = {
+    desktop = "gnome";
+    applications.librewolf.enable = true;
+    services = {
+      matrix.enable = true;
+      ssh.enable = true;
+      pufferpanel.enable = true;
+    };
+  };
+  services.cloudflared.enable = true;
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;

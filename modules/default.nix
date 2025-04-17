@@ -1,6 +1,8 @@
-{...}: {
+{ ... }:
+{
   imports = [
-    ../modules/core
-    ../modules/options
+    ./core
+    ./services
+    ./options
   ];
 }

@@ -5,5 +5,6 @@
     ./sound.nix
     ./nvidia.nix
     ./applications.nix
+    ./services.nix
   ];
 }
