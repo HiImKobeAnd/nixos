@@ -12,7 +12,6 @@
     ../../modules
   ];
   # Config
-  modules.applications.games.enable = false;
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;
