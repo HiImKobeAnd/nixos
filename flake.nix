@@ -29,7 +29,6 @@
             inherit inputs;
           };
           modules = [
-            ./services
             ./hosts/desktop/configuration.nix
 
             inputs.home-manager.nixosModules.home-manager
@@ -49,9 +48,6 @@
         server = nixpkgs.lib.nixosSystem {
           modules = [
             ./hosts/server/configuration.nix
-            ./services/cloudflared.nix
-            ./services/pufferpanel.nix
-            ./services/ssh.nix
 
             inputs.home-manager.nixosModules.home-manager
             {
