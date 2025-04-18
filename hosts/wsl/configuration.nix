@@ -12,7 +12,6 @@
     ../../modules
   ];
   # Config
-  modules.services.readeck.enable = true;
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;
