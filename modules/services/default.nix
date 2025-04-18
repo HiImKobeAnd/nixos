@@ -10,5 +10,6 @@
     ./ssh.nix
     ./conduwuit.nix
     ./pufferpanel.nix
+    ./readeck.nix
   ];
 }
