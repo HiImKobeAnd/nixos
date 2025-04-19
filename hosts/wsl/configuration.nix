@@ -12,7 +12,6 @@
     ../../modules
   ];
   # Config
-  modules.services.paperless.enable = true;
 
   # User
   users.users.hiimkobeand = {
