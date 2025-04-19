@@ -13,6 +13,7 @@
   ];
   # Config
   modules.services.docker.enable = true;
+  modules.services.rssfeed.enable = true;
 
   # User
   users.users.hiimkobeand = {
@@ -24,7 +25,6 @@
       "libvirtd"
     ];
   };
-
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;
