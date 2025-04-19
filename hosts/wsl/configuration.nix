@@ -12,6 +12,19 @@
     ../../modules
   ];
   # Config
+  modules.services.docker.enable = true;
+
+  # User
+  users.users.hiimkobeand = {
+    isNormalUser = true;
+    description = "Kobe Andersen";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+    ];
+  };
+
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;
