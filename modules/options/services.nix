@@ -41,9 +41,5 @@
       type = lib.types.bool;
       default = false;
     };
-    rssfeed.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
   };
 }
