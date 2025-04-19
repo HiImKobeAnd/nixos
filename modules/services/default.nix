@@ -11,5 +11,6 @@
     ./conduwuit.nix
     ./pufferpanel.nix
     ./readeck.nix
+    ./paperless.nix
   ];
 }

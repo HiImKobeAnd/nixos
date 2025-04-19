@@ -41,5 +41,9 @@
       type = lib.types.bool;
       default = false;
     };
+    paperless.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 }
