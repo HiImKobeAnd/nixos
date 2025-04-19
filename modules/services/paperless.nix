@@ -13,7 +13,11 @@
       enable = true;
       port = 8240;
       settings = {
-        PAPERLESS_AUTO_LOGIN_USERNAME = "admin";
+        PAPERLESS_OCR_LANGUAGE = "dan+eng";
+        PAPERLESS_OCR_USER_ARGS = {
+          optimize = 1;
+          pdfa_image_compression = "lossless";
+        };
       };
     };
   };
