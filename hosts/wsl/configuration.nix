@@ -12,8 +12,7 @@
     ../../modules
   ];
   # Config
-  modules.services.docker.enable = true;
-  modules.services.readeck.enable = true;
+
   # User
   users.users.hiimkobeand = {
     isNormalUser = true;
