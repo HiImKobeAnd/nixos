@@ -11,6 +11,7 @@
     ];
     services.readeck = {
       enable = true;
+      environmentFile = /home/wsl/.config/readeck/.env;
       settings = {
         server.port = 8160;
       };
