@@ -12,9 +12,7 @@
     services.readeck = {
       enable = true;
       settings = {
-        server = {
-          port = "8160";
-        };
+        server.port = 8160;
       };
     };
   };
