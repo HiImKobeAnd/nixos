@@ -12,6 +12,7 @@
     ../../modules
   ];
   # Config
+  modules.services.docker.enable = true;
 
   # User
   users.users.hiimkobeand = {
