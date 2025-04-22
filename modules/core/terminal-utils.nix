@@ -10,6 +10,7 @@
     btop
     bat
 
+    gh
     koji
 
     nh
