@@ -13,7 +13,7 @@
       ];
       plugins = {
         betterFolders = {
-          enable = true;
+          enable = false;
           sidebarAnim = false;
           closeAllFolders = true;
           closeAllHomeButton = true;
