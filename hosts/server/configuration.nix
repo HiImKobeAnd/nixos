@@ -6,41 +6,43 @@
     ../../modules
   ];
   # Setup
-  config.modules = {
-    desktop = "gnome";
-    applications.librewolf.enable = true;
-    services = {
-      matrix.enable = true;
-      ssh.enable = true;
-      pufferpanel.enable = true;
+  config = {
+    modules = {
+      desktop = "gnome";
+      applications.librewolf.enable = true;
+      services = {
+        matrix.enable = true;
+        ssh.enable = true;
+        pufferpanel.enable = true;
+      };
     };
-  };
-  services.cloudflared.enable = true;
+    services.cloudflared.enable = true;
 
-  # Nixpkgs
-  nixpkgs.config.allowUnfree = true;
+    # Nixpkgs
+    nixpkgs.config.allowUnfree = true;
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+    # Bootloader.
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
-  # Networking
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+    # Networking
+    networking.hostName = "nixos";
+    networking.networkmanager.enable = true;
 
-  # User
-  users.users.server = {
-    isNormalUser = true;
-    description = "Kobe Andersen";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
+    # User
+    users.users.server = {
+      isNormalUser = true;
+      description = "Kobe Andersen";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+    };
+
+    nix.settings.experimental-features = [
+      "nix-command"
+      "flakes"
     ];
+    system.stateVersion = "24.11";
   };
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-  system.stateVersion = "24.11";
 }

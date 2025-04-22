@@ -15,6 +15,8 @@
     nh
     any-nix-shell
 
+    libgcc
+
     nil
     lua-language-server
     nixfmt-rfc-style
