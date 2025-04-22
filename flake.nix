@@ -16,7 +16,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
@@ -33,7 +32,6 @@
 
             inputs.home-manager.nixosModules.home-manager
             inputs.nixos-cosmic.nixosModules.default
-            inputs.stylix.nixosModules.stylix
             {
               home-manager = {
                 useGlobalPkgs = true;
