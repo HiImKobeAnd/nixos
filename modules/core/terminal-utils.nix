@@ -15,7 +15,7 @@
     nh
     any-nix-shell
 
-    libgcc
+    gcc
 
     nil
     lua-language-server
