@@ -45,6 +45,7 @@
             (extension "sponsorblock" "sponsorBlocker@ajay.app")
             (extension "ublock-origin" "uBlock0@raymondhill.net")
             (extension "yang-addon" "0a3250b1-58e0-48cb-9383-428f5adc3dc1")
+            (extension "raindropio" "jid0-adyhmvsP91nUO8pRv0Mn2VKeB84@jetpack")
           ];
         "uBlock0@raymondhill.net" = {
           userSettings = {
