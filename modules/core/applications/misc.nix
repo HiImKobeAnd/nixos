@@ -11,6 +11,7 @@
       anki
       noisetorch
       krita
+      gpxsee
       (chromium.override { enableWideVine = true; })
     ];
   };
