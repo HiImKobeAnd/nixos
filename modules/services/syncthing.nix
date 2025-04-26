@@ -9,6 +9,7 @@
     environment.systemPackages = with pkgs; [
       syncthing
     ];
+    systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true"; # Don't create default ~/Sync folder
     services.syncthing = {
       enable = true;
       overrideDevices = false;
