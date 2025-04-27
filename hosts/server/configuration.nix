@@ -8,7 +8,6 @@
   # Setup
   config = {
     modules = {
-      desktop = "gnome";
       services = {
         matrix.enable = true;
         ssh.enable = true;
