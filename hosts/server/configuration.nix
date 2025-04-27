@@ -9,7 +9,6 @@
   config = {
     modules = {
       desktop = "gnome";
-      applications.librewolf.enable = true;
       services = {
         matrix.enable = true;
         ssh.enable = true;

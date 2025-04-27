@@ -8,7 +8,7 @@
     ./keyd.nix
     ./docker.nix
     ./ssh.nix
-    ./conduwuit.nix
+    ./matrix.nix
     ./pufferpanel.nix
     ./readeck.nix
     ./paperless.nix
