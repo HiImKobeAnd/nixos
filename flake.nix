@@ -17,6 +17,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -32,6 +36,7 @@
 
             inputs.home-manager.nixosModules.home-manager
             inputs.nixos-cosmic.nixosModules.default
+            inputs.aagl.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;

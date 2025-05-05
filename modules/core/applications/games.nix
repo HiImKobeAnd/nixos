@@ -26,6 +26,7 @@
       steam.enable = true;
       steam.gamescopeSession.enable = true;
       steam.remotePlay.openFirewall = true;
+      honkers-railway-launcher.enable = true;
     };
     nix.settings.substituters = [ "https://ezkea.cachix.org" ];
     nix.settings.trusted-public-keys = [
