@@ -12,6 +12,8 @@
       noisetorch
       krita
       gpxsee
+      grayjay
+      zotero
       (chromium.override { enableWideVine = true; })
     ];
   };
