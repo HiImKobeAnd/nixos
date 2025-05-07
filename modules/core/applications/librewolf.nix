@@ -7,7 +7,7 @@
 {
   config = lib.mkIf config.modules.applications.librewolf.enable {
     programs.firefox = {
-      enable = true;
+      enable = false;
       package = pkgs.librewolf;
       policies = {
         DisableTelemetry = true;
