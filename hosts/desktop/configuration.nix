@@ -24,6 +24,7 @@
         controllers.enable = true;
         misc.enable = true;
         syncthing.enable = true;
+        docker.enable = true;
         ollama.enable = true;
       };
     };
