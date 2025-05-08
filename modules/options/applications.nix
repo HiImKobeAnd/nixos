@@ -25,7 +25,7 @@
       type = lib.types.bool;
       default = false;
     };
-    lmstudio.enable = lib.mkOption {
+    ai-frontend.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };

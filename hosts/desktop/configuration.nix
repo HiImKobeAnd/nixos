@@ -17,13 +17,14 @@
         quickemu.enable = true;
         waydroid.enable = true;
         misc.enable = true;
-        lmstudio.enable = true;
+        #ai-frontend.enable = true;
       };
       services = {
         keyd.enable = true;
         controllers.enable = true;
         misc.enable = true;
         syncthing.enable = true;
+        ollama.enable = true;
       };
     };
 
