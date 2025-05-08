@@ -7,5 +7,6 @@
     ./quickemu.nix
     ./waydroid.nix
     ./essentials.nix
+    ./lmstudio.nix
   ];
 }

@@ -17,6 +17,7 @@
         quickemu.enable = true;
         waydroid.enable = true;
         misc.enable = true;
+        lmstudio.enable = true;
       };
       services = {
         keyd.enable = true;
