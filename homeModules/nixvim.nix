@@ -50,9 +50,8 @@
       require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
     '';
     plugins = {
-        vim-be-good.enable = true;
+      vim-be-good.enable = true;
       lualine.enable = true;
-      luasnip.enable = true;
       comment.enable = true;
       web-devicons.enable = true;
       auto-session.enable = true;
@@ -144,7 +143,6 @@
           sources = [
             { name = "nvim_lsp"; }
             { name = "path"; }
-            { name = "nvim_lsp"; }
             { name = "nvim_lsp_signature_help"; }
             { name = "luasnip"; }
             { name = "buffer"; }
