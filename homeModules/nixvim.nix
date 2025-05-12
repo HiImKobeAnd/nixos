@@ -48,7 +48,7 @@
     performance = {
       byteCompileLua.enable = true;
       combinePlugins = {
-        enable = false;
+        enable = true;
         standalonePlugins = [
           "fzf-lua"
         ];
