@@ -58,7 +58,6 @@
       require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
     '';
     plugins = {
-      vim-be-good.enable = true;
       lualine.enable = true;
       comment.enable = true;
       web-devicons.enable = true;
