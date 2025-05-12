@@ -11,7 +11,6 @@
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
     globals.mapleader = ",";
-    performance.byteCompileLua.enable = true;
     colorschemes.gruvbox.enable = true;
     opts = {
       undofile = true;
@@ -46,6 +45,15 @@
         key = "gd";
       }
     ];
+    performance = {
+      byteCompileLua.enable = true;
+      combinePlugins = {
+        enable = true;
+        standalonePlugins = [
+          "fzf-lua"
+        ];
+      };
+    };
     extraConfigLua = ''
       require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
     '';
@@ -133,7 +141,6 @@
         enable = true;
         autoEnableSources = true;
         settings = {
-          #preselect = "cmp.PreselectMode.Item";
           mapping = {
             "<C-Space>" = "cmp.mapping.complete()";
             "<C-p>" = "cmp.mapping.select_prev_item()";
