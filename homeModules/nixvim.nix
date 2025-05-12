@@ -11,6 +11,7 @@
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
     globals.mapleader = ",";
+    performance.byteCompileLua.enable = true;
     colorschemes.gruvbox.enable = true;
     opts = {
       undofile = true;
@@ -49,6 +50,7 @@
       require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
     '';
     plugins = {
+        vim-be-good.enable = true;
       lualine.enable = true;
       luasnip.enable = true;
       comment.enable = true;
