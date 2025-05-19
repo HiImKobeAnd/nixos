@@ -17,7 +17,6 @@
         quickemu.enable = true;
         waydroid.enable = true;
         misc.enable = true;
-        #ai-frontend.enable = true;
       };
       services = {
         keyd.enable = true;
@@ -25,7 +24,7 @@
         misc.enable = true;
         syncthing.enable = true;
         docker.enable = true;
-        ollama.enable = true;
+        #ollama.enable = true;
       };
     };
 

@@ -7,6 +7,5 @@
     ./quickemu.nix
     ./waydroid.nix
     ./essentials.nix
-    ./ai-frontend.nix
   ];
 }

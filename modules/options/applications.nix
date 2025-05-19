@@ -25,9 +25,5 @@
       type = lib.types.bool;
       default = false;
     };
-    ai-frontend.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
   };
 }
