@@ -18,7 +18,7 @@
           "cookiebanners.service.mode" = 2;
           "privacy.donottrackheader.enabled" = true;
           "privacy.fingerprintingProtection" = true;
-          "privacy.resistFingerprinting" = true;
+          "privacy.resistFingerprinting" = false;
           "privacy.trackingprotection.emailtracking.enabled" = true;
           "privacy.trackingprotection.enabled" = true;
           "privacy.trackingprotection.fingerprinting.enabled" = true;
