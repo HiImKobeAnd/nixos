@@ -12,13 +12,9 @@
       }
     ];
     settings = {
-    theme = "gruvbox";
+      theme = "gruvbox";
       editor = {
-        auto-format = true;
-        lsp.enable = true;
-        lsp.display-messages = true;
-        lsp.display-inlay-hints = true;
-        smart-tab.enable = true;
+            lsp.display-inlay-hints = true;
       };
     };
     extraPackages = with pkgs; [
