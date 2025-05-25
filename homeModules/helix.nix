@@ -2,6 +2,7 @@
 {
   programs.helix = {
     enable = true;
+    package = pkgs.evil-helix;
     languages.language = [
       {
         name = "nix";
