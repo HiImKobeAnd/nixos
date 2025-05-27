@@ -7,6 +7,7 @@
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
     ../../homeModules/cosmic.nix
+    ../../homeModules/helix.nix
   ];
   home = {
     username = "hiimkobeand";

@@ -7,14 +7,13 @@
       {
         name = "nix";
         language-servers = [ "nixd" ];
-        formatter.binary = "${lib.getExe pkgs.nixfmt-rfc-style}";
-        formatter.command = "nixfmt";
+        formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
       }
     ];
     settings = {
       theme = "gruvbox";
       editor = {
-            lsp.display-inlay-hints = true;
+        lsp.display-inlay-hints = true;
       };
     };
     extraPackages = with pkgs; [
