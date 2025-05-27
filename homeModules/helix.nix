@@ -8,7 +8,7 @@
         name = "nix";
         language-servers = [ "nixd" ];
         formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
-    auto-format = true;
+        auto-format = true;
       }
     ];
     settings = {
