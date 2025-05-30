@@ -15,7 +15,6 @@
       theme = "gruvbox";
       editor = {
         lsp.display-inlay-hints = true;
-        clipboard-provider = "wayland";
         cursor-shape = {
           insert = "bar";
         };
