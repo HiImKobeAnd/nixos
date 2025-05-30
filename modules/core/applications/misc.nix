@@ -11,6 +11,7 @@
       anki
       noisetorch
       krita
+      pureref
       gpxsee
       zotero
       (chromium.override { enableWideVine = true; })
