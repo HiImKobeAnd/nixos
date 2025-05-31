@@ -13,7 +13,6 @@
       krita
       inkscape
       pureref
-      umlet
       gpxsee
       zotero
       (chromium.override { enableWideVine = true; })
