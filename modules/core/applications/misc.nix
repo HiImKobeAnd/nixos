@@ -11,7 +11,6 @@
       anki
       noisetorch
       krita
-      inkscape
       pureref
       gpxsee
       zotero
