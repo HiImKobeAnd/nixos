@@ -19,10 +19,10 @@
           "privacy.donottrackheader.enabled" = true;
           "privacy.fingerprintingProtection" = false;
           "privacy.resistFingerprinting" = false;
-          "privacy.trackingprotection.emailtracking.enabled" = true;
-          "privacy.trackingprotection.enabled" = true;
           "privacy.trackingprotection.fingerprinting.enabled" = false;
+          "privacy.trackingprotection.enabled" = true;
           "privacy.trackingprotection.socialtracking.enabled" = true;
+          "privacy.trackingprotection.emailtracking.enabled" = true;
           "sidebar.verticalTabs" = true;
           "webgl.disabled" = false;
         };
