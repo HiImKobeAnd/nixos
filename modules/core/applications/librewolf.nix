@@ -17,13 +17,14 @@
           "cookiebanners.service.mode.privateBrowsing" = 2;
           "cookiebanners.service.mode" = 2;
           "privacy.donottrackheader.enabled" = true;
-          "privacy.fingerprintingProtection" = true;
+          "privacy.fingerprintingProtection" = false;
           "privacy.resistFingerprinting" = false;
           "privacy.trackingprotection.emailtracking.enabled" = true;
           "privacy.trackingprotection.enabled" = true;
-          "privacy.trackingprotection.fingerprinting.enabled" = true;
+          "privacy.trackingprotection.fingerprinting.enabled" = false;
           "privacy.trackingprotection.socialtracking.enabled" = true;
           "sidebar.verticalTabs" = true;
+          "webgl.disabled" = false;
         };
         ExtensionSettings =
           with builtins;
