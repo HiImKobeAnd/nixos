@@ -15,8 +15,7 @@
       pureref
       gpxsee
       zotero
-      ani-cli
-      vlc
+      hakuneko
       (chromium.override { enableWideVine = true; })
     ];
   };
