@@ -15,7 +15,7 @@
       pureref
       gpxsee
       zotero
-      hakuneko
+      mokuro
       (chromium.override { enableWideVine = true; })
     ];
   };
