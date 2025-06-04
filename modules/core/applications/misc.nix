@@ -15,6 +15,8 @@
       pureref
       gpxsee
       zotero
+      ani-cli
+      vlc
       (chromium.override { enableWideVine = true; })
     ];
   };
