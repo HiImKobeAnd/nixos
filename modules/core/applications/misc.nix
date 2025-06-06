@@ -17,7 +17,6 @@
       zotero
       mokuro
       element-desktop
-      cinny-desktop
       (chromium.override { enableWideVine = true; })
     ];
   };
