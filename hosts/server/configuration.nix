@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -14,6 +14,8 @@
         pufferpanel.enable = true;
       };
     };
+
+    environment.systemPackages = with pkgs; [ cloudflared ];
     services.cloudflared.enable = true;
 
     # Nixpkgs
