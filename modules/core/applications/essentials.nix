@@ -12,6 +12,7 @@
       youtube-music
       libreoffice-fresh
       obsidian
+      cinny-desktop
     ];
   };
 }
