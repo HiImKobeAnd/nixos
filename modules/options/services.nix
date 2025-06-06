@@ -45,5 +45,9 @@
       type = lib.types.bool;
       default = false;
     };
+    cloudflared.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 }

@@ -15,9 +15,6 @@
       };
     };
 
-    environment.systemPackages = with pkgs; [ cloudflared ];
-    services.cloudflared.enable = true;
-
     # Nixpkgs
     nixpkgs.config.allowUnfree = true;
 
