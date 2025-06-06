@@ -1,15 +1,16 @@
 { pkgs, ... }:
 {
   fonts.packages = with pkgs; [
-    jetbrains-mono
     noto-fonts
-    notonoto
-    nerd-fonts.noto
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     nerd-fonts.symbols-only
-    nerd-font-patcher
   ];
   fonts = {
     fontconfig = {
+      # defaultFonts = {
+      # serif = [ "Noto Font"]
+      # }
       antialias = true;
     };
   };
