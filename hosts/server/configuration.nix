@@ -12,6 +12,7 @@
         matrix.enable = true;
         ssh.enable = true;
         pufferpanel.enable = true;
+        cloudflared.enable = true;
       };
     };
 
