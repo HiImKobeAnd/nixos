@@ -13,7 +13,6 @@ _: {
     LC_PAPER = "da_DK.UTF-8";
     LC_TELEPHONE = "da_DK.UTF-8";
     LC_TIME = "da_DK.UTF-8";
-    LC_ALL = "ja_JP.UTF-8";
   };
 
   console.keyMap = "dk-latin1";
