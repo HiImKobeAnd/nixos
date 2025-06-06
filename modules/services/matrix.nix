@@ -6,6 +6,7 @@
       settings.global = {
         port = 8000;
         server_name = "hiimkobeand.net";
+        allow_registration = true;
       };
     };
   };
