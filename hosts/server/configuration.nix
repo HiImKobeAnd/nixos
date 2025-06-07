@@ -9,9 +9,9 @@
   config = {
     modules = {
       services = {
-        matrix.enable = true;
+        matrix.enable = false;
         ssh.enable = true;
-        pufferpanel.enable = true;
+        pufferpanel.enable = false;
         cloudflared.enable = true;
       };
     };
