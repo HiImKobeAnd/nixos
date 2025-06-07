@@ -12,5 +12,6 @@
     ./pufferpanel.nix
     ./readeck.nix
     ./paperless.nix
+    ./cloudflared.nix
   ];
 }
