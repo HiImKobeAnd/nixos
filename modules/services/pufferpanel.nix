@@ -1,6 +1,14 @@
-{ lib, config, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   config = lib.mkIf config.modules.services.pufferpanel.enable {
+    environment.systemPackages = with pkgs; [
+      pufferpanel
+    ];
     services.pufferpanel = {
       enable = true;
       environment = {
