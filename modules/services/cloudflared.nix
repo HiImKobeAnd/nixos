@@ -8,6 +8,7 @@
   config = lib.mkIf config.modules.services.cloudflared.enable {
     environment.systemPackages = with pkgs; [
       cloudflared
+      neo-cowsay
     ];
     services.cloudflared = {
       enable = true;
