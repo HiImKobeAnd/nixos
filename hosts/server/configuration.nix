@@ -13,6 +13,7 @@
         ssh.enable = true;
         pufferpanel.enable = false;
         cloudflared.enable = true;
+        docker.enable = true;
       };
     };
 
@@ -34,6 +35,7 @@
       extraGroups = [
         "networkmanager"
         "wheel"
+        "docker"
       ];
     };
 

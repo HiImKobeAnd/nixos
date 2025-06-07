@@ -52,6 +52,7 @@
         "networkmanager"
         "wheel"
         "libvirtd"
+        "docker"
       ];
     };
 
