@@ -17,6 +17,7 @@
       zotero
       mokuro
       element-desktop
+      firefox
       (chromium.override { enableWideVine = true; })
     ];
   };
