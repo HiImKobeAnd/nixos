@@ -18,6 +18,7 @@
       mokuro
       element-desktop
       firefox
+      moonlight
       (chromium.override { enableWideVine = true; })
     ];
   };
