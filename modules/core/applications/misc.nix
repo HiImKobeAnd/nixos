@@ -18,7 +18,7 @@
       mokuro
       element-desktop
       firefox
-      moonlight
+      legcord
       (chromium.override { enableWideVine = true; })
     ];
   };
