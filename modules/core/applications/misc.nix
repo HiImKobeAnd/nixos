@@ -18,7 +18,6 @@
       mokuro
       element-desktop
       firefox
-      legcord
       (chromium.override { enableWideVine = true; })
     ];
   };
