@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs?ref=nixos-unstable";
       follows = "nixos-cosmic/nixpkgs";
     };
     home-manager = {
