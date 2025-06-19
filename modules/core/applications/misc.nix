@@ -18,6 +18,7 @@
       mokuro
       element-desktop
       firefox
+      zed-editor
       (chromium.override { enableWideVine = true; })
     ];
   };
