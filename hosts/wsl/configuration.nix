@@ -12,6 +12,7 @@
     ../../modules
   ];
   # Config
+  modules.fonts.enable = false;
   modules.services.docker.enable = true;
 
   # User

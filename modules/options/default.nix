@@ -2,8 +2,7 @@
 {
   imports = [
     ./desktop-environment.nix
-    ./sound.nix
-    ./nvidia.nix
+    ./system.nix
     ./applications.nix
     ./services.nix
   ];
