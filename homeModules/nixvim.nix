@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
@@ -128,8 +128,18 @@
       };
       treesitter = {
         enable = true;
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          json
+          lua
+          nix
+          regex
+          markdown
+          toml
+          yaml
+          javascript
+          rust
+        ];
         settings = {
-          ensure_installed = "all";
           highlight.enable = true;
           indent.enable = true;
         };
