@@ -5,6 +5,7 @@
     ../../homeModules/nixvim.nix
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
+    ../../homeModules/helix.nix
   ];
   home = {
     username = "wsl";
