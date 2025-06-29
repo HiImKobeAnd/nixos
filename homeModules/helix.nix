@@ -22,6 +22,7 @@
     };
     extraPackages = with pkgs; [
       rust-analyzer
+      just-lsp
       taplo
       lldb
       marksman
