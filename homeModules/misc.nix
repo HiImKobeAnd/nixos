@@ -5,7 +5,7 @@ _: {
       genericName = "Virtual machine";
       exec = "quickemu --vm /home/hiimkobeand/VM/quickemu/windows-11.conf --display spice";
       terminal = false;
-      categories = ["Utility"];
+      categories = [ "Utility" ];
     };
   };
 
