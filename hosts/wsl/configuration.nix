@@ -5,7 +5,7 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -14,6 +14,10 @@
   # Config
   modules.fonts.enable = false;
   modules.services.docker.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    firefox
+  ];
 
   # User
   users.users.hiimkobeand = {
