@@ -2,9 +2,7 @@
   description = "hiimkobeand's nixos config";
 
   inputs = {
-    nixpkgs = {
-      follows = "nixos-cosmic/nixpkgs";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
