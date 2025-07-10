@@ -12,7 +12,6 @@
         ssh.enable = true;
         cloudflared.enable = true;
         docker.enable = true;
-        tandoor.enable = true;
       };
     };
 
