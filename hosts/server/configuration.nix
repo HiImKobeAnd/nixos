@@ -9,11 +9,10 @@
   config = {
     modules = {
       services = {
-        matrix.enable = false;
         ssh.enable = true;
-        pufferpanel.enable = false;
         cloudflared.enable = true;
         docker.enable = true;
+        tandoor.enable = true;
       };
     };
 

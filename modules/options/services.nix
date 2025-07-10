@@ -49,5 +49,9 @@
       type = lib.types.bool;
       default = false;
     };
+    tandoor.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 }

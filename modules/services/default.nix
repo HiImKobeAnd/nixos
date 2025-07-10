@@ -13,5 +13,6 @@
     ./readeck.nix
     ./paperless.nix
     ./cloudflared.nix
+    ./tandoor.nix
   ];
 }
