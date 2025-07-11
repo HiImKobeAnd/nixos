@@ -8,6 +8,7 @@
   config = lib.mkIf config.modules.applications.games.enable {
     environment.systemPackages = with pkgs; [
       steam
+      protonup-qt
       xivlauncher
       (lutris.override {
         extraPkgs = pkgs: [
