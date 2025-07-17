@@ -6,6 +6,7 @@
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
     ../../homeModules/helix.nix
+    ../../homeModules/zellij.nix
   ];
   home = {
     username = "wsl";
