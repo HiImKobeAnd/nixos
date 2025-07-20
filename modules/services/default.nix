@@ -10,9 +10,6 @@
     ./ssh.nix
     ./matrix.nix
     ./pufferpanel.nix
-    ./readeck.nix
-    ./paperless.nix
     ./cloudflared.nix
-    ./tandoor.nix
   ];
 }

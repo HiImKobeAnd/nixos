@@ -37,19 +37,7 @@
       type = lib.types.bool;
       default = false;
     };
-    readeck.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-    paperless.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
     cloudflared.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
-    tandoor.enable = lib.mkOption {
       type = lib.types.bool;
       default = false;
     };

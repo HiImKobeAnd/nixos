@@ -2,7 +2,6 @@
 {
   imports = [
     ../../homeModules/git.nix
-    ../../homeModules/nixvim.nix
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
     ../../homeModules/helix.nix
