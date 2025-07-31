@@ -16,7 +16,6 @@
       zotero
       firefox
       calibre
-      rnnoise-plugin
       (chromium.override { enableWideVine = true; })
     ];
   };
