@@ -9,8 +9,13 @@
       enable = true;
     };
 
+    # boot.kernelParams = [
+    # "NVreg_PreserveVideoMemoryAllocations=1"
+    # ];
+
     services.xserver.videoDrivers = [ "nvidia" ];
 
+    powerManagement.enable = true;
     hardware.nvidia = {
       modesetting.enable = true;
       open = false;
