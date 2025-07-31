@@ -16,6 +16,7 @@
       zotero
       firefox
       calibre
+      vscodium
       (chromium.override { enableWideVine = true; })
     ];
   };
