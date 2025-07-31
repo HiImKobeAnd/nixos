@@ -9,9 +9,9 @@
       enable = true;
     };
 
-    # boot.kernelParams = [
-    # "NVreg_PreserveVideoMemoryAllocations=1"
-    # ];
+    boot.kernelParams = [
+      "NVreg_PreserveVideoMemoryAllocations=1"
+    ];
 
     services.xserver.videoDrivers = [ "nvidia" ];
 
