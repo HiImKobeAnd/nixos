@@ -15,7 +15,7 @@
         games.enable = true;
         librewolf.enable = true;
         quickemu.enable = true;
-        # waydroid.enable = true;
+        waydroid.enable = true;
         misc.enable = true;
       };
       services = {
