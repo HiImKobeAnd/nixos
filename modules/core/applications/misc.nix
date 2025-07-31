@@ -16,7 +16,6 @@
       zotero
       firefox
       calibre
-      easyeffects
       (chromium.override { enableWideVine = true; })
     ];
   };
