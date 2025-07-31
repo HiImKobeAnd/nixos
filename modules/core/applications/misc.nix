@@ -12,13 +12,10 @@
       noisetorch
       krita
       inkscape
-      pureref
-      gpxsee
+      # gpxsee
       zotero
-      mokuro
-      element-desktop
       firefox
-      zed-editor
+      calibre
       (chromium.override { enableWideVine = true; })
     ];
   };
