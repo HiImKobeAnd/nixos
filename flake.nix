@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord.url = "github:KaylorBen/nixcord";
-    # nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -39,7 +38,6 @@
             ./hosts/desktop/configuration.nix
 
             inputs.home-manager.nixosModules.home-manager
-            # inputs.nixos-cosmic.nixosModules.default
             inputs.aagl.nixosModules.default
             {
               home-manager = {

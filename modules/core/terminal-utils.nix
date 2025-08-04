@@ -15,6 +15,9 @@
 
     nh
     any-nix-shell
+    nixpkgs-review
+    nix-output-monitor
+    glow
 
     gcc
 
