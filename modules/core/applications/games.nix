@@ -8,6 +8,7 @@
   config = lib.mkIf config.modules.applications.games.enable {
     environment.systemPackages = with pkgs; [
       steam
+      gamemode
       protonup-rs
       xivlauncher
       (lutris.override {
@@ -27,6 +28,7 @@
       steam.enable = true;
       steam.gamescopeSession.enable = true;
       steam.remotePlay.openFirewall = true;
+      gamemode.enable = true;
       #honkers-railway-launcher.enable = true;
     };
     nix.settings.substituters = [ "https://ezkea.cachix.org" ];
