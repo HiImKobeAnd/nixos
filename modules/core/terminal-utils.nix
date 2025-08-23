@@ -16,6 +16,7 @@
     nh
     any-nix-shell
     nixpkgs-review
+    nix-init
     nix-output-monitor
     glow
 
