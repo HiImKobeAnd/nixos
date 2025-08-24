@@ -38,7 +38,7 @@
     hardware.bluetooth.enable = true;
 
     # Networking
-    networking.hostName = "nixos";
+    networking.hostName = "hiimkobeand";
     networking.networkmanager.enable = true;
 
     # Nixpkgs
