@@ -11,7 +11,7 @@ git add .
 
 echo "NixOS Rebuilding..."
 
-nh os switch ~/.dotfiles/nixos/ --diff=always --hostname $USER -- -j 1 --cores 4
+nh os switch ~/.dotfiles/nixos/ --hostname $USER -- -j 1 --cores 4
 
 # Get current generation metadata
 current=$(sudo nix-env -p /nix/var/nix/profiles/system --list-generations | grep current)
