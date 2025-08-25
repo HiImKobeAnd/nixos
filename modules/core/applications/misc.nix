@@ -17,7 +17,6 @@
       firefox
       calibre
       vscodium
-      prusa-slicer
       (chromium.override { enableWideVine = true; })
     ];
   };
