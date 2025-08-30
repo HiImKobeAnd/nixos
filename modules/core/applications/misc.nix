@@ -17,6 +17,7 @@
       firefox
       calibre
       vscodium
+      blender
       (chromium.override { enableWideVine = true; })
     ];
   };
