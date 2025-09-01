@@ -16,6 +16,7 @@
         librewolf.enable = true;
         quickemu.enable = true;
         waydroid.enable = true;
+        blender.enable = true;
         misc.enable = true;
       };
       services = {
