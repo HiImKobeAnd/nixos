@@ -7,9 +7,9 @@
 {
   config = lib.mkIf config.modules.applications.blender.enable {
     environment.systemPackages = with pkgs; [
-      # (blender.override {
-      # cudaSupport = true;
-      # })
+      (blender.override {
+        cudaSupport = true;
+      })
     ];
     nix.settings = {
       substituters = [
