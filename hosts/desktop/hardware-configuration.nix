@@ -24,6 +24,9 @@
     initrd.kernelModules = [ ];
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
+    kernelParams = [
+      "mem_sleep_default=deep"
+    ];
   };
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/984df510-041f-4680-886c-56982c1589b7";
