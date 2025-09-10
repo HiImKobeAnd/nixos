@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ../../homeModules/nixvim.nix
+    # ../../homeModules/nixvim.nix
     ../../homeModules/nixcord.nix
     ../../homeModules/git.nix
     ../../homeModules/fish.nix
