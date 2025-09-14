@@ -10,7 +10,7 @@
       steam
       gamemode
       protonup-rs
-      #xivlauncher
+      xivlauncher
       (lutris.override {
         extraPkgs = pkgs: [
           wine
