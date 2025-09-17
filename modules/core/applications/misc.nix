@@ -18,7 +18,7 @@
       calibre
       vscodium
       element-desktop
-      passmark-performancetest
+      unigine-superposition
       (chromium.override { enableWideVine = true; })
     ];
   };
