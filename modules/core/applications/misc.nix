@@ -18,7 +18,6 @@
       calibre
       vscodium
       element-desktop
-      unigine-superposition
       (chromium.override { enableWideVine = true; })
     ];
   };
