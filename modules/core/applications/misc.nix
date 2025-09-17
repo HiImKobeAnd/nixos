@@ -17,6 +17,7 @@
       firefox
       calibre
       vscodium
+      element-desktop
       (chromium.override { enableWideVine = true; })
     ];
   };
