@@ -7,7 +7,7 @@
   # Setup
   config = {
     modules = {
-      desktop = "gnome";
+      desktop = "cosmic";
       sound.enable = true;
       nvidia.enable = true;
       applications = {
