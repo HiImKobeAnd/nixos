@@ -18,7 +18,6 @@
       calibre
       vscodium
       element-desktop
-      kdePackages.kwallet
       (chromium.override { enableWideVine = true; })
     ];
   };
