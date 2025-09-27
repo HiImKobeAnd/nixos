@@ -58,6 +58,7 @@
     };
 
     virtualisation.libvirtd.enable = true;
+    virtualisation.libvirtd.qemu.swtpm.enable = true;
 
     nix.settings.experimental-features = [
       "nix-command"
