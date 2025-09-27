@@ -18,7 +18,6 @@
       calibre
       vscodium
       element-desktop
-      virt-manager
       (chromium.override { enableWideVine = true; })
     ];
   };
