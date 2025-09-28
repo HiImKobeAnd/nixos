@@ -29,6 +29,7 @@
       calibre
       vscodium
       element-desktop
+      davinci-resolve
       (chromium.override { enableWideVine = true; })
     ];
   };
