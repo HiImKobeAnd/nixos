@@ -19,7 +19,7 @@
           closeAllHomeButton = true;
           closeOthers = true;
         };
-        callTimer.enable = true;
+        # callTimer.enable = true;
         clearURLs.enable = true;
         fakeNitro = {
           enable = true;
