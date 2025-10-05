@@ -8,7 +8,7 @@
   config = lib.mkIf config.modules.applications.misc.enable {
     programs.noisetorch.enable = true;
     programs.obs-studio = {
-      enable = true;
+      enable = false;
       package = (
         pkgs.obs-studio.override {
           cudaSupport = true;
@@ -25,11 +25,8 @@
       inkscape
       # gpxsee
       zotero
-      firefox
-      calibre
-      vscodium
+      # firefox
       element-desktop
-      davinci-resolve
       (chromium.override { enableWideVine = true; })
     ];
   };
