@@ -10,6 +10,7 @@
       qemu
       swtpm
       quickemu
+      virt-manager
     ];
   };
 }
