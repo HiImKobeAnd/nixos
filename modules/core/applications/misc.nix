@@ -27,6 +27,7 @@
       zotero
       # firefox
       element-desktop
+      easyeffects
       (chromium.override { enableWideVine = true; })
     ];
   };
