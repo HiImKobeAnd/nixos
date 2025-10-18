@@ -11,6 +11,7 @@
       gamemode
       protonup-rs
       xivlauncher
+      pokemmo-installer
       # (lutris.override {
       #   extraPkgs = pkgs: [
       #     wine
