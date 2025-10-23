@@ -27,8 +27,6 @@
       zotero
       # firefox
       element-desktop
-      code-cursor
-      jetbrains.rust-rover
       (chromium.override { enableWideVine = true; })
     ];
   };
