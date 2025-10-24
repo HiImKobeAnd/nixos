@@ -64,6 +64,7 @@
       auto-session.enable = true;
       nvim-autopairs.enable = true;
       undotree.enable = true;
+      which-key.enable = true;
       fzf-lua = {
         enable = true;
         profile = "default";
