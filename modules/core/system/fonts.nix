@@ -10,7 +10,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
-      nerd-fonts.noto
+      nerd-fonts.symbols-only
     ];
     fonts = {
       fontconfig = {

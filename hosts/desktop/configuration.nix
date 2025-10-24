@@ -9,6 +9,7 @@
     modules = {
       desktop = "cosmic";
       sound.enable = true;
+      fonts.enable = true;
       nvidia.enable = true;
       applications = {
         essentials.enable = true;
