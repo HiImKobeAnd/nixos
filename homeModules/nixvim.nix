@@ -75,15 +75,19 @@
         profile = "default";
         keymaps = {
           "<leader>f" = "files";
-          "<leader>fg" = {
+          "<leader>g" = {
             action = "live_grep";
             options = {
               desc = "Live Grep";
             };
           };
-          "<leader>gs" = "git_status";
-          "<leader>sd" = "diagnostics_document";
-          "<leader>sD" = "diagnostics_workspace";
+          "<leader>lr" = "lsp_references";
+          "<leader>ld" = "lsp_definitions";
+          "<leader>lD" = "lsp_declarations";
+          "<leader>ls" = "lsp_live_workspace_symbols";
+          "<leader>G" = "git_status";
+          "<leader>d" = "diagnostics_document";
+          "<leader>D" = "diagnostics_workspace";
         };
       };
 
