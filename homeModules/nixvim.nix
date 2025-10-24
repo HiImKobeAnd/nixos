@@ -16,13 +16,20 @@
       undofile = true;
       undolevels = 10000;
 
+      breakindent = true;
+
       relativenumber = true;
 
       tabstop = 2;
       shiftwidth = 2;
       expandtab = true;
 
-      updatetime = 50;
+      updatetime = 250;
+      timeoutlen = 300;
+
+      completeopt = "menuone,noselect";
+
+      hlsearch = false;
 
       termguicolors = true;
 
@@ -139,6 +146,7 @@
           yaml
           javascript
           rust
+          just
         ];
         settings = {
           highlight.enable = true;
