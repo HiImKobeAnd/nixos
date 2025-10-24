@@ -29,8 +29,6 @@
 
       completeopt = "menuone,noselect";
 
-      hlsearch = false;
-
       termguicolors = true;
 
       mouse = "a";
@@ -77,8 +75,12 @@
         profile = "default";
         keymaps = {
           "<C-p>" = "files";
-          "<leader>fg" = "live_grep";
-          "<leader>km" = "keymaps";
+          "<leader>fg" = {
+            action = "live_grep";
+            options = {
+              desc = "Live Grep";
+            };
+          };
           "<leader>gs" = "git_status";
           "<leader>sd" = "diagnostics_document";
           "<leader>sD" = "diagnostics_workspace";
@@ -146,7 +148,6 @@
           yaml
           javascript
           rust
-          just
         ];
         settings = {
           highlight.enable = true;
