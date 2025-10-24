@@ -74,7 +74,7 @@
         enable = true;
         profile = "default";
         keymaps = {
-          "<C-p>" = "files";
+          "<leader>f" = "files";
           "<leader>fg" = {
             action = "live_grep";
             options = {
