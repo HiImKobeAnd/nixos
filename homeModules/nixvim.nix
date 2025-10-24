@@ -10,7 +10,7 @@
     vimAlias = true;
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus";
-    globals.mapleader = ",";
+    globals.mapleader = " ";
     colorschemes.gruvbox.enable = true;
     opts = {
       undofile = true;
