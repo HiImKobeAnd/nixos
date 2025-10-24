@@ -74,20 +74,54 @@
         enable = true;
         profile = "default";
         keymaps = {
-          "<leader>f" = "files";
+          "<leader>f" = {
+            action = "files";
+            options = {
+              desc = "Open file picker";
+            };
+          };
           "<leader>g" = {
             action = "live_grep";
             options = {
               desc = "Live Grep";
             };
           };
-          "<leader>lr" = "lsp_references";
-          "<leader>ld" = "lsp_definitions";
-          "<leader>lD" = "lsp_declarations";
-          "<leader>ls" = "lsp_live_workspace_symbols";
-          "<leader>G" = "git_status";
-          "<leader>d" = "diagnostics_document";
-          "<leader>D" = "diagnostics_workspace";
+          "<leader>lr" = {
+            action = "lsp_references";
+            options = {
+              desc = "References";
+            };
+          };
+          "<leader>ls" = {
+            action = "lsp_workspace_symbols";
+            options = {
+              desc = "Symbols";
+            };
+          };
+          "<leader>ld" = {
+            action = "lsp_definitions";
+            options = {
+              desc = "Definitions";
+            };
+          };
+          "<leader>lD" = {
+            action = "lsp_declarations";
+            options = {
+              desc = "Declarations";
+            };
+          };
+          "<leader>d" = {
+            action = "diagnostics_document";
+            options = {
+              desc = "Diagnostics Documents";
+            };
+          };
+          "<leader>D" = {
+            action = "diagnostics_workspace";
+            options = {
+              desc = "Diagnostics Workspace";
+            };
+          };
         };
       };
 
