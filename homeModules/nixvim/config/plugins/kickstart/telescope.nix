@@ -99,11 +99,11 @@
           desc = "[S]earch Recent Files ('.' for repeat)";
         };
       };
-      "<leader><leader>" = {
+      "<leader>f" = {
         mode = "n";
-        action = "buffers";
+        action = "find_files";
         options = {
-          desc = "[ ] Find existing buffers";
+          desc = "[ ] Find Files";
         };
       };
     };
