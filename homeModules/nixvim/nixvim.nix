@@ -120,6 +120,8 @@ in
   #
   # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   enable = true;
+  viAlias = true;
+  vimAlias = true;
   colorschemes.gruvbox.enable = true;
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
