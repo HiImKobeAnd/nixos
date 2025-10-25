@@ -49,9 +49,9 @@
         ];
       };
     };
-    extraConfigLua = ''
-      require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
-    '';
+    #extraConfigLua = ''
+    #  require('cmp').event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
+    #'';
     plugins = {
       lualine.enable = true;
       comment.enable = true;
