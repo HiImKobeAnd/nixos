@@ -49,7 +49,7 @@
   keymaps = [
     {
       mode = "";
-      key = "<leader>c";
+      key = "<leader>j";
       action.__raw = ''
         function()
           require('conform').format { async = true, lsp_fallback = true }
