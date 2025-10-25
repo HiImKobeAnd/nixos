@@ -31,6 +31,13 @@
         use_icons.__raw = "vim.g.have_nerd_font";
       };
 
+      comment = {
+        mappings = {
+          comment_visual = "<leader>c";
+          comment_line = "<leader>c";
+        };
+      };
+
       # ... and there is more!
       # Check out: https://github.com/echasnovski/mini.nvim
     };
