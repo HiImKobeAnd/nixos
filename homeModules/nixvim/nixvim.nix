@@ -5,7 +5,7 @@
   ...
 }:
 let
-  enable_nerd_fonts = false;
+  enable_nerd_fonts = true;
 in
 {
   imports = [
@@ -19,6 +19,7 @@ in
     ./config/plugins/kickstart/todo-comments.nix
     ./config/plugins/kickstart/mini.nix
     ./config/plugins/kickstart/treesitter.nix
+    ./config/plugins/custom/auto-session.nix
 
     # NOTE: Add/Configure additional plugins for Kickstart.nixvim
     #
@@ -119,22 +120,7 @@ in
   #
   # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   enable = true;
-  colorschemes = {
-    # https://nix-community.github.io/nixvim/colorschemes/tokyonight/index.html
-    tokyonight = {
-      enable = true;
-      settings = {
-        # Like many other themes, this one has different styles, and you could load
-        # any other, such as 'storm', 'moon', or 'day'.
-        style = "night";
-        styles = {
-          comments = {
-            italic = false; # Disable italics in comments
-          };
-        };
-      };
-    };
-  };
+  colorschemes.gruvbox.enable = true;
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
   globals = {
