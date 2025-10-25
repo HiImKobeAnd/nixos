@@ -39,16 +39,6 @@
       signcolumn = "yes";
     };
     keymaps = [
-      {
-        action = "<cmd> vim.lsp.buf.declaration()";
-        mode = "n";
-        key = "gD";
-      }
-      {
-        action = "<cmd> vim.lsp.buf.definition()";
-        mode = "n";
-        key = "gd";
-      }
     ];
     performance = {
       byteCompileLua.enable = true;
