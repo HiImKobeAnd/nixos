@@ -1,14 +1,13 @@
 { ... }:
 {
   imports = [
-    # ../../homeModules/nixvim.nix
     ../../homeModules/nixcord.nix
     ../../homeModules/git.nix
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
     ../../homeModules/cosmic.nix
     ../../homeModules/helix.nix
-    ../../homeModules/nixvim.nix
+    ../../homeModules/nixvim
   ];
   home = {
     username = "hiimkobeand";
