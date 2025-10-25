@@ -6,7 +6,7 @@
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
     ../../homeModules/cosmic.nix
-    ../../homeModules/helix.nix
+    # ../../homeModules/helix.nix
     ../../homeModules/nixvim
   ];
   home = {
