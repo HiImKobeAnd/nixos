@@ -19,21 +19,13 @@ in
     ./config/plugins/kickstart/todo-comments.nix
     ./config/plugins/kickstart/mini.nix
     ./config/plugins/kickstart/treesitter.nix
-    ./config/plugins/custom/auto-session.nix
 
-    # NOTE: Add/Configure additional plugins for Kickstart.nixvim
-    #
-    #  Here are some example plugins that I've included in the Kickstart repository.
-    #  Uncomment any of the lines below to enable them (you will need to restart nvim).
-    #
-    # ./config/plugins/kickstart/debug.nix
-    ./config/plugins/kickstart/indent-blankline.nix
-    # ./config/plugins/kickstart/lint.nix
+    ./config/plugins/custom/auto-session.nix
     ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
-    #
-    # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
-    # Add your plugins to ./config/plugins/custom and import them below
+    # ./config/plugins/kickstart/debug.nix
+    # ./config/plugins/kickstart/lint.nix
+    #./config/plugins/kickstart/indent-blankline.nix
   ];
 
   /*
@@ -114,11 +106,6 @@ in
     P.S. You can delete this when you're done too. It's your config now! :)
   */
 
-  # You can easily change to a different colorscheme.
-  # Add your colorscheme here and enable it.
-  # Don't forget to disable the colorschemes you arent using
-  #
-  # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
   enable = true;
   viAlias = true;
   vimAlias = true;
@@ -126,12 +113,10 @@ in
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
   globals = {
-    # Set <space> as the leader key
     # See `:help mapleader`
     mapleader = " ";
     maplocalleader = " ";
 
-    # Set to true if you have a Nerd Font installed and selected in the terminal
     have_nerd_font = enable_nerd_fonts;
   };
 
@@ -139,11 +124,9 @@ in
   clipboard = {
     providers = {
       wl-copy.enable = true; # For Wayland
-      xsel.enable = true; # For X11
     };
 
     # Sync clipboard between OS and Neovim
-    #  Remove this option if you want your OS clipboard to remain independent.
     register = "unnamedplus";
   };
 
@@ -157,7 +140,7 @@ in
     number = true;
     # You can also add relative line numbers, to help with jumping.
     #  Experiment for yourself to see if you like it!
-    # relativenumber = true;
+    relativenumber = true;
 
     # Enable mouse mode, can be useful for resizing splits for example!
     mouse = "a";
