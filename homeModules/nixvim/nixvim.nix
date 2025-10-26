@@ -159,7 +159,7 @@ in
     smartcase = true;
 
     # Keep signcolumn on by default
-    signcolumn = "yes:2";
+    signcolumn = "yes";
 
     # Decrease update time
     updatetime = 250;
