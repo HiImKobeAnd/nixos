@@ -22,11 +22,16 @@
                 "FL"
                 "FR"
               ];
+              "dont-export-monitor" = true;
             };
             "stream.props" = { };
             "stream.rules" = [
               {
-                matches = [ { "media.class" = "Audio/Sink"; } ];
+                matches = [
+                  # { "media.class" = "Audio/Sink"; }
+                  { "node.name" = "alsa_output.pci-0000_0c_00.6.iec958-stereo"; }
+                  { "node.name" = "alsa_output.usb-Logitech_PRO_X_000000000000-00.pro-output-0"; }
+                ];
                 actions.create-stream = { };
               }
             ];
