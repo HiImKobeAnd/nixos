@@ -9,6 +9,7 @@
     dua
     btop
     bat
+    tldr
 
     gh
     koji
