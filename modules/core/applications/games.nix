@@ -11,11 +11,11 @@
       gamemode
       protonup-rs
       # xivlauncher
-      # (lutris.override {
-      #   extraPkgs = pkgs: [
-      #     wine
-      #   ];
-      # })
+      (lutris.override {
+        extraPkgs = pkgs: [
+          wine
+        ];
+      })
       (prismlauncher.override {
         additionalPrograms = [ ffmpeg ];
         jdks = [
