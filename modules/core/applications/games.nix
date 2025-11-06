@@ -10,12 +10,12 @@
       steam
       gamemode
       protonup-rs
-      # xivlauncher
-      (lutris.override {
-        extraPkgs = pkgs: [
-          wine
-        ];
-      })
+      xivlauncher
+      # (lutris.override {
+      #   extraPkgs = pkgs: [
+      #     wine
+      #   ];
+      # })
       (prismlauncher.override {
         additionalPrograms = [ ffmpeg ];
         jdks = [
