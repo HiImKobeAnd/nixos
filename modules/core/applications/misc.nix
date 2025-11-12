@@ -26,7 +26,7 @@
       # gpxsee
       zotero
       # firefox
-      element-desktop
+      # element-desktop
       (chromium.override { enableWideVine = true; })
     ];
   };
