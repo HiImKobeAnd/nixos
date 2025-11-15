@@ -8,7 +8,7 @@
   config = lib.mkIf config.modules.services.ollama.enable {
     environment.systemPackages = with pkgs; [
       ollama
-      librechat
+      alpaca
     ];
     services.ollama = {
       enable = true;
