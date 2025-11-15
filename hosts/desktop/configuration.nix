@@ -26,10 +26,19 @@
         misc.enable = true;
         syncthing.enable = true;
         docker.enable = true;
-        #ollama.enable = true;
+        ollama.enable = true;
       };
     };
     services.flatpak.enable = true;
+
+    nix.settings = {
+      substituters = [
+        "https://nix-community.cachix.org"
+      ];
+      trusted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
+    };
 
     # Bootloader
     boot.loader.systemd-boot.enable = true;
