@@ -16,6 +16,11 @@
       #     wine
       #   ];
       # })
+      (heroic.override {
+        extraPkgs = pkgs: [
+          pkgs.gamescope
+        ];
+      })
       (prismlauncher.override {
         additionalPrograms = [ ffmpeg ];
         jdks = [
