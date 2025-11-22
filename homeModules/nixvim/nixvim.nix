@@ -171,6 +171,10 @@ in
     splitright = true;
     splitbelow = true;
 
+    tabstop = 2;
+    shiftwidth = 2;
+    expandtab = true;
+
     # Sets how neovim will display certain whitespace characters in the editor
     #  See `:help 'list'`
     #  and `:help 'listchars'`

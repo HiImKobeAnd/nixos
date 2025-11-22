@@ -24,6 +24,11 @@
         home-manager.follows = "home-manager";
       };
     };
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
@@ -38,7 +43,6 @@
             ./hosts/desktop/configuration.nix
 
             inputs.home-manager.nixosModules.home-manager
-            # inputs.aagl.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = true;
