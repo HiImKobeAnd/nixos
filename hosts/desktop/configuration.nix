@@ -7,7 +7,7 @@
   # Setup
   config = {
     modules = {
-      desktop = "kde";
+      desktop = "cosmic";
       sound.enable = true;
       fonts.enable = true;
       nvidia.enable = true;
