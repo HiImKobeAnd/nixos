@@ -25,6 +25,7 @@
       inkscape
       # gpxsee
       zotero
+      blockbench
       # firefox
       # element-desktop
       (chromium.override { enableWideVine = true; })
