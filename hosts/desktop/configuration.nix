@@ -26,7 +26,7 @@
         misc.enable = true;
         syncthing.enable = true;
         docker.enable = true;
-        ollama.enable = true;
+        # ollama.enable = true;
       };
     };
     services.flatpak.enable = true;
