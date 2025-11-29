@@ -19,5 +19,9 @@ _: {
       enable = true;
       gitCredentialHelper.enable = true;
     };
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+    };
   };
 }
