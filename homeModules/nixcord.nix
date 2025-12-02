@@ -20,7 +20,7 @@
           closeOthers = true;
         };
         # callTimer.enable = true;
-        clearURLs.enable = true;
+        clearUrLs.enable = true;
         fakeNitro = {
           enable = true;
           enableEmojiBypass = false;
