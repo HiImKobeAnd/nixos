@@ -11,6 +11,7 @@
       gamemode
       protonup-rs
       xivlauncher
+      osu-lazer
       # (lutris.override {
       #   extraPkgs = pkgs: [
       #     wine
