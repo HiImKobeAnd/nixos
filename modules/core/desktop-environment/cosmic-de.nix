@@ -16,7 +16,7 @@
     environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
     environment.systemPackages = with pkgs; [
       # cosmic-ext-applet-external-monitor-brightness
-      # ddcutil # Needed for external monitor brightness applet
+      ddcutil # Needed for external monitor brightness applet
       alacritty
     ];
     environment.cosmic.excludePackages = with pkgs; [
