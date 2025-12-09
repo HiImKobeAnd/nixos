@@ -23,8 +23,8 @@
               "com.system76.CosmicAppletWorkspaces"
             ]
             [
-              "io.github.cosmic_utils.cosmic-ext-applet-external-monitor-brightness"
               "com.system76.CosmicAppletStatusArea"
+              "io.github.cosmic_utils.cosmic-ext-applet-external-monitor-brightness"
               "com.system76.CosmicAppletNotifications"
               "com.system76.CosmicAppletNetwork"
               "com.system76.CosmicAppletPower"
