@@ -22,7 +22,10 @@
       "sd_mod"
     ];
     initrd.kernelModules = [ ];
-    kernelModules = [ "kvm-intel" ];
+    kernelModules = [
+      "kvm-intel"
+      "ddcci-backlight"
+    ];
     extraModulePackages = [ ];
     kernelParams = [
       "mem_sleep_default=deep"

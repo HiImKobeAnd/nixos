@@ -43,7 +43,10 @@
     # Bootloader
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.extraModulePackages = [ config.boot.kernelPackages.rtl8852bu ]; # For Asus AX55 nano wifi dongle
+    boot.extraModulePackages = with config.boot.kernelPackages; [
+      # rtl8852bu # For Asus AX55 nano wifi dongle
+      ddcci-driver
+    ];
 
     # Bluetooth
     hardware.bluetooth.enable = true;

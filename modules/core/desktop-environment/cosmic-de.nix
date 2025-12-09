@@ -12,6 +12,8 @@
     services.geoclue2.enable = true;
     services.geoclue2.enableDemoAgent = false;
 
+    services.system76-scheduler.enable = true;
+
     boot.kernelParams = [ "nvidia_drm.fbdev=1" ];
     environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
     environment.systemPackages = with pkgs; [
