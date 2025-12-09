@@ -17,7 +17,7 @@
     boot.kernelParams = [ "nvidia_drm.fbdev=1" ];
     environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
     environment.systemPackages = with pkgs; [
-      # cosmic-ext-applet-external-monitor-brightness
+      cosmic-ext-applet-external-monitor-brightness
       ddcutil # Needed for external monitor brightness applet
       alacritty
     ];
