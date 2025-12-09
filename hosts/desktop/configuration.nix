@@ -45,19 +45,19 @@
     boot.loader.efi.canTouchEfiVariables = true;
     boot.extraModulePackages = with config.boot.kernelPackages; [
       # rtl8852bu # For Asus AX55 nano wifi dongle
-      ddcci-driver # For backlight control
+      # ddcci-driver # For backlight control
     ];
 
     # For backlight control
-    services.udev.extraRules =
-      let
-        bash = "${pkgs.bash}/bin/bash";
-        ddcciDev = "NVIDIA i2c adapter 5 at 1:00.0";
-        ddcciNode = "sys/bus/i2c/devices/i2c-14/new_device";
-      in
-      ''
-        SUBSYSTEM=="i2c", ACTION=="add", ATTR{name}=="${ddcciDev}", RUN+="${bash} -c 'sleep 30; printf ddcci\ 0x37 > ${ddcciNode}'"
-      '';
+    # services.udev.extraRules =
+    #   let
+    #     bash = "${pkgs.bash}/bin/bash";
+    #     ddcciDev = "NVIDIA i2c adapter 5 at 1:00.0";
+    #     ddcciNode = "sys/bus/i2c/devices/i2c-14/new_device";
+    #   in
+    #   ''
+    #     SUBSYSTEM=="i2c", ACTION=="add", ATTR{name}=="${ddcciDev}", RUN+="${bash} -c 'sleep 30; printf ddcci\ 0x37 > ${ddcciNode}'"
+    #   '';
 
     # Bluetooth
     hardware.bluetooth.enable = true;
