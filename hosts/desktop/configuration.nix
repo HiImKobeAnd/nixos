@@ -45,7 +45,7 @@
     boot.loader.efi.canTouchEfiVariables = true;
     boot.extraModulePackages = with config.boot.kernelPackages; [
       # rtl8852bu # For Asus AX55 nano wifi dongle
-      # ddcci-driver # For backlight control
+      ddcci-driver # For backlight control
     ];
 
     # For backlight control
