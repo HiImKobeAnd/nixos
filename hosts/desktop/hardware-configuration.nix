@@ -24,7 +24,7 @@
     initrd.kernelModules = [ ];
     kernelModules = [
       "kvm-intel"
-      "ddcci-backlight"
+      "ddcci-backlight" # For backlight control
     ];
     extraModulePackages = [ ];
     kernelParams = [
