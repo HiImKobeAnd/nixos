@@ -78,6 +78,7 @@
         "wheel"
         "libvirtd"
         "docker"
+        "i2c"
       ];
     };
 

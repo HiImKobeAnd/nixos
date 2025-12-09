@@ -24,6 +24,6 @@
     environment.cosmic.excludePackages = with pkgs; [
       cosmic-term # Misaligns cursor in neovim
     ];
-    hardware.i2c.enable = true; # Needed for external monitor brightness applet
+    services.ddccontrol.enable = true; # Needed for external monitor brightness applet
   };
 }
