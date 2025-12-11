@@ -78,7 +78,7 @@
         "wheel"
         "libvirtd"
         "docker"
-        "i2c"
+        "i2c" # For backlight control
       ];
     };
 
