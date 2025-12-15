@@ -34,6 +34,7 @@
         plugins_center = cosmicLib.cosmic.mkRON "optional" [
           "cosmic-ext-time-tracker"
           "com.system76.CosmicAppletTime"
+          "io.github.cosmic_utils.weather-applet"
         ];
       }
     ];
