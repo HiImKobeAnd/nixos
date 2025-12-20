@@ -28,6 +28,8 @@
       blockbench
       # firefox
       # element-desktop
+      godot
+      spicetify-cli
       (chromium.override { enableWideVine = true; })
     ];
   };
