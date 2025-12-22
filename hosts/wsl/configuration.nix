@@ -13,22 +13,17 @@
   ];
   # Config
   modules.fonts.enable = false;
-  modules.services.docker.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    firefox
-  ];
 
   # User
-  users.users.hiimkobeand = {
-    isNormalUser = true;
-    description = "Kobe Andersen";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "libvirtd"
-    ];
-  };
+  #users.users.hiimkobeand = {
+  #  isNormalUser = true;
+  #  description = "Kobe Andersen";
+  #  extraGroups = [
+  #    "networkmanager"
+  #    "wheel"
+  #    "libvirtd"
+  #  ];
+  #};
 
   # Nixpkgs
   nixpkgs.config.allowUnfree = true;
@@ -41,5 +36,5 @@
     "flakes"
   ];
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }
