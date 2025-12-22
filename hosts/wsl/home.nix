@@ -4,12 +4,12 @@
     ../../homeModules/git.nix
     ../../homeModules/fish.nix
     ../../homeModules/misc.nix
-    ../../homeModules/helix.nix
+    ../../homeModules/nixvim
   ];
   home = {
     username = "wsl";
     homeDirectory = "/home/wsl";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
   };
   programs = {
     home-manager.enable = true;
