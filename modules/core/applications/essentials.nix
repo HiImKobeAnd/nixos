@@ -9,7 +9,7 @@
     programs.kdeconnect.enable = true;
     environment.systemPackages = with pkgs; [
       thunderbird
-      youtube-music
+      pear-desktop
       libreoffice-fresh
       obsidian
     ];

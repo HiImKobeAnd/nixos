@@ -20,12 +20,10 @@
           closeOthers = true;
         };
         # callTimer.enable = true;
-        clearUrLs.enable = true;
         fakeNitro = {
           enable = true;
           enableEmojiBypass = false;
         };
-        mutualGroupDMs.enable = true;
         youtubeAdblock.enable = true;
         messageClickActions.enable = true;
         shikiCodeblocks.enable = true;
