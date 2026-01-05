@@ -11,6 +11,11 @@
       gamemode
       protonup-rs
       xivlauncher
+      (retroarch.withCores (
+        cores: with cores; [
+          melonds
+        ]
+      ))
       # (lutris.override {
       #   extraPkgs = pkgs: [
       #     wine
