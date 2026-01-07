@@ -10,7 +10,7 @@
       steam
       gamemode
       protonup-rs
-      xivlauncher
+      # xivlauncher
       (retroarch.withCores (
         cores: with cores; [
           melonds
