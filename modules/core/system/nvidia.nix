@@ -5,17 +5,15 @@
 }:
 {
   config = lib.mkIf config.modules.nvidia.enable {
-    hardware.graphics = {
-      enable = true;
-    };
+    hardware.graphics.enable = true;
+    hardware.graphics.enable32Bit = true;
+    services.xserver.videoDrivers = [ "nvidia" ];
+    powerManagement.enable = true;
 
     boot.kernelParams = [
       "NVreg_PreserveVideoMemoryAllocations=1"
     ];
 
-    services.xserver.videoDrivers = [ "nvidia" ];
-
-    powerManagement.enable = true;
     hardware.nvidia = {
       modesetting.enable = true;
       open = false;
