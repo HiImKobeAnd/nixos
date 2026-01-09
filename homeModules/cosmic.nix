@@ -66,6 +66,10 @@
         action = cosmicLib.cosmic.mkRON "enum" "Fullscreen";
         key = "Super+F";
       }
+      # {
+      # action = cosmicLib.cosmic.mkRON "enum" "Suspend";
+      # key = "Super+Esc";
+      # }
     ];
   };
 
