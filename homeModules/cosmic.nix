@@ -23,11 +23,11 @@
             ]
             [
               "com.system76.CosmicAppletStatusArea"
+              "com.system76.CosmicAppletAudio"
               "io.github.cosmic_utils.cosmic-ext-applet-external-monitor-brightness"
               "com.system76.CosmicAppletNotifications"
               "com.system76.CosmicAppletNetwork"
               "com.system76.CosmicAppletPower"
-              "com.system76.CosmicAppletAudio"
             ]
           ]
         );
