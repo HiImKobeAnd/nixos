@@ -27,7 +27,7 @@
               "com.system76.CosmicAppletNotifications"
               "com.system76.CosmicAppletNetwork"
               "com.system76.CosmicAppletPower"
-              "com.system76.CosmicAppletSound"
+              "com.system76.CosmicAppletAudio"
             ]
           ]
         );

@@ -25,7 +25,7 @@
 
     nil
     lua-language-server
-    nixfmt-rfc-style
+    nixfmt
   ];
   programs = {
     bash = {
