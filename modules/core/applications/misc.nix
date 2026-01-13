@@ -21,7 +21,6 @@
     environment.systemPackages = with pkgs; [
       anki
       noisetorch
-      easyeffects
       krita
       inkscape
       # gpxsee
