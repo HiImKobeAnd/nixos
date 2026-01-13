@@ -7,7 +7,7 @@
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
-      # pulse.enable = true;
+      pulse.enable = true;
     };
     services.pipewire.extraConfig.pipewire."50-combined_stream" = {
       "context.modules" = [
