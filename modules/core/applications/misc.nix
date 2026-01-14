@@ -23,6 +23,7 @@
       noisetorch
       krita
       inkscape
+      insomnia
       # gpxsee
       zotero
       blockbench
