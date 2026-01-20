@@ -16,11 +16,11 @@
           melonds
         ]
       ))
-      # (lutris.override {
-      #   extraPkgs = pkgs: [
-      #     wine
-      #   ];
-      # })
+      (lutris.override {
+        extraPkgs = pkgs: [
+          wine
+        ];
+      })
       (heroic.override {
         extraPkgs = pkgs: [
           pkgs.gamescope
