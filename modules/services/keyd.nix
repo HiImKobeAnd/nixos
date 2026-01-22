@@ -12,7 +12,7 @@
               "pagedown" = "nextsong";
               "home" = "f23";
               "end" = "f24";
-              "capslock" = "layer(navlayer)";
+              # "capslock" = "layer(navlayer)";
               #rightalt = "layer(rightalt)";
             };
             rightalt = {
