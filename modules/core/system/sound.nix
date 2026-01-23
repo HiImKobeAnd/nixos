@@ -30,7 +30,7 @@
               {
                 matches = [
                   { "media.class" = "Audio/Sink"; }
-                  { "node.name" = "~also_output.*"; }
+                  # { "node.name" = "~also_output.*"; }
                   # { "node.name" = "alsa_output.pci-0000_01_00.1.hdmi-stereo"; }
                   # { "node.name" = "alsa_output.usb-Logitech_PRO_X_000000000000-00.pro-output-0"; }
                 ];
