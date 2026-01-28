@@ -25,14 +25,12 @@
       noisetorch
       krita
       inkscape
-      podman
       # gpxsee
       zotero
-      blockbench
+      # blockbench
       # firefox
       # element-desktop
       godot
-      easyeffects
       (chromium.override { enableWideVine = true; })
     ];
   };
