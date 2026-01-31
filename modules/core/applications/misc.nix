@@ -31,6 +31,7 @@
       # firefox
       # element-desktop
       godot
+      grayjay
       (chromium.override { enableWideVine = true; })
     ];
   };
