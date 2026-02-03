@@ -64,6 +64,15 @@
         key = "Super+E";
       }
       {
+        action = cosmicLib.cosmic.mkRON "enum" {
+          value = [ "anki" ];
+          variant = "Spawn";
+        };
+        description = cosmicLib.cosmic.mkRON "optional" "Open Anki";
+        key = "Super+A";
+      }
+
+      {
         action = cosmicLib.cosmic.mkRON "enum" "Fullscreen";
         key = "Super+F";
       }
