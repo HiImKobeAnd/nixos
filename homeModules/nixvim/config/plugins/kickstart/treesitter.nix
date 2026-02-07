@@ -33,6 +33,8 @@
       gitcommit
       gitignore
       ini
+      just
+      make
       # llvm
       markdown
       markdown_inline
