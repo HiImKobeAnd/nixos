@@ -96,6 +96,10 @@
         enable = true;
       };
 
+      elixirls = {
+        enable = true;
+      };
+
       # Lua lsp
       lua_ls = {
         enable = true;
