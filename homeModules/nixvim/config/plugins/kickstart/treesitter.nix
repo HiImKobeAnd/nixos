@@ -46,6 +46,9 @@
       rust
       toml # Also for ZMK `keymap.toml`
 
+      # Elixir
+      elixir
+
       # Web Development
       css
       html
