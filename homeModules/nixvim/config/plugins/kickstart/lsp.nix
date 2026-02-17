@@ -98,6 +98,7 @@
 
       elixirls = {
         enable = true;
+        package = null;
       };
 
       # Lua lsp
