@@ -6,6 +6,7 @@
       diagnostic.enabled = true;
       diagnostic.severity = "error";
       discovery.enabled = true;
+      discovery.concurrent = 0;
       running.concurrent = true;
       state.enabled = true;
       status.enabled = true;
@@ -14,6 +15,7 @@
       summary.expandErrors = true;
       summary.follow = true;
       watch.enabled = true;
+      stategies = "dap";
     };
     adapters = {
       elixir.enable = true;
