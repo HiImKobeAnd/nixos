@@ -20,6 +20,7 @@
     adapters = {
       elixir.enable = true;
       rust.enable = true;
+      plenary.enable = true;
     };
   };
 }
