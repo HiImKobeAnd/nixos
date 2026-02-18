@@ -15,7 +15,7 @@
       summary.expandErrors = true;
       summary.follow = true;
       watch.enabled = true;
-      stategies = "dap";
+      stategies = "integrated";
     };
     adapters = {
       elixir.enable = true;
