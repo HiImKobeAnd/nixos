@@ -38,12 +38,12 @@
       options.desc = "[T]oggle [w]atch mode";
     }
     # Test running
-    {
-      mode = "n";
-      key = "<leader>rn";
-      action.__raw = "function() require('neotest').run.run() end";
-      options.desc = "[R]un [n]earest test";
-    }
+    # {
+    #   mode = "n";
+    #   key = "<leader>rn";
+    #   action.__raw = "function() require('neotest').run.run() end";
+    #   options.desc = "[R]un [n]earest test";
+    # }
     {
       mode = "n";
       key = "<leader>rr";
