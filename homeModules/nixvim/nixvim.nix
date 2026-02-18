@@ -20,12 +20,14 @@ in
     ./config/plugins/kickstart/mini.nix
     ./config/plugins/kickstart/treesitter.nix
 
+    ./config/plugins/custom/neotest.nix
     ./config/plugins/custom/auto-session.nix
     ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
     # ./config/plugins/kickstart/debug.nix
     # ./config/plugins/kickstart/lint.nix
     #./config/plugins/kickstart/indent-blankline.nix
+
   ];
 
   /*
