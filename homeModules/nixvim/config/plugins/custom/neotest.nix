@@ -40,15 +40,15 @@
     # Test running
     {
       mode = "n";
-      key = "<leader>rr";
+      key = "<leader>rn";
       action.__raw = "function() require('neotest').run.run() end";
-      options.desc = "[R]un nearest test";
+      options.desc = "[R]un [n]earest test";
     }
     {
       mode = "n";
-      key = "<leader>rt";
+      key = "<leader>rr";
       action.__raw = "function() require('neotest').run.run(vim.fn.getcwd()) end";
-      options.desc = "[R]un [t]est project";
+      options.desc = "[R]un test project";
     }
   ];
 }
