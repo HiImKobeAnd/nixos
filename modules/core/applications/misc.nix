@@ -26,6 +26,7 @@
       krita
       inkscape
       # gpxsee
+      qgis
       zotero
       # blockbench
       # firefox

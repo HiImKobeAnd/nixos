@@ -25,6 +25,7 @@
           "privacy.trackingprotection.emailtracking.enabled" = true;
           "sidebar.verticalTabs" = true;
           "webgl.disabled" = false;
+          "widget.gtk.libadwaita-colors.enabled" = false;
         };
         ExtensionSettings =
           with builtins;
