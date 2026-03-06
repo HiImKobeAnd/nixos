@@ -5,6 +5,7 @@
     enable = true;
     settings = {
       signs = true;
+      sign_priority = 8;
       keywords = {
         FIX = {
           icon = " ";
@@ -82,6 +83,29 @@
           "WarningMsg"
           "#fabd2f"
         ];
+      };
+      gui_style.bg = "BOLD";
+      gui_style.fg = "NONE";
+      highlight = {
+        after = "fg";
+        comments_only = true;
+        keyword = "wide";
+        max_line_len = 400;
+        multiline = true;
+        multiline_context = 10;
+        multiline_pattern = "^.";
+        pattern = ".*<(KEYWORDS)\\s*:";
+      };
+      search = {
+        args = [
+          "--color=never"
+          "--no-heading"
+          "--with-filename"
+          "--line-number"
+          "--column"
+        ];
+        command = "rg";
+        pattern = "\\b(KEYWORDS):";
       };
     };
   };
