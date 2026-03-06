@@ -6,54 +6,57 @@
     settings = {
       signs = true;
       sign_priority = 8;
+      merge_keywords = true;
       keywords = {
         FIX = {
-          icon = " ";
-          color = "error";
           alt = [
             "FIXME"
             "BUG"
             "FIXIT"
             "ISSUE"
           ];
-        };
-        TODO = {
-          icon = " ";
-          color = "info";
+          color = "error";
+          icon = " ";
         };
         HACK = {
+          color = "warning";
           icon = " ";
-          color = "warning";
         };
-        WARN = {
-          icon = " ";
-          color = "warning";
+        NOTE = {
           alt = [
-            "WARNING"
-            "XXX"
+            "INFO"
           ];
+          color = "hint";
+          icon = " ";
         };
         PERF = {
-          icon = " ";
           alt = [
             "OPTIM"
             "PERFORMANCE"
             "OPTIMIZE"
           ];
-        };
-        NOTE = {
-          icon = " ";
-          color = "hint";
-          alt = [ "INFO" ];
+          icon = " ";
         };
         TEST = {
-          icon = "⏲ ";
-          color = "test";
           alt = [
             "TESTING"
             "PASSED"
             "FAILED"
           ];
+          color = "test";
+          icon = "⏲ ";
+        };
+        TODO = {
+          color = "info";
+          icon = " ";
+        };
+        WARN = {
+          alt = [
+            "WARNING"
+            "XXX"
+          ];
+          color = "warning";
+          icon = " ";
         };
       };
       colors = {
