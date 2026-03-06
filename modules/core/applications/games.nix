@@ -35,9 +35,17 @@
       })
     ];
     programs = {
-      steam.enable = true;
-      steam.gamescopeSession.enable = true;
-      steam.remotePlay.openFirewall = true;
+      steam = {
+        enable = true;
+        gamescopeSession.enable = true;
+        remotePlay.openFirewall = true;
+        package = pkgs.steam.override {
+          extraEnv = {
+            GAMEMODERUN = "1";
+            PULSE_LATENCY_MSEC = "30";
+          };
+        };
+      };
       gamemode.enable = true;
       #honkers-railway-launcher.enable = true;
     };
