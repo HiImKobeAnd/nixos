@@ -108,8 +108,8 @@
         #         "--line-number"
         #         "--column"
         #       ];
-        # command = "rg";
-        #       pattern = "\\b(KEYWORDS):";
+        command = "rg";
+        pattern = "\\b(KEYWORDS):";
       };
     };
   };
