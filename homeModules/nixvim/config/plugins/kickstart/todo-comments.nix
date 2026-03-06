@@ -3,6 +3,7 @@
   # https://nix-community.github.io/nixvim/plugins/todo-comments/index.html
   plugins.todo-comments = {
     enable = true;
+    # TODO
     settings = {
       signs = true;
       sign_priority = 8;
@@ -99,17 +100,17 @@
       #       multiline_pattern = "^.";
       #       pattern = ".*<(KEYWORDS)\\s*:";
       #     };
-      #     search = {
-      #       args = [
-      #         "--color=never"
-      #         "--no-heading"
-      #         "--with-filename"
-      #         "--line-number"
-      #         "--column"
-      #       ];
-      #       command = "rg";
-      #       pattern = "\\b(KEYWORDS):";
-      #     };
+      search = {
+        #       args = [
+        #         "--color=never"
+        #         "--no-heading"
+        #         "--with-filename"
+        #         "--line-number"
+        #         "--column"
+        #       ];
+        command = "rg";
+        #       pattern = "\\b(KEYWORDS):";
+      };
     };
   };
 }
