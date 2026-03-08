@@ -28,7 +28,6 @@
       # gpxsee
       qgis
       zotero
-      mistral-vibe
       # blockbench
       # firefox
       # element-desktop
