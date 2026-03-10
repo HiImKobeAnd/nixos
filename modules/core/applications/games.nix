@@ -10,6 +10,7 @@
       steam
       gamemode
       protonup-rs
+      osu-lazer-bin
       # xivlauncher
       (retroarch.withCores (
         cores: with cores; [
