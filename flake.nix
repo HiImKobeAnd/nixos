@@ -41,6 +41,7 @@
           };
           modules = [
             ./hosts/desktop/configuration.nix
+            ./overlays
 
             inputs.home-manager.nixosModules.home-manager
             {
