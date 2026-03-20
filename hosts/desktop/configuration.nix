@@ -65,6 +65,7 @@
     # Networking
     networking.hostName = "hiimkobeand";
     networking.networkmanager.enable = true;
+    networking.networkmanager.wifi.powersave = false;
 
     # Nixpkgs
     nixpkgs.config.allowUnfree = true;
