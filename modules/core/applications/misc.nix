@@ -32,6 +32,8 @@
       # firefox
       # element-desktop
       godot
+      easyeffects
+      gajim
       grayjay
       (chromium.override { enableWideVine = true; })
     ];
