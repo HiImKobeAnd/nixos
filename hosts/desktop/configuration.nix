@@ -26,6 +26,7 @@
         misc.enable = true;
         syncthing.enable = true;
         docker.enable = true;
+        screen-powerstate-services.enable = true;
         # ollama.enable = true;
       };
     };

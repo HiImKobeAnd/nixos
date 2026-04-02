@@ -25,6 +25,7 @@
     kernelModules = [
       "kvm-intel"
       "ddcci-backlight" # For backlight control
+      "i2c-dev"
     ];
     extraModulePackages = [ ];
     kernelParams = [

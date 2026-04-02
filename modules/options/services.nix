@@ -41,5 +41,9 @@
       type = lib.types.bool;
       default = false;
     };
+    screen-powerstate-services.enable = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 }
