@@ -21,9 +21,7 @@
       ];
       serviceConfig = {
         Type = "oneshot";
-        RemainAfterExit = "yes";
-        ExecStart = "${pkgs.coreutils}/bin/true"; # Do nothing on start
-        ExecStop = "${pkgs.ddcutil}/bin/ddcutil setvcp d6 04"; # Run on shutdown
+        ExecStart = "${pkgs.ddcutil}/bin/ddcutil setvcp d6 04"; # Run on shutdown
       };
     };
 
@@ -38,7 +36,7 @@
 
       serviceConfig = {
         Type = "oneshot";
-        ExecStartPre = "${pkgs.coreutils}/bin/sleep 10";
+        ExecStartPre = "${pkgs.coreutils}/bin/sleep 2";
         ExecStart = "${pkgs.ddcutil}/bin/ddcutil --noverify --sleep-multiplier 2 setvcp d6 01";
       };
     };
@@ -50,7 +48,6 @@
       wantedBy = [ "sleep.target" ];
       serviceConfig = {
         Type = "oneshot";
-        # Replace 'd6 04' with your specific working command if different
         ExecStart = "${pkgs.ddcutil}/bin/ddcutil setvcp d6 04";
       };
     };
