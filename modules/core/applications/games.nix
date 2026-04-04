@@ -11,12 +11,12 @@
       gamemode
       protonup-rs
       osu-lazer-bin
-      # xivlauncher
-      (retroarch.withCores (
-        cores: with cores; [
-          melonds
-        ]
-      ))
+      xivlauncher
+      # (retroarch.withCores (
+      #   cores: with cores; [
+      #     melonds
+      #   ]
+      # ))
       (lutris.override {
         extraPkgs = pkgs: [
           wine
