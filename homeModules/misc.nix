@@ -8,18 +8,4 @@ _: {
       categories = [ "Utility" ];
     };
   };
-
-  programs = {
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
-    #zathura = {
-    #  enable = true;
-    #  options = {
-    #    continuous-hist-save = "true";
-    #    database = "sqlite";
-    #  };
-    #};
-  };
 }
