@@ -3,6 +3,9 @@
   flake.nixosModules.fish =
     { pkgs, ... }:
     {
+      environment.systemPackages = with pkgs; [
+        eza
+      ];
       programs = {
         fish = {
           enable = true;
