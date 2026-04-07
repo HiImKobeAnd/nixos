@@ -9,7 +9,7 @@
           enableFishIntegration = true;
           flags = [ "--cmd cd" ];
         };
-        starship.enable = true;
+        # starship.enable = true;
       };
 
       environment.systemPackages = with pkgs; [

@@ -47,6 +47,7 @@
         self.nixosModules.email
         self.nixosModules.office-suite
         self.nixosModules.nixcord
+        self.nixosModules.nixvim
 
         # Home Manager
         # inputs.home-manager.flakeModules.home-manager
