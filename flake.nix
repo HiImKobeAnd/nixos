@@ -3,78 +3,18 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
+    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
     nixcord.url = "github:KaylorBen/nixcord";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-    # aagl = {
-    #   url = "github:ezKEa/aagl-gtk-on-nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    # cosmic-manager = {
-    #   url = "github:HeitorAugustoLN/cosmic-manager";
-    #   inputs = {
-    #     nixpkgs.follows = "nixpkgs";
-    #     home-manager.follows = "home-manager";
-    #   };
-    # };
-    # plasma-manager = {
-    #   url = "github:nix-community/plasma-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.home-manager.follows = "home-manager";
-    # };
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    import-tree.url = "github:vic/import-tree";
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./config);
-  # { nixpkgs, ... }@inputs:
-  # {
-  #   nixosConfigurations = {
-  #     hiimkobeand = nixpkgs.lib.nixosSystem {
-  #       specialArgs = {
-  #         inherit inputs;
-  #       };
-  #       modules = [
-  #         ./hosts/desktop/configuration.nix
-  #
-  #         inputs.home-manager.nixosModules.home-manager
-  #         {
-  #           home-manager = {
-  #             useGlobalPkgs = true;
-  #             useUserPackages = true;
-  #             users.hiimkobeand = import ./hosts/desktop/home.nix;
-  #             extraSpecialArgs = { inherit inputs; };
-  #             backupFileExtension = "hm-backup-ext";
-  #           };
-  #         }
-  #       ];
-  #     };
-  #     wsl = nixpkgs.lib.nixosSystem {
-  #       system = "x86_64-linux";
-  #       modules = [
-  #         ./hosts/wsl/configuration.nix
-  #
-  #         inputs.nixos-wsl.nixosModules.default
-  #         inputs.home-manager.nixosModules.home-manager
-  #         {
-  #           home-manager = {
-  #             useGlobalPkgs = true;
-  #             useUserPackages = true;
-  #             users.wsl = import ./hosts/wsl/home.nix;
-  #             extraSpecialArgs = { inherit inputs; };
-  #             backupFileExtension = "hm-backup";
-  #           };
-  #         }
-  #       ];
-  #     };
-  #   };
-  # };
 }

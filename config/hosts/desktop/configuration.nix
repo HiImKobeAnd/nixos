@@ -47,23 +47,7 @@
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
-
-        # Home Manager
-        # inputs.home-manager.flakeModules.home-manager
-        # self.homeConfigurations.hiimkobeand
       ];
-      nix.settings = {
-        substituters = [
-          "https://nix-community.cachix.org"
-        ];
-        trusted-public-keys = [
-          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        ];
-      };
-
-      # Maintenance
-      nix.optimise.automatic = true;
-      nix.settings.auto-optimise-store = true;
 
       # Sound
       security.rtkit.enable = true;
@@ -100,9 +84,6 @@
       networking.networkmanager.enable = true;
       networking.networkmanager.wifi.powersave = false;
 
-      # Nixpkgs
-      nixpkgs.config.allowUnfree = true;
-
       # User
       users.users.hiimkobeand = {
         isNormalUser = true;
@@ -118,6 +99,21 @@
 
       virtualisation.libvirtd.enable = true;
 
+      # Maintenance
+      nix.optimise.automatic = true;
+      nix.settings.auto-optimise-store = true;
+
+      # Nixpkgs
+      nixpkgs.config.allowUnfree = true;
+      nix.settings = {
+        substituters = [
+          "https://nix-community.cachix.org"
+        ];
+        trusted-public-keys = [
+          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        ];
+      };
+
       nix.settings.experimental-features = [
         "nix-command"
         "flakes"
@@ -125,33 +121,4 @@
 
       system.stateVersion = "24.05";
     };
-
 }
-
-# Setup
-# config = {
-#   modules = {
-#     desktop = "cosmic";
-#     sound.enable = true;
-#     fonts.enable = true;
-#     nvidia.enable = true;
-#     applications = {
-#       essentials.enable = true;
-#       games.enable = true;
-#       librewolf.enable = true;
-#       quickemu.enable = true;
-#       waydroid.enable = true;
-#       # blender.enable = true;
-#       misc.enable = true;
-#     };
-#     services = {
-#       keyd.enable = true;
-#       controllers.enable = true;
-#       misc.enable = true;
-#       syncthing.enable = true;
-#       docker.enable = true;
-#       screen-powerstate-services.enable = true;
-#       # ollama.enable = true;
-#     };
-#   };
-#   services.flatpak.enable = true;
