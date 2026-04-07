@@ -31,6 +31,7 @@
         settings = {
           user.email = "hiimkobeand@gmail.com";
           user.name = "hiimkobeand";
+          credential.helper = "${pkgs.gh} auth git-credential";
           alias = {
             st = "status";
             aa = "add -A";
