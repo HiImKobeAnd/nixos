@@ -1,6 +1,4 @@
-{
-  ...
-}:
+{ ... }:
 {
   flake.nixosModules.vm =
     { pkgs, ... }:

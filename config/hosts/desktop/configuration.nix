@@ -47,6 +47,7 @@
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
+        self.nixosModules.blender
       ];
 
       # Sound

@@ -1,6 +1,4 @@
-{
-  ...
-}:
+{ ... }:
 {
   flake.nixosModules.kde =
     { pkgs, ... }:
