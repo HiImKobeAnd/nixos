@@ -5,12 +5,13 @@
     {
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
-        hyprlauncher
+        # hyprlauncher
         hyprshutdown
         kdePackages.dolphin
         waybar
         hyprpaper
-        noctalia-shell
+        quickshell
+        cosmic-launcher
       ];
       programs.hyprland = {
         enable = true;
