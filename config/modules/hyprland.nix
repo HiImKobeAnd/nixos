@@ -11,6 +11,7 @@
         cosmic-files
         evolution
         gnome-control-center
+        gnome-calendar
         (noctalia-shell.override {
           calendarSupport = true;
           brightnessctlSupport = true;
