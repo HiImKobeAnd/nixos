@@ -9,6 +9,7 @@
         hyprshutdown
         kdePackages.dolphin
         cosmic-files
+        evolution
         (noctalia-shell.override { calendarSupport = true; })
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
