@@ -5,12 +5,13 @@
     {
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
-        hyprlauncher
+        anyrun
+        walker
         hyprshutdown
         kdePackages.dolphin
         cosmic-files
         hyprpaper
-        self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
+        # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
       programs.hyprland = {
         enable = true;
@@ -49,23 +50,23 @@
           postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
         };
       };
-      packages.waybar = inputs.wrapper-modules.lib.wrap {
-        inherit pkgs;
-        name = "waybar";
-        package = pkgs.waybar;
-
-        backend = "shell";
-
-        flags = [
-          "--add-flags"
-          "-c"
-          "--add-flags"
-          "${../non-nix/waybar.jsonc}"
-        ];
-
-        drv = {
-          postBuild = "ln -s ${pkgs.waybar}/share $out/share";
-        };
-      };
+      # packages.myWaybar = inputs.wrapper-modules.lib.wrap {
+      #   inherit pkgs;
+      #   name = "waybar";
+      #   package = pkgs.waybar;
+      #
+      #   backend = "shell";
+      #
+      #   flags = [
+      #     "--add-flags"
+      #     "-c"
+      #     "--add-flags"
+      #     "${../non-nix/waybar.jsonc}"
+      #   ];
+      #
+      #   drv = {
+      #     postBuild = "ln -s ${pkgs.waybar}/share $out/share";
+      #   };
+      # };
     };
 }
