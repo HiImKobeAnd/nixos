@@ -11,7 +11,6 @@
         cosmic-files
         waybar
         hyprpaper
-        quickshell
       ];
       programs.hyprland = {
         enable = true;
