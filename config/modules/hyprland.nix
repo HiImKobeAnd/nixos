@@ -9,7 +9,7 @@
         hyprshutdown
         kdePackages.dolphin
         cosmic-files
-        noctalia-shell
+        (noctalia-shell.override { calendarSupport = true; })
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
       programs.hyprland = {
@@ -26,6 +26,7 @@
           enable = true;
         };
       };
+      services.gnome.evolution-data-server.enable = true;
     };
 
   perSystem =
