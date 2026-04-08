@@ -11,7 +11,10 @@
         cosmic-files
         evolution
         quickshell
-        (noctalia-shell.override { calendarSupport = true; })
+        (noctalia-shell.override {
+          calendarSupport = true;
+          ddcutilSupport = true;
+        })
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
       programs.hyprland = {
