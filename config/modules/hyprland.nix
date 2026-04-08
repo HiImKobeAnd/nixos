@@ -9,7 +9,7 @@
         hyprshutdown
         kdePackages.dolphin
         cosmic-files
-        hyprpaper
+        noctalia-shell
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
       programs.hyprland = {
