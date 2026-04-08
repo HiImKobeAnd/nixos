@@ -13,16 +13,16 @@
       };
       programs.hyprlock.enable = true;
       services.hypridle.enable = true;
+      services.displayManager.sddm = {
+        enable = true;
+        wayland = {
+          enable = true;
+        };
+      };
     };
 
   perSystem =
     { pkgs, lib, ... }:
-    let
-      hyprConfig = ''
-
-      '';
-      configFile = pkgs.writeText "hyprland.conf" hyprConfig;
-    in
     {
       packages.myHyprland = inputs.wrapper-modules.lib.wrap {
         inherit pkgs;
@@ -35,7 +35,7 @@
           "--add-flags"
           "-c"
           "--add-flags"
-          "${configFile}"
+          "${../../hyprland.conf}"
         ];
 
         drv = {

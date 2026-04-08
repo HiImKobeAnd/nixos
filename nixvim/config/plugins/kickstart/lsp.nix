@@ -91,6 +91,11 @@
       #   enable = true;
       # };
 
+      # Hyprland config lsp
+      hyprls = {
+        enable = true;
+      };
+
       # Nix lsp
       nil_ls = {
         enable = true;
