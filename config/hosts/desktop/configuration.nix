@@ -30,7 +30,7 @@
         self.nixosModules.flatpak
 
         # Applications
-        self.nixosModules.gnome
+        self.nixosModules.cosmic-de
         self.nixosModules.vm
         self.nixosModules.librewolf
         self.nixosModules.waydroid
