@@ -9,8 +9,8 @@
         hyprshutdown
         kdePackages.dolphin
         cosmic-files
-        waybar
         hyprpaper
+        self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
       programs.hyprland = {
         enable = true;
@@ -42,11 +42,29 @@
           "--add-flags"
           "-c"
           "--add-flags"
-          "${../../hyprland.conf}"
+          "${../non-nix/hyprland.conf}"
         ];
 
         drv = {
           postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
+        };
+      };
+      packages.waybar = inputs.wrapper-modules.lib.wrap {
+        inherit pkgs;
+        name = "waybar";
+        package = pkgs.waybar;
+
+        backend = "shell";
+
+        flags = [
+          "--add-flags"
+          "-c"
+          "--add-flags"
+          "${../non-nix/waybar.jsonc}"
+        ];
+
+        drv = {
+          postBuild = "ln -s ${pkgs.waybar}/share $out/share";
         };
       };
     };
