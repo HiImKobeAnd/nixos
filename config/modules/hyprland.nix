@@ -10,10 +10,9 @@
         kdePackages.dolphin
         cosmic-files
         evolution
-        quickshell
         (noctalia-shell.override {
           calendarSupport = true;
-          ddcutilSupport = true;
+          brightnessctlSupport = true;
         })
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
@@ -22,6 +21,7 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
+      programs.evolution.enable = true;
       programs.hyprlock.enable = true;
       services.hypridle.enable = true;
       services.dunst.enable = true;
