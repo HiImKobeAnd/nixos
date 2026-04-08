@@ -10,6 +10,7 @@
         kdePackages.dolphin
         cosmic-files
         evolution
+        quickshell
         (noctalia-shell.override { calendarSupport = true; })
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
