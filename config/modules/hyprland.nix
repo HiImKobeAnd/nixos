@@ -10,6 +10,7 @@
         kdePackages.dolphin
         cosmic-files
         evolution
+        gnome-control-center
         (noctalia-shell.override {
           calendarSupport = true;
           brightnessctlSupport = true;
