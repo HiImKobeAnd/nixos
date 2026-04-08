@@ -5,6 +5,10 @@
     {
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
+        wofi
+        kdePackages.dolphin
+        waybar
+        hyprpaper
       ];
       programs.hyprland = {
         enable = true;
