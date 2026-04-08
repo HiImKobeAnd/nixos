@@ -5,10 +5,12 @@
     {
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
-        wofi
+        hyprlauncher
+        hyprshutdown
         kdePackages.dolphin
         waybar
         hyprpaper
+        noctalia-shell
       ];
       programs.hyprland = {
         enable = true;
@@ -17,6 +19,7 @@
       };
       programs.hyprlock.enable = true;
       services.hypridle.enable = true;
+      services.dunst.enable = true;
       services.displayManager.sddm = {
         enable = true;
         wayland = {
