@@ -8,6 +8,7 @@
         hyprlauncher
         hyprshutdown
         kdePackages.dolphin
+        cosmic-files
         waybar
         hyprpaper
         quickshell
