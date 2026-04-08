@@ -17,7 +17,6 @@
         cosmic-ext-applet-external-monitor-brightness
         cosmic-ext-applet-weather
         ddcutil # Needed for external monitor brightness applet
-        alacritty
       ];
       environment.cosmic.excludePackages = with pkgs; [
         cosmic-term # Misaligns cursor in neovim

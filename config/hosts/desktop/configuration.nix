@@ -19,9 +19,10 @@
 
         # Terminal
         self.nixosModules.basic-terminal-tools
-        self.nixosModules.dev-terminal-tools
+        self.nixosModules.terminal
         self.nixosModules.nix-tools
         self.nixosModules.fish
+        self.nixosModules.git
 
         # Services
         self.nixosModules.syncthing
@@ -29,7 +30,7 @@
         self.nixosModules.flatpak
 
         # Applications
-        self.nixosModules.cosmic-de
+        self.nixosModules.hyprland
         self.nixosModules.vm
         self.nixosModules.librewolf
         self.nixosModules.waydroid

@@ -1,21 +1,11 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.dev-terminal-tools =
+  flake.nixosModules.git =
     { pkgs, ... }:
     {
-      programs = {
-        zoxide = {
-          enable = true;
-          enableFishIntegration = true;
-          flags = [ "--cmd cd" ];
-        };
-        starship.enable = true;
-      };
-
       environment.systemPackages = with pkgs; [
-        gh
         koji
-        fzf
+        gh
       ];
       programs.git = {
         enable = true;
