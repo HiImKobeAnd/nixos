@@ -7,6 +7,7 @@
       environment.systemPackages = with pkgs; [
         cosmic-files
         khal
+        vdirsyncer
         (noctalia-shell.override {
           calendarSupport = true;
           ddcutilSupport = true;
