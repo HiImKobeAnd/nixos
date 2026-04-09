@@ -15,7 +15,10 @@
           calendarSupport = true;
           ddcutilSupport = true;
         })
-        # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
+        # (self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia-shell.override {
+        # calendarSupport = true;
+        # ddcutilSupport = true;
+        #})
       ];
       programs.hyprland = {
         enable = true;
@@ -58,23 +61,23 @@
           postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
         };
       };
-      # packages.myWaybar = inputs.wrapper-modules.lib.wrap {
-      #   inherit pkgs;
-      #   name = "waybar";
-      #   package = pkgs.waybar;
-      #
-      #   backend = "shell";
-      #
-      #   flags = [
-      #     "--add-flags"
-      #     "-c"
-      #     "--add-flags"
-      #     "${../non-nix/waybar.jsonc}"
-      #   ];
-      #
-      #   drv = {
-      #     postBuild = "ln -s ${pkgs.waybar}/share $out/share";
-      #   };
-      # };
+      packages.myNoctaliaShell = inputs.wrapper-modules.lib.wrap {
+        inherit pkgs;
+        name = "noctalia-shell";
+        package = pkgs.noctalia-shell;
+
+        backend = "shell";
+
+        flags = [
+          "--add-flags"
+          "-c"
+          "--add-flags"
+          "${../non-nix/nocatalia-shell.json}"
+        ];
+
+        drv = {
+          postBuild = "ln -s ${pkgs.noctalia-shell}/share $out/share";
+        };
+      };
     };
 }
