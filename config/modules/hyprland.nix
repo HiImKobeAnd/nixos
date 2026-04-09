@@ -9,9 +9,6 @@
         hyprshutdown
         kdePackages.dolphin
         cosmic-files
-        evolution
-        gnome-control-center
-        gnome-calendar
         (noctalia-shell.override {
           calendarSupport = true;
           brightnessctlSupport = true;
@@ -23,7 +20,6 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
-      programs.evolution.enable = true;
       programs.hyprlock.enable = true;
       services.hypridle.enable = true;
       services.dunst.enable = true;
@@ -34,7 +30,6 @@
         };
       };
       services.gnome.evolution-data-server.enable = true;
-      services.gnome.gnome-online-accounts.enable = true;
     };
 
   perSystem =
