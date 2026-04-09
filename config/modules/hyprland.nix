@@ -8,6 +8,8 @@
         cosmic-files
         khal
         vdirsyncer
+        playerctl
+        discord
         (noctalia-shell.override {
           calendarSupport = true;
           ddcutilSupport = true;
@@ -22,12 +24,13 @@
       programs.hyprlock.enable = true;
       services.hypridle.enable = true;
       services.dunst.enable = true;
-      services.displayManager.sddm = {
-        enable = true;
-        wayland = {
-          enable = true;
-        };
-      };
+      # services.displayManager.sddm = {
+      #   enable = true;
+      #   wayland = {
+      #     enable = true;
+      #   };
+      # };
+      programs.regreet.enable = true;
       # services.gnome.evolution-data-server.enable = true;
       services.vdirsyncer.enable = true;
     };
