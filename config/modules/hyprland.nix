@@ -29,6 +29,7 @@
         };
       };
       # services.gnome.evolution-data-server.enable = true;
+      services.vdirsyncer.enable = true;
     };
 
   perSystem =
