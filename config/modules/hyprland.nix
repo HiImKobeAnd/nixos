@@ -10,6 +10,7 @@
         vdirsyncer
         playerctl
         discord
+        ddcutil # Needed for external monitor brightness applet
         (noctalia-shell.override {
           calendarSupport = true;
           ddcutilSupport = true;
@@ -33,6 +34,7 @@
       programs.regreet.enable = true;
       # services.gnome.evolution-data-server.enable = true;
       services.vdirsyncer.enable = true;
+      services.ddccontrol.enable = true; # Needed for external monitor brightness applet
     };
 
   perSystem =
