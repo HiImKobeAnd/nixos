@@ -5,13 +5,11 @@
     {
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
-        anyrun
-        hyprshutdown
-        kdePackages.dolphin
         cosmic-files
+        khal
         (noctalia-shell.override {
           calendarSupport = true;
-          brightnessctlSupport = true;
+          ddcutilSupport = true;
         })
         # self.packages.${pkgs.stdenv.hostPlatform.system}.myWaybar
       ];
@@ -29,7 +27,7 @@
           enable = true;
         };
       };
-      services.gnome.evolution-data-server.enable = true;
+      # services.gnome.evolution-data-server.enable = true;
     };
 
   perSystem =
