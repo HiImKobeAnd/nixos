@@ -37,6 +37,7 @@
       # };
       programs.regreet.enable = true;
       services.gnome.evolution-data-server.enable = true;
+      services.gnome.gnome-keyring.enable = true;
       services.vdirsyncer.enable = true;
       services.ddccontrol.enable = true; # Needed for external monitor brightness applet
     };
