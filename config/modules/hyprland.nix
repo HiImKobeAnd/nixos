@@ -28,7 +28,18 @@
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
       services.dunst.enable = true; # Notification daemon
-      programs.regreet.enable = true; # Greeter
+      programs.regreet = {
+        # Greeter
+        enable = true;
+        settings = {
+          background = {
+            path = "../../background-image.jpg";
+          };
+          GTK = {
+            application_prefer_dark_theme = true;
+          };
+        };
+      };
       services.gnome.evolution-data-server.enable = true; # For calendar support
       services.gnome.gnome-keyring.enable = true; # For calendar support
       services.ddccontrol.enable = true; # For external monitor brightness applet
