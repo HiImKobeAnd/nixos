@@ -27,7 +27,6 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
-      services.hypridle.enable = true;
       services.dunst.enable = true; # Notification daemon
       programs.regreet.enable = true; # Greeter
       services.gnome.evolution-data-server.enable = true; # For calendar support
