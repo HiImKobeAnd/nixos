@@ -12,6 +12,7 @@
         grim # For screenshot
         slurp # For screenshot
         ddcutil # For external monitor brightness applet
+        hyprlandPlugins.hy3
         (noctalia-shell.override {
           calendarSupport = true; # For calendar support
           ddcutilSupport = true; # For external monitor brightness applet
