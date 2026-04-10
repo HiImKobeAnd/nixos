@@ -9,10 +9,10 @@
         playerctl # For music control
         evolution # For calendar support
         wl-clipboard
+        xcursor-pro
         grim # For screenshot
         slurp # For screenshot
         ddcutil # For external monitor brightness applet
-        linux-wallpaperengine
         (noctalia-shell.override {
           calendarSupport = true; # For calendar support
           ddcutilSupport = true; # For external monitor brightness applet
@@ -27,10 +27,9 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
-      programs.hyprlock.enable = true;
       services.hypridle.enable = true;
-      services.dunst.enable = true;
-      programs.regreet.enable = true;
+      services.dunst.enable = true; # Notification daemon
+      programs.regreet.enable = true; # Greeter
       services.gnome.evolution-data-server.enable = true; # For calendar support
       services.gnome.gnome-keyring.enable = true; # For calendar support
       services.ddccontrol.enable = true; # For external monitor brightness applet
