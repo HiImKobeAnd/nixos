@@ -6,17 +6,19 @@
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
         cosmic-files
-        playerctl
-        discord
-        evolution
-        ddcutil # Needed for external monitor brightness applet
+        playerctl # For music control
+        evolution # For calendar support
+        wl-clipboard
+        grim # For screenshot
+        slurp # For screenshot
+        ddcutil # For external monitor brightness applet
         (noctalia-shell.override {
-          calendarSupport = true;
-          ddcutilSupport = true;
+          calendarSupport = true; # For calendar support
+          ddcutilSupport = true; # For external monitor brightness applet
         })
         # (self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia-shell.override {
-        # calendarSupport = true;
-        # ddcutilSupport = true;
+        # calendarSupport = true; # For calendar support
+        # ddcutilSupport = true; # For external monitor brightness applet
         #})
       ];
       programs.hyprland = {
@@ -27,17 +29,10 @@
       programs.hyprlock.enable = true;
       services.hypridle.enable = true;
       services.dunst.enable = true;
-      # services.displayManager.sddm = {
-      #   enable = true;
-      #   wayland = {
-      #     enable = true;
-      #   };
-      # };
       programs.regreet.enable = true;
-      services.gnome.evolution-data-server.enable = true;
-      services.gnome.gnome-keyring.enable = true;
-      services.vdirsyncer.enable = true;
-      services.ddccontrol.enable = true; # Needed for external monitor brightness applet
+      services.gnome.evolution-data-server.enable = true; # For calendar support
+      services.gnome.gnome-keyring.enable = true; # For calendar support
+      services.ddccontrol.enable = true; # For external monitor brightness applet
     };
 
   perSystem =
