@@ -6,8 +6,6 @@
       environment.sessionVariables.NIXOS_OZONE_WL = 1;
       environment.systemPackages = with pkgs; [
         cosmic-files
-        khal
-        vdirsyncer
         playerctl
         discord
         evolution
