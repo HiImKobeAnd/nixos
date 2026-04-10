@@ -20,8 +20,8 @@
       query # treesitter queries
       vim
       vimdoc
-      # lua
-      # luadoc
+      lua
+      luadoc
 
       # General Development
       csv
@@ -46,13 +46,16 @@
       rust
       toml # Also for ZMK `keymap.toml`
 
+      #QT
+      qmljs
+
       # Elixir
       elixir
 
       # Web Development
       css
       html
-      # http
+      http
       javascript
       json
       # json5

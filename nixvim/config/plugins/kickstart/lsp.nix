@@ -96,6 +96,9 @@
         enable = true;
       };
 
+      qmlls.enable = true;
+      jsonls.enable = true;
+
       # Nix lsp
       nil_ls = {
         enable = true;
