@@ -31,6 +31,11 @@
       programs.regreet = {
         # Greeter
         enable = true;
+        cageArgs = [
+          "-s"
+          "-m"
+          "last"
+        ];
         settings = {
           background = {
             path = "../../background-image.jpg";
