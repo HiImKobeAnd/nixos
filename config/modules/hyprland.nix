@@ -12,7 +12,7 @@
         grim # For screenshot
         slurp # For screenshot
         ddcutil # For external monitor brightness applet
-        hyprlandPlugins.hy3
+        linux-wallpaperengine
         (noctalia-shell.override {
           calendarSupport = true; # For calendar support
           ddcutilSupport = true; # For external monitor brightness applet
@@ -39,41 +39,31 @@
   perSystem =
     { pkgs, lib, ... }:
     {
-      packages.myHyprland = inputs.wrapper-modules.lib.wrap {
+      # packages.myHyprland = inputs.wrapper-modules.lib.wrapPackage {
+      #   inherit pkgs;
+      #   package = pkgs.hyprland;
+      #
+      #   env = {
+      #     HYPRLAND_PLUGINS = {
+      #       value = pkgs.lib.makeSearchPathOutput "lib" "" [
+      #         pkgs.hyprlandPlugins.hy3
+      #       ];
+      #       method = "set";
+      #     };
+      #   };
+      #
+      #   flags = {
+      #
+      #     "-c" = "${../non-nix/hyprland.conf}";
+      #   };
+      #
+      #   drv = {
+      #     postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
+      #   };
+      # };
+      packages.myNoctaliaShell = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
         inherit pkgs;
-        name = "hyprland";
-        package = pkgs.hyprland;
-
-        backend = "shell";
-
-        flags = [
-          "--add-flags"
-          "-c"
-          "--add-flags"
-          "${../non-nix/hyprland.conf}"
-        ];
-
-        drv = {
-          postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
-        };
-      };
-      packages.myNoctaliaShell = inputs.wrapper-modules.lib.wrap {
-        inherit pkgs;
-        name = "noctalia-shell";
-        package = pkgs.noctalia-shell;
-
-        backend = "shell";
-
-        flags = [
-          "--add-flags"
-          "-c"
-          "--add-flags"
-          "${../non-nix/nocatalia-shell.json}"
-        ];
-
-        drv = {
-          postBuild = "ln -s ${pkgs.noctalia-shell}/share $out/share";
-        };
+        settings = (builtins.fromJSON (builtins.readFile ../non-nix/nocatalia-shell.json)).settings;
       };
     };
 }
