@@ -10,6 +10,7 @@
         nix-init
         nil
         nixfmt
+        devenv
       ];
       programs.direnv = {
         enable = true;

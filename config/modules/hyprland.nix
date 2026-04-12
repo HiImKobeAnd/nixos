@@ -48,6 +48,15 @@
           };
         };
       };
+      # services.greetd = {
+      #   enable = true;
+      #   settings = {
+      #     default_session = {
+      #       command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd uwsm start select";
+      #       user = "greeter";
+      #     };
+      #   };
+      # };
       services.gnome.evolution-data-server.enable = true; # For calendar support
       services.gnome.gnome-keyring.enable = true; # For calendar support
       services.ddccontrol.enable = true; # For external monitor brightness applet
