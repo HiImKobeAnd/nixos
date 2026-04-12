@@ -21,6 +21,8 @@
         # calendarSupport = true; # For calendar support
         # ddcutilSupport = true; # For external monitor brightness applet
         #})
+        hyprcursor # For cursors
+        rose-pine-hyprcursor # For cursors
       ];
       programs.hyprland = {
         enable = true;
