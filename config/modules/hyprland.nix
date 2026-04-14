@@ -3,7 +3,10 @@
   flake.nixosModules.hyprland =
     { pkgs, ... }:
     {
-      environment.sessionVariables.NIXOS_OZONE_WL = 1;
+      environment.sessionVariables = {
+        NIXOS_OZONE_WL = 1;
+        HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
+      };
       environment.systemPackages = with pkgs; [
         cosmic-files
         playerctl # For music control
