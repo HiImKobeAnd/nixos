@@ -96,7 +96,10 @@
         enable = true;
       };
 
-      qmlls.enable = true;
+      qmlls = {
+        enable = true;
+        package = null;
+      };
       jsonls.enable = true;
 
       # Nix lsp
