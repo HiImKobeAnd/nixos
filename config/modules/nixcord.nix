@@ -10,7 +10,7 @@
         enable = true;
         user = "hiimkobeand";
         discord.openASAR.enable = false;
-        vesktop.enable = false;
+        vesktop.enable = true;
         config = {
           themeLinks = [
             "https://raw.githubusercontent.com/Costeer/Gruvbox-Material-Themes/refs/heads/main/Discord%20Theme/materialgruvbox-2.theme.css"
@@ -34,6 +34,7 @@
             dearrow.enable = true;
             dearrow.hideButton = true;
             reverseImageSearch.enable = true;
+            webKeybinds.enable = true;
           };
         };
       };
