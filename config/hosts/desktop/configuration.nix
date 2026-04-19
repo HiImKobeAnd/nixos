@@ -16,6 +16,7 @@
         self.nixosModules.default-fonts
         self.nixosModules.controllers
         self.nixosModules.nvidia
+        self.nixosModules.scx-scheduler
 
         # Terminal
         self.nixosModules.basic-terminal-tools
