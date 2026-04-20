@@ -24,7 +24,7 @@
         self.nixosModules.nix-tools
         self.nixosModules.fish
         self.nixosModules.git
-        # self.nixosModules.qt-tools
+        self.nixosModules.comma
 
         # Services
         self.nixosModules.syncthing

@@ -9,6 +9,10 @@
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixcord.url = "github:KaylorBen/nixcord";
     nixvim = {
       url = "github:nix-community/nixvim";
