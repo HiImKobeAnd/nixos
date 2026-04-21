@@ -14,7 +14,6 @@
         bat
         tldr
         just
-        just
       ];
     };
 }
