@@ -54,7 +54,7 @@
     {
       mode = "n";
       key = "<leader>rr";
-      action.__raw = "function() require('overseer').list_tasks() end";
+      action.__raw = "function() require('overseer').run_task() end";
       options.desc = "[R]un task ove[r]view";
     }
     {
