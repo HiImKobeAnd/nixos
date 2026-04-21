@@ -13,6 +13,8 @@
         btop
         bat
         tldr
+        just
+        just
       ];
     };
 }
