@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.nixosModules.nixcord =
-    { ... }:
+    { pkgs, ... }:
     {
       imports = [
         inputs.nixcord.nixosModules.nixcord
@@ -10,6 +10,14 @@
         enable = true;
         user = "hiimkobeand";
         discord.openASAR.enable = true;
+        vesktop.package = pkgs.vesktop.overrideAttrs (old: {
+          src = pkgs.fetchFromGitHub {
+            owner = "Vencord";
+            repo = "Vesktop";
+            rev = "global-shortcuts"; # or pin to a specific commit SHA for reproducibility
+            hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+          };
+        });
         vesktop.enable = false;
         config = {
           themeLinks = [

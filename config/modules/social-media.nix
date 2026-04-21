@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.nixosModules.social-media =
-    { pkgs, ... }:
+    { pkgs, lib, ... }:
     {
       environment.systemPackages = with pkgs; [
         # gajim
