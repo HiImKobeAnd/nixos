@@ -54,8 +54,14 @@
     {
       mode = "n";
       key = "<leader>rr";
-      action.__raw = "function() require('overseer').toggle() end";
+      action.__raw = "function() require('overseer').run() end";
       options.desc = "[R]un task ove[r]view";
+    }
+    {
+      mode = "n";
+      key = "<leader>rt";
+      action.__raw = "function() require('overseer').toggle({direction = {'right'}}) end";
+      options.desc = "[R]un [t]ask ove[r]view";
     }
     {
       mode = "n";
