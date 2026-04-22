@@ -9,7 +9,7 @@
       programs.nixcord = {
         enable = true;
         user = "hiimkobeand";
-        discord.openASAR.enable = true;
+        discord.openASAR.enable = false;
         vesktop.enable = false;
         config = {
           themeLinks = [

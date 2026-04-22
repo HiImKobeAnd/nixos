@@ -1,3 +1,3 @@
 # TODOs
 
-1. Add hyprland.
+1. Fix build script. last three generations are 1030
