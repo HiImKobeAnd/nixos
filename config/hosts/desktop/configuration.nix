@@ -51,7 +51,7 @@
         # self.nixosModules.nixcord
         self.nixosModules.nixvim
         self.nixosModules.blender
-        # self.nixosModules.my-vesktop
+        self.nixosModules.my-vesktop
       ];
 
       # Sound

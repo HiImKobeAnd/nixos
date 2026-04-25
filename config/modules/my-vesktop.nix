@@ -23,6 +23,7 @@
         my-vesktop =
           (pkgs.vesktop.override {
             electron_40 = pkgs.electron_41;
+            withSystemVencord = true;
           }).overrideAttrs
             (oldAttrs: rec {
               src = pkgs.fetchFromGitHub {
