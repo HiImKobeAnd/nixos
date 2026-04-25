@@ -41,14 +41,15 @@
                 hash = "sha256-nOwl/e5lL8UGjwUexm/EiA7cPmWYif9PHwa0vAX5VbM=";
               };
               preBuild = (oldAttrs.preBuild or "") + ''
-                mkdir -p src/main/devtools
-                # If using system vencord, link the nixpkgs version into the source tree
-                ln -s ${pkgs.vencord}/share/vencord src/vencord-internal 
+                ln -s ${pkgs.vencord}/share/vencord ./vencord
+                mkdir -p src
+                ln -s ${pkgs.vencord}/share/vencord src/vencord 
               '';
               postPatch = (oldAttrs.postPatch or "") + ''
                 sed -i 's/"electron": "[^"]*"/"electron": "^41.1.1"/g' package.json
               '';
               env = (oldAttrs.env or { }) // {
+                VENCORD_PATH = "${pkgs.vencord}/share/vencord";
                 VENCORD_REMOTE = "Vendicated/Vencord";
                 IS_VESKTOP_BUILD = "1";
                 ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
