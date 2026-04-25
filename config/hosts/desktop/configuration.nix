@@ -48,7 +48,7 @@
         self.nixosModules.music
         self.nixosModules.email
         self.nixosModules.office-suite
-        # self.nixosModules.nixcord
+        self.nixosModules.nixcord
         self.nixosModules.nixvim
         self.nixosModules.blender
         self.nixosModules.my-vesktop
