@@ -1,8 +1,9 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.other-games =
     { pkgs, ... }:
     {
+      imports = [ inputs.aagl.nixosModules.default ];
       environment.systemPackages = with pkgs; [
         osu-lazer-bin
         xivlauncher
@@ -24,11 +25,11 @@
 
       ];
       programs = {
-        #honkers-railway-launcher.enable = true;
+        honkers-railway-launcher.enable = true;
       };
-      # nix.settings.substituters = [ "https://ezkea.cachix.org" ];
-      # nix.settings.trusted-public-keys = [
-      #   "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
-      # ];
+      nix.settings.substituters = [ "https://ezkea.cachix.org" ];
+      nix.settings.trusted-public-keys = [
+        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
+      ];
     };
 }
