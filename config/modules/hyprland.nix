@@ -8,15 +8,14 @@
         HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
       };
       environment.systemPackages = with pkgs; [
-        cosmic-files
+        cosmic-files # File manager GUI
         playerctl # For music control
         evolution # For calendar support
-        wl-clipboard
-        xcursor-pro
+        wl-clipboard # Clipboard
         grim # For screenshot
         slurp # For screenshot
         ddcutil # For external monitor brightness applet
-        hyprlandPlugins.hy3
+        hyprlandPlugins.hy3 # Hyprland plugin to make tiling feel like Cosmic DE
         (noctalia-shell.override {
           calendarSupport = true; # For calendar support
           ddcutilSupport = true; # For external monitor brightness applet
@@ -52,15 +51,6 @@
           };
         };
       };
-      # services.greetd = {
-      #   enable = true;
-      #   settings = {
-      #     default_session = {
-      #       command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd uwsm start select";
-      #       user = "greeter";
-      #     };
-      #   };
-      # };
       services.gnome.evolution-data-server.enable = true; # For calendar support
       services.gnome.gnome-keyring.enable = true; # For calendar support
       services.ddccontrol.enable = true; # For external monitor brightness applet
@@ -69,28 +59,19 @@
   perSystem =
     { pkgs, lib, ... }:
     {
-      # packages.myHyprland = inputs.wrapper-modules.lib.wrapPackage {
-      #   inherit pkgs;
-      #   package = pkgs.hyprland;
-      #
-      #   env = {
-      #     HYPRLAND_PLUGINS = {
-      #       value = pkgs.lib.makeSearchPathOutput "lib" "" [
-      #         pkgs.hyprlandPlugins.hy3
-      #       ];
-      #       method = "set";
-      #     };
-      #   };
-      #
-      #   flags = {
-      #
-      #     "-c" = "${../non-nix/hyprland.conf}";
-      #   };
-      #
-      #   drv = {
-      #     postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
-      #   };
-      # };
+      packages.myHyprland = inputs.wrapper-modules.lib.wrapPackage {
+        inherit pkgs;
+        package = pkgs.hyprland;
+
+        flags = {
+
+          "-c" = "${../non-nix/hyprland.conf}";
+        };
+
+        drv = {
+          postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
+        };
+      };
       packages.myNoctaliaShell = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
         inherit pkgs;
         settings = (builtins.fromJSON (builtins.readFile ../non-nix/nocatalia-shell.json)).settings;

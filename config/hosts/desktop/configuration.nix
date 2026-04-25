@@ -51,6 +51,7 @@
         self.nixosModules.nixcord
         self.nixosModules.nixvim
         self.nixosModules.blender
+        # self.nixosModules.my-vesktop
       ];
 
       # Sound
@@ -67,6 +68,7 @@
       boot.extraModulePackages = with config.boot.kernelPackages; [
         # rtl8852bu # For Asus AX55 nano wifi dongle
         ddcci-driver # For backlight control
+        v4l2loopback
       ];
 
       # For backlight control

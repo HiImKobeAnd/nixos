@@ -5,7 +5,7 @@
     {
       environment.systemPackages = with pkgs; [
         osu-lazer-bin
-        # xivlauncher
+        xivlauncher
         # (retroarch.withCores (
         #   cores: with cores; [
         #     melonds
