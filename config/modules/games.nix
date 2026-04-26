@@ -14,17 +14,16 @@
         #     melonds
         #   ]
         # ))
-        (lutris.override {
-          extraPkgs = pkgs: [
-            wine
-          ];
-        })
-        (heroic.override {
-          extraPkgs = pkgs: [
-            pkgs.gamescope
-          ];
-        })
-
+        # (lutris.override {
+        #   extraPkgs = pkgs: [
+        #     wine
+        #   ];
+        # })
+        # (heroic.override {
+        #   extraPkgs = pkgs: [
+        #     pkgs.gamescope
+        #   ];
+        # })
       ];
       programs = {
         honkers-railway-launcher.enable = true;

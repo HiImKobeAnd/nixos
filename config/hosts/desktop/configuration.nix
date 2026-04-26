@@ -17,6 +17,7 @@
         self.nixosModules.controllers
         self.nixosModules.nvidia
         self.nixosModules.scx-scheduler
+        self.nixosModules.stylix
 
         # Terminal
         self.nixosModules.basic-terminal-tools
@@ -106,7 +107,6 @@
       virtualisation.libvirtd.enable = true;
 
       # Maintenance
-      nix.optimise.automatic = true;
       nix.settings.auto-optimise-store = true;
 
       # Nixpkgs

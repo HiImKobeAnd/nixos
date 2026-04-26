@@ -42,13 +42,13 @@
           "last"
         ];
         settings = {
-          background = {
-            path = "../../background-image.jpg";
-            fit = "Contain";
-          };
-          GTK = {
-            application_prefer_dark_theme = true;
-          };
+          # background = {
+          # path = "../../background-image.jpg";
+          # fit = "Contain";
+          # };
+          # GTK = {
+          #   application_prefer_dark_theme = true;
+          # };
         };
       };
       services.gnome.evolution-data-server.enable = true; # For calendar support
