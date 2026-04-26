@@ -3,7 +3,9 @@
   flake.nixosModules.other-games =
     { pkgs, ... }:
     {
-      imports = [ inputs.aagl.nixosModules.default ];
+      imports = [
+        inputs.aagl.nixosModules.default
+      ];
       environment.systemPackages = with pkgs; [
         osu-lazer-bin
         xivlauncher
@@ -26,6 +28,7 @@
       ];
       programs = {
         honkers-railway-launcher.enable = true;
+        anime-games-launcher.enable = true;
       };
       nix.settings.substituters = [ "https://ezkea.cachix.org" ];
       nix.settings.trusted-public-keys = [
