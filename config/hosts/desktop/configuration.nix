@@ -52,6 +52,7 @@
         self.nixosModules.nixcord
         self.nixosModules.nixvim
         self.nixosModules.blender
+        self.nixosModules.vlc
         # self.nixosModules.my-vesktop
       ];
 
