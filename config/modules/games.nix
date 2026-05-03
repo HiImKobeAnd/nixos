@@ -7,7 +7,7 @@
         inputs.aagl.nixosModules.default
       ];
       environment.systemPackages = with pkgs; [
-        osu-lazer-bin
+        # osu-lazer-bin
         # xivlauncher
         # (retroarch.withCores (
         #   cores: with cores; [
