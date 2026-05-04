@@ -7,6 +7,7 @@
         inputs.aagl.nixosModules.default
       ];
       environment.systemPackages = with pkgs; [
+        faugus-launcher
         # osu-lazer-bin
         # xivlauncher
         # (retroarch.withCores (
