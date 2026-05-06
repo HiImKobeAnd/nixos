@@ -9,7 +9,7 @@
       ];
       services.ollama = {
         enable = true;
-        acceleration = "cuda";
+        package = pkgs.ollama-cuda;
       };
       nix.settings.substituters = [ "https://cache.nixos-cuda.org" ];
       nix.settings.trusted-public-keys = [
