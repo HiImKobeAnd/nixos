@@ -15,6 +15,7 @@
         grim # For screenshot
         slurp # For screenshot
         ddcutil # For external monitor brightness applet
+        ydotool # Maybe fix for discord global keybinds
         hyprlandPlugins.hy3 # Hyprland plugin to make tiling feel like Cosmic DE
         (noctalia-shell.override {
           calendarSupport = true; # For calendar support
