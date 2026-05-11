@@ -54,7 +54,6 @@
         self.nixosModules.blender
         self.nixosModules.vlc
         # self.nixosModules.ollama
-        self.nixosModules.my-vesktop
       ];
 
       # Sound
