@@ -18,45 +18,41 @@
       final,
       ...
     }:
+    let
+      vesktop-src = pkgs.fetchFromGitHub {
+        owner = "Vencord";
+        repo = "Vesktop";
+        rev = "797c02bdd0d35063ac76d75cffa77b0790f3a657";
+        hash = "sha256-xeeg1U0+1lfJxTZQsY5Y49aM66Qp/1zqVkKSiewSxJk=";
+      };
+    in
     {
       overlayAttrs = {
         my-vesktop =
           (pkgs.vesktop.override {
             electron_40 = pkgs.electron_41;
           }).overrideAttrs
-            (oldAttrs: rec {
-              src = pkgs.fetchFromGitHub {
-                owner = "Vencord";
-                repo = "Vesktop";
-                rev = "global-shortcuts";
-                hash = "sha256-PCRRbcqf8RczsGQ8lxYIfy9RWNkVe3qsstAWrHc42Mc=";
-              };
-
-              electron = pkgs.electron_41;
+            (oldAttrs: {
+              src = vesktop-src;
+              version = "1.6.5";
 
               pnpmDeps = pkgs.fetchPnpmDeps {
-                inherit (oldAttrs) pname;
-                inherit src;
-                fetcherVersion = oldAttrs.pnpmDeps.fetcherVersion;
+                pname = "vesktop";
+                version = "1.6.5";
+                src = vesktop-src;
+                patches = [ ];
+                pnpm = pkgs.pnpm_10_29_2;
+                fetcherVersion = 2;
                 hash = "sha256-nOwl/e5lL8UGjwUexm/EiA7cPmWYif9PHwa0vAX5VbM=";
               };
-              preBuild = (oldAttrs.preBuild or "") + ''
-                ln -s ${pkgs.vencord}/share/vencord ./vencord
-                mkdir -p src
-                ln -s ${pkgs.vencord}/share/vencord src/vencord 
-              '';
-              postPatch = (oldAttrs.postPatch or "") + ''
-                sed -i 's/"electron": "[^"]*"/"electron": "^41.1.1"/g' package.json
-              '';
-              env = (oldAttrs.env or { }) // {
-                VENCORD_PATH = "${pkgs.vencord}/share/vencord";
-                VENCORD_REMOTE = "Vendicated/Vencord";
-                IS_VESKTOP_BUILD = "1";
-                ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
-                VESKTOP_SKIP_DAT_CHECK = "1";
-              };
+
+              # env = (oldAttrs.env or { }) // {
+              # ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
+              # IS_VESKTOP_BUILD = "1";
+              # };
             });
       };
+
       packages.default = pkgs.my-vesktop;
     };
 }
