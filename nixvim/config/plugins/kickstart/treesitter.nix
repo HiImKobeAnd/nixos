@@ -51,6 +51,8 @@
 
       # Elixir
       elixir
+      heex
+      eex
 
       # Web Development
       css

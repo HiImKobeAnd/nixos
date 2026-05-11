@@ -15,16 +15,12 @@
         grim # For screenshot
         slurp # For screenshot
         ddcutil # For external monitor brightness applet
-        ydotool # Maybe fix for discord global keybinds
         hyprlandPlugins.hy3 # Hyprland plugin to make tiling feel like Cosmic DE
         (noctalia-shell.override {
+          # (self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia-shell.override {
           calendarSupport = true; # For calendar support
           ddcutilSupport = true; # For external monitor brightness applet
         })
-        # (self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia-shell.override {
-        # calendarSupport = true; # For calendar support
-        # ddcutilSupport = true; # For external monitor brightness applet
-        #})
         hyprcursor # For cursors
         rose-pine-hyprcursor # For cursors
       ];
@@ -42,15 +38,6 @@
           "-m"
           "last"
         ];
-        settings = {
-          # background = {
-          # path = "../../background-image.jpg";
-          # fit = "Contain";
-          # };
-          # GTK = {
-          #   application_prefer_dark_theme = true;
-          # };
-        };
       };
       services.gnome.evolution-data-server.enable = true; # For calendar support
       services.gnome.gnome-keyring.enable = true; # For calendar support
