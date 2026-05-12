@@ -6,6 +6,9 @@
       imports = [
         inputs.nixcord.nixosModules.nixcord
       ];
+      environment.systemPackages = with pkgs; [
+        overlayed
+      ];
       programs.nixcord = {
         enable = true;
         user = "hiimkobeand";
