@@ -7,7 +7,7 @@
         inputs.nixcord.nixosModules.nixcord
       ];
       environment.systemPackages = with pkgs; [
-        overlayed
+        discover-overlay
       ];
       programs.nixcord = {
         enable = true;
