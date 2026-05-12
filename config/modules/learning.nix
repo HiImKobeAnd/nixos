@@ -7,7 +7,6 @@
         anki
         zotero
         obsidian
-        super-productivity
       ];
     };
 }
