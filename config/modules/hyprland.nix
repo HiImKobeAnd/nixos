@@ -24,7 +24,7 @@
         HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
       };
       environment.systemPackages = with pkgs; [
-        nautilus # File manager GUI
+        kdePackages.dolphin # File manager GUI
         playerctl # For music control
         evolution # For calendar support
         wl-clipboard # Clipboard
