@@ -1,4 +1,5 @@
-local apps = {
+return {
+
 	terminal = "alacritty",
 	fileManager = "dolphin",
 	menu = "hyprlauncher",
@@ -7,6 +8,5 @@ local apps = {
 	notes = "obsidian",
 	music = "pear-desktop",
 	communication = "discord --ozone-platform=x11",
+	planning = "io.github.alainm23.planify",
 }
-
-return apps

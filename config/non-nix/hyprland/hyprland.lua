@@ -1,11 +1,7 @@
-local animations = require("animations")
-local keybinds = require("keybinds")
-local default_applications = require("default_applications")
+require("animations")
+require("keybinds")
+local apps = require("default_applications")
 
-animations.setup(hl)
-keybinds.setup(hl)
-default_applications.setup(hl)
----
 ---- MONITORS ----
 
 hl.monitor({
@@ -21,10 +17,11 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("noctalia-shell")
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("hyprctl plugin load $HY3_PATH")
-	hl.exec_cmd(music, { workspace = "1 silent" })
-	hl.exec_cmd(communication, { workspace = "1 silent" })
-	hl.exec_cmd(browser, { workspace = "2 silent" })
-	hl.exec_cmd(notes, { workspace = "magic silent" })
+	hl.exec_cmd(apps.music, { workspace = "1 silent" })
+	hl.exec_cmd(apps.communication, { workspace = "1 silent" })
+	hl.exec_cmd(apps.browser, { workspace = "2 silent" })
+	hl.exec_cmd(apps.planning, { workspace = "special:magic silent" })
+	hl.exec_cmd(apps.notes, { workspace = "special:magic silent" })
 end)
 
 ---- ENVIRONMENT VARIABLES ----
@@ -113,9 +110,8 @@ hl.window_rule({
 })
 
 for i = 1, 4 do
-	hl.workspace({
-		id = i,
-		monitor = "HDMI-A-3",
+	hl.workspace_rule({
+		workspace = i,
 		persistent = true,
 	})
 end
