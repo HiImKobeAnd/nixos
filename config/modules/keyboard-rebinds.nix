@@ -12,8 +12,8 @@
               main = {
                 "pageup" = "playpause";
                 "pagedown" = "nextsong";
-                "home" = "f23";
-                "end" = "f24";
+                "home" = "prog1";
+                "end" = "prog2";
                 # "capslock" = "layer(navlayer)";
                 #rightalt = "layer(rightalt)";
               };
