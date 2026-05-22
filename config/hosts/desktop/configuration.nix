@@ -54,6 +54,7 @@
         self.nixosModules.blender
         self.nixosModules.vlc
         # self.nixosModules.ollama
+        # self.nixosModules.my-vesktop
       ];
 
       # Sound
@@ -125,6 +126,9 @@
         "nix-command"
         "flakes"
       ];
+
+      # CUDA Support
+      nixpkgs.config.cudaSupport = true;
 
       system.stateVersion = "24.05";
     };

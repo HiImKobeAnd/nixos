@@ -9,6 +9,9 @@ switch: _pre && _post
 reboot: _pre && _post
     nh os boot {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always
 
+switch-1j: _pre && _post
+    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --max-jobs 1 --diff always
+
 _pre:
     git add .
     @echo "NixOS Rebuilding..."

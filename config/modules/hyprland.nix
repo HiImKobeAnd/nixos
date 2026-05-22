@@ -3,12 +3,28 @@
   flake.nixosModules.hyprland =
     { pkgs, ... }:
     {
+      nixpkgs.overlays = [
+        (final: prev: {
+          hyprlandPlugins = prev.hyprlandPlugins // {
+            hy3 = prev.hyprlandPlugins.hy3.overrideAttrs (oldAttrs: {
+              version = "0.55.0";
+
+              src = prev.fetchFromGitHub {
+                owner = "outfoxxed";
+                repo = "hy3";
+                rev = "hl0.55.0";
+                hash = "sha256-P3wwiIfqo89evW7xzI+wOI/qM1WPZBiiSmGNtBmYeVk=";
+              };
+            });
+          };
+        })
+      ];
       environment.sessionVariables = {
         NIXOS_OZONE_WL = 1;
         HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
       };
       environment.systemPackages = with pkgs; [
-        cosmic-files # File manager GUI
+        nautilus # File manager GUI
         playerctl # For music control
         evolution # For calendar support
         wl-clipboard # Clipboard

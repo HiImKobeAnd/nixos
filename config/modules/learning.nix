@@ -8,6 +8,7 @@
         zotero
         obsidian
         super-productivity
+        planify
       ];
     };
 }
