@@ -74,6 +74,8 @@
       # astro
       # nginx
       # svelte
+
+      typst
     ];
 
     settings = {
