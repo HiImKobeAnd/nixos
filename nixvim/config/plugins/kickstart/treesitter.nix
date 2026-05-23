@@ -76,6 +76,7 @@
       # svelte
 
       typst
+      go
     ];
 
     settings = {
