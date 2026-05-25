@@ -27,8 +27,8 @@
         # })
       ];
       programs = {
-        honkers-railway-launcher.enable = true;
-        anime-games-launcher.enable = true;
+        # honkers-railway-launcher.enable = true;
+        # anime-games-launcher.enable = true;
       };
       nix.settings.substituters = [ "https://ezkea.cachix.org" ];
       nix.settings.trusted-public-keys = [

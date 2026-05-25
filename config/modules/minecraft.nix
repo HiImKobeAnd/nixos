@@ -9,6 +9,7 @@
           jdks = [
             temurin-bin
             temurin-jre-bin-17
+            temurin-jre-bin-25
           ];
         })
       ];
