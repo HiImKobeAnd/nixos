@@ -17,6 +17,15 @@
               };
             });
           };
+          noctalia-shell = prev.noctalia-shell.overrideAttrs (oldAttrs: {
+            version = "4.7.7";
+            src = prev.fetchFromGitHub {
+              owner = "noctalia-dev";
+              repo = "noctalia-shell";
+              rev = "v4.7.7";
+              hash = "sha256-QszLpoDPD7JEv8B/w1U2u1ksBw/CYBDmwUTLhJrekF0=";
+            };
+          });
         })
       ];
       environment.sessionVariables = {
