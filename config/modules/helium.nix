@@ -4,7 +4,7 @@
     { pkgs, system, ... }:
     {
       environment.systemPackages = [
-        # inputs.helium-nix.packages."x86_64-linux".helium
+        inputs.helium-nix.packages."x86_64-linux".helium
       ];
       nix.settings = {
         substituters = [ "https://helium-nix.cachix.org" ];
