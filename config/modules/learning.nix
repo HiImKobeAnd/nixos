@@ -7,7 +7,7 @@
         anki
         zotero
         obsidian
-        super-productivity
+        # super-productivity
         planify
       ];
     };

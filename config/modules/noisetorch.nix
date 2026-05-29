@@ -5,7 +5,7 @@
     {
       environment.systemPackages = with pkgs; [
         noisetorch
-        easyeffects
+        # easyeffects
       ];
       programs.noisetorch.enable = true;
     };

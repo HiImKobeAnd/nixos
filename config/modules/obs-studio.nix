@@ -16,7 +16,6 @@
         plugins = with pkgs.obs-studio-plugins; [
           wlrobs
           obs-pipewire-audio-capture
-          obs-backgroundremoval
         ];
       };
       nix.settings.substituters = [ "https://cache.nixos-cuda.org" ];
