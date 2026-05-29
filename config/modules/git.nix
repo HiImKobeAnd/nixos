@@ -3,10 +3,10 @@
   flake.nixosModules.git =
     { pkgs, ... }:
     {
-      environment.systemPackages = with pkgs; [
-        jujutsu
-        koji
-        gh
+      environment.systemPackages = [
+        self.packages.${pkgs.stdenv.hostPlatform.system}.myJJ
+        pkgs.koji
+        pkgs.gh
       ];
       programs.git = {
         enable = true;
@@ -30,6 +30,13 @@
             last = "log -1 HEAD";
             unstage = "reset HEAD --";
           };
+        };
+      };
+      packages.myJJ = inputs.wrapper-modules.wrappers.jujutsu.wrap {
+        inherit pkgs;
+        settings = {
+          user.email = "hiimkobeand@gmail.com";
+          user.name = "hiimkobeand";
         };
       };
     };
