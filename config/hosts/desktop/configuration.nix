@@ -127,9 +127,6 @@
         "flakes"
       ];
 
-      # CUDA Support
-      nixpkgs.config.cudaSupport = true;
-
       system.stateVersion = "24.05";
     };
 }
