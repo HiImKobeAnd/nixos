@@ -53,6 +53,7 @@
         self.nixosModules.nixvim
         self.nixosModules.blender
         self.nixosModules.vlc
+        self.nixosModules.helium
         # self.nixosModules.ollama
         # self.nixosModules.my-vesktop
       ];
