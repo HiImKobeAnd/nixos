@@ -4,6 +4,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
+        jujutsu
         koji
         gh
       ];
