@@ -3,7 +3,7 @@ return {
 	terminal = "alacritty",
 	fileManager = "dolphin",
 	menu = "hyprlauncher",
-	browser = "librewolf",
+	browser = "helium",
 	mail = "thunderbird",
 	notes = "obsidian",
 	music = "pear-desktop",
