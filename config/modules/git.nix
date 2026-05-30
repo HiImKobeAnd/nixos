@@ -4,7 +4,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = [
-        self.packages.${pkgs.stdenv.hostPlatform.system}.myJJ
+        # self.packages.${pkgs.stdenv.hostPlatform.system}.myJJ
         pkgs.koji
         pkgs.gh
       ];
