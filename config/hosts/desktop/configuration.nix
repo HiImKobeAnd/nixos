@@ -110,9 +110,6 @@
 
       virtualisation.libvirtd.enable = true;
 
-      # Maintenance
-      nix.settings.auto-optimise-store = true;
-
       # Nixpkgs
       nixpkgs.config.allowUnfree = true;
       nix.settings = {
