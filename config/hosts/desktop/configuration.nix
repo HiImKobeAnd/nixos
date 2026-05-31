@@ -55,8 +55,8 @@
         self.nixosModules.vlc
         self.nixosModules.helium
         self.nixosModules.winboat
-        # self.nixosModules.ollama
-        # self.nixosModules.my-vesktop
+        self.nixosModules.ollama
+        # self.nixosModules.vesktop
       ];
 
       # Sound

@@ -85,6 +85,8 @@ hl.config({
 
 ---- WINDOWS AND WORKSPACES ----
 
+hl.workspace_rule({ workspace = "special:magic", default = true })
+
 local suppressMaximizeRule = hl.window_rule({
 	-- Ignore maximize requests from all apps. You'll probably like this.
 	name = "suppress-maximize-events",
