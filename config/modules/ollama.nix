@@ -7,6 +7,7 @@
         ollama
         alpaca
         opencode
+        mistral-vibe
       ];
       services.ollama = {
         enable = true;
