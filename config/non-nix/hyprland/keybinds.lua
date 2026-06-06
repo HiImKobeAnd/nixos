@@ -90,8 +90,8 @@ hl.bind("XF86Launch1", hl.dsp.pass({ window = "class:^(discord)$" }))
 hl.bind("XF86Launch2", hl.dsp.pass({ window = "class:^(discord)$" }))
 
 hl.bind("mouse:282", hl.dsp.pass({ window = "class:^(discord)$" }))
-hl.bind("Print", hl.dsp.exec_cmd("grim -g '$(slurp -d)' - | wl-copy"))
-hl.bind("CTRL + Print", hl.dsp.exec_cmd("grim -g '$(slurp)' - | wl-copy"))
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness increase"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness decrease"), { locked = true, repeating = true })
 

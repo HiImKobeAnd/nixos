@@ -4,8 +4,8 @@
     { pkgs, ... }:
     {
       virtualisation.waydroid.enable = true;
-      environment.systemPackages = with pkgs; [
-        waydroid
-      ];
+      virtualisation.waydroid.package = pkgs.waydroid-nftables;
+
+      environment.systemPackages = [ pkgs.wl-clipboard ];
     };
 }

@@ -3,12 +3,27 @@
   flake.nixosModules.helium =
     { pkgs, system, ... }:
     {
-      environment.systemPackages = [
-        inputs.helium-nix.packages."x86_64-linux".helium
+      imports = [
+        inputs.helium.nixosModules.default
       ];
-      nix.settings = {
-        substituters = [ "https://helium-nix.cachix.org" ];
-        trusted-public-keys = [ "helium-nix.cachix.org-1:a8YPjt9O4GPyX0u3gjg/aWpb14teU9aRiSG/MOaSFgw=" ];
+      programs.helium = {
+        enable = true;
+        flags = [
+          "--ozone-platform-hint=auto"
+        ];
+        policies = {
+          "BrowserSignin" = 0;
+          "PasswordManagerEnabled" = false;
+          "SyncDisabled" = true;
+          "SpellcheckEnabled" = true;
+          "SpellcheckLanguage" = [
+            "da"
+            "en-GB"
+          ];
+          "DefaultSearchProviderEnabled" = true;
+          "DefaultSearchProviderSearchURL" = "https://duckduckgo.com/?q=%s";
+          "RestoreOnStartup" = 1;
+        };
       };
     };
 }
