@@ -1,8 +1,9 @@
-{ self, inputs, ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.hyprland =
     { pkgs, ... }:
     {
+      nixpkgs.overlays = [ inputs.noctalia.overlays.default ];
       environment.sessionVariables = {
         NIXOS_OZONE_WL = 1;
         HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
@@ -21,6 +22,9 @@
           calendarSupport = true; # For calendar support
           ddcutilSupport = true; # For external monitor brightness applet
         })
+        (noctalia.override {
+          cudaSupport = true;
+        })
         hyprcursor # For cursors
         rose-pine-hyprcursor # For cursors
       ];
@@ -29,7 +33,6 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
-      services.dunst.enable = true; # Notification daemon
       programs.regreet = {
         # Greeter
         enable = true;
@@ -39,9 +42,14 @@
           "last"
         ];
       };
-      services.gnome.evolution-data-server.enable = true; # For calendar support
-      services.gnome.gnome-keyring.enable = true; # For calendar support
-      services.ddccontrol.enable = true; # For external monitor brightness applet
+      services = {
+        dunst.enable = true; # Notification daemon
+        gnome.evolution-data-server.enable = true; # For calendar support
+        gnome.gnome-keyring.enable = true; # For calendar support
+        ddccontrol.enable = true; # For external monitor brightness applet
+        power-profiles-daemon.enable = true;
+        upower.enable = true;
+      };
     };
 
   perSystem =
