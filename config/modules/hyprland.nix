@@ -10,11 +10,11 @@
       };
       environment.systemPackages = with pkgs; [
         cosmic-files # File manager GUI
-        playerctl # For music control
-        evolution # For calendar support
+        # playerctl # For music control
+        # evolution # For calendar support
         wl-clipboard # Clipboard
-        grim # For screenshot
-        slurp # For screenshot
+        # grim # For screenshot
+        # slurp # For screenshot
         ddcutil # For external monitor brightness applet
         hyprlandPlugins.hy3 # Hyprland plugin to make tiling feel like Cosmic DE
         (noctalia-shell.override {
@@ -43,10 +43,10 @@
         ];
       };
       services = {
-        dunst.enable = true; # Notification daemon
-        gnome.evolution-data-server.enable = true; # For calendar support
-        gnome.gnome-keyring.enable = true; # For calendar support
-        ddccontrol.enable = true; # For external monitor brightness applet
+        # dunst.enable = true; # Notification daemon
+        # gnome.evolution-data-server.enable = true; # For calendar support
+        # gnome.gnome-keyring.enable = true; # For calendar support
+        # ddccontrol.enable = true; # For external monitor brightness applet
         power-profiles-daemon.enable = true;
         upower.enable = true;
       };
