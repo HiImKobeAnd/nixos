@@ -115,7 +115,6 @@
       # Lua lsp
       lua_ls = {
         enable = true;
-
         # cmd = {
         # };
         # filetypes = {
@@ -131,6 +130,7 @@
           # };
         };
       };
+      clangd.enable = true;
     };
 
     keymaps = {
