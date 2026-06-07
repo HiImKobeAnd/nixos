@@ -15,6 +15,9 @@ switch-1j: _pre && _post
 update: _pre && _post
     nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always --update
 
+clean:
+    nh clean all --keep 3
+
 _pre:
     git add .
     @echo "NixOS Rebuilding..."
