@@ -6,8 +6,8 @@
       environment.systemPackages = with pkgs; [
         krita
         inkscape
-        qgis
-        godot
+        # qgis
+        # godot
         # gpxsee
         # blockbench
       ];

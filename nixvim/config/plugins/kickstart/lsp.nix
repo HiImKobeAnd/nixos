@@ -78,8 +78,8 @@
       # };
       rust_analyzer = {
         enable = true;
-        installCargo = true;
-        installRustc = true;
+        # installCargo = true;
+        # installRustc = true;
       };
       # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
       #

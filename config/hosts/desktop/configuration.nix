@@ -34,20 +34,20 @@
 
         # Applications
         self.nixosModules.hyprland
-        self.nixosModules.vm
+        # self.nixosModules.vm
         self.nixosModules.librewolf
         self.nixosModules.waydroid
         self.nixosModules.steam
         self.nixosModules.minecraft
         self.nixosModules.other-games
         self.nixosModules.hobby-applications
-        self.nixosModules.chromium
+        # self.nixosModules.chromium
         self.nixosModules.social-media
         self.nixosModules.obs-studio
         self.nixosModules.audio-applications
         self.nixosModules.learning
         self.nixosModules.music
-        self.nixosModules.email
+        # self.nixosModules.email
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim

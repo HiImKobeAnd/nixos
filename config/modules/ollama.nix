@@ -5,7 +5,6 @@
     {
       environment.systemPackages = with pkgs; [
         ollama
-        alpaca
         opencode
         mistral-vibe
       ];
