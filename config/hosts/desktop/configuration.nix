@@ -54,7 +54,7 @@
         # self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium
-        # self.nixosModules.winboat
+        self.nixosModules.winboat
         self.nixosModules.ollama
         # self.nixosModules.vesktop
       ];
