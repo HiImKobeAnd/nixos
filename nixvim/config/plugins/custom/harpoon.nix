@@ -13,7 +13,7 @@
     {
       mode = "n";
       key = "<C-v>";
-      action.__raw = "function() require('harpoon').ui:toggle_quick_menu(harpoon:list()) end";
+      action.__raw = "function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end";
       options.desc = "[V]iew harpoon";
     }
   ];
