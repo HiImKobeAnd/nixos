@@ -21,9 +21,9 @@ in
     ./config/plugins/kickstart/treesitter.nix
 
     # ./config/plugins/custom/neotest.nix
-    ./config/plugins/custom/overseer.nix
+    # ./config/plugins/custom/overseer.nix
     ./config/plugins/custom/auto-session.nix
-    # ./config/plugins/custom/harpoon.nix
+    ./config/plugins/custom/harpoon.nix
     ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
     # ./config/plugins/kickstart/debug.nix
