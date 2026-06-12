@@ -56,6 +56,7 @@
         self.nixosModules.helium
         self.nixosModules.winboat
         self.nixosModules.ollama
+        self.nixosModules.aicode
         # self.nixosModules.vesktop
       ];
 

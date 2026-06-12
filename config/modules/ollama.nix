@@ -5,8 +5,6 @@
     {
       environment.systemPackages = with pkgs; [
         ollama
-        opencode
-        mistral-vibe
       ];
       services.ollama = {
         enable = true;
