@@ -23,6 +23,10 @@
           group = "[R]un";
         }
         {
+          __unkeyed-1 = "<leader>a";
+          group = "H[a]rpoon";
+        }
+        {
           __unkeyed-1 = "<leader>h";
           group = "Git [H]unk";
           mode = [
