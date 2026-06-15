@@ -3,7 +3,10 @@
   flake.nixosModules.hyprland =
     { pkgs, ... }:
     {
-      nixpkgs.overlays = [ inputs.noctalia.overlays.default ];
+      nixpkgs.overlays = [
+        inputs.noctalia.overlays.default
+        inputs.noctalia-greeter.overlays.default
+      ];
       environment.sessionVariables = {
         NIXOS_OZONE_WL = 1;
         HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
@@ -24,18 +27,34 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
-      programs.regreet = {
-        # Greeter
-        enable = true;
-        cageArgs = [
-          "-s"
-          "-m"
-          "last"
-        ];
-      };
+      # programs.regreet = {
+      #   # Greeter
+      #   enable = true;
+      #   cageArgs = [
+      #     "-s"
+      #     "-m"
+      #     "last"
+      #   ];
+      # };
+      # programs.noctalia-greeter = {
+      # enable = true;
+      # };
       services = {
         power-profiles-daemon.enable = true; # Noctalia dependency
         upower.enable = true; # Noctalia dependency
+        # greetd = {
+        #   enable = true;
+        #   settings = {
+        #     initial_session = {
+        #       command = "uwsm start hyprland-uwsm.desktop";
+        #       user = "hiimkobeand";
+        #     };
+        #     default_session = {
+        #       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd 'uwsm start hyprland.desktop";
+        #       user = "greeter";
+        #     };
+        #   };
+        # };
       };
     };
 
