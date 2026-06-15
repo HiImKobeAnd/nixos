@@ -5,7 +5,9 @@
     {
       nixpkgs.overlays = [
         inputs.noctalia.overlays.default
-        inputs.noctalia-greeter.overlays.default
+      ];
+      imports = [
+        inputs.noctalia-greeter.nixosModules.default
       ];
       environment.sessionVariables = {
         NIXOS_OZONE_WL = 1;
@@ -36,9 +38,9 @@
       #     "last"
       #   ];
       # };
-      # programs.noctalia-greeter = {
-      # enable = true;
-      # };
+      programs.noctalia-greeter = {
+        enable = true;
+      };
       services = {
         power-profiles-daemon.enable = true; # Noctalia dependency
         upower.enable = true; # Noctalia dependency
