@@ -26,15 +26,6 @@
         withUWSM = true;
         # package = self.packages.${pkgs.stdenv.hostPlatform.system}.myHyprland;
       };
-      # programs.regreet = {
-      #   # Greeter
-      #   enable = true;
-      #   cageArgs = [
-      #     "-s"
-      #     "-m"
-      #     "last"
-      #   ];
-      # };
       services = {
         power-profiles-daemon.enable = true; # Noctalia dependency
         upower.enable = true; # Noctalia dependency
