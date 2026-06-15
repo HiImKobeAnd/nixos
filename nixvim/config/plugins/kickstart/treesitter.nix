@@ -78,6 +78,7 @@
       # nginx
       # svelte
 
+      python
       typst
       go
     ];
