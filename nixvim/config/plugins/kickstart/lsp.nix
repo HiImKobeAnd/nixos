@@ -137,8 +137,6 @@
           sourcemap = {
             autogenerate = true;
             enabled = true;
-            rojo_project_file = "default.project.json";
-            sourcemap_file = "sourcemap.json";
           };
         };
       };
