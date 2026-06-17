@@ -14,7 +14,6 @@
       ];
       programs.nixcord = {
         enable = true;
-        discord.vencord.enable = true;
         vesktop.enable = true;
 
         vesktop.package =
