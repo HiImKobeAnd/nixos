@@ -55,6 +55,8 @@
             volumeBooster.enable = true;
             dearrow.enable = true;
             dearrow.hideButton = true;
+            clearUrls.enable = true;
+            webScreenShareFixes.enable = true;
           };
         };
       };
