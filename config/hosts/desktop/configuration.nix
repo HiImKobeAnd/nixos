@@ -115,6 +115,10 @@
 
       virtualisation.libvirtd.enable = true;
       virtualisation.libvirtd.onBoot = "ignore";
+      systemd.services.livirtd = {
+        after = [ "graphical.target" ];
+        wantedBy = lib.mkForce [ "graphical.target" ];
+      };
 
       # Nixpkgs
       nixpkgs.config.allowUnfree = true;
