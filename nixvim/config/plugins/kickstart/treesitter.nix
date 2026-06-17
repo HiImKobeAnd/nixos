@@ -22,6 +22,7 @@
       vimdoc
       lua
       luadoc
+      luau
 
       # General Development
       csv
