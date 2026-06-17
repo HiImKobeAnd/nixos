@@ -35,7 +35,7 @@
         # Applications
         self.nixosModules.hyprland
         # self.nixosModules.vm
-        self.nixosModules.librewolf
+        # self.nixosModules.librewolf
         self.nixosModules.waydroid
         self.nixosModules.steam
         self.nixosModules.minecraft
@@ -56,7 +56,7 @@
         self.nixosModules.helium
         self.nixosModules.winboat
         self.nixosModules.ollama
-        self.nixosModules.aicode
+        # self.nixosModules.aicode
         # self.nixosModules.vesktop
       ];
 
