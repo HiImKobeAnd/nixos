@@ -328,13 +328,13 @@
       "locked": {
         "lastModified": 1781659360,
         "narHash": "sha256-bwTlMeMALwHREYkYBd9swITfW270tt6GzyY1j+QAqIU=",
-        "owner": "KaylorBen",
+        "owner": "flameflag",
         "repo": "nixcord",
         "rev": "9dd239d5f8d651ccd94efcf1e3bd384ad41084ca",
         "type": "github"
       },
       "original": {
-        "owner": "KaylorBen",
+        "owner": "flameflag",
         "repo": "nixcord",
         "type": "github"
       }
