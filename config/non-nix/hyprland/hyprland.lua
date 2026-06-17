@@ -14,8 +14,7 @@ hl.monitor({
 ---- AUTOSTART ----
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("noctalia-shell")
-	hl.exec_cmd("hyprpaper")
+	hl.exec_cmd("noctalia")
 	hl.exec_cmd("hyprctl plugin load $HY3_PATH")
 	hl.exec_cmd(apps.music, { workspace = "1 silent" })
 	hl.exec_cmd(apps.communication, { workspace = "1 silent" })
@@ -128,3 +127,6 @@ hl.window_rule({
 	move = { "100%-820", "100%-470" },
 	keep_aspect_ratio = true,
 })
+
+-- For Noctalia Color templates
+require("noctalia")

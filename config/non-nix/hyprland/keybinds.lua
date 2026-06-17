@@ -1,7 +1,7 @@
 local apps = require("default_applications")
 
 local mod = "SUPER"
-local ipc = "noctalia-shell ipc call"
+local ipc = "noctalia msg "
 ----------------------
 ---- APPLICATIONS ----
 ----------------------
@@ -18,8 +18,8 @@ hl.bind(mod .. " + Z", hl.dsp.exec_cmd("zotero"))
 ---- DESKTOP ----
 -----------------
 
-hl.bind(mod .. " + " .. mod .. "_L", hl.dsp.exec_cmd(ipc .. " launcher toggle"))
-hl.bind(mod .. " + Escape", hl.dsp.exec_cmd(ipc .. " sessionMenu toggle"))
+hl.bind(mod .. " + " .. mod .. "_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mod .. " + Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 hl.bind(mod .. " + Q", hl.dsp.window.close())
 hl.bind(mod .. " + Y", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
@@ -28,11 +28,11 @@ hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
 ---- MULTIMEDIA ----
 --------------------
 
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. " volume increase"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. " volume decrease"), { locked = true, repeating = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"))
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"))
-hl.bind("SHIFT + XF86AudioNext", hl.dsp.exec_cmd("playerctl previous"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"), { locked = true, repeating = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(ipc .. "media toggle"))
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd(ipc .. "media next"))
+hl.bind("SHIFT + XF86AudioNext", hl.dsp.exec_cmd(ipc .. "media previous"))
 
 --------------------
 ---- WORKSPACES ----
@@ -86,13 +86,13 @@ hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 ---- MISC ----
 --------------
 
-hl.bind("XF86Launch1", hl.dsp.pass({ window = "class:^(discord)$" }))
-hl.bind("XF86Launch2", hl.dsp.pass({ window = "class:^(discord)$" }))
+hl.bind("XF86TouchpadOn", hl.dsp.exec_cmd("vesktop --run-shortcut toggleMute"))
+hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("vesktop --run-shortcut toggleDeafen"))
 
 hl.bind("mouse:282", hl.dsp.pass({ window = "class:^(discord)$" }))
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
-hl.bind("CTRL + Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. " brightness increase"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. " brightness decrease"), { locked = true, repeating = true })
+hl.bind("Print", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+hl.bind("CTRL + Print", hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen"))
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"), { locked = true, repeating = true })
 
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(apps.planning .. ".quick-add"))

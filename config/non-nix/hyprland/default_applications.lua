@@ -7,6 +7,6 @@ return {
 	mail = "thunderbird",
 	notes = "obsidian",
 	music = "pear-desktop",
-	communication = "discord --ozone-platform=x11",
+	communication = "vesktop",
 	planning = "io.github.alainm23.planify",
 }
