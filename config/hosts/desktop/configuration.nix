@@ -115,7 +115,7 @@
 
       virtualisation.libvirtd.enable = true;
       virtualisation.libvirtd.onBoot = "ignore";
-      systemd.services.livirtd = {
+      systemd.services.libvirtd = {
         after = [ "graphical.target" ];
         wantedBy = lib.mkForce [ "graphical.target" ];
       };
