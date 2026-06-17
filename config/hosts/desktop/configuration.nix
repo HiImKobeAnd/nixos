@@ -77,6 +77,10 @@
         v4l2loopback
       ];
 
+      boot.blacklistedKernelModules = [
+        "ucsi_ccg" # Stops my DGPU from trying to load USB C Drivers which should result in faster startup
+      ];
+
       # For backlight control
       services.udev.extraRules =
         let
@@ -94,7 +98,7 @@
       # Networking
       networking.hostName = "hiimkobeand";
       networking.networkmanager.enable = true;
-      networking.networkmanager.wifi.powersave = false;
+      systemd.services.NetworkManager-wait-online.enable = false;
 
       # User
       users.users.hiimkobeand = {
@@ -110,6 +114,7 @@
       };
 
       virtualisation.libvirtd.enable = true;
+      virtualisation.libvirtd.onBoot = "ignore";
 
       # Nixpkgs
       nixpkgs.config.allowUnfree = true;

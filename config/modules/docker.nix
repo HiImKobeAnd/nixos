@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   flake.nixosModules.docker =
     {
@@ -13,5 +13,9 @@
       };
       # hardware.nvidia-container-toolkit.enable = true; # For using NVIDIA GPU in docker containers
       # virtualisation.docker.daemon.settings.features.cdi = true; # For using NVIDIA GPU in docker containers
+      systemd.services.docker = {
+        after = [ "graphical.target" ];
+        wantedBy = lib.mkForce [ "graphical.target" ];
+      };
     };
 }

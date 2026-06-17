@@ -9,7 +9,7 @@
       powerManagement.enable = true;
 
       boot.kernelParams = [
-        "NVreg_PreserveVideoMemoryAllocations=1"
+        "NVreg_UseKernelSuspendNotifiers=1"
       ];
 
       hardware.nvidia = {
