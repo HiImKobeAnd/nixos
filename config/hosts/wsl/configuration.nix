@@ -22,6 +22,9 @@
         self.nixosModules.git
         self.nixosModules.comma
 
+        # Applications
+        self.nixosModules.nixvim
+
         # Services
         # self.nixosModules.docker
       ];
