@@ -103,9 +103,10 @@
       jsonls.enable = true;
 
       # Nix lsp
-      nil_ls = {
-        enable = true;
-      };
+      # nil_ls = {
+      # enable = true;
+      # };
+      nixd.enable = true;
 
       elixirls = {
         enable = true;
