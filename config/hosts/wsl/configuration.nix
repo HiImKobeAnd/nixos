@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
   flake.nixosModules.wslConfiguration =
     {
@@ -10,14 +10,17 @@
     {
       imports = [
         # System
+        inputs.nixos-wsl.nixosModules.default
         self.nixosModules.default-locale
         self.nixosModules.default-fonts
 
         # Terminal
         self.nixosModules.basic-terminal-tools
-        self.nixosModules.dev-terminal-tools
+        self.nixosModules.terminal
         self.nixosModules.nix-tools
         self.nixosModules.fish
+        self.nixosModules.git
+        self.nixosModules.comma
 
         # Services
         # self.nixosModules.docker
