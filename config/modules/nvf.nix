@@ -22,13 +22,17 @@
             viAlias = false;
             vimAlias = true;
 
+            autocomplete = {
+              nvim-cmp.enable = true;
+            };
+
             treesitter.enable = true;
             lsp = {
               enable = true;
-            formatOnSave = true;
-                            inlayHints.enable = true;
-                            lightbulb.enable = true;
-                            lspconfig.enable=true;
+              formatOnSave = true;
+              inlayHints.enable = true;
+              lightbulb.enable = true;
+              lspconfig.enable = true;
             };
 
             languages = {
@@ -39,8 +43,9 @@
               nix = {
                 enable = true;
                 lsp.enable = true;
-treesitter.enable=true;
-                                format.enable=true;                                format.type = [ "nixfmt" ];
+                treesitter.enable = true;
+                format.enable = true;
+                format.type = [ "nixfmt" ];
                 lsp.servers = [ "nixd" ];
               };
               rust.enable = true;
