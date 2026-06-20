@@ -51,7 +51,6 @@
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
-        self.nixosModules.nvf
         # self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium

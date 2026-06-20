@@ -24,6 +24,7 @@
 
         # Applications
         self.nixosModules.nixvim
+        self.nixosModules.nvf
 
         # Services
         # self.nixosModules.docker
