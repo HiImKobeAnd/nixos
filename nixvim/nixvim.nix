@@ -112,7 +112,7 @@ in
 
   enable = true;
   viAlias = true;
-  vimAlias = true;
+  vimAlias = false;
   colorschemes.gruvbox.enable = true;
 
   # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
