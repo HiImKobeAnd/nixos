@@ -47,9 +47,7 @@
 
             telescope.enable = true;
 
-            autocomplete = {
-              nvim-cmp.enable = true;
-            };
+            autocomplete.nvim-cmp.enable = true;
             snippets.luasnip.enable = true;
 
             session.nvim-session-manager = {
