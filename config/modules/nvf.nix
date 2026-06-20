@@ -19,18 +19,21 @@
         enable = true;
         settings = {
           vim = {
-            options.tabstop = 4;
-            options.shiftwidth = 4;
-            searchCase = "smart";
             viAlias = false;
             vimAlias = true;
 
-            #theme = {
-            #enable = true;
-            #name = "gruvbox";
-            #style = "dark";
-            #};
+            theme = {
+              enable = true;
+              name = "gruvbox";
+              style = "dark";
+            };
 
+            options.tabstop = 2;
+            options.shiftwidth = 2;
+            searchCase = "smart";
+            undoFile.enable = true;
+
+            lazy.enable = false;
             autopairs.nvim-autopairs.enable = true;
 
             binds = {
@@ -47,6 +50,7 @@
             autocomplete = {
               nvim-cmp.enable = true;
             };
+            snippets.luasnip.enable = true;
 
             treesitter.enable = true;
             lsp = {
