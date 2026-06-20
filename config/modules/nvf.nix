@@ -34,7 +34,9 @@
 
               nix = {
                 enable = true;
-                format.type = [ "nixfmt" ];
+                lsp.enable = true;
+treesitter.enable=true;
+                                format.enable=true;                                format.type = [ "nixfmt" ];
                 lsp.servers = [ "nixd" ];
               };
               rust.enable = true;
