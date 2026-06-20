@@ -18,6 +18,9 @@
           vim.lsp = {
             enable = true;
           };
+        vim.treesitter.enable = true;
+                                        vim.options.tabstop = 4;
+                                        vim.options.shiftwidth = 4;
 
           vim = {
             viAlias = false;
