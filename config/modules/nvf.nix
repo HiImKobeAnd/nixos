@@ -12,6 +12,7 @@
       ];
       nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       programs.nvf = {
+        enable = true;
         vim.lsp = {
           enable = true;
         };
