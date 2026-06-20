@@ -14,9 +14,9 @@
       programs.nvf = {
         enable = true;
         settings = {
-
           vim = {
             options.tabstop = 4;
+
             options.shiftwidth = 4;
             searchCase = "smart";
             viAlias = false;
@@ -25,6 +25,10 @@
             treesitter.enable = true;
             lsp = {
               enable = true;
+            formatOnSave = true;
+                            inlayHints.enable = true;
+                            lightbulb.enable = true;
+                            lspconfig.enable=true;
             };
 
             languages = {
