@@ -15,47 +15,48 @@
         enable = true;
         settings = {
 
-          vim.lsp = {
-            enable = true;
-          };
-        vim.treesitter.enable = true;
-                                        vim.options.tabstop = 4;
-                                        vim.options.shiftwidth = 4;
-
           vim = {
+            options.tabstop = 4;
+            options.shiftwidth = 4;
+            searchCase = "smart";
             viAlias = false;
             vimAlias = true;
-          };
-          vim.languages = {
-            enableExtraDiagnostics = true;
-            enableFormat = true;
-            enableTreesitter = true;
 
-            nix = {
+            treesitter.enable = true;
+            lsp = {
               enable = true;
-              format.type = [ "nixfmt" ];
-              lsp.servers = [ "nixd" ];
             };
-            rust.enable = true;
-            fish.enable = true;
-            elixir.enable = true;
-            docker.enable = true;
-            bash.enable = true;
-            go.enable = true;
-            make.enable = true;
-            env.enable = true;
-            html.enable = true;
-            json.enable = true;
-            just.enable = true;
-            lua.enable = true;
-            markdown.enable = true;
-            python.enable = true;
-            sql.enable = true;
-            css.enable = true;
-            toml.enable = true;
-            typescript.enable = true;
-          };
-          vim = {
+
+            languages = {
+              enableExtraDiagnostics = true;
+              enableFormat = true;
+              enableTreesitter = true;
+
+              nix = {
+                enable = true;
+                format.type = [ "nixfmt" ];
+                lsp.servers = [ "nixd" ];
+              };
+              rust.enable = true;
+              fish.enable = true;
+              elixir.enable = true;
+              docker.enable = true;
+              bash.enable = true;
+              go.enable = true;
+              make.enable = true;
+              env.enable = true;
+              html.enable = true;
+              json.enable = true;
+              just.enable = true;
+              lua.enable = true;
+              markdown.enable = true;
+              python.enable = true;
+              sql.enable = true;
+              css.enable = true;
+              toml.enable = true;
+              typescript.enable = true;
+            };
+
             notes.todo-comments.enable = true;
             navigation.harpoon.enable = true;
           };
