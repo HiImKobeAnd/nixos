@@ -17,6 +17,14 @@
           vim = {
             options.tabstop = 4;
 
+            theme = {
+              enable = true;
+              name = "gruvbox";
+              style = "dark";
+            };
+
+            autopairs.nvim-autopairs.enable = true;
+
             options.shiftwidth = 4;
             searchCase = "smart";
             viAlias = false;
