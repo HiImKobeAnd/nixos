@@ -16,6 +16,10 @@
         settings = {
           vim = {
             options.tabstop = 4;
+            options.shiftwidth = 4;
+            searchCase = "smart";
+            viAlias = false;
+            vimAlias = true;
 
             theme = {
               enable = true;
@@ -24,11 +28,6 @@
             };
 
             autopairs.nvim-autopairs.enable = true;
-
-            options.shiftwidth = 4;
-            searchCase = "smart";
-            viAlias = false;
-            vimAlias = true;
 
             binds = {
               whichKey.enable = true;
@@ -84,8 +83,8 @@
 
               nix = {
                 enable = true;
-                format.type = [ "nixfmt" ];
-                lsp.servers = [ "nixd" ];
+                #format.type = [ "nixfmt" ];
+                #lsp.servers = [ "nixd" ];
               };
               rust.enable = true;
               fish.enable = true;
