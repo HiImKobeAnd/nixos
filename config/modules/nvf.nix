@@ -1,13 +1,10 @@
 {
   inputs,
-  config,
   ...
 }:
 {
   flake.nixosModules.nvf =
     {
-      pkgs,
-      dib,
       ...
     }:
     {
