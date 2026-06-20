@@ -52,6 +52,11 @@
             };
             snippets.luasnip.enable = true;
 
+            session.nvim-session-manager = {
+              enable = true;
+              setupOpts.autoload_mode = "CurrentDir";
+            };
+
             treesitter.enable = true;
             lsp = {
               enable = true;
