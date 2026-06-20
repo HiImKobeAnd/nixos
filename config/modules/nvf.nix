@@ -5,7 +5,7 @@
 }:
 {
   flake.nixosModules.nvf =
-    { pkgs, lib, ... }:
+    { pkgs, dib, ... }:
     {
       imports = [
         inputs.nvf.nixosModules.default
@@ -30,6 +30,17 @@
             viAlias = false;
             vimAlias = true;
 
+            binds = {
+              whichKey.enable = true;
+              hardtime-nvim.enable = true;
+            };
+
+            statusline = {
+              lualine.enable = true;
+            };
+
+            telescope.enable = true;
+
             autocomplete = {
               nvim-cmp.enable = true;
             };
@@ -43,6 +54,29 @@
               lspconfig.enable = true;
             };
 
+            visuals = {
+              nvim-web-devicons.enable = true;
+              fidget-nvim.enable = true;
+            };
+            treesitter.context.enable = true;
+
+            ui = {
+              borders.enable = true;
+            };
+
+            diagnostics = {
+              nvim-lint.enable = true;
+            };
+
+            debugger = {
+              nvim-dap = {
+                enable = true;
+                ui.enable = true;
+              };
+            };
+
+            spellcheck.enable = true;
+
             languages = {
               enableExtraDiagnostics = true;
               enableFormat = true;
@@ -50,9 +84,6 @@
 
               nix = {
                 enable = true;
-                lsp.enable = true;
-                treesitter.enable = true;
-                format.enable = true;
                 format.type = [ "nixfmt" ];
                 lsp.servers = [ "nixd" ];
               };
