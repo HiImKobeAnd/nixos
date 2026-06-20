@@ -68,7 +68,7 @@
 
             notes.todo-comments.enable = true;
             navigation.harpoon.enable = true;
-            #treesitter.context.enable = true;
+            treesitter.context.enable = true;
 
             ui = {
               borders.enable = true;
@@ -85,7 +85,7 @@
               };
             };
 
-            #spellcheck.enable = true;
+            spellcheck.enable = true;
 
             languages = {
               enableExtraDiagnostics = true;
@@ -94,8 +94,8 @@
 
               nix = {
                 enable = true;
-                #format.type = [ "nixfmt" ];
-                #lsp.servers = [ "nixd" ];
+                format.type = [ "nixfmt" ];
+                lsp.servers = [ "nixd" ];
               };
               rust.enable = true;
               fish.enable = true;
