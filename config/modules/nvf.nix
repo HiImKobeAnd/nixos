@@ -20,40 +20,40 @@
             vimAlias = true;
             globals.mapleader = " ";
 
-            theme = {
-              enable = true;
-              name = "gruvbox";
-              style = "dark";
-            };
+            #theme = {
+            #  enable = true;
+            #  name = "gruvbox";
+            #  style = "dark";
+            #};
 
-            options.tabstop = 2;
-            options.shiftwidth = 2;
-            searchCase = "smart";
-            undoFile.enable = true;
+            #options.tabstop = 2;
+            #options.shiftwidth = 2;
+            #searchCase = "smart";
+            #undoFile.enable = true;
 
-            lazy.enable = false;
-            autopairs.nvim-autopairs.enable = true;
+            #lazy.enable = false;
+            #autopairs.nvim-autopairs.enable = true;
 
-            binds = {
-              whichKey.enable = true;
-              hardtime-nvim.enable = true;
-            };
+            #binds = {
+            #  whichKey.enable = true;
+            #  hardtime-nvim.enable = true;
+            #};
 
-            statusline = {
-              lualine.enable = true;
-            };
+            #statusline = {
+            #  lualine.enable = true;
+            #};
 
-            telescope.enable = true;
+            #telescope.enable = true;
 
-            snippets.luasnip.enable = true;
-            autocomplete.nvim-cmp.enable = true;
+            #snippets.luasnip.enable = true;
+            #autocomplete.nvim-cmp.enable = true;
 
             #session.nvim-session-manager = {
             #  enable = true;
             #  setupOpts.autoload_mode = "CurrentDir";
             #};
 
-            treesitter.enable = true;
+            #treesitter.enable = true;
             lsp = {
               enable = true;
               formatOnSave = true;
