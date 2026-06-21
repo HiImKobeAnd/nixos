@@ -1,5 +1,5 @@
 {
- inputs,
+  inputs,
   ...
 }:
 {
@@ -62,14 +62,14 @@
               lspconfig.enable = true;
             };
 
-            visuals = {
-              nvim-web-devicons.enable = true;
-              fidget-nvim.enable = true;
-            };
+            #visuals = {
+            #nvim-web-devicons.enable = true;
+            #fidget-nvim.enable = true;
+            #};
 
-            notes.todo-comments.enable = true;
-            navigation.harpoon.enable = true;
-            treesitter.context.enable = true;
+            #notes.todo-comments.enable = true;
+            #navigation.harpoon.enable = true;
+            #treesitter.context.enable = true;
 
             ui = {
               borders.enable = true;
@@ -86,7 +86,7 @@
               };
             };
 
-            spellcheck.enable = true;
+            #spellcheck.enable = true;
 
             languages = {
               enableExtraDiagnostics = true;
