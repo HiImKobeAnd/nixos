@@ -1,11 +1,16 @@
 {
   pkgs,
+  inputs,
+  self,
   ...
 }:
 let
   enable_nerd_fonts = true;
 in
 {
+  _module.args = {
+    inherit inputs self;
+  };
   imports = [
     # Plugins
     # ./config/plugins/kickstart/gitsigns.nix

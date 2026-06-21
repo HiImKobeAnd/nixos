@@ -1,4 +1,10 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  self,
+  ...
+}:
 {
   # Useful status updates for LSP.
   # https://nix-community.github.io/nixvim/plugins/fidget/index.html
@@ -107,7 +113,22 @@
       # nil_ls = {
       # enable = true;
       # };
-      nixd.enable = true;
+      nixd = {
+        enable = true;
+        settings =
+          let
+            flake = "(builtins.getflake '${self}')";
+            system = "${pkgs.stdenv.hostPlatform.system}";
+          in
+          {
+            nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
+            options = {
+              flake-parts.expr = "${flake}.debug.options";
+              nixos.expr = "${flake}.nixosconfigurations.desktop.options";
+              nixvim.expr = "${flake}.packages.${system}.nvim.options";
+            };
+          };
+      };
 
       elixirls = {
         enable = true;
