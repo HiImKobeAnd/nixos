@@ -58,6 +58,7 @@
       completion = {
         menu.auto_show = true;
         ghost_text.enabled = true;
+        trigger.show_on_insert = true;
 
         # By default, you may press `<c-space>` to show the documentation.
         # Optionally, set `auto_show = true` to show the documentation after a delay.
