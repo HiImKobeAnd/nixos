@@ -45,13 +45,13 @@
 
             telescope.enable = true;
 
-            autocomplete.nvim-cmp.enable = true;
             snippets.luasnip.enable = true;
+            autocomplete.nvim-cmp.enable = true;
 
-            session.nvim-session-manager = {
-              enable = true;
-              setupOpts.autoload_mode = "CurrentDir";
-            };
+            #session.nvim-session-manager = {
+            #  enable = true;
+            #  setupOpts.autoload_mode = "CurrentDir";
+            #};
 
             treesitter.enable = true;
             lsp = {
