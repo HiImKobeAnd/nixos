@@ -34,7 +34,7 @@
             autopairs.nvim-autopairs.enable = true;
 
             binds = {
-              whichKey.enable = true;
+              # whichKey.enable = true;
               hardtime-nvim.enable = true;
             };
 
@@ -99,7 +99,7 @@
               };
               rust.enable = true;
               fish.enable = true;
-              elixir.enable = true;
+              # elixir.enable = true;
               docker.enable = true;
               bash.enable = true;
               go.enable = true;
