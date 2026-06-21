@@ -1,5 +1,5 @@
 {
-  inputs,
+ inputs,
   ...
 }:
 {
@@ -18,6 +18,7 @@
           vim = {
             viAlias = false;
             vimAlias = true;
+            globals.mapleader = " ";
 
             theme = {
               enable = true;
