@@ -1,6 +1,7 @@
 {
   inputs,
   config,
+  self,
   ...
 }:
 {
@@ -10,6 +11,15 @@
       imports = [
         inputs.nixvim.nixosModules.nixvim
       ];
-      programs.nixvim = import ../../nixvim/nixvim.nix { inherit pkgs lib config; };
+      nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+      programs.nixvim = import ../../nixvim/nixvim.nix {
+        inherit
+          pkgs
+          lib
+          config
+          inputs
+          self
+          ;
+      };
     };
 }

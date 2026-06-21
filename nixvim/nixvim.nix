@@ -1,16 +1,19 @@
 {
   pkgs,
-  lib,
-  config,
+  inputs,
+  self,
   ...
 }:
 let
   enable_nerd_fonts = true;
 in
 {
+  _module.args = {
+    inherit inputs self;
+  };
   imports = [
     # Plugins
-    ./config/plugins/kickstart/gitsigns.nix
+    # ./config/plugins/kickstart/gitsigns.nix
     ./config/plugins/kickstart/which-key.nix
     ./config/plugins/kickstart/telescope.nix
     ./config/plugins/kickstart/lsp.nix
@@ -22,14 +25,14 @@ in
 
     # ./config/plugins/custom/neotest.nix
     # ./config/plugins/custom/overseer.nix
+    ./config/plugins/custom/hardtime.nix
     ./config/plugins/custom/auto-session.nix
-    ./config/plugins/custom/harpoon.nix
+    # ./config/plugins/custom/harpoon.nix
     ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
     # ./config/plugins/kickstart/debug.nix
     # ./config/plugins/kickstart/lint.nix
-    #./config/plugins/kickstart/indent-blankline.nix
-
+    # ./config/plugins/kickstart/indent-blankline.nix
   ];
 
   /*
@@ -112,19 +115,16 @@ in
 
   enable = true;
   viAlias = true;
-  vimAlias = true;
+  vimAlias = false;
   colorschemes.gruvbox.enable = true;
 
-  # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
   globals = {
-    # See `:help mapleader`
     mapleader = " ";
     maplocalleader = " ";
 
     have_nerd_font = enable_nerd_fonts;
   };
 
-  #  See `:help 'clipboard'`
   clipboard = {
     providers = {
       wl-copy.enable = true; # For Wayland

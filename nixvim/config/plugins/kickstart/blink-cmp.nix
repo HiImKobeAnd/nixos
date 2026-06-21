@@ -18,9 +18,7 @@
   # https://nix-community.github.io/nixvim/plugins/cmp/index.html
   plugins.blink-cmp = {
     enable = true;
-
     settings = {
-
       keymap = {
         # 'default' (recommended) for mappings similar to built-in completions
         #   <c-y> to accept ([y]es) the completion.
@@ -50,17 +48,16 @@
       };
 
       appearance = {
-        # 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
-        # Adjusts spacing to ensure icons are aligned
         nerd_font_variant = "mono";
       };
 
       completion = {
-        # By default, you may press `<c-space>` to show the documentation.
-        # Optionally, set `auto_show = true` to show the documentation after a delay.
+        menu.auto_show = true;
+        ghost_text.enabled = true;
+        trigger.show_on_insert = true;
+
         documentation = {
-          auto_show = false;
-          auto_show_delay_ms = 500;
+          auto_show = true;
         };
       };
 
@@ -91,7 +88,7 @@
       #
       # See :h blink-cmp-config-fuzzy for more information
       fuzzy = {
-        implementation = "lua";
+        implementation = "prefer_rust_with_warning";
       };
 
       # Shows a signature help window while you type arguments for a function

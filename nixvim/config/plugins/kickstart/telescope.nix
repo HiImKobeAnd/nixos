@@ -31,6 +31,7 @@
       fzf-native.enable = true;
       # https://github.com/nvim-telescope/telescope-ui-select.nvim
       ui-select.enable = true;
+      file-browser.enable = true;
     };
 
     # You can put your default mappings / updates / etc. in here
@@ -104,6 +105,13 @@
         action = "find_files";
         options = {
           desc = "[ ] Find Files";
+        };
+      };
+      "<leader>sb" = {
+        mode = "n";
+        action = "file_browser";
+        options = {
+          desc = "[S]earch file [B]rowser";
         };
       };
     };
