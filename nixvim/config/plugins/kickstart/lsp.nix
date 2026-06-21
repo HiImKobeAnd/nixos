@@ -90,7 +90,7 @@
         enable = true;
         settings =
           let
-            flake = "(builtins.getFlake '${self}')";
+            flake = ''(builtins.getFlake "${self}")'';
             system = "${pkgs.stdenv.hostPlatform.system}";
           in
           {
