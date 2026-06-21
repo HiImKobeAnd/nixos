@@ -31,6 +31,7 @@
       fzf-native.enable = true;
       # https://github.com/nvim-telescope/telescope-ui-select.nvim
       ui-select.enable = true;
+      file-browser.enable = true;
     };
 
     # You can put your default mappings / updates / etc. in here
