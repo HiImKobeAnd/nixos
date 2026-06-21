@@ -33,6 +33,18 @@
             lazy.enable = false;
             autopairs.nvim-autopairs.enable = true;
 
+            keymaps = [
+              {
+                mode = [
+                  "n"
+                  "v"
+                ];
+                key = "<Space>";
+                action = "<Nop>";
+                silent = true;
+              }
+            ];
+
             binds = {
               # whichKey.enable = true;
               hardtime-nvim.enable = true;
