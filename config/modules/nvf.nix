@@ -18,7 +18,7 @@
           vim = {
             viAlias = false;
             vimAlias = true;
-            globals.mapleader = " ";
+            #globals.mapleader = " ";
 
             #theme = {
             #  enable = true;
@@ -54,13 +54,13 @@
             #};
 
             #treesitter.enable = true;
-            lsp = {
-              enable = true;
-              formatOnSave = true;
-              inlayHints.enable = true;
-              lightbulb.enable = true;
-              lspconfig.enable = true;
-            };
+            #lsp = {
+            #enable = true;
+            #formatOnSave = true;
+            #inlayHints.enable = true;
+            #lightbulb.enable = true;
+            #lspconfig.enable = true;
+            #};
 
             #visuals = {
             #nvim-web-devicons.enable = true;
