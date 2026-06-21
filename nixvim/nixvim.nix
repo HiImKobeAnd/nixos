@@ -1,7 +1,5 @@
 {
   pkgs,
-  lib,
-  config,
   ...
 }:
 let
@@ -10,7 +8,7 @@ in
 {
   imports = [
     # Plugins
-    ./config/plugins/kickstart/gitsigns.nix
+    # ./config/plugins/kickstart/gitsigns.nix
     ./config/plugins/kickstart/which-key.nix
     ./config/plugins/kickstart/telescope.nix
     ./config/plugins/kickstart/lsp.nix
@@ -23,12 +21,12 @@ in
     # ./config/plugins/custom/neotest.nix
     # ./config/plugins/custom/overseer.nix
     ./config/plugins/custom/auto-session.nix
-    ./config/plugins/custom/harpoon.nix
+    # ./config/plugins/custom/harpoon.nix
     ./config/plugins/kickstart/autopairs.nix
     # ./config/plugins/kickstart/neo-tree.nix
     # ./config/plugins/kickstart/debug.nix
     # ./config/plugins/kickstart/lint.nix
-    #./config/plugins/kickstart/indent-blankline.nix
+    # ./config/plugins/kickstart/indent-blankline.nix
 
   ];
 

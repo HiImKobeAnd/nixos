@@ -107,6 +107,13 @@
           desc = "[ ] Find Files";
         };
       };
+      "<leader>sb" = {
+        mode = "n";
+        action = "file_browser";
+        options = {
+          desc = "[S]earch file [B]rowser";
+        };
+      };
     };
     settings = {
       extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
