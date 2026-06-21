@@ -54,6 +54,7 @@
   # and elegantly composed help section, `:help lsp-vs-treesitter`
   #
   # https://nix-community.github.io/nixvim/plugins/lsp/index.html
+  lsp.inlayHints.enable = true;
   plugins.lsp = {
     enable = true;
 
@@ -153,6 +154,7 @@
         "<leader>q" = {
           mode = "n";
           action = "setloclist";
+          # action.__raw = "require('telescope.builtin').quickfix()";
           desc = "Open diagnostic [Q]uickfix list";
         };
       };
