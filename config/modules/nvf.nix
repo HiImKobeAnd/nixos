@@ -71,52 +71,52 @@
             #navigation.harpoon.enable = true;
             #treesitter.context.enable = true;
 
-            ui = {
-              borders.enable = true;
-            };
+            #         ui = {
+            #   borders.enable = true;
+            # };
 
-                                                # diagnostics = {
-                                                #   nvim-lint.enable = true;
-                                                # };
+            # diagnostics = {
+            #   nvim-lint.enable = true;
+            # };
 
-            debugger = {
-              nvim-dap = {
-                enable = true;
-                ui.enable = true;
-              };
-            };
-
+            # debugger = {
+            #   nvim-dap = {
+            #     enable = true;
+            #     ui.enable = true;
+            #   };
+            # };
+            #
             #spellcheck.enable = true;
 
-            languages = {
-              enableExtraDiagnostics = true;
-              enableFormat = true;
-              enableTreesitter = true;
-
-              nix = {
-                enable = true;
-                                                                #format.type = [ "nixfmt" ];
-                                                                #lsp.servers = [ "nixd" ];
-              };
-              rust.enable = true;
-              fish.enable = true;
-              elixir.enable = true;
-              docker.enable = true;
-              bash.enable = true;
-              go.enable = true;
-              make.enable = true;
-              env.enable = true;
-              html.enable = true;
-              json.enable = true;
-              just.enable = true;
-              lua.enable = true;
-              markdown.enable = true;
-              python.enable = true;
-              sql.enable = true;
-              css.enable = true;
-              toml.enable = true;
-              typescript.enable = true;
-            };
+            #     languages = {
+            #       enableExtraDiagnostics = true;
+            #       enableFormat = true;
+            #       enableTreesitter = true;
+            #
+            #       nix = {
+            #         enable = true;
+            #                                                         #format.type = [ "nixfmt" ];
+            #                                                         #lsp.servers = [ "nixd" ];
+            #       };
+            #       rust.enable = true;
+            #       fish.enable = true;
+            #       elixir.enable = true;
+            #       docker.enable = true;
+            #       bash.enable = true;
+            #       go.enable = true;
+            #       make.enable = true;
+            #       env.enable = true;
+            #       html.enable = true;
+            #       json.enable = true;
+            #       just.enable = true;
+            #       lua.enable = true;
+            #       markdown.enable = true;
+            #       python.enable = true;
+            #       sql.enable = true;
+            #       css.enable = true;
+            #       toml.enable = true;
+            #       typescript.enable = true;
+            #     };
           };
         };
       };
