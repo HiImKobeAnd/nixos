@@ -75,9 +75,9 @@
               borders.enable = true;
             };
 
-            diagnostics = {
-              nvim-lint.enable = true;
-            };
+                                                # diagnostics = {
+                                                #   nvim-lint.enable = true;
+                                                # };
 
             debugger = {
               nvim-dap = {
@@ -95,8 +95,8 @@
 
               nix = {
                 enable = true;
-                format.type = [ "nixfmt" ];
-                lsp.servers = [ "nixd" ];
+                                                                #format.type = [ "nixfmt" ];
+                                                                #lsp.servers = [ "nixd" ];
               };
               rust.enable = true;
               fish.enable = true;
