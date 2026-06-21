@@ -25,6 +25,7 @@ in
 
     # ./config/plugins/custom/neotest.nix
     # ./config/plugins/custom/overseer.nix
+    ./config/plugins/custom/hardtime.nix
     ./config/plugins/custom/auto-session.nix
     # ./config/plugins/custom/harpoon.nix
     ./config/plugins/kickstart/autopairs.nix
@@ -117,16 +118,13 @@ in
   vimAlias = false;
   colorschemes.gruvbox.enable = true;
 
-  # https://nix-community.github.io/nixvim/NeovimOptions/index.html#globals
   globals = {
-    # See `:help mapleader`
     mapleader = " ";
     maplocalleader = " ";
 
     have_nerd_font = enable_nerd_fonts;
   };
 
-  #  See `:help 'clipboard'`
   clipboard = {
     providers = {
       wl-copy.enable = true; # For Wayland
