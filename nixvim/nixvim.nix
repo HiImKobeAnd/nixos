@@ -32,7 +32,6 @@ in
     # ./config/plugins/kickstart/debug.nix
     # ./config/plugins/kickstart/lint.nix
     # ./config/plugins/kickstart/indent-blankline.nix
-
   ];
 
   /*

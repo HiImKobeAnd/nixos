@@ -74,50 +74,23 @@
     #  - settings: Override the default settings passed when initializing the server.
     #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     servers = {
-      # clangd = {
-      #   enable = true;
-      # };
-      # gopls = {
-      #   enable = true;
-      # };
-      pyright = {
-        enable = true;
-      };
+      pyright.enable = true;
       rust_analyzer = {
         enable = true;
         installCargo = false;
         installRustc = false;
       };
-      # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
-      #
-      # Some languages (like typscript) have entire language plugins that can be useful:
-      #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
-      #
-      # But for many setups the LSP (`ts_ls`) will work just fine
-      # ts_ls = {
-      #   enable = true;
-      # };
-
-      # Hyprland config lsp
-      hyprls = {
-        enable = true;
-      };
-
+      hyprls.enable = true;
       qmlls = {
         enable = true;
         package = null;
       };
       jsonls.enable = true;
-
-      # Nix lsp
-      # nil_ls = {
-      # enable = true;
-      # };
       nixd = {
         enable = true;
         settings =
           let
-            flake = "(builtins.getflake '${self}')";
+            flake = "(builtins.getFlake '${self}')";
             system = "${pkgs.stdenv.hostPlatform.system}";
           in
           {
@@ -129,12 +102,10 @@
             };
           };
       };
-
       elixirls = {
         enable = true;
         package = null;
       };
-
       # Lua lsp
       lua_ls = {
         enable = true;
