@@ -13,6 +13,7 @@
 
           options.tabstop = 2;
           options.shiftwidth = 2;
+          options.mouse = "a";
           searchCase = "smart";
           undoFile.enable = true;
 
@@ -20,6 +21,7 @@
           autopairs.nvim-autopairs.enable = true;
 
           theme = {
+            enable = true;
             name = "gruvbox";
             style = "dark";
           };
@@ -27,6 +29,9 @@
           binds = {
             whichKey.enable = true;
             hardtime-nvim.enable = true;
+            hardtime-nvim.setupOpts = {
+              disable_mouse = false;
+            };
           };
 
           statusline = {
@@ -36,7 +41,10 @@
           telescope.enable = true;
 
           snippets.luasnip.enable = true;
-          autocomplete.nvim-cmp.enable = true;
+          autocomplete.blink-cmp = {
+            enable = true;
+            mappings.confirm = "C-Y";
+          };
 
           session.nvim-session-manager = {
             enable = true;
@@ -64,7 +72,17 @@
             ui2.enable = true;
           };
 
-          vendoredKeymaps.enable = true;
+          vendoredKeymaps.enable = false;
+
+          comments = {
+            comment-nvim.enable = true;
+          };
+
+          clipboard = {
+            enable = true;
+            providers.wl-copy.enable = true;
+            registers = "unnamedplus";
+          };
 
           diagnostics = {
             nvim-lint.enable = true;
