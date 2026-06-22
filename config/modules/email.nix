@@ -4,8 +4,8 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        thunderbird
         birdtray
       ];
+      programs.thunderbird.enable = true;
     };
 }
