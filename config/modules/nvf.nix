@@ -1,9 +1,9 @@
-{inputs, ...}: {
-  flake.nixosModules.nvf = {...}: {
+{ inputs, ... }: {
+  flake.nixosModules.nvf = { ... }: {
     imports = [
       inputs.nvf.nixosModules.default
     ];
-    nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     programs.nvf = {
       enable = true;
       settings = {
@@ -18,18 +18,6 @@
 
           lazy.enable = false;
           autopairs.nvim-autopairs.enable = true;
-
-          keymaps = [
-            {
-              mode = [
-                "n"
-                "v"
-              ];
-              key = "<Space>";
-              action = "<Nop>";
-              silent = true;
-            }
-          ];
 
           binds = {
             whichKey.enable = true;
@@ -67,10 +55,6 @@
           notes.todo-comments.enable = true;
           navigation.harpoon.enable = true;
 
-          ui = {
-            borders.enable = true;
-          };
-
           diagnostics = {
             nvim-lint.enable = true;
           };
@@ -91,8 +75,8 @@
 
             nix = {
               enable = true;
-              format.type = ["nixfmt"];
-              lsp.servers = ["nixd"];
+              format.type = [ "nixfmt" ];
+              lsp.servers = [ "nixd" ];
             };
             rust.enable = true;
             fish.enable = true;
