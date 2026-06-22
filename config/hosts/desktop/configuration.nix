@@ -47,7 +47,7 @@
         self.nixosModules.audio-applications
         self.nixosModules.learning
         self.nixosModules.music
-        self.nixosModules.email
+        # self.nixosModules.email
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
