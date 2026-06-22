@@ -19,12 +19,6 @@
             viAlias = false;
             vimAlias = true;
 
-            theme = {
-              enable = true;
-              name = "gruvbox";
-              style = "dark";
-            };
-
             options.tabstop = 2;
             options.shiftwidth = 2;
             searchCase = "smart";
