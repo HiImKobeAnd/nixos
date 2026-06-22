@@ -55,6 +55,10 @@
           notes.todo-comments.enable = true;
           navigation.harpoon.enable = true;
 
+          ui = {
+            borders.enable = true;
+          };
+
           diagnostics = {
             nvim-lint.enable = true;
           };
