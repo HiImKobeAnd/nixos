@@ -17,7 +17,9 @@
           searchCase = "smart";
           undoFile.enable = true;
 
-          lazy.enable = false;
+          telescope.enable = true;
+          treesitter.enable = true;
+          lazy.enable = true;
           autopairs.nvim-autopairs.enable = true;
 
           theme = {
@@ -38,8 +40,6 @@
             lualine.enable = true;
           };
 
-          telescope.enable = true;
-
           snippets.luasnip.enable = true;
           autocomplete.blink-cmp = {
             enable = true;
@@ -51,7 +51,6 @@
             setupOpts.autoload_mode = "CurrentDir";
           };
 
-          treesitter.enable = true;
           lsp = {
             enable = true;
             formatOnSave = true;
