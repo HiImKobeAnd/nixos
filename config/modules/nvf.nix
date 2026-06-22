@@ -19,6 +19,11 @@
           lazy.enable = false;
           autopairs.nvim-autopairs.enable = true;
 
+          theme = {
+            name = "gruvbox";
+            style = "dark";
+          };
+
           binds = {
             whichKey.enable = true;
             hardtime-nvim.enable = true;
@@ -53,11 +58,13 @@
           };
 
           notes.todo-comments.enable = true;
-          navigation.harpoon.enable = true;
 
           ui = {
             borders.enable = true;
+            ui2.enable = true;
           };
+
+          vendoredKeymaps.enable = true;
 
           diagnostics = {
             nvim-lint.enable = true;
