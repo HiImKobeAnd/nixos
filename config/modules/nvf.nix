@@ -30,10 +30,10 @@
 
           binds = {
             whichKey.enable = true;
-            hardtime-nvim.enable = true;
-            hardtime-nvim.setupOpts = {
-              disable_mouse = false;
-            };
+            # hardtime-nvim.enable = true;
+            # hardtime-nvim.setupOpts = {
+            # disable_mouse = false;
+            # };
           };
 
           statusline = {

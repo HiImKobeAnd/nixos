@@ -25,7 +25,7 @@ in
 
     # ./config/plugins/custom/neotest.nix
     # ./config/plugins/custom/overseer.nix
-    ./config/plugins/custom/hardtime.nix
+    # ./config/plugins/custom/hardtime.nix
     ./config/plugins/custom/auto-session.nix
     # ./config/plugins/custom/harpoon.nix
     ./config/plugins/kickstart/autopairs.nix
