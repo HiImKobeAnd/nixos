@@ -75,8 +75,8 @@
       pyright.enable = true;
       rust_analyzer = {
         enable = true;
-        installCargo = false;
-        installRustc = false;
+        installCargo = true;
+        installRustc = true;
       };
       hyprls.enable = true;
       qmlls = {
