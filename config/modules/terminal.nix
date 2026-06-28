@@ -5,6 +5,7 @@
     {
       environment.systemPackages = with pkgs; [
         kitty
+        ghostty
         fzf
       ];
       programs = {
