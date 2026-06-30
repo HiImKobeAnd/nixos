@@ -6,6 +6,9 @@
       nixpkgs.overlays = [
         inputs.noctalia.overlays.default
       ];
+      imports = [
+        inputs.noctalia-greeter.nixosModules.default
+      ];
       environment.sessionVariables = {
         NIXOS_OZONE_WL = 1;
         HY3_PATH = "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so";
@@ -29,20 +32,27 @@
       services = {
         power-profiles-daemon.enable = true; # Noctalia dependency
         upower.enable = true; # Noctalia dependency
-        greetd = {
-          enable = true;
-          settings = {
-            initial_session = {
-              command = "uwsm start hyprland-uwsm.desktop";
-              user = "hiimkobeand";
-            };
-            default_session = {
-              command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'uwsm start hyprland.desktop";
-              user = "greeter";
-            };
-          };
-        };
+        # greetd = {
+        #   enable = true;
+        #   settings = {
+        #     initial_session = {
+        #       command = "uwsm start hyprland-uwsm.desktop";
+        #       user = "hiimkobeand";
+        #     };
+        #     default_session = {
+        #       command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'uwsm start hyprland.desktop";
+        #       user = "greeter";
+        #     };
+        #   };
+        # };
         gnome.gnome-keyring.enable = true;
+      };
+      programs.noctalia-greeter = {
+        enable = true;
+        settings = {
+          user.default = "hiimkobeand";
+          keyboard.layout = "dk";
+        };
       };
     };
 
