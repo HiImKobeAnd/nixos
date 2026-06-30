@@ -36,7 +36,7 @@
                   version = "1.6.5";
                   inherit src;
                   patches = [ ];
-                  pnpm = pkgs.pnpm_10_29_2;
+                  pnpm = pkgs.pnpm_10;
                   fetcherVersion = 3;
                   hash = "sha256-TuFTXDrgLGJD0jaTeo66eHpHLjHKYofrZwn61aQLArY=";
                 };

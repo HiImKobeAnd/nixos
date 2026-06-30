@@ -51,14 +51,19 @@
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
-        self.nixosModules.nvf
         # self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium
         self.nixosModules.winboat
         self.nixosModules.ollama
         # self.nixosModules.aicode
-        # self.nixosModules.vesktop
+      ];
+
+      # Fix for https://github.com/NixOS/nixpkgs/issues/536623
+      nixpkgs.overlays = [
+        (final: _prev: {
+          pnpm_10_29_2 = final.pnpm_10;
+        })
       ];
 
       # Sound
