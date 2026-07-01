@@ -10,7 +10,7 @@
         unzip
         ripgrep
         dua
-        btop
+        btop-cuda
         bat
         tldr
         just
