@@ -106,7 +106,7 @@
       };
       # Lua lsp
       lua_ls = {
-        enable = true;
+        # enable = true;
         # cmd = {
         # };
         # filetypes = {
