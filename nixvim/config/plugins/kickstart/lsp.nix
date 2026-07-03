@@ -126,9 +126,10 @@
       luau_lsp = {
         enable = true;
         settings = {
+          sourcemap.enabled = false;
           types = {
             definition_files = {
-              "@noctalia-types" = ../../../../config/non-nix/noctalia.d.lua;
+              "@noctalia-types" = "./noctalia.d.lua";
             };
           };
         };
