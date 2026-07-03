@@ -3,8 +3,13 @@
   flake.nixosModules.zed =
     { pkgs, ... }:
     {
-      environment.systemPackages = with pkgs; [
-        zed-editor-fhs
+      environment.systemPackages = [
+        (pkgs.zed-editor.fhsWithPackages (
+          p: with p; [
+            nixd
+            rustc
+          ]
+        ))
       ];
     };
 }
