@@ -57,7 +57,6 @@
         self.nixosModules.winboat
         self.nixosModules.ollama
         # self.nixosModules.aicode
-        self.nixosModules.zed
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
