@@ -106,7 +106,7 @@
       };
       # Lua lsp
       lua_ls = {
-        # enable = true;
+        enable = true;
         # cmd = {
         # };
         # filetypes = {
@@ -126,11 +126,10 @@
       luau_lsp = {
         enable = true;
         settings = {
+          platform.type = "standard";
           sourcemap.enabled = false;
-          types = {
-            definition_files = {
-              "@noctalia-types" = "./noctalia.d.lua";
-            };
+          types.definition_files = {
+            "noctalia-types" = "noctalia.d.luau";
           };
         };
       };
