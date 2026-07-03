@@ -128,7 +128,7 @@
         settings = {
           types = {
             definition_files = {
-              "@noctalia-types" = "../../../../config/non-nix/noctalia.d.lua";
+              "@noctalia-types" = ../../../../config/non-nix/noctalia.d.lua;
             };
           };
         };
