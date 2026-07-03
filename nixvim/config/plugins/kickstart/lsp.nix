@@ -125,12 +125,6 @@
 
       luau_lsp = {
         enable = true;
-        settings = {
-          sourcemap = {
-            autogenerate = true;
-            enabled = true;
-          };
-        };
       };
 
       clangd.enable = true;
