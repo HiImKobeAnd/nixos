@@ -1,6 +1,6 @@
 return {
 
-	terminal = "alacritty",
+	terminal = "ghostty",
 	fileManager = "dolphin",
 	menu = "hyprlauncher",
 	browser = "helium",

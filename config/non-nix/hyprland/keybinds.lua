@@ -92,7 +92,7 @@ hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("vesktop --run-shortcut toggleDeaf
 hl.bind("mouse:282", hl.dsp.pass({ window = "class:^(discord)$" }))
 hl.bind("Print", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
 hl.bind("CTRL + Print", hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen"))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(ipc .. "brightness-up 20"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(ipc .. "brightness-down 20"), { locked = true, repeating = true })
 
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd(apps.planning .. ".quick-add"))

@@ -12,9 +12,6 @@
       imports = [
         inputs.nixcord.nixosModules.nixcord
       ];
-      environment.systemPackages = with pkgs; [
-        discover-overlay
-      ];
       programs.nixcord = {
         enable = true;
         discord.enable = false;
