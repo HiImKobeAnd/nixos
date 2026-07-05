@@ -119,6 +119,8 @@
         ];
       };
 
+      hardware.i2c.enable = true;
+
       virtualisation.libvirtd.enable = true;
       virtualisation.libvirtd.onBoot = "ignore";
       systemd.services.libvirtd = {
