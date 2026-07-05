@@ -56,7 +56,7 @@
         self.nixosModules.helium
         self.nixosModules.winboat
         self.nixosModules.ollama
-        # self.nixosModules.aicode
+        self.nixosModules.aicode
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
