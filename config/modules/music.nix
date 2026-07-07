@@ -5,8 +5,6 @@
     {
       environment.systemPackages = with pkgs; [
         pear-desktop
-        kopuz
-        chromium
       ];
     };
 }
