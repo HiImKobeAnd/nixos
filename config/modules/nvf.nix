@@ -74,7 +74,7 @@
                   ".luaurc"
                 ];
                 settings.luau-lsp = {
-
+                  types.definitionFiles = [ "noctalia.d.luau" ];
                 };
               };
             };
