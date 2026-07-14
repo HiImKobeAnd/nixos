@@ -126,11 +126,9 @@
       luau_lsp = {
         enable = true;
         settings = {
-          platform.type = "standard";
-          sourcemap.enabled = false;
-          types.definition_files = {
-            "noctalia-types" = "noctalia.d.luau";
-          };
+          types.definitionFiles = [
+            "noctalia.d.luau"
+          ];
         };
       };
 
