@@ -1,5 +1,10 @@
-{ inputs, ... }: {
-  flake.nixosModules.nvf = { ... }: {
+{
+  inputs,
+  lib,
+  ...
+}:
+{
+  flake.nixosModules.nvf = { pkgs, ... }: {
     imports = [
       inputs.nvf.nixosModules.default
     ];
@@ -57,6 +62,22 @@
             inlayHints.enable = true;
             lightbulb.enable = true;
             lspconfig.enable = true;
+            servers = {
+              luau-lsp = {
+                cmd = lib.mkDefault [
+                  (lib.getExe pkgs.luau-lsp)
+                  "lsp"
+                ];
+                filetypes = [ "luau" ];
+                root_markers = [
+                  ".git"
+                  ".luaurc"
+                ];
+                settings.luau-lsp = {
+
+                };
+              };
+            };
           };
 
           visuals = {
