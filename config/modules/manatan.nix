@@ -60,8 +60,6 @@
 
           runScript = "${pkg.outPath}/bin/manatan";
 
-          nativeBuildInputs = [ copyDesktopItems ];
-
           desktopItems = [
             (makeDesktopItem {
               name = "manatan";
