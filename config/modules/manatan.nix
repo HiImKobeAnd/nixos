@@ -86,6 +86,7 @@
               udev
               alsa-lib
               gtk3
+              harfbuzz
             ];
         }
       ) { };
