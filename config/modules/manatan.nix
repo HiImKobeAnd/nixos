@@ -91,6 +91,7 @@
               gdk-pixbuf
               libxi
               mpv
+              libepoxy
             ];
         }
       ) { };
