@@ -75,6 +75,8 @@
             })
           ];
 
+          nativeBuildInputs = [ copyDesktopItems ];
+
           targetPkgs =
             pkgs: with pkgs; [
               fontconfig
