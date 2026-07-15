@@ -21,11 +21,11 @@
         # wine
         # ];
         # })
-        (heroic.override {
-          extraPkgs = pkgs: [
-            pkgs.gamescope
-          ];
-        })
+        # (heroic.override {
+        # extraPkgs = pkgs: [
+        # pkgs.gamescope
+        # ];
+        # })
       ];
       programs = {
         # honkers-railway-launcher.enable = true;
