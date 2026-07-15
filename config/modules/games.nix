@@ -9,7 +9,6 @@
       environment.systemPackages = with pkgs; [
         # faugus-launcher
         osu-lazer-bin
-        starsector
         # xivlauncher
         # (retroarch.withCores (
         #   cores: with cores; [
