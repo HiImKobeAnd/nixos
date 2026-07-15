@@ -85,6 +85,7 @@
               lsof
               udev
               alsa-lib
+              gtk3
             ];
         }
       ) { };
