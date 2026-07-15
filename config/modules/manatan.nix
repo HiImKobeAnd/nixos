@@ -92,6 +92,7 @@
               libxi
               mpv
               libepoxy
+              expat
             ];
         }
       ) { };
