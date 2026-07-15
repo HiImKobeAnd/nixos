@@ -85,9 +85,11 @@
               lsof
               udev
               alsa-lib
+
               gtk3
               harfbuzz
               gdk-pixbuf
+              libxi
             ];
         }
       ) { };
