@@ -90,6 +90,7 @@
               harfbuzz
               gdk-pixbuf
               libxi
+              mpv
             ];
         }
       ) { };
