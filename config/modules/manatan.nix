@@ -11,6 +11,8 @@
           wayland,
           libxkbcommon,
           buildFHSEnv,
+          copyDesktopItems,
+          makeDesktopItem,
         }:
         let
           pkg = stdenv.mkDerivation (finalAttrs: {
@@ -57,6 +59,23 @@
           inherit (pkg) pname version;
 
           runScript = "${pkg.outPath}/bin/manatan";
+
+          nativeBuildInputs = [ copyDesktopItems ];
+
+          desktopItems = [
+            (makeDesktopItem {
+              name = "manatan";
+              exec = "manatan"; # The name of the FHS env wrapper script
+              icon = "manatan"; # If you find an icon in the source, place it in $out/share/icons
+              comment = pkg.meta.description;
+              desktopName = "Manatan";
+              genericName = "Language Learning App";
+              categories = [
+                "Education"
+                "Utility"
+              ];
+            })
+          ];
 
           targetPkgs =
             pkgs: with pkgs; [
