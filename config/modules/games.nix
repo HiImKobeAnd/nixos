@@ -9,6 +9,7 @@
       environment.systemPackages = with pkgs; [
         # faugus-launcher
         osu-lazer-bin
+        starsector
         # xivlauncher
         # (retroarch.withCores (
         #   cores: with cores; [
@@ -20,11 +21,11 @@
         # wine
         # ];
         # })
-        # (heroic.override {
-        #   extraPkgs = pkgs: [
-        #     pkgs.gamescope
-        #   ];
-        # })
+        (heroic.override {
+          extraPkgs = pkgs: [
+            pkgs.gamescope
+          ];
+        })
       ];
       programs = {
         # honkers-railway-launcher.enable = true;
