@@ -18,5 +18,4 @@
         enableFishIntegration = true;
       };
     };
-
 }

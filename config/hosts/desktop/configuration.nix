@@ -59,6 +59,7 @@
         self.nixosModules.ollama
         self.nixosModules.aicode
         self.nixosModules.opentrack
+        self.nixosModules.manatan
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623

@@ -10,7 +10,7 @@ reboot: _pre && _post
     nh os boot {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always
 
 switch-1j: _pre && _post
-    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --max-jobs 1 --diff always
+    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --max-jobs 1 --cores 1 --diff always
 
 update: _pre && _post
     nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always --update
