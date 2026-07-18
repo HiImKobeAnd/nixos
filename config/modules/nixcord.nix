@@ -19,7 +19,6 @@
 
         vesktop.package =
           (pkgs.vesktop.override {
-            electron_40 = pkgs.electron_41;
           }).overrideAttrs
             (
               oldAttrs:

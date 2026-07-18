@@ -35,19 +35,16 @@
         # Applications
         self.nixosModules.hyprland
         # self.nixosModules.vm
-        # self.nixosModules.librewolf
         self.nixosModules.waydroid
         self.nixosModules.steam
         self.nixosModules.minecraft
         self.nixosModules.other-games
         self.nixosModules.hobby-applications
-        # self.nixosModules.chromium
         self.nixosModules.social-media
         self.nixosModules.obs-studio
         self.nixosModules.audio-applications
         self.nixosModules.learning
         self.nixosModules.music
-        # self.nixosModules.email
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
@@ -55,10 +52,8 @@
         self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium
-        self.nixosModules.winboat
         self.nixosModules.ollama
         self.nixosModules.aicode
-        self.nixosModules.opentrack
         self.nixosModules.manatan
       ];
 
@@ -66,6 +61,7 @@
       nixpkgs.overlays = [
         (final: _prev: {
           pnpm_10_29_2 = final.pnpm_10;
+          electron_40 = final.electron_41;
         })
       ];
 
