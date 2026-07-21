@@ -38,23 +38,20 @@
         self.nixosModules.waydroid
         self.nixosModules.steam
         self.nixosModules.minecraft
-        self.nixosModules.other-games
+        self.nixosModules.games
         self.nixosModules.hobby-applications
         self.nixosModules.social-media
         self.nixosModules.obs-studio
-        self.nixosModules.audio-applications
         self.nixosModules.learning
         self.nixosModules.music
         self.nixosModules.office-suite
         self.nixosModules.nixcord
         self.nixosModules.nixvim
-        self.nixosModules.nvf
         self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium
         self.nixosModules.ollama
         self.nixosModules.aicode
-        self.nixosModules.manatan
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623

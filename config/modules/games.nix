@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.nixosModules.other-games =
+  flake.nixosModules.games =
     { pkgs, ... }:
     {
       imports = [
