@@ -3,11 +3,8 @@
   flake.nixosModules.blender =
     { pkgs, ... }:
     {
-      nixpkgs.config.packageOverrides = pkgs: {
-        blender = pkgs.blender.override { cudaSupport = true; };
-      };
       environment.systemPackages = with pkgs; [
-        blender
+        (blender.override { config.cudaSupport = true; config.rocmSupport = false; })
       ];
       nix.settings.substituters = [ "https://cache.nixos-cuda.org" ];
       nix.settings.trusted-public-keys = [

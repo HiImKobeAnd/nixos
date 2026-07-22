@@ -6,7 +6,7 @@
       environment.systemPackages = with pkgs; [
         steam
         gamemode
-        protonup-rs
+        protonplus
       ];
       programs = {
         steam = {
