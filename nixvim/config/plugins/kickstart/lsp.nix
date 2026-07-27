@@ -125,11 +125,6 @@
 
       luau_lsp = {
         enable = true;
-        settings = {
-          types.definitionFiles = [
-            "noctalia.d.luau"
-          ];
-        };
       };
 
       clangd.enable = true;

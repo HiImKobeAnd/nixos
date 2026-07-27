@@ -50,15 +50,19 @@
         self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium
-        self.nixosModules.ollama
         self.nixosModules.aicode
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
       nixpkgs.overlays = [
-        (final: _prev: {
+        (final: prev: {
           pnpm_10_29_2 = final.pnpm_10;
           electron_40 = final.electron_41;
+          # HACK 2026/07/27 fix see https://github.com/NixOS/nixpkgs/issues/545409.
+          # Can be removed when https://github.com/NixOS/nixpkgs/pull/545542 is merged.
+          openimagedenoise = prev.openimagedenoise.overrideAttrs (old: {
+            buildInputs = (old.buildInputs or [ ]) ++ [ final.cudaPackages.cuda_nvcc ];
+          });
         })
       ];
 

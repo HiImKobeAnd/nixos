@@ -4,7 +4,7 @@ current_gen := `sudo nix-env -p /nix/var/nix/profiles/system --list-generations 
 default: switch
 
 switch: _pre && _post
-    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always
+    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always -q
 
 reboot: _pre && _post
     nh os boot {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always
@@ -16,7 +16,7 @@ update: _pre && _post
     nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always --update
 
 clean:
-    nh clean all --keep 3
+    nh clean all --keep 3 --no-direnv --optimise
 
 _pre:
     git add .

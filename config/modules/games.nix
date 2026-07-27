@@ -9,7 +9,7 @@
       environment.systemPackages = with pkgs; [
         # faugus-launcher
         osu-lazer-bin
-        # xivlauncher
+        xivlauncher
         # (retroarch.withCores (
         #   cores: with cores; [
         #     melonds

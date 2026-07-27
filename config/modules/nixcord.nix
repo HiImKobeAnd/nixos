@@ -5,7 +5,7 @@
     let
       vesktop-global-shortcuts = builtins.fetchTarball {
         url = "https://github.com/Vencord/Vesktop/archive/refs/heads/global-shortcuts.tar.gz";
-        sha256 = "sha256:16f42bn8k4j2avm5rzr9lkmqrmp3b27b2l1nqp4mgmiy9pas1ry5";
+        sha256 = "sha256:1i1f28h4fh6y88a5h5xjlligbvdbnb8lz3k9hih031bqwyh90qbb";
       };
     in
     {
@@ -32,9 +32,9 @@
                   version = "1.6.5";
                   inherit src;
                   patches = [ ];
-                  pnpm = pkgs.pnpm_10;
-                  fetcherVersion = 3;
-                  hash = "sha256-TuFTXDrgLGJD0jaTeo66eHpHLjHKYofrZwn61aQLArY=";
+                  pnpm = pkgs.pnpm_11;
+                  fetcherVersion = 4;
+                  hash = "sha256-xvb3DfqmcCyOpGHaGjeCJxClfVcHpdezyzxLXNiz72k=";
                 };
               }
             );

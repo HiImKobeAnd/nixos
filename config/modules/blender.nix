@@ -4,7 +4,10 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        (blender.override { config.cudaSupport = true; config.rocmSupport = false; })
+        (blender.override {
+          config.cudaSupport = true;
+          config.rocmSupport = false;
+        })
       ];
       nix.settings.substituters = [ "https://cache.nixos-cuda.org" ];
       nix.settings.trusted-public-keys = [
