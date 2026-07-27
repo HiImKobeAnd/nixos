@@ -20,6 +20,7 @@
         })
         hyprcursor # For cursors
         rose-pine-hyprcursor # For cursors
+        pulseaudio # For Noctalia plugin: Audio Switcher
       ];
       programs.hyprland = {
         enable = true;
