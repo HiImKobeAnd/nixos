@@ -31,8 +31,6 @@
         extraModulePackages = [ ];
         kernelParams = [
           "mem_sleep_default=deep"
-          "acpi=force"
-          "reboot=p,b"
         ];
       };
       fileSystems."/" = {
