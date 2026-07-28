@@ -26,12 +26,12 @@
           credential.helper = "${lib.getExe pkgs.gh} auth git-credential";
 
           core.pager = "${lib.getExe pkgs.delta}";
-          interactive.diffFitler = "${lib.getExe pkgs.delta} --color-only";
+          interactive.diffFilter = "${lib.getExe pkgs.delta} --color-only";
           delta = {
             navigate = true;
             side-by-side = true;
             line-numbers = true;
-            syntax-mapping = "luau:Lua";
+            syntax-mapping = "luau:lua";
           };
           merge.conflictstyle = "zdiff3";
 
