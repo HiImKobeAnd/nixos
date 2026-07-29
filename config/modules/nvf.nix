@@ -148,7 +148,7 @@
           };
 
           # Keybinds
-          binds.whichKey.register = {
+          binds.whichKey.register = lib.mkForce {
             "<leader>s" = "[S]earch";
           };
         };
