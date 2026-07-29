@@ -16,9 +16,15 @@
           viAlias = false;
           vimAlias = true;
 
-          options.tabstop = 2;
-          options.shiftwidth = 2;
-          options.mouse = "a";
+          options = {
+            mouse = "a";
+            shiftwidth = 2;
+            tabstop = 2;
+          };
+          globals = {
+            mapleader = " ";
+            maplocalleader = " ";
+          };
           searchCase = "smart";
           undoFile.enable = true;
 
@@ -41,15 +47,10 @@
             # };
           };
 
-          statusline = {
-            lualine.enable = true;
-          };
+          statusline.lualine.enable = true;
 
           snippets.luasnip.enable = true;
-          autocomplete.blink-cmp = {
-            enable = true;
-            mappings.confirm = "C-Y";
-          };
+          autocomplete.blink-cmp.enable = true;
 
           session.nvim-session-manager = {
             enable = true;
@@ -74,7 +75,7 @@
                   ".luaurc"
                 ];
                 settings.luau-lsp = {
-                  types.definitionFiles = [ "./noctalia.d.luau" ];
+                  types.definitionFiles = [ "noctalia.d.luau" ];
                 };
               };
             };
@@ -94,9 +95,7 @@
 
           vendoredKeymaps.enable = false;
 
-          comments = {
-            comment-nvim.enable = true;
-          };
+          comments.comment-nvim.enable = true;
 
           clipboard = {
             enable = true;
