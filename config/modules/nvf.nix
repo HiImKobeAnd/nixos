@@ -20,10 +20,7 @@
             mouse = "a";
             shiftwidth = 2;
             tabstop = 2;
-          };
-          globals = {
-            mapleader = " ";
-            maplocalleader = " ";
+            showmode = false;
           };
           searchCase = "smart";
           undoFile.enable = true;
@@ -84,6 +81,7 @@
           visuals = {
             nvim-web-devicons.enable = true;
             fidget-nvim.enable = true;
+            cursorline.enable = true;
           };
 
           notes.todo-comments.enable = true;
