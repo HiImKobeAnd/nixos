@@ -92,7 +92,7 @@
             ui2.enable = true;
           };
 
-          vendoredKeymaps.enable = true;
+          vendoredKeymaps.enable = false;
 
           comments = {
             comment-nvim.enable = true;
@@ -146,6 +146,9 @@
             toml.enable = true;
             typescript.enable = true;
           };
+
+          # Keybinds
+          binds.whichKey.setupOpts.preset = "helix";
         };
       };
     };
