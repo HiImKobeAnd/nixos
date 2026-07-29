@@ -24,7 +24,7 @@
 
           telescope.enable = true;
           treesitter.enable = true;
-          lazy.enable = true;
+          lazy.enable = false;
           autopairs.nvim-autopairs.enable = true;
 
           theme = {
