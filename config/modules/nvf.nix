@@ -81,7 +81,7 @@
           visuals = {
             nvim-web-devicons.enable = true;
             fidget-nvim.enable = true;
-            cursorline.enable = true;
+            nvim-cursorline.enable = true;
           };
 
           notes.todo-comments.enable = true;
