@@ -148,7 +148,9 @@
           };
 
           # Keybinds
-          binds.whichKey.setupOpts.preset = "helix";
+          binds.whichKey.register = {
+            "<leader>s" = "[S]earch";
+          };
         };
       };
     };
