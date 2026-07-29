@@ -151,6 +151,10 @@
           binds.whichKey.register = lib.mkForce {
             "<leader>s" = "[S]earch";
           };
+          telescope.mappings.findFiles = "<leader>f";
+          telescope.mappings.diagnostics = "<leader>q";
+          comments.comment-nvim.mappings.toggleCurrentLine = "<leader>cc";
+          comments.comment-nvim.mappings.toggleCurrentBlock = "<leader>cb";
         };
       };
     };
