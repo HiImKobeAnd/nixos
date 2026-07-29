@@ -31,7 +31,6 @@
             navigate = true;
             side-by-side = true;
             line-numbers = true;
-            syntax-mapping = "luau:Lua";
           };
           merge.conflictstyle = "zdiff3";
 
