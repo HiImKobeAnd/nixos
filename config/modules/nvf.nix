@@ -92,7 +92,7 @@
             ui2.enable = true;
           };
 
-          vendoredKeymaps.enable = false;
+          vendoredKeymaps.enable = true;
 
           comments = {
             comment-nvim.enable = true;
