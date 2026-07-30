@@ -146,7 +146,7 @@
             enable = true;
             mappings = {
               findFiles = "<leader>f";
-              diagnostics = "<leader>q";
+              diagnostics = "<leader>sd";
               liveGrep = "<leader>sg";
               helpTags = "<leader>sh";
               open = "<leader>so";
@@ -157,6 +157,14 @@
             mappings.toggleSelectedLine = "<leader>c";
             mappings.toggleCurrentLine = "<leader>c";
           };
+          keymaps = [
+            {
+              key = "<leader>q";
+              mode = "n";
+              silent = true;
+              action = ":Telescope quickfix<CR>";
+            }
+          ];
         };
       };
     };
