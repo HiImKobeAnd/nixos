@@ -145,6 +145,7 @@
 
           binds.whichKey.register = lib.mkForce {
             "<leader>s" = "[S]earch";
+            "<leader>c" = "[C]omment";
           };
           telescope = {
             enable = true;
@@ -153,8 +154,8 @@
           };
           comments.comment-nvim = {
             enable = true;
-            mappings.toggleSelectedLine = "<leader>cc";
-            mappings.toggleSelectedBlock = "<leader>cb";
+            mappings.toggleSelectedLine = "<leader>c";
+            mappings.toggleCurrentLine = "<leader>c";
           };
         };
       };
