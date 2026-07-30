@@ -151,27 +151,12 @@
               helpTags = "<leader>sh";
               open = "<leader>so";
             };
-            extensions = [
-              {
-                name = "telescope-file-browser";
-                packages = [ pkgs.vimPlugins.telescope-file-browser-nvim ];
-                setup = { };
-              }
-            ];
           };
           comments.comment-nvim = {
             enable = true;
             mappings.toggleSelectedLine = "<leader>c";
             mappings.toggleCurrentLine = "<leader>c";
           };
-          keymaps = [
-            {
-              key = "<leader>sb";
-              mode = "n";
-              silent = true;
-              action = ":Telescope file_browser<CR>";
-            }
-          ];
         };
       };
     };
