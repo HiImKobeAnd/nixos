@@ -141,18 +141,37 @@
 
           binds.whichKey.register = lib.mkForce {
             "<leader>s" = "[S]earch";
-            # "<leader>c" ="[C]omment";
           };
           telescope = {
             enable = true;
-            mappings.findFiles = "<leader>f";
-            mappings.diagnostics = "<leader>q";
+            mappings = {
+              findFiles = "<leader>f";
+              diagnostics = "<leader>q";
+              liveGrep = "<leader>sg";
+              helpTags = "<leader>sh";
+              open = "<leader>so";
+            };
+            extensions = [
+              {
+                name = "telescope-file-browser";
+                packages = [ pkgs.vimPlugins.telescope-file-browser-nvim ];
+                setup = { };
+              }
+            ];
           };
           comments.comment-nvim = {
             enable = true;
             mappings.toggleSelectedLine = "<leader>c";
             mappings.toggleCurrentLine = "<leader>c";
           };
+          keymaps = [
+            {
+              key = "<leader>sb";
+              mode = "n";
+              silent = true;
+              action = ":Telescope file_browser<CR>";
+            }
+          ];
         };
       };
     };
