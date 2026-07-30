@@ -22,10 +22,6 @@
             tabstop = 2;
             showmode = false;
           };
-          globals = {
-            mapleader = " ";
-            maplocalleader = " ";
-          };
           searchCase = "smart";
           undoFile.enable = true;
 
@@ -145,7 +141,7 @@
 
           binds.whichKey.register = lib.mkForce {
             "<leader>s" = "[S]earch";
-            "<leader>c" = "[C]omment";
+            # "<leader>c" ="[C]omment";
           };
           telescope = {
             enable = true;
