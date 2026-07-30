@@ -153,21 +153,9 @@
           };
           comments.comment-nvim = {
             enable = true;
-            mappings.toggleCurrentLine = "<leader>cc";
-            mappings.toggleCurrentBlock = "<leader>cb";
+            mappings.toggleSelectedLine = "<leader>cc";
+            mappings.toggleSelectedBlock = "<leader>cb";
           };
-          keymaps = [
-            {
-              mode = [
-                "n"
-                "v"
-              ];
-              key = "<Space>";
-              action = "<Nop>";
-              silent = true;
-              desc = "Disable default Space motion";
-            }
-          ];
         };
       };
     };
