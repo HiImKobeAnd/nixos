@@ -22,10 +22,13 @@
             tabstop = 2;
             showmode = false;
           };
+          globals = {
+            mapleader = " ";
+            maplocalleader = " ";
+          };
           searchCase = "smart";
           undoFile.enable = true;
 
-          telescope.enable = true;
           treesitter.enable = true;
           lazy.enable = false;
           autopairs.nvim-autopairs.enable = true;
@@ -93,17 +96,13 @@
 
           vendoredKeymaps.enable = false;
 
-          comments.comment-nvim.enable = true;
-
           clipboard = {
             enable = true;
             providers.wl-copy.enable = true;
             registers = "unnamedplus";
           };
 
-          diagnostics = {
-            nvim-lint.enable = true;
-          };
+          diagnostics.nvim-lint.enable = true;
 
           debugger = {
             nvim-dap = {
@@ -144,12 +143,15 @@
             typescript.enable = true;
           };
 
-          # Keybinds
           binds.whichKey.register = lib.mkForce {
             "<leader>s" = "[S]earch";
           };
-          telescope.mappings.findFiles = "<leader>f";
-          telescope.mappings.diagnostics = "<leader>q";
+          telescope = {
+            enable = true;
+            mappings.findFiles = "<leader>f";
+            mappings.diagnostics = "<leader>q";
+          };
+          comments.comment-nvim.enable = true;
           comments.comment-nvim.mappings.toggleCurrentLine = "<leader>cc";
           comments.comment-nvim.mappings.toggleCurrentBlock = "<leader>cb";
         };
