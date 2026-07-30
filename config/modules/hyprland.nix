@@ -15,9 +15,7 @@
         wl-clipboard # Clipboard
         ddcutil # For external monitor brightness applet
         hyprlandPlugins.hy3 # Hyprland plugin to make tiling feel like Cosmic DE
-        (noctalia.override {
-          cudaSupport = true;
-        })
+        noctalia
         hyprcursor # For cursors
         rose-pine-hyprcursor # For cursors
         pulseaudio # For Noctalia plugin: Audio Switcher
