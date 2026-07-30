@@ -151,9 +151,23 @@
             mappings.findFiles = "<leader>f";
             mappings.diagnostics = "<leader>q";
           };
-          comments.comment-nvim.enable = true;
-          comments.comment-nvim.mappings.toggleCurrentLine = "<leader>cc";
-          comments.comment-nvim.mappings.toggleCurrentBlock = "<leader>cb";
+          comments.comment-nvim = {
+            enable = true;
+            mappings.toggleCurrentLine = "<leader>cc";
+            mappings.toggleCurrentBlock = "<leader>cb";
+          };
+          keymaps = [
+            {
+              mode = [
+                "n"
+                "v"
+              ];
+              key = "<Space>";
+              action = "<Nop>";
+              silent = true;
+              desc = "Disable default Space motion";
+            }
+          ];
         };
       };
     };
