@@ -19,7 +19,6 @@
         hyprcursor # For cursors
         rose-pine-hyprcursor # For cursors
         pulseaudio # For Noctalia plugin: Audio Switcher
-        linux-wallpaperengine # For Noctalia plugin: W engine
       ];
       programs.hyprland = {
         enable = true;
