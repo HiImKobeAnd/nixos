@@ -8,5 +8,6 @@
       ];
       # For Python UV
       environment.localBinInPath = true;
+      programs.nix-ld.enable = true;
     };
 }
