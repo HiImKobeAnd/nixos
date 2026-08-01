@@ -17,7 +17,6 @@
         self.nixosModules.controllers
         self.nixosModules.nvidia
         self.nixosModules.scx-scheduler
-        self.nixosModules.stylix
 
         # Terminal
         self.nixosModules.basic-terminal-tools
