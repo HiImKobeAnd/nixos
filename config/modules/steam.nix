@@ -1,24 +1,27 @@
-{ ... }:
+{ inputs, ... }:
 {
   flake.nixosModules.steam =
     { pkgs, ... }:
+    let
+      prPkgs = import inputs.nixpkgs-millennium {
+        system = pkgs.stdenv.hostPlatform.system;
+        config.allowUnfree = true;
+      };
+    in
     {
       environment.systemPackages = with pkgs; [
-        steam
         gamemode
         protonplus
       ];
+
       programs = {
         steam = {
           enable = true;
+          package = prPkgs.steam.override {
+            withMillennium = true;
+          };
           gamescopeSession.enable = true;
           remotePlay.openFirewall = true;
-          # package = pkgs.steam.override {
-          #   extraEnv = {
-          #     GAMEMODERUN = "1";
-          #     PULSE_LATENCY_MSEC = "30";
-          #   };
-          # };
         };
         gamemode.enable = true;
       };

@@ -424,6 +424,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-millennium": {
+      "locked": {
+        "lastModified": 1783111426,
+        "narHash": "sha256-C9zmnEeHCiGQJ3+5rDEowRPTcWb8C9xJsdr/NIMUrs0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d8ffa823d2636496cf9258308ab84c4d78e16d46",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "pull/538226/head",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-nixcord": {
       "locked": {
         "lastModified": 1785386831,
@@ -601,6 +617,7 @@
         "nixcord": "nixcord",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_3",
+        "nixpkgs-millennium": "nixpkgs-millennium",
         "nixvim": "nixvim",
         "noctalia": "noctalia",
         "nvf": "nvf",
