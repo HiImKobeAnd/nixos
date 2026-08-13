@@ -116,6 +116,7 @@
           "wheel"
           "libvirtd"
           "docker"
+          "podman"
           "i2c" # For backlight control
         ];
       };
