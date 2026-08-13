@@ -28,7 +28,6 @@
 
         # Services
         self.nixosModules.syncthing
-        self.nixosModules.docker
         self.nixosModules.flatpak
 
         # Applications
@@ -52,6 +51,7 @@
         self.nixosModules.helium
         self.nixosModules.aicode
         self.nixosModules.python
+        self.nixosModules.distrobox
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
