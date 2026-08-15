@@ -121,7 +121,11 @@
       };
     };
 
-    terminal.toggleterm.enable = true;
+    terminal.toggleterm = {
+      enable = true;
+      mappings.open = "<c-t>";
+      setupOpts.direction = "float";
+    };
 
     spellcheck.enable = true;
 
