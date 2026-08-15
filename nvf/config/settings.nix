@@ -36,8 +36,8 @@
       mappings = {
         confirm = "<C-y>";
         close = "<C-e>";
-        next = "tab";
-        previous = "<s-tab";
+        next = "<Tab>";
+        previous = "<S-Tab>";
       };
     };
 
