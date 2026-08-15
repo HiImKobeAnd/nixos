@@ -164,6 +164,21 @@
               silent = true;
               action = ":Telescope quickfix<CR>";
             }
+            {
+              key = "grd";
+              mode = "n";
+              action = ":Telescope lsp_definitions";
+            }
+            {
+              key = "grr";
+              mode = "n";
+              action = ":Telescope lsp_references";
+            }
+            {
+              key = "grs";
+              mode = "n";
+              action = ":Telescope lsp_document_symbols";
+            }
           ];
         };
       };

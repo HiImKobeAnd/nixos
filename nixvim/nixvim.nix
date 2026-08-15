@@ -113,7 +113,6 @@ in
     P.S. You can delete this when you're done too. It's your config now! :)
   */
 
-  enable = true;
   viAlias = true;
   vimAlias = false;
   colorschemes.gruvbox.enable = true;
