@@ -81,6 +81,8 @@
       nvim-web-devicons.enable = true;
       fidget-nvim.enable = true;
       nvim-cursorline.enable = true;
+      highlight-undo.enable = true;
+      indent-blankline.enable = true;
     };
 
     notes.todo-comments.enable = true;
@@ -104,6 +106,19 @@
       nvim-dap = {
         enable = true;
         ui.enable = true;
+      };
+    };
+
+    utility.motion = {
+      leap = {
+        enable = true;
+        mappings = {
+          leapBackwardTill = "<leader>sX";
+          leapBackwardTo = "<leader>sS";
+          leapForwardTill = "<leader>sx";
+          leapForwardTo = "<leader>ss";
+
+        };
       };
     };
 
