@@ -7,6 +7,7 @@
         kitty
         ghostty
         fzf
+        yazi
       ];
       programs = {
         starship.enable = true;
