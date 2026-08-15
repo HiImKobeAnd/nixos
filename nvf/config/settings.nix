@@ -74,7 +74,6 @@
 
     visuals = {
       nvim-web-devicons.enable = true;
-      nvim-web-devicons.setupOpts.color_icons = true;
       fidget-nvim.enable = true;
     };
 
@@ -158,6 +157,7 @@
     };
     telescope = {
       enable = true;
+      setupOpts.defaults.color_devicons = true;
       mappings = {
         findFiles = "<leader>f";
         diagnostics = "<leader>sd";
