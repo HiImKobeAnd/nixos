@@ -27,7 +27,9 @@
       style = "dark";
     };
 
-    binds.whichKey.enable = true;
+    binds.whichKey = {
+      enable = true;
+    };
     statusline.lualine.enable = true;
 
     snippets.luasnip.enable = true;
@@ -72,6 +74,7 @@
 
     visuals = {
       nvim-web-devicons.enable = true;
+      nvim-web-devicons.setupOpts.color_icons = true;
       fidget-nvim.enable = true;
     };
 
@@ -80,7 +83,6 @@
     ui = {
       borders.enable = true;
       ui2.enable = true;
-      colorful-menu-nvim.enable = true;
     };
 
     vendoredKeymaps.enable = false;
