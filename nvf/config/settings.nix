@@ -175,18 +175,14 @@
         {
           name = "media_files";
           packages = [ pkgs.vimPlugins.telescope-media-files-nvim ];
-          setup = {
-            extensions = {
-              media-files = {
-                filestypes = [
-                  "png"
-                  "webp"
-                  "jpg"
-                  "jpeg"
-                ];
-                find_cmd = "rg";
-              };
-            };
+          setup.media-files = {
+            filestypes = [
+              "png"
+              "webp"
+              "jpg"
+              "jpeg"
+            ];
+            find_cmd = "rg";
           };
         }
       ];
