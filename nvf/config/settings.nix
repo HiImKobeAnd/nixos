@@ -5,8 +5,8 @@
 }:
 {
   vim = {
-    viAlias = false;
-    vimAlias = true;
+    viAlias = true;
+    vimAlias = false;
 
     options = {
       mouse = "a";
@@ -82,7 +82,6 @@
       fidget-nvim.enable = true;
       nvim-cursorline.enable = true;
       highlight-undo.enable = true;
-      indent-blankline.enable = true;
     };
 
     notes.todo-comments.enable = true;
@@ -121,6 +120,8 @@
         };
       };
     };
+
+    terminal.toggleterm.enable = true;
 
     spellcheck.enable = true;
 
