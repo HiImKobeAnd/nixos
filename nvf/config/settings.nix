@@ -39,8 +39,8 @@
 
     snippets.luasnip.enable = true;
     autocomplete.blink-cmp.enable = true;
-    # autocomplete.blink-cmp.mappings.complete = "<C-r>";
-    autocomplete.blink-cmp.mappings.confirm = "<C-r>";
+    autocomplete.blink-cmp.mappings.complete = "<C-y>";
+    # autocomplete.blink-cmp.mappings.confirm = "<C-y>";
 
     session.nvim-session-manager = {
       enable = true;
