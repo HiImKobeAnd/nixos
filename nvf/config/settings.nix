@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   vim = {
     viAlias = false;
     vimAlias = true;
@@ -158,17 +159,17 @@
       {
         key = "grd";
         mode = "n";
-        action = ":Telescope lsp_definitions";
+        action = ":Telescope lsp_definitions<CR>";
       }
       {
         key = "grr";
         mode = "n";
-        action = ":Telescope lsp_references";
+        action = ":Telescope lsp_references<CR>";
       }
       {
         key = "grs";
         mode = "n";
-        action = ":Telescope lsp_document_symbols";
+        action = ":Telescope lsp_document_symbols<CR>";
       }
     ];
   };
