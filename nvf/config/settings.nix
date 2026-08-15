@@ -101,15 +101,22 @@
       };
     };
 
-    utility.motion = {
-      leap = {
+    utility = {
+      yazi-nvim.enable = true;
+      images.image-nvim = {
         enable = true;
-        mappings = {
-          leapBackwardTill = "<leader>sX";
-          leapBackwardTo = "<leader>sS";
-          leapForwardTill = "<leader>sx";
-          leapForwardTo = "<leader>ss";
+        setupOpts.backend = "kitty";
+      };
+      motion = {
+        leap = {
+          enable = true;
+          mappings = {
+            leapBackwardTill = "<leader>sX";
+            leapBackwardTo = "<leader>sS";
+            leapForwardTill = "<leader>sx";
+            leapForwardTo = "<leader>ss";
 
+          };
         };
       };
     };
