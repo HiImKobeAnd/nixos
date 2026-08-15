@@ -27,13 +27,7 @@
       style = "dark";
     };
 
-    binds = {
-      whichKey.enable = true;
-      hardtime-nvim.enable = true;
-      hardtime-nvim.setupOpts = {
-        disable_mouse = false;
-      };
-    };
+    binds.whichKey.enable = true;
 
     statusline.lualine.enable = true;
 
