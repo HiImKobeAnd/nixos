@@ -173,7 +173,7 @@
       };
       extensions = [
         {
-          name = "telescope-media-files";
+          name = "media_files";
           packages = [ pkgs.vimPlugins.telescope-media-files-nvim ];
           setup = {
             extensions = {
