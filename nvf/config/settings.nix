@@ -28,7 +28,6 @@
     };
 
     binds.whichKey.enable = true;
-
     statusline.lualine.enable = true;
 
     snippets.luasnip.enable = true;
@@ -74,10 +73,6 @@
     visuals = {
       nvim-web-devicons.enable = true;
       fidget-nvim.enable = true;
-      nvim-cursorline = {
-        enable = true;
-        setupOpts.cursorline.enable = true;
-      };
     };
 
     notes.todo-comments.enable = true;
