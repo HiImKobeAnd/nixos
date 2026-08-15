@@ -38,11 +38,15 @@
     statusline.lualine.enable = true;
 
     snippets.luasnip.enable = true;
-    autocomplete.blink-cmp.enable = true;
-    autocomplete.blink-cmp.mappings.confirm = "<C-y>";
-    autocomplete.blink-cmp.mappings.close = "<C-e>";
-    autocomplete.blink-cmp.mappings.next = "tab";
-    autocomplete.blink-cmp.mappings.previous = "<s-tab";
+    autocomplete.blink-cmp = {
+      enable = true;
+      mappings = {
+        confirm = "<C-y>";
+        close = "<C-e>";
+        next = "tab";
+        previous = "<s-tab";
+      };
+    };
 
     session.nvim-session-manager = {
       enable = true;
@@ -174,6 +178,11 @@
         key = "grs";
         mode = "n";
         action = ":Telescope lsp_document_symbols<CR>";
+      }
+      {
+        key = "<Esc>";
+        mode = "n";
+        action = "nohlsearch<CR>";
       }
     ];
   };
