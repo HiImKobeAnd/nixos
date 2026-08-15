@@ -182,7 +182,7 @@
       {
         key = "<Esc>";
         mode = "n";
-        action = "nohlsearch<CR>";
+        action = ":nohlsearch<CR>";
       }
     ];
   };
