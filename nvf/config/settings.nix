@@ -13,6 +13,7 @@
       shiftwidth = 2;
       tabstop = 2;
       showmode = false;
+      cursorline = "both";
     };
     searchCase = "smart";
     undoFile.enable = true;
