@@ -182,7 +182,7 @@
               "jpg"
               "jpeg"
             ];
-            find_cmd = "rg";
+            find_cmd = "${pkgs.lib.getExe pkgs.ripgrep}";
           };
         }
       ];
