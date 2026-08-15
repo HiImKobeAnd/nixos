@@ -171,21 +171,6 @@
         helpTags = "<leader>sh";
         open = "<leader>so";
       };
-      extensions = [
-        {
-          name = "media_files";
-          packages = [ pkgs.vimPlugins.telescope-media-files-nvim ];
-          setup.media-files = {
-            filestypes = [
-              "png"
-              "webp"
-              "jpg"
-              "jpeg"
-            ];
-            find_cmd = "${pkgs.lib.getExe pkgs.ripgrep}";
-          };
-        }
-      ];
     };
     comments.comment-nvim = {
       enable = true;
