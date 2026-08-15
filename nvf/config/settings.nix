@@ -39,11 +39,10 @@
 
     snippets.luasnip.enable = true;
     autocomplete.blink-cmp.enable = true;
-    # autocomplete.blink-cmp.mappings.confirm = "<C-y>";
-    # autocomplete.blink-cmp.mappings.close = "<C-e>";
-    # autocomplete.blink-cmp.mappings.next = "tab";
-    # autocomplete.blink-cmp.mappings.previous = "<s-tab";
-    autocomplete.blink-cmp.setupOpts.cmdline.keymap.preset = "default";
+    autocomplete.blink-cmp.mappings.confirm = "<C-y>";
+    autocomplete.blink-cmp.mappings.close = "<C-e>";
+    autocomplete.blink-cmp.mappings.next = "tab";
+    autocomplete.blink-cmp.mappings.previous = "<s-tab";
 
     session.nvim-session-manager = {
       enable = true;
