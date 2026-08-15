@@ -80,6 +80,7 @@
     ui = {
       borders.enable = true;
       ui2.enable = true;
+      colorful-menu-nvim.enable = true;
     };
 
     vendoredKeymaps.enable = false;
