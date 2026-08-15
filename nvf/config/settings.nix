@@ -102,7 +102,6 @@
     };
 
     utility = {
-      yazi-nvim.enable = true;
       images.image-nvim = {
         enable = true;
         setupOpts.backend = "kitty";
@@ -172,6 +171,25 @@
         helpTags = "<leader>sh";
         open = "<leader>so";
       };
+      extensions = [
+        {
+          name = "telescope-media-files";
+          packages = [ pkgs.vimPlugins.telescope-media-files-nvim ];
+          setup = {
+            extensions = {
+              media-files = {
+                filestypes = [
+                  "png"
+                  "webp"
+                  "jpg"
+                  "jpeg"
+                ];
+                find_cmd = "rg";
+              };
+            };
+          };
+        }
+      ];
     };
     comments.comment-nvim = {
       enable = true;
