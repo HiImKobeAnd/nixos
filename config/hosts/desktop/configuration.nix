@@ -51,6 +51,7 @@
         self.nixosModules.helium
         self.nixosModules.aicode
         self.nixosModules.python
+        self.nixosModules.docker
         self.nixosModules.distrobox
       ];
 
