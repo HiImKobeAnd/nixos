@@ -12,6 +12,7 @@
       programs.git = {
         enable = true;
         package = self.packages.${pkgs.stdenv.hostPlatform.system}.myGit;
+        lfs.enable = true;
       };
     };
 
