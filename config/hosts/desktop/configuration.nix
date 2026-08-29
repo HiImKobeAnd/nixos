@@ -53,6 +53,7 @@
         self.nixosModules.python
         self.nixosModules.docker
         self.nixosModules.distrobox
+        self.nixosModules.godot
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
