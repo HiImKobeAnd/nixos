@@ -54,6 +54,7 @@
         self.nixosModules.docker
         self.nixosModules.distrobox
         self.nixosModules.godot
+        self.nixosModules.freecad
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
