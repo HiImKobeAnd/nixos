@@ -5,6 +5,7 @@
     {
       environment.systemPackages = with pkgs; [
         eza
+        fishPlugins.bass
       ];
       programs = {
         fish = {
