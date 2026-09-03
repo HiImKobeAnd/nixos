@@ -16,5 +16,9 @@
         enable = true;
         setSocketVariable = true;
       };
+
+      systemd.services.nvidia-container-toolkit-cdi-generator = {
+        serviceConfig.ExecStartPre = lib.mkForce [];
+      };
     };
 }
