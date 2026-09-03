@@ -8,6 +8,7 @@
     {
       environment.systemPackages = [
         pkgs.nvidia-container-toolkit
+        pkgs.devcontainer
       ];
       hardware.nvidia-container-toolkit.enable = true;
       virtualisation.docker.enable = true;
