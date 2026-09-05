@@ -19,7 +19,6 @@
         hyprcursor # For cursors
         rose-pine-hyprcursor # For cursors
         pulseaudio # For Noctalia plugin: Audio Switcher
-        kdePackages.kdeconnect-kde
       ];
       programs.hyprland = {
         enable = true;

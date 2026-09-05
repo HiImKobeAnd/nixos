@@ -38,7 +38,7 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    kopuz.url = "github:temidaradev/kopuz";
+    # kopuz.url = "github:temidaradev/kopuz";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./config);
