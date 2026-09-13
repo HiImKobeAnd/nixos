@@ -27,6 +27,13 @@
       style = "dark";
     };
 
+    extraPlugins = {
+      auto-dark-mode-nvim = {
+        package = pkgs.vimPlugins.auto-dark-mode-nvim;
+        setup = "require('auto-dark-mode').setup {}";
+      };
+    };
+
     binds.whichKey = {
       enable = true;
     };
