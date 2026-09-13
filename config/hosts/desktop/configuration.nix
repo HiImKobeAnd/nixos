@@ -39,6 +39,7 @@
         self.nixosModules.hobby-applications
         self.nixosModules.obs-studio
         self.nixosModules.learning
+        self.nixosModules.nixcord
         self.nixosModules.music
         self.nixosModules.office-suite
         self.nixosModules.nvf
