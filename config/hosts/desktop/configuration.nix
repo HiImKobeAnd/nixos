@@ -32,27 +32,20 @@
 
         # Applications
         self.nixosModules.hyprland
-        # self.nixosModules.vm
         self.nixosModules.waydroid
         self.nixosModules.steam
         self.nixosModules.minecraft
         self.nixosModules.games
         self.nixosModules.hobby-applications
-        self.nixosModules.social-media
         self.nixosModules.obs-studio
         self.nixosModules.learning
         self.nixosModules.music
         self.nixosModules.office-suite
-        self.nixosModules.nixcord
         self.nixosModules.nvf
-        self.nixosModules.blender
         self.nixosModules.vlc
         self.nixosModules.helium
         self.nixosModules.aicode
-        self.nixosModules.python
         self.nixosModules.docker
-        self.nixosModules.distrobox
-        self.nixosModules.godot
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
