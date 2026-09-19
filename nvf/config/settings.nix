@@ -136,8 +136,6 @@
       setupOpts.direction = "float";
     };
 
-    spellcheck.enable = true;
-
     languages = {
       enableExtraDiagnostics = true;
       enableFormat = true;
