@@ -217,7 +217,7 @@
       {
         key = "<leader>d";
         mode = "n";
-        action = ":lua vim.diagnostic.open_float()";
+        action = ":lua vim.diagnostic.open_float()<CR>";
       }
     ];
   };
