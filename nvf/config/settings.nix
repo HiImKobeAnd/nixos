@@ -99,7 +99,10 @@
       registers = "unnamedplus";
     };
 
-    diagnostics.nvim-lint.enable = true;
+    diagnostics = {
+      enable = true;
+      nvim-lint.enable = true;
+    };
 
     debugger = {
       nvim-dap = {
@@ -214,7 +217,7 @@
       {
         key = "<leader>d";
         mode = "n";
-        action = "lua vim.diagnostic.open_float()";
+        action = ":lua vim.diagnostic.open_float()";
       }
     ];
   };
