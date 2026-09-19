@@ -211,6 +211,11 @@
         mode = "n";
         action = ":nohlsearch<CR>";
       }
+      {
+        key = "<leader>d";
+        mode = "n";
+        action = "lua vim.diagnostic.open_float()";
+      }
     ];
   };
 }
