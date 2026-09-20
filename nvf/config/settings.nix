@@ -172,17 +172,15 @@
     telescope = {
       enable = true;
       setupOpts = {
-        defaults = {
-          color_devicons = true;
-          pickers = {
-            find_files.find_command = [
-              "rg"
-              "--files"
-              "--hidden"
-              "--glob"
-              "!**/.git/*"
-            ];
-          };
+        defaults.color_devicons = true;
+        pickers = {
+          find_files.find_command = [
+            "rg"
+            "--files"
+            "--hidden"
+            "--glob"
+            "!**/.git/*"
+          ];
         };
       };
       mappings = {
