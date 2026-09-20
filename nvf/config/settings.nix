@@ -172,15 +172,21 @@
     telescope = {
       enable = true;
       setupOpts = {
-        defaults.color_devicons = true;
-        pickers = {
-          find_files.find_command = [
-            "rg"
-            "--files"
-            "--hidden"
-            "--glob"
-            "!**/.git/*"
-          ];
+        defaults = {
+          color_devicons = true;
+          mappings.i."<C-h>".__raw = ''
+            function(prompt_bufnr)
+              local action_state = require("telescope.actions.state")
+              local current_picker = action_state.get_current_picker(prompt_bufnr)
+              local prompt = current_picker:_get_prompt()
+              
+              require("telescope.actions").close(prompt_bufnr)
+              require("telescope.builtin").find_files({
+                hidden = true,
+                default_text = prompt,
+              })
+            end
+          '';
         };
       };
       mappings = {
