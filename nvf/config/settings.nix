@@ -171,24 +171,7 @@
     };
     telescope = {
       enable = true;
-      setupOpts = {
-        defaults = {
-          color_devicons = true;
-          mappings.i."<C-h>".__raw = ''
-            function(prompt_bufnr)
-              local action_state = require("telescope.actions.state")
-              local current_picker = action_state.get_current_picker(prompt_bufnr)
-              local prompt = current_picker:_get_prompt()
-              
-              require("telescope.actions").close(prompt_bufnr)
-              require("telescope.builtin").find_files({
-                hidden = true,
-                default_text = prompt,
-              })
-            end
-          '';
-        };
-      };
+      setupOpts.defaults.color_devicons = true;
       mappings = {
         findFiles = "<leader>f";
         diagnostics = "<leader>sd";
@@ -197,6 +180,28 @@
         open = "<leader>so";
       };
     };
+    luaConfigPost = ''
+      require("telescope").setup({
+        defaults = {
+          mappings = {
+            i = {
+              ["<C-h>"] = function(prompt_bufnr)
+                local action_state = require("telescope.actions.state")
+                local current_picker = action_state.get_current_picker(prompt_bufnr)
+                local prompt = current_picker:_get_prompt()
+                
+                require("telescope.actions").close(prompt_bufnr)
+                require("telescope.builtin").find_files({
+                  hidden = true,
+                  default_text = prompt,
+                })
+              end,
+            },
+          },
+        },
+      })
+    '';
+
     comments.comment-nvim = {
       enable = true;
       mappings.toggleSelectedLine = "<leader>c";
