@@ -171,7 +171,13 @@
     };
     telescope = {
       enable = true;
-      setupOpts.defaults.color_devicons = true;
+      setupOpts = {
+        defaults.color_devicons = true;
+        pickers.find_files.mappings = {
+          i."<C-h>" = lib.generators.mkLuaInline "function() _G.toggle_telescope_hidden() end";
+          n."<C-h>" = lib.generators.mkLuaInline "function() _G.toggle_telescope_hidden() end";
+        };
+      };
       mappings = {
         findFiles = "<leader>f";
         diagnostics = "<leader>sd";
@@ -180,28 +186,27 @@
         open = "<leader>so";
       };
     };
-    luaConfigPost = ''
-      require("telescope").setup({
-        defaults = {
-          mappings = {
-            i = {
-              ["<C-h>"] = function(prompt_bufnr)
-                local action_state = require("telescope.actions.state")
-                local current_picker = action_state.get_current_picker(prompt_bufnr)
-                local prompt = current_picker:_get_prompt()
-                
-                require("telescope.actions").close(prompt_bufnr)
-                require("telescope.builtin").find_files({
-                  hidden = true,
-                  default_text = prompt,
-                })
-              end,
-            },
-          },
-        },
-      })
+    luaConfigRC.telescope-hidden = /* lua */ ''
+      function _G.toggle_telescope_hidden()
+        local actions_state = require('telescope.actions.state')
+        local picker = actions_state.get_current_picker()
+        vim.g.telescope_hidden = not vim.g.telescope_hidden
+        local opts = {
+          prompt_title = vim.g.telescope_hidden and 'Find Files (hidden)' or 'Find Files',
+          default_text = actions_state.get_current_line(),
+        }
+        if picker and picker.cwd then
+          opts.cwd = picker.cwd
+        end
+        if vim.g.telescope_hidden then
+          local base_cmd = (require('telescope.config').pickers.find_files or {}).find_command
+          local cmd = type(base_cmd) == 'table' and vim.deepcopy(base_cmd) or { 'fd', '--type', 'file' }
+          vim.list_extend(cmd, { '--hidden', '--no-ignore', '--exclude', '.git' })
+          opts.find_command = cmd
+        end
+        require('telescope.builtin').find_files(opts)
+      end
     '';
-
     comments.comment-nvim = {
       enable = true;
       mappings.toggleSelectedLine = "<leader>c";
