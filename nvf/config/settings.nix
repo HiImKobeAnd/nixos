@@ -171,7 +171,26 @@
     };
     telescope = {
       enable = true;
-      setupOpts.defaults.color_devicons = true;
+      setupOpts = {
+        defaults.color_devicons = true;
+        pickers = {
+          find_files.find_command = [
+            "rg"
+            "--files"
+            "--hidden"
+            "--glob"
+            "!**/.git/*"
+          ];
+          find_files.mappings.n."cd".__raw = ''
+            function(prompt_bufnr)
+              local selection = require("telescope.actions.state").get_selected_entry()
+              local dir = vim.fn.fnamemodify(selection.path, ":p:h")
+              require("telescope.actions").close(prompt_bufnr)
+              vim.cmd(string.format("silent lcd %s", dir))
+            end
+          '';
+        };
+      };
       mappings = {
         findFiles = "<leader>f";
         diagnostics = "<leader>sd";
