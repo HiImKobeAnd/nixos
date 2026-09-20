@@ -201,7 +201,10 @@
         if vim.g.telescope_hidden then
           local base_cmd = (require('telescope.config').pickers.find_files or {}).find_command
           local cmd = type(base_cmd) == 'table' and vim.deepcopy(base_cmd) or { 'fd', '--type', 'file' }
-          vim.list_extend(cmd, { '--hidden', '--exclude', '.git' })
+          vim.list_extend(cmd, { '--hidden', '--no-ignore' })
+          for _, dir in ipairs({ '.git', '.devenv', '.direnv', '.cache', 'node_modules', 'dist', 'build', 'target', 'result' }) do
+            vim.list_extend(cmd, { '--exclude', dir })
+          end
           opts.find_command = cmd
         end
         require('telescope.builtin').find_files(opts)
