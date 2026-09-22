@@ -47,6 +47,7 @@
         self.nixosModules.helium
         self.nixosModules.aicode
         self.nixosModules.docker
+        self.nixosModules.tailscale
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
