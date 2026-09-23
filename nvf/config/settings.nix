@@ -34,7 +34,9 @@
       };
       diagflow-nvim = {
         package = pkgs.vimPlugins.diagflow-nvim;
-        setup = "require('diagflow').setup()";
+        setup = "require('diagflow').setup({
+        show_borders = true,
+        })";
       };
     };
 
