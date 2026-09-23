@@ -32,6 +32,10 @@
         package = pkgs.vimPlugins.auto-dark-mode-nvim;
         setup = "require('auto-dark-mode').setup {}";
       };
+      diagflow-nvim = {
+        package = pkgs.vimPlugins.diagflow-nvim;
+        setup = "require('diagflow').setup()";
+      };
     };
 
     binds.whichKey = {
