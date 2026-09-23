@@ -65,7 +65,6 @@
       enable = true;
       formatOnSave = true;
       inlayHints.enable = true;
-      lightbulb.enable = true;
       lspconfig.enable = true;
       servers = {
         luau-lsp = {
