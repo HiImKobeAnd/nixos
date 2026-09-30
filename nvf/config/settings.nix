@@ -227,7 +227,6 @@
       mappings.toggleSelectedLine = "<leader>c";
       mappings.toggleCurrentLine = "<leader>c";
     };
-    mini.ai.enable = true;
     keymaps = [
       {
         key = "<leader>q";
