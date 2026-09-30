@@ -48,6 +48,7 @@
         self.nixosModules.aicode
         self.nixosModules.docker
         self.nixosModules.tailscale
+        self.nixosModules.email
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
