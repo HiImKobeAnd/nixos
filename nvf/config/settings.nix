@@ -176,6 +176,13 @@
     };
     telescope = {
       enable = true;
+      extensions = [
+        {
+          name = "fzf";
+          packages = [ pkgs.vimPlugins.telescope-fzf-native-nvim ];
+          setup.fzf.fuzzy = true;
+        }
+      ];
       setupOpts = {
         defaults.color_devicons = true;
         pickers.find_files.mappings = {
