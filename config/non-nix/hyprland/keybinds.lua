@@ -20,6 +20,7 @@ hl.bind(mod .. " + Z", hl.dsp.exec_cmd("zotero"))
 
 hl.bind(mod .. " + " .. mod .. "_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mod .. " + Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
+hl.bind(mod .. " + D", hl.dsp.exec_cmd(ipc .. "theme-mode-toggle"))
 hl.bind(mod .. " + Q", hl.dsp.window.close())
 hl.bind(mod .. " + Y", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + F", hl.dsp.window.fullscreen())
@@ -41,9 +42,9 @@ hl.bind("SHIFT + XF86AudioNext", hl.dsp.exec_cmd(ipc .. "media previous"))
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
-	local key = i % 10 -- 10 maps to key 0
-	hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+  local key = i % 10 -- 10 maps to key 0
+  hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+  hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
 -- Example special workspace (scratchpad)
