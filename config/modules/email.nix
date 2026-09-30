@@ -4,8 +4,8 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        bluemail
         evolution
+        evolution-ews
       ];
       programs.thunderbird.enable = true;
     };
