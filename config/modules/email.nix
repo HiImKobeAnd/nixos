@@ -3,10 +3,10 @@
   flake.nixosModules.email =
     { pkgs, ... }:
     {
-      environment.systemPackages = with pkgs; [
-        evolution
-        evolution-ews
-      ];
+      programs.evolution = {
+        enable = true;
+        plugins = [ pkgs.evolution-ews ];
+      };
       programs.thunderbird.enable = true;
     };
 }
