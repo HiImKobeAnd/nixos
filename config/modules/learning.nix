@@ -5,7 +5,7 @@
     {
       environment.systemPackages = with pkgs; [
         anki
-        zotero
+        # zotero
         obsidian
         # super-productivity
         planify
