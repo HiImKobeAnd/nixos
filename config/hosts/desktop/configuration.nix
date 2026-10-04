@@ -49,6 +49,7 @@
         self.nixosModules.docker
         self.nixosModules.tailscale
         self.nixosModules.email
+        self.nixosModules.freecad
       ];
 
       # Fix for https://github.com/NixOS/nixpkgs/issues/536623
