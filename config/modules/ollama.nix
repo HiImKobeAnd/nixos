@@ -20,7 +20,7 @@
         image = "ghcr.io/odysseus-dev/odysseus:latest";
         ports = [ "7000:7000" ];
         volumes = [
-          "/var/lib/odysseus/data:/app/data"
+          "odysseus-data:/app/data"
         ];
         environment = {
           APP_BIND = "0.0.0.0";
