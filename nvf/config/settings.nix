@@ -168,7 +168,7 @@
       sql.enable = true;
       css.enable = true;
       toml.enable = true;
-      typescript.enable = true;
+      # typescript.enable = true;
     };
 
     binds.whichKey.register = lib.mkForce {
