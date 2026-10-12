@@ -25,9 +25,8 @@
         environment = {
           APP_BIND = "0.0.0.0";
           APP_PORT = "7000";
-          AUTH_ENABLED = "true";
         };
-        extraOptions = [ "--add-host=host.docker.internal:host-gateway" ];
+        extraOptions = [ "--network=host" ];
       };
     };
 }
