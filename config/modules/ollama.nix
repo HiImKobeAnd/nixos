@@ -11,22 +11,10 @@
         package = pkgs.ollama-cuda;
         host = "0.0.0.0";
       };
-      services.open-webui.enable = true;
       systemd.services.ollama = {
         after = [ "graphical.target" ];
         wantedBy = lib.mkForce [ "graphical.target" ];
       };
-      virtualisation.oci-containers.containers.odysseus = {
-        image = "ghcr.io/odysseus-dev/odysseus:latest";
-        ports = [ "7000:7000" ];
-        volumes = [
-          "odysseus-data:/app/data"
-        ];
-        environment = {
-          APP_BIND = "0.0.0.0";
-          APP_PORT = "7000";
-        };
-        extraOptions = [ "--network=host" ];
-      };
+      services.open-webui.enable = true;
     };
 }
