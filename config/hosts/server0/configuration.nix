@@ -24,14 +24,27 @@
 
       networking.networkmanager.enable = true;
 
-      services.displayManager.gdm.enable = true;
-      services.desktopManager.gnome.enable = true;
+      services = {
+        displayManager.gdm.enable = true;
+        desktopManager.gnome.enable = true;
+        xserver.xkb = {
+          layout = "dk";
+          variant = "";
+        };
+        openssh = {
+          enable = true;
+          openFirewall = true;
+          settings = {
+            PasswordAuthentication = false;
+            KbdInteractiveAuthentication = false;
+            PermitRootLogin = "no";
+            AllowUsers = [ "server0" ];
+          };
+        };
+
+      };
 
       # Configure keymap in X11
-      services.xserver.xkb = {
-        layout = "dk";
-        variant = "";
-      };
 
       nix.settings.experimental-features = [
         "nix-command"
@@ -47,7 +60,7 @@
         ];
       };
       nixpkgs.config.allowUnfree = true;
-      services.openssh.enable = true;
+
       system.stateVersion = "26.05"; # Did you read the comment?
     };
 }
