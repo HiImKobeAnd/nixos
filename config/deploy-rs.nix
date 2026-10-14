@@ -14,6 +14,7 @@
       hostname = "192.168.100.233";
       profiles.system = {
         user = "server0";
+        sshUser = "server0";
         path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.server0;
       };
     };
