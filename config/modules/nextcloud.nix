@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.nixosModules.nextcloud =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       services = {
         nextcloud = {
@@ -19,6 +19,12 @@
             inherit (pkgs.nextcloud35Packages.apps) calendar contacts;
           };
         };
+        nginx.virtualHosts."${config.services.nextcloud.hostName}".listen = [
+          {
+            addr = "127.0.0.1";
+            port = 8080;
+          }
+        ];
       };
     };
 }
