@@ -52,6 +52,16 @@
       security.acme = {
         defaults.email = "hiimkobeand@gmail.com";
         acceptTerms = true;
+        certs = {
+          "hiimkobeand.net" = {
+            webroot = "/var/lib/acme/acme-challenge/";
+            email = "hiimkobeand@gmail.com";
+            extraDomainNames = [
+              "www.hiimkobeand.net"
+              "hs.hiimkobeand.net"
+            ];
+          };
+        };
       };
     };
 }
