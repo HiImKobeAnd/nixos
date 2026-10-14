@@ -9,7 +9,6 @@
           package = pkgs.nextcloud35;
           hostName = "localhost";
           autoUpdateApps.enable = true;
-          https = true;
           config = {
             dbtype = "sqlite";
             adminpassFile = "/etc/nextcloud-admin-pass";
