@@ -34,7 +34,11 @@
           "networkmanager"
           "wheel"
         ];
+        openssh.authorizedKeys.keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKtL57ynKkB4Sul/DcDwKIX8oYEhHb3OcpWpSxEdbj5B"
+        ];
       };
+
       nixpkgs.config.allowUnfree = true;
 
       system.stateVersion = "26.05";
