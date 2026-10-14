@@ -51,6 +51,7 @@
         self.nixosModules.email
         self.nixosModules.freecad
         self.nixosModules.ollama
+        self.nixosModules.deploy-rs
       ];
 
       nixpkgs.overlays = [
