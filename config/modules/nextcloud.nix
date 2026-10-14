@@ -12,6 +12,7 @@
           https = true;
           config = {
             dbtype = "sqlite";
+            adminpassFile = "/etc/nextcloud-admin-pass";
           };
           extraAppsEnable = true;
           extraApps = {

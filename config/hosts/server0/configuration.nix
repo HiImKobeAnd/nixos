@@ -6,13 +6,9 @@
       imports = [
         self.nixosModules.server0Hardware
         self.nixosModules.default-locale
-        self.nixosModules.default-fonts
-        self.nixosModules.basic-terminal-tools
-        self.nixosModules.git
-        self.nixosModules.nvf
         self.nixosModules.ssh
-        self.nixosModules.gnome
-        self.nixosModules.nix-tools
+        self.nixosModules.nextcloud
+        self.nixosModules.headscale
       ];
 
       boot.loader.systemd-boot.enable = true;

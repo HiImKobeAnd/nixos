@@ -44,26 +44,4 @@
         gnome.gnome-keyring.enable = true;
       };
     };
-
-  perSystem =
-    { pkgs, lib, ... }:
-    {
-      packages.myHyprland = inputs.wrapper-modules.lib.wrapPackage {
-        inherit pkgs;
-        package = pkgs.hyprland;
-
-        flags = {
-
-          "-c" = "${../non-nix/hyprland.conf}";
-        };
-
-        drv = {
-          postBuild = "ln -s ${pkgs.hyprland}/share $out/share";
-        };
-      };
-      packages.myNoctaliaShell = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
-        inherit pkgs;
-        settings = (builtins.fromJSON (builtins.readFile ../non-nix/nocatalia-shell.json)).settings;
-      };
-    };
 }
