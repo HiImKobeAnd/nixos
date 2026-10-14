@@ -6,10 +6,6 @@
       imports = [
         self.nixosModules.server0Hardware
         self.nixosModules.default-locale
-        self.nixosModules.basic-terminal-tools
-        self.nixosModules.nix-tools
-        self.nixosModules.git
-        self.nixosModules.ssh
         self.nixosModules.nextcloud
         self.nixosModules.headscale
       ];
