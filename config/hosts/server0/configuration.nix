@@ -38,6 +38,9 @@
         ];
       };
 
+      nix.settings.trusted-public-keys = [
+        "server0-deploy-1:lrr8UaeHUKnGxvuEG8Kv5L5DLDHIr7Gl+gHD95Yu/JM="
+      ];
       nixpkgs.config.allowUnfree = true;
 
       system.stateVersion = "26.05";

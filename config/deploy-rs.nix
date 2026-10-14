@@ -13,7 +13,6 @@
     deploy.nodes.server0 = {
       hostname = "192.168.100.233";
       profiles.system = {
-        sshUser = "server0";
         user = "server0";
         path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.server0;
       };
