@@ -38,6 +38,9 @@
             "hs.hiimkobeand.net" = {
               forceSSL = true;
               enableACME = true;
+              locations."/.well-known/acme-challenge/" = {
+                root = "/var/lib/acme/acme-challenge";
+              };
               locations."/" = {
                 proxyPass = "http://127.0.0.1:8888";
               };
@@ -52,16 +55,6 @@
       security.acme = {
         defaults.email = "hiimkobeand@gmail.com";
         acceptTerms = true;
-        certs = {
-          "hiimkobeand.net" = {
-            webroot = "/var/lib/acme/acme-challenge/";
-            email = "hiimkobeand@gmail.com";
-            extraDomainNames = [
-              "www.hiimkobeand.net"
-              "hs.hiimkobeand.net"
-            ];
-          };
-        };
       };
     };
 }
