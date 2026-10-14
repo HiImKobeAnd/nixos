@@ -12,6 +12,7 @@
         self.nixosModules.nvf
         self.nixosModules.ssh
         self.nixosModules.gnome
+        self.nixosModules.nix-tools
       ];
 
       boot.loader.systemd-boot.enable = true;
