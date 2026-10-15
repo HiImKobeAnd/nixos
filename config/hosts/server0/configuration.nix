@@ -8,10 +8,8 @@
         self.nixosModules.default-locale
         self.nixosModules.ssh
         self.nixosModules.nextcloud
-        self.nixosModules.headscale
+        self.nixosModules.cloudflared
       ];
-
-      services.cloudflared.enable = true;
 
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
