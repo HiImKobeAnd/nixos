@@ -29,27 +29,38 @@
             };
           };
         };
-        nginx = {
+        #   nginx = {
+        #     enable = true;
+        #     recommendedTlsSettings = true;
+        #     recommendedProxySettings = true;
+        #     recommendedGzipSettings = true;
+        #     recommendedOptimisation = true;
+        #     virtualHosts = {
+        #       "hs.hiimkobeand.net" = {
+        #         forceSSL = true;
+        #         enableACME = true;
+        #         locations."/" = {
+        #           proxyPass = "http://127.0.0.1:8888";
+        #           proxyWebsockets = true;
+        #         };
+        #       };
+        #       "cloud.hs.hiimkobeand.internal" = {
+        #         locations."/" = {
+        #           proxyPass = "http://127.0.0.1:8080";
+        #           proxyWebsockets = true;
+        #         };
+        #       };
+        #     };
+        #   };
+        # };
+
+        caddy = {
           enable = true;
-          recommendedTlsSettings = true;
-          recommendedProxySettings = true;
-          recommendedGzipSettings = true;
-          recommendedOptimisation = true;
+          email = "hiimkobeand@gmail.com";
           virtualHosts = {
-            "hs.hiimkobeand.net" = {
-              forceSSL = true;
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://127.0.0.1:8888";
-                proxyWebsockets = true;
-              };
-            };
+            "hs.hiimkobeand.net".extraConfig = "reverse_proxy 127.0.0.1:8888";
+            "cloud.hs.hiimkobeand.internal".extraConfig = "reverse_proxy 127.0.0.1:8080";
             "cloud.hs.hiimkobeand.internal" = {
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://127.0.0.1:8080";
-                proxyWebsockets = true;
-              };
             };
           };
         };
