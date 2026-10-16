@@ -60,8 +60,6 @@
           virtualHosts = {
             "hs.hiimkobeand.net".extraConfig = "reverse_proxy 127.0.0.1:8888";
             "cloud.hs.hiimkobeand.internal".extraConfig = "reverse_proxy 127.0.0.1:8080";
-            "cloud.hs.hiimkobeand.internal" = {
-            };
           };
         };
       };
