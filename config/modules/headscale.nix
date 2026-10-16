@@ -12,7 +12,7 @@
       services = {
         headscale = {
           enable = true;
-          port = 8080;
+          port = 8888;
           address = "0.0.0.0";
           settings = {
             server_url = "https://hs.hiimkobeand.net";
@@ -46,7 +46,7 @@
               forceSSL = true;
               enableACME = true;
               locations."/" = {
-                proxyPass = "http://127.0.0.1:8080";
+                proxyPass = "http://127.0.0.1:8888";
                 proxyWebsockets = true;
               };
             };
