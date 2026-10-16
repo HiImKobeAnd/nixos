@@ -6,6 +6,7 @@
       services = {
         headscale = {
           enable = true;
+          port = 8080;
           settings = {
             server_url = "https://hs.hiimkobeand.net";
             dns = {
