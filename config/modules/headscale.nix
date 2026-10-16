@@ -7,7 +7,7 @@
         headscale = {
           enable = true;
           port = 8888;
-          address = "127.0.0.1";
+          address = "0.0.0.0";
           settings = {
             server_url = "https://hs.hiimkobeand.net";
             dns = {
