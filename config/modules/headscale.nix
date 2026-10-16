@@ -45,8 +45,7 @@
               };
             };
             "cloud.hs.hiimkobeand.internal" = {
-              forceSSL = false;
-              enableACME = false;
+              enableACME = true;
               locations."/" = {
                 proxyPass = "http://127.0.0.1:8080";
                 proxyWebsockets = true;
