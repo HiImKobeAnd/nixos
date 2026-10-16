@@ -7,7 +7,7 @@
         nextcloud = {
           enable = true;
           package = pkgs.nextcloud35;
-          hostName = "cloud.hs.hiimkobeand.internal";
+          hostName = "cloud.hiimkobeand.net";
           autoUpdateApps.enable = true;
           config = {
             dbtype = "sqlite";
