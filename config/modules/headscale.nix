@@ -57,10 +57,15 @@
         caddy = {
           enable = true;
           email = "hiimkobeand@gmail.com";
-          virtualHosts = {
-            "hs.hiimkobeand.net".extraConfig = "reverse_proxy 127.0.0.1:8888";
-            "cloud.hs.hiimkobeand.internal".extraConfig = "reverse_proxy 127.0.0.1:8080";
-          };
+          configFile = pkgs.writeText "Caddyfile" ''
+            hs.hiimkobeand.net {
+                reverse_proxy 127.0.0.1:8888
+            }
+
+            cloud.hs.hiimkobeand.internal {
+                reverse_proxy 127.0.0.1:8080
+            }
+          '';
         };
       };
       networking.firewall.allowedTCPPorts = [
