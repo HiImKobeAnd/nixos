@@ -3,12 +3,6 @@
   flake.nixosModules.headscale =
     { pkgs, ... }:
     {
-      networking.hosts = {
-        "192.168.100.233" = [
-          "hiimkobeand.net"
-          "hs.hiimkobeand.net"
-        ];
-      };
       services = {
         headscale = {
           enable = true;
@@ -48,6 +42,11 @@
               locations."/" = {
                 proxyPass = "http://127.0.0.1:8888";
                 proxyWebsockets = true;
+                extraConfig = ''
+                  proxy_buffering off;
+                  proxy_read_timeout 300s;
+                  proxy_send_timeout 300s;
+                '';
               };
             };
           };
