@@ -101,6 +101,13 @@
       networking.networkmanager.enable = true;
       systemd.services.NetworkManager-wait-online.enable = false;
 
+      networking.hosts = {
+        "192.168.100.233" = [
+          "hiimkobeand.net"
+          "hs.hiimkobeand.net"
+        ];
+      };
+
       # User
       users.users.hiimkobeand = {
         isNormalUser = true;
