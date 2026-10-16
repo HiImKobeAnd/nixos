@@ -9,6 +9,7 @@
         self.nixosModules.ssh
         self.nixosModules.nextcloud
         self.nixosModules.headscale
+        self.nixosModules.tailscale
       ];
 
       boot.loader.systemd-boot.enable = true;
