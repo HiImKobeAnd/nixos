@@ -7,11 +7,14 @@
         nextcloud = {
           enable = true;
           package = pkgs.nextcloud35;
-          hostName = "localhost";
+          hostName = "cloud.hs.hiimkobeand.internal";
           autoUpdateApps.enable = true;
           config = {
             dbtype = "sqlite";
             adminpassFile = "/etc/nextcloud-admin-pass";
+          };
+          settings = {
+            trusted_proxies = [ "127.0.0.1" ];
           };
           extraAppsEnable = true;
           extraApps = {

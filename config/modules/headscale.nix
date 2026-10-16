@@ -17,7 +17,7 @@
                 {
                   name = "cloud.hs.hiimkobeand.internal";
                   type = "A";
-                  value = "100.100.100.100";
+                  value = "100.64.0.2";
                 }
               ];
               nameservers.global = [
@@ -41,6 +41,12 @@
               enableACME = true;
               locations."/" = {
                 proxyPass = "http://127.0.0.1:8888";
+                proxyWebsockets = true;
+              };
+            };
+            "cloud.hs.hiimkobeand.internal" = {
+              locations."/" = {
+                proxyPass = "http://127.0.0.1:8080";
                 proxyWebsockets = true;
               };
             };
