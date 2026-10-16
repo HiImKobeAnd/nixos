@@ -7,7 +7,7 @@
         headscale = {
           enable = true;
           port = 8888;
-          address = "0.0.0.0";
+          address = "127.0.0.1";
           settings = {
             server_url = "https://hs.hiimkobeand.net";
             dns = {
@@ -38,14 +38,16 @@
           virtualHosts = {
             "hs.hiimkobeand.net" = {
               forceSSL = true;
+              http2 = true;
               enableACME = true;
               locations."/" = {
                 proxyPass = "http://127.0.0.1:8888";
                 proxyWebsockets = true;
                 extraConfig = ''
-                  proxy_buffering off;
-                  proxy_read_timeout 300s;
-                  proxy_send_timeout 300s;
+                  proxy_http_version 1.1;
+                  proxy_set_header Upgrade $http_upgrade;
+                  proxy_set_header Connection "upgrade";
+                  proxy_read_timeout  36000s;
                 '';
               };
             };
