@@ -15,6 +15,9 @@
           };
           settings = {
             trusted_proxies = [ "127.0.0.1" ];
+            overwriteprotocol = "https";
+            overwritehost = "cloud.hiimkobeand.net";
+            "overwrite.cli.url" = "https://cloud.hiimkobeand.net";
           };
           extraAppsEnable = true;
           extraApps = {
