@@ -13,23 +13,22 @@
             dbtype = "sqlite";
             adminpassFile = "/etc/nextcloud-admin-pass";
           };
-          settings = {
-            trusted_proxies = [ "127.0.0.1" ];
-            overwriteprotocol = "https";
-            overwritehost = "cloud.hiimkobeand.net";
-            "overwrite.cli.url" = "https://cloud.hiimkobeand.net";
-          };
+          https = true;
+          settings.trusted_proxies = [ "127.0.0.1" ];
           extraAppsEnable = true;
           extraApps = {
             inherit (pkgs.nextcloud35Packages.apps) calendar contacts;
           };
         };
-        nginx.virtualHosts."cloud.hiimkobeand.net".listen = [
-          {
-            addr = "127.0.0.1";
-            port = 8080;
-          }
-        ];
+        nginx.virtualHosts."cloud.hiimkobeand.net" = {
+          forceSSL = true;
+          enableACME = true;
+          extraConfig = ''
+            allow 100.64.0.0/10;
+            allow 127.0.0.1;
+            deny all;
+          '';
+        };
       };
     };
 }
