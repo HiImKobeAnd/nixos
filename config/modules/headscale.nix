@@ -43,12 +43,6 @@
               locations."/" = {
                 proxyPass = "http://127.0.0.1:8888";
                 proxyWebsockets = true;
-                extraConfig = ''
-                  proxy_http_version 1.1;
-                  proxy_set_header Upgrade $http_upgrade;
-                  proxy_set_header Connection "upgrade";
-                  proxy_read_timeout  36000s;
-                '';
               };
             };
           };
