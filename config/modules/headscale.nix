@@ -6,7 +6,7 @@
       services = {
         headscale = {
           enable = true;
-          port = 8888;
+          port = 80;
           settings = {
             server_url = "https://hs.hiimkobeand.net";
             dns = {
@@ -28,30 +28,30 @@
             };
           };
         };
-        nginx = {
-          enable = true;
-          recommendedTlsSettings = true;
-          recommendedProxySettings = true;
-          recommendedGzipSettings = true;
-          recommendedOptimisation = true;
-          virtualHosts = {
-            "hs.hiimkobeand.net" = {
-              forceSSL = true;
-              enableACME = true;
-              locations."/" = {
-                proxyPass = "http://127.0.0.1:8888";
-              };
-            };
-          };
-        };
-      };
-      networking.firewall.allowedTCPPorts = [
-        80
-        443
-      ];
-      security.acme = {
-        defaults.email = "hiimkobeand@gmail.com";
-        acceptTerms = true;
+        #   nginx = {
+        #     enable = true;
+        #     recommendedTlsSettings = true;
+        #     recommendedProxySettings = true;
+        #     recommendedGzipSettings = true;
+        #     recommendedOptimisation = true;
+        #     virtualHosts = {
+        #       "hs.hiimkobeand.net" = {
+        #         forceSSL = true;
+        #         enableACME = true;
+        #         locations."/" = {
+        #           proxyPass = "http://127.0.0.1:8888";
+        #         };
+        #       };
+        #     };
+        #   };
+        # };
+        # networking.firewall.allowedTCPPorts = [
+        #   80
+        #   443
+        # ];
+        # security.acme = {
+        #   defaults.email = "hiimkobeand@gmail.com";
+        #   acceptTerms = true;
       };
     };
 }
