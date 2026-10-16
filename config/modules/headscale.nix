@@ -19,6 +19,12 @@
                   type = "A";
                   value = "100.64.0.2";
                 }
+                {
+                  name = "cloud.hiimkobeand.net";
+                  type = "A";
+                  value = "100.64.0.2";
+                }
+
               ];
               nameservers.global = [
                 "9.9.9.9"
@@ -29,43 +35,41 @@
             };
           };
         };
-        #   nginx = {
-        #     enable = true;
-        #     recommendedTlsSettings = true;
-        #     recommendedProxySettings = true;
-        #     recommendedGzipSettings = true;
-        #     recommendedOptimisation = true;
-        #     virtualHosts = {
-        #       "hs.hiimkobeand.net" = {
-        #         forceSSL = true;
-        #         enableACME = true;
-        #         locations."/" = {
-        #           proxyPass = "http://127.0.0.1:8888";
-        #           proxyWebsockets = true;
-        #         };
-        #       };
-        #       "cloud.hs.hiimkobeand.internal" = {
-        #         locations."/" = {
-        #           proxyPass = "http://127.0.0.1:8080";
-        #           proxyWebsockets = true;
-        #         };
-        #       };
-        #     };
-        #   };
-        # };
-
-        caddy = {
+        nginx = {
           enable = true;
-          email = "hiimkobeand@gmail.com";
-          configFile = pkgs.writeText "Caddyfile" ''
-            hs.hiimkobeand.net {
-                reverse_proxy 127.0.0.1:8888
-            }
-
-            cloud.hs.hiimkobeand.internal {
-                reverse_proxy 127.0.0.1:8080
-            }
-          '';
+          recommendedTlsSettings = true;
+          recommendedProxySettings = true;
+          recommendedGzipSettings = true;
+          recommendedOptimisation = true;
+          virtualHosts = {
+            "hs.hiimkobeand.net" = {
+              forceSSL = true;
+              enableACME = true;
+              locations."/" = {
+                proxyPass = "http://127.0.0.1:8888";
+                proxyWebsockets = true;
+              };
+            };
+            # "cloud.hs.hiimkobeand.internal" = {
+            #   locations."/" = {
+            #     proxyPass = "http://127.0.0.1:8080";
+            #     proxyWebsockets = true;
+            #   };
+            # };
+            "cloud.hiimkobeand.net" = {
+              forceSSL = true;
+              enableACME = true;
+              locations."/" = {
+                proxyPass = "http://127.0.0.1:8080";
+                proxyWebsockets = true;
+                extraConfig = ''
+                  allow 100.64.0.0/10;
+                  allow 127.0.0.1;
+                  deny all;
+                '';
+              };
+            };
+          };
         };
       };
       networking.firewall.allowedTCPPorts = [
