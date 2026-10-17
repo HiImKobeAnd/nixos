@@ -58,8 +58,7 @@
       sops = {
         defaultSopsFile = ../../../secrets/secrets.yaml;
         defaultSopsFormat = "yaml";
-        age.keyFile = "//home/hiimkobeand/.config/sops/age/keys.txt";
-        secrets.test = { };
+        age.keyFile = "/home/hiimkobeand/.config/sops/age/keys.txt";
       };
 
       nixpkgs.overlays = [
