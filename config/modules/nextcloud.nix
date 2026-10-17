@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   flake.nixosModules.nextcloud =
     { pkgs, ... }:
@@ -11,7 +11,7 @@
           autoUpdateApps.enable = true;
           config = {
             dbtype = "sqlite";
-            adminpassFile = "/etc/nextcloud-admin-pass";
+            adminpassFile = config.sops.secrets."default_nextcloud_admin_pass".path;
           };
           https = true;
           settings = {
