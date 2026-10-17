@@ -20,6 +20,8 @@
             default_phone_region = "DK";
             log_type = "systemd";
             serverid = 0;
+          };
+          phpOptions = {
             "opcache.interned_strings_buffer" = "32";
           };
 
