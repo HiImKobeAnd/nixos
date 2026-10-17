@@ -1,7 +1,7 @@
-{ config, ... }:
+{ ... }:
 {
   flake.nixosModules.nextcloud =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       services = {
         nextcloud = {
