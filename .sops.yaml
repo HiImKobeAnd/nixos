@@ -1,0 +1,9 @@
+keys:
+  - &desktop_hiimkobeand age1keqx5zws0ygahg3r8ascfqnst7g4nzj5etm49cu4sds9tcdzys6spgce5c
+  - &server0_hiimkobeand age1fjym0lhal6rtpxk0t3l3asr46279ggdsyyhnvx9vt7l85x9dsu0qva5rdm
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+    - age:
+      - *desktop_hiimkobeand
+      - *server0_hiimkobeand

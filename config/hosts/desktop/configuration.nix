@@ -1,11 +1,10 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
   flake.nixosModules.desktopConfiguration =
     {
       pkgs,
       lib,
       config,
-      inputs,
       ...
     }:
     {
@@ -53,7 +52,14 @@
         self.nixosModules.freecad
         self.nixosModules.ollama
         self.nixosModules.deploy-rs
+        inputs.sops-nix.nixosModules.sops
       ];
+
+      sops = {
+        defaultSopsFile = ../../secrets/secrets.yaml;
+        defaultSopsFormat = "yaml";
+        age.sshKeyPaths = [ "/home/user/.config/sops/age/keys.txt" ];
+      };
 
       nixpkgs.overlays = [
         (final: prev: {
