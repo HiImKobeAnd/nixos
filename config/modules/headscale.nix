@@ -50,19 +50,6 @@
                 proxyWebsockets = true;
               };
             };
-            # "cloud.hiimkobeand.net" = {
-            #   forceSSL = true;
-            #   enableACME = true;
-            #   locations."/" = {
-            #     proxyPass = "http://127.0.0.1:8080";
-            #     proxyWebsockets = true;
-            #     extraConfig = ''
-            #       allow 100.64.0.0/10;
-            #       allow 127.0.0.1;
-            #       deny all;
-            #     '';
-            #   };
-            # };
           };
         };
       };
@@ -73,6 +60,14 @@
       security.acme = {
         defaults.email = "hiimkobeand@gmail.com";
         acceptTerms = true;
+        # certs = {
+        #   "hiimkobeand.net" = {
+        #     domain = "*.hiimkobeand.net";
+        #     group = "nginx";
+        #     dnsProvider = "cloudflare";
+        #     environmentFile = "/etc/cloudflare-dns-key";
+        #   };
+        # };
       };
     };
 }
