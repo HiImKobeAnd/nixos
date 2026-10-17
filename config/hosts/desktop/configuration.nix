@@ -58,7 +58,7 @@
       sops = {
         defaultSopsFile = ../../secrets/secrets.yaml;
         defaultSopsFormat = "yaml";
-        age.sshKeyPaths = [ "/home/user/.config/sops/age/keys.txt" ];
+        age.sshKeyPaths = [ "/home/hiimkobeand/.config/sops/age/keys.txt" ];
       };
 
       nixpkgs.overlays = [
