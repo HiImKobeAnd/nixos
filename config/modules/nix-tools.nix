@@ -11,6 +11,7 @@
         nil
         nixfmt
         devenv
+        sops
       ];
       programs.direnv = {
         enable = true;
