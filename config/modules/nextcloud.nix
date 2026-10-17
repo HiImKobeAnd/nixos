@@ -16,12 +16,10 @@
           https = true;
           settings = {
             trusted_proxies = [ "127.0.0.1" ];
-            settings = {
-              maintenance_window_start = 1;
-              default_phone_region = "DK";
-              log_type = "systemd";
-              serverid = 0;
-            };
+            maintenance_window_start = 1;
+            default_phone_region = "DK";
+            log_type = "systemd";
+            serverid = 0;
           };
 
           extraAppsEnable = true;
