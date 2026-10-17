@@ -17,6 +17,8 @@
         defaultSopsFile = ../../../secrets/secrets.yaml;
         defaultSopsFormat = "yaml";
         age.keyFile = "/home/server0/.config/sops/age/keys.txt";
+        secrets."default_nextcloud_admin_pass" = { };
+        secrets."cloudflare_dns_key" = { };
       };
 
       boot.loader.systemd-boot.enable = true;
