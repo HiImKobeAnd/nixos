@@ -65,7 +65,7 @@
             domain = "*.hiimkobeand.net";
             group = "nginx";
             dnsProvider = "cloudflare";
-            environmentFile = config.sops.secrets."cloudflare_dns_key";
+            environmentFile = config.sops.secrets."cloudflare_dns_key".path;
           };
         };
       };
