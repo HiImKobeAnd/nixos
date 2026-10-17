@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   flake.nixosModules.headscale =
     { pkgs, ... }:
@@ -60,14 +60,14 @@
       security.acme = {
         defaults.email = "hiimkobeand@gmail.com";
         acceptTerms = true;
-        # certs = {
-        #   "hiimkobeand.net" = {
-        #     domain = "*.hiimkobeand.net";
-        #     group = "nginx";
-        #     dnsProvider = "cloudflare";
-        #     environmentFile = "/etc/cloudflare-dns-key";
-        #   };
-        # };
+        certs = {
+          "hiimkobeand.net" = {
+            domain = "*.hiimkobeand.net";
+            group = "nginx";
+            dnsProvider = "cloudflare";
+            environmentFile = config.sops.secrets."cloudflare_dns_key";
+          };
+        };
       };
     };
 }

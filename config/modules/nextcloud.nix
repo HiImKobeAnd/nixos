@@ -34,6 +34,11 @@
           forceSSL = true;
           enableACME = true;
           extraConfig = ''
+            error_page 403 =444 /empty_err;
+                  location = /empty_err {
+                    return 444;
+                  }
+
             allow 100.64.0.0/10;
             allow 127.0.0.1;
             deny all;
