@@ -53,7 +53,6 @@
         self.nixosModules.freecad
         self.nixosModules.ollama
         self.nixosModules.deploy-rs
-        self.nixosModules.sops
       ];
 
       nixpkgs.overlays = [
