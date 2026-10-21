@@ -3,11 +3,7 @@
   flake.nixosModules.games =
     { pkgs, ... }:
     {
-      imports = [
-        inputs.aagl.nixosModules.default
-      ];
       environment.systemPackages = with pkgs; [
-        # faugus-launcher
         osu-lazer-bin
         # (retroarch.withCores (
         #   cores: with cores; [
@@ -24,14 +20,6 @@
         # pkgs.gamescope
         # ];
         # })
-      ];
-      programs = {
-        # honkers-railway-launcher.enable = true;
-        # anime-games-launcher.enable = true;
-      };
-      nix.settings.substituters = [ "https://ezkea.cachix.org" ];
-      nix.settings.trusted-public-keys = [
-        "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
       ];
     };
 }

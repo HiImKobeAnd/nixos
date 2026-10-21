@@ -4,24 +4,24 @@ current_gen := `sudo nix-env -p /nix/var/nix/profiles/system --list-generations 
 default: switch
 
 switch: _pre && _post
-    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always -q
+  nh os switch {{ dotfiles_location }} --hostname {{ env_var('USER') }} --diff always -q
 
 reboot: _pre && _post
-    nh os boot {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always
+  nh os boot {{ dotfiles_location }} --hostname {{ env_var('USER') }} --diff always
 
 switch-1j: _pre && _post
-    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --max-jobs 1 --cores 1 --diff always
+  nh os switch {{ dotfiles_location }} --hostname {{ env_var('USER') }} --max-jobs 1 --cores 1 --diff always
 
 update: _pre && _post
-    nh os switch {{dotfiles_location}} --hostname {{env_var('USER')}} --diff always --update
+  nh os switch {{ dotfiles_location }} --hostname {{ env_var('USER') }} --diff always --update
 
 clean:
-    nh clean all --keep 3 --no-direnv --optimise
+  nh clean all --keep 3 --no-direnv --optimise
 
 _pre:
-    git add .
-    @echo "NixOS Rebuilding..."
+  # git add .
+  @echo "NixOS Rebuilding..."
 
 _post:
-    @echo "Committing generation: {{current_gen}}"
-    git commit -am "{{current_gen}}"
+  @echo "Committing generation: {{ current_gen }}"
+  git commit -am "{{ current_gen }}"

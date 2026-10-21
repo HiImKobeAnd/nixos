@@ -50,9 +50,10 @@
         self.nixosModules.tailscale
         self.nixosModules.email
         self.nixosModules.freecad
-        self.nixosModules.ollama
+        # self.nixosModules.ollama
         self.nixosModules.deploy-rs
         inputs.sops-nix.nixosModules.sops
+        self.hjemModules.desktop
       ];
 
       sops = {
@@ -85,8 +86,7 @@
       boot.loader.efi.canTouchEfiVariables = true;
       boot.extraModulePackages = with config.boot.kernelPackages; [
         # rtl8852bu # For Asus AX55 nano wifi dongle
-        ddcci-driver # For backlight control
-        v4l2loopback
+        # ddcci-driver # For backlight control
       ];
 
       boot.blacklistedKernelModules = [

@@ -1,10 +1,9 @@
-{ self, inputs, ... }:
+{ ... }:
 {
   flake.nixosModules.desktopHardware =
     {
       config,
       lib,
-      pkgs,
       modulesPath,
       ...
     }:
@@ -22,13 +21,11 @@
           "usb_storage"
           "sd_mod"
         ];
-        initrd.kernelModules = [ ];
         kernelModules = [
           "kvm-intel"
           "ddcci-backlight" # For backlight control
           "i2c-dev"
         ];
-        extraModulePackages = [ ];
         kernelParams = [
           "mem_sleep_default=deep"
         ];
@@ -37,15 +34,6 @@
         device = "/dev/disk/by-uuid/984df510-041f-4680-886c-56982c1589b7";
         fsType = "ext4";
       };
-
-      # fileSystems."/home/hiimkobeand/Games" = {
-      #   device = "/dev/disk/by-uuid/8be8a434-5206-45a2-b162-fa1d058f7368";
-      #   fsType = "ext4";
-      #   options = [
-      #     "users"
-      #     "nofail"
-      #   ];
-      # };
 
       fileSystems."/boot" = {
         device = "/dev/disk/by-uuid/816A-3496";

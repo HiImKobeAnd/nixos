@@ -7,7 +7,7 @@
     nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     programs.nvf = {
       enable = true;
-      settings = import ../../nvf/config/settings.nix;
+      settings = import ../../extra/nvf.nix;
     };
   };
 
@@ -17,7 +17,7 @@
       nvfConfig = inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = [
-          (import ../../nvf/config/settings.nix)
+          (import ../../extra/nvf.nix)
         ];
       };
       nvfPackage = nvfConfig.neovim;

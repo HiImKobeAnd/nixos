@@ -165,7 +165,7 @@
       lua.enable = true;
       markdown.enable = true;
       python.enable = true;
-      sql.enable = true;
+      # sql.enable = true;
       css.enable = true;
       toml.enable = true;
       # typescript.enable = true;
