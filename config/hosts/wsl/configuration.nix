@@ -23,7 +23,6 @@
         self.nixosModules.comma
 
         # Applications
-        self.nixosModules.nixvim
         self.nixosModules.nvf
 
         # Services
