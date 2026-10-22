@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.nixosModules.nextcloud =
-    { pkgs, config, ... }:
+    { pkgs, ... }:
     {
       services = {
         nextcloud = {
@@ -9,10 +9,7 @@
           package = pkgs.nextcloud35;
           hostName = "cloud.hiimkobeand.net";
           autoUpdateApps.enable = true;
-          config = {
-            dbtype = "sqlite";
-            adminpassFile = config.sops.secrets."default_nextcloud_admin_pass".path;
-          };
+          config.dbtype = "sqlite";
           https = true;
           settings = {
             trusted_proxies = [ "127.0.0.1" ];
