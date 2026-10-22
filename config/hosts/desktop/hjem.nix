@@ -10,7 +10,7 @@
         user = "hiimkobeand";
         directory = "/home/hiimkobeand";
         xdg.config.files = {
-          # "hypr".source = "./config/non-nix/hyprland";
+          # "hypr".source = ../../../extra/hyprland;
           "git/config".clobber = true;
           "git/config".text = ''
             [user]
