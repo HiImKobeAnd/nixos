@@ -159,7 +159,10 @@
       go.enable = true;
       make.enable = true;
       env.enable = true;
-      html.enable = true;
+      html = {
+        enable = true;
+        format.type = [ "prettier" ];
+      };
       json.enable = true;
       just.enable = true;
       lua.enable = true;
