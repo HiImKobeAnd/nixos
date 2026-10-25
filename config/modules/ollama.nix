@@ -15,6 +15,6 @@
         after = [ "graphical.target" ];
         wantedBy = lib.mkForce [ "graphical.target" ];
       };
-      services.open-webui.enable = true;
+      # services.open-webui.enable = true;
     };
 }

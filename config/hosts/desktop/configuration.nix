@@ -50,7 +50,7 @@
         self.nixosModules.tailscale
         self.nixosModules.email
         self.nixosModules.freecad
-        # self.nixosModules.ollama
+        self.nixosModules.ollama
         self.nixosModules.deploy-rs
         inputs.sops-nix.nixosModules.sops
         self.hjemModules.desktop
