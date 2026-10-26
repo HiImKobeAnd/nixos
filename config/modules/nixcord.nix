@@ -40,7 +40,7 @@
         #       }
         #     );
 
-        # user = "hiimkobeand";
+        user = "hiimkobeand";
         # config = {
         #   themeLinks = [
         #     "https://raw.githubusercontent.com/Costeer/Gruvbox-Material-Themes/refs/heads/main/Discord%20Theme/materialgruvbox-2.theme.css"
