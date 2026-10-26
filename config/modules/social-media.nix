@@ -7,6 +7,7 @@
         # gajim
         # element-desktop
         grayjay
+        dorion
       ];
     };
 }

@@ -36,6 +36,10 @@
                   fetcherVersion = 4;
                   hash = "sha256-xvb3DfqmcCyOpGHaGjeCJxClfVcHpdezyzxLXNiz72k=";
                 };
+                postPatch = (oldAttrs.postPatch or "") + ''
+                  sed -i 's/"electron": "[^"]*43[^"]*"/"electron": "^44.0.0"/g' package.json
+                '';
+
               }
             );
 
