@@ -19,7 +19,7 @@ clean:
   nh clean all --keep 3 --no-direnv --optimise
 
 _pre:
-  # git add .
+  git add .
   @echo "NixOS Rebuilding..."
 
 _post:
