@@ -372,13 +372,13 @@
       "locked": {
         "lastModified": 1793021930,
         "narHash": "sha256-cBt5t1EAuEPllPznQa5qAAr6UqZoIqIGra2TKbkqY50=",
-        "owner": "flameflag",
+        "owner": "4evy",
         "repo": "nixcord",
         "rev": "5d9cbc77242752bd5353df2407ee9cd9966fe466",
         "type": "github"
       },
       "original": {
-        "owner": "flameflag",
+        "owner": "4evy",
         "repo": "nixcord",
         "type": "github"
       }

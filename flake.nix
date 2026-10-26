@@ -12,7 +12,7 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord.url = "github:flameflag/nixcord";
+    nixcord.url = "github:4evy/nixcord";
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
