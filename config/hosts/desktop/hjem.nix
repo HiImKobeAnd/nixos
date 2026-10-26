@@ -11,6 +11,7 @@
         directory = "/home/hiimkobeand";
         xdg.config.files = {
           # "hypr".source = ../../../extra/hyprland;
+
           "git/config".clobber = true;
           "git/config".text = ''
             [user]
@@ -35,6 +36,12 @@
 
             [merge]
               conflictStyle = zdiff3
+          '';
+
+          "alacritty/alacritty.toml".clobber = true;
+          "alacritty/alacritty.toml".text = ''
+            [terminal]
+            shell="fish"
           '';
         };
       };
