@@ -56,10 +56,6 @@
         self.hjemModules.desktop
       ];
 
-      environment.systemPackages = [
-        pkgs.legcord
-      ];
-
       sops = {
         defaultSopsFile = ../../../secrets/secrets.yaml;
         defaultSopsFormat = "yaml";
