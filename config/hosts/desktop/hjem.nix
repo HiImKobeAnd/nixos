@@ -42,6 +42,8 @@
           "alacritty/alacritty.toml".text = ''
             [terminal]
             shell="fish"
+            [general]
+            import = ["~/.config/alacritty/themes/noctalia.toml"]
           '';
         };
       };
