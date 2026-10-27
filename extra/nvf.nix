@@ -148,7 +148,6 @@
 
       nix = {
         enable = true;
-        format.type = [ "nixfmt" ];
         lsp.servers = [ "nixd" ];
       };
       rust.enable = true;

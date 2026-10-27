@@ -1,10 +1,7 @@
 { lib, ... }:
 {
   flake.nixosModules.docker =
-    {
-      pkgs,
-      ...
-    }:
+    { pkgs, ... }:
     {
       environment.systemPackages = [
         pkgs.nvidia-container-toolkit
@@ -18,7 +15,7 @@
       };
 
       systemd.services.nvidia-container-toolkit-cdi-generator = {
-        serviceConfig.ExecStartPre = lib.mkForce [];
+        serviceConfig.ExecStartPre = lib.mkForce [ ];
       };
     };
 }
