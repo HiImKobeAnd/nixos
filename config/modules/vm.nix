@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.vm = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       qemu

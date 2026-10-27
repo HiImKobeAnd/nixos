@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.syncthing = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       syncthing

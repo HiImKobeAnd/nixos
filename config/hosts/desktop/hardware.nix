@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.desktopHardware = {
     config,
     lib,

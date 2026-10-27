@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.python = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       uv

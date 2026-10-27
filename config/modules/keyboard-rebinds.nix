@@ -1,5 +1,5 @@
-{...}: {
-  flake.nixosModules.keyboard-rebinds = {...}: {
+_: {
+  flake.nixosModules.keyboard-rebinds = _: {
     services.keyd = {
       enable = true;
       keyboards = {

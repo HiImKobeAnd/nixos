@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.scx-scheduler = {pkgs, ...}: {
     services.scx = {
       enable = true;

@@ -1,5 +1,5 @@
-{...}: {
-  flake.nixosModules.ssh = {...}: {
+_: {
+  flake.nixosModules.ssh = _: {
     services.openssh = {
       enable = true;
       settings.PasswordAuthentication = false;

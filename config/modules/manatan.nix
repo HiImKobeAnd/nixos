@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.manatan = {pkgs, ...}: let
     manatan = pkgs.callPackage (
       {

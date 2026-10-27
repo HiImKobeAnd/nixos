@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.fish = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       eza

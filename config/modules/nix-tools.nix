@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.nix-tools = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       nh

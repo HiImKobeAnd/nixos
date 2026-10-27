@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.hobby-applications = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       krita

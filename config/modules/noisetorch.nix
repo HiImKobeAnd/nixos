@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.audio-applications = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       noisetorch

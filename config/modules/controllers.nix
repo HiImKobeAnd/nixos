@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.controllers = {pkgs, ...}: {
     hardware.uinput.enable = true;
     services = {

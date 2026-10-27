@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.basic-terminal-tools = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       curl

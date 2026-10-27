@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.librewolf = {pkgs, ...}: {
     programs.firefox = {
       enable = true;

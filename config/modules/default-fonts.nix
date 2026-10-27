@@ -1,4 +1,4 @@
-{...}: {
+_: {
   flake.nixosModules.default-fonts = {pkgs, ...}: {
     fonts.packages = with pkgs; [
       noto-fonts
