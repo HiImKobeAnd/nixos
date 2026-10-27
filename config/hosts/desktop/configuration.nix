@@ -40,20 +40,23 @@
         self.nixosModules.obs-studio
         self.nixosModules.learning
         self.nixosModules.nixcord
-        self.nixosModules.music
-        self.nixosModules.office-suite
         self.nixosModules.nvf
-        self.nixosModules.vlc
         self.nixosModules.helium
-        self.nixosModules.aicode
         self.nixosModules.docker
         self.nixosModules.tailscale
-        self.nixosModules.email
-        self.nixosModules.freecad
         self.nixosModules.ollama
         self.nixosModules.deploy-rs
         inputs.sops-nix.nixosModules.sops
         self.hjemModules.desktop
+      ];
+
+      environment.systemPackages = with pkgs; [
+        opencode
+        thunderbird
+        vlc
+        libreoffice
+        pear-desktop
+        freecad
       ];
 
       sops = {
