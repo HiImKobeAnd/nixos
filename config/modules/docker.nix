@@ -1,21 +1,18 @@
-{ lib, ... }:
-{
-  flake.nixosModules.docker =
-    { pkgs, ... }:
-    {
-      environment.systemPackages = [
-        pkgs.nvidia-container-toolkit
-        pkgs.devcontainer
-      ];
-      hardware.nvidia-container-toolkit.enable = true;
-      virtualisation.docker.enable = true;
-      virtualisation.docker.rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
-
-      systemd.services.nvidia-container-toolkit-cdi-generator = {
-        serviceConfig.ExecStartPre = lib.mkForce [ ];
-      };
+{lib, ...}: {
+  flake.nixosModules.docker = {pkgs, ...}: {
+    environment.systemPackages = [
+      pkgs.nvidia-container-toolkit
+      pkgs.devcontainer
+    ];
+    hardware.nvidia-container-toolkit.enable = true;
+    virtualisation.docker.enable = true;
+    virtualisation.docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
     };
+
+    systemd.services.nvidia-container-toolkit-cdi-generator = {
+      serviceConfig.ExecStartPre = lib.mkForce [];
+    };
+  };
 }

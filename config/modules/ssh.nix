@@ -1,12 +1,9 @@
-{ ... }:
-{
-  flake.nixosModules.ssh =
-    { ... }:
-    {
-      services.openssh = {
-        enable = true;
-        settings.PasswordAuthentication = false;
-        settings.KbdInteractiveAuthentication = false;
-      };
+{...}: {
+  flake.nixosModules.ssh = {...}: {
+    services.openssh = {
+      enable = true;
+      settings.PasswordAuthentication = false;
+      settings.KbdInteractiveAuthentication = false;
     };
+  };
 }

@@ -1,8 +1,5 @@
-{ ... }:
-{
-  flake.nixosModules.email =
-    { pkgs, ... }:
-    {
-      programs.thunderbird.enable = true;
-    };
+{...}: {
+  flake.nixosModules.email = {pkgs, ...}: {
+    programs.thunderbird.enable = true;
+  };
 }

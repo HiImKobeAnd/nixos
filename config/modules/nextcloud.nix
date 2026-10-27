@@ -1,46 +1,43 @@
-{ ... }:
-{
-  flake.nixosModules.nextcloud =
-    { pkgs, ... }:
-    {
-      services = {
-        nextcloud = {
-          enable = true;
-          package = pkgs.nextcloud35;
-          hostName = "cloud.hiimkobeand.net";
-          autoUpdateApps.enable = true;
-          config.dbtype = "sqlite";
-          https = true;
-          settings = {
-            trusted_proxies = [ "127.0.0.1" ];
-            maintenance_window_start = 1;
-            default_phone_region = "DK";
-            log_type = "systemd";
-            serverid = 0;
-          };
-          phpOptions = {
-            "opcache.interned_strings_buffer" = "32";
-          };
-
-          extraAppsEnable = true;
-          extraApps = {
-            inherit (pkgs.nextcloud35Packages.apps) calendar contacts;
-          };
+{...}: {
+  flake.nixosModules.nextcloud = {pkgs, ...}: {
+    services = {
+      nextcloud = {
+        enable = true;
+        package = pkgs.nextcloud35;
+        hostName = "cloud.hiimkobeand.net";
+        autoUpdateApps.enable = true;
+        config.dbtype = "sqlite";
+        https = true;
+        settings = {
+          trusted_proxies = ["127.0.0.1"];
+          maintenance_window_start = 1;
+          default_phone_region = "DK";
+          log_type = "systemd";
+          serverid = 0;
         };
-        nginx.virtualHosts."cloud.hiimkobeand.net" = {
-          forceSSL = true;
-          enableACME = true;
-          extraConfig = ''
-            error_page 403 =444 /empty_err;
-                  location = /empty_err {
-                    return 444;
-                  }
+        phpOptions = {
+          "opcache.interned_strings_buffer" = "32";
+        };
 
-            allow 100.64.0.0/10;
-            allow 127.0.0.1;
-            deny all;
-          '';
+        extraAppsEnable = true;
+        extraApps = {
+          inherit (pkgs.nextcloud35Packages.apps) calendar contacts;
         };
       };
+      nginx.virtualHosts."cloud.hiimkobeand.net" = {
+        forceSSL = true;
+        enableACME = true;
+        extraConfig = ''
+          error_page 403 =444 /empty_err;
+                location = /empty_err {
+                  return 444;
+                }
+
+          allow 100.64.0.0/10;
+          allow 127.0.0.1;
+          deny all;
+        '';
+      };
     };
+  };
 }

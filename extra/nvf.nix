@@ -2,8 +2,7 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   vim = {
     viAlias = true;
     vimAlias = false;
@@ -72,13 +71,13 @@
             (lib.getExe pkgs.luau-lsp)
             "lsp"
           ];
-          filetypes = [ "luau" ];
+          filetypes = ["luau"];
           root_markers = [
             ".git"
             ".luaurc"
           ];
           settings.luau-lsp = {
-            types.definitionFiles = [ "noctalia.d.luau" ];
+            types.definitionFiles = ["noctalia.d.luau"];
           };
         };
       };
@@ -129,7 +128,6 @@
             leapBackwardTo = "<leader>sS";
             leapForwardTill = "<leader>sx";
             leapForwardTo = "<leader>ss";
-
           };
         };
       };
@@ -148,7 +146,7 @@
 
       nix = {
         enable = true;
-        lsp.servers = [ "nixd" ];
+        lsp.servers = ["nixd"];
       };
       rust.enable = true;
       fish.enable = true;
@@ -160,7 +158,7 @@
       env.enable = true;
       html = {
         enable = true;
-        format.type = [ "prettier" ];
+        format.type = ["prettier"];
       };
       json.enable = true;
       just.enable = true;
@@ -181,7 +179,7 @@
       extensions = [
         {
           name = "fzf";
-          packages = [ pkgs.vimPlugins.telescope-fzf-native-nvim ];
+          packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
           setup.fzf.fuzzy = true;
         }
       ];
@@ -200,30 +198,34 @@
         open = "<leader>so";
       };
     };
-    luaConfigRC.telescope-hidden = /* lua */ ''
-      function _G.toggle_telescope_hidden()
-        local actions_state = require('telescope.actions.state')
-        local picker = actions_state.get_current_picker()
-        vim.g.telescope_hidden = not vim.g.telescope_hidden
-        local opts = {
-          prompt_title = vim.g.telescope_hidden and 'Find Files (hidden)' or 'Find Files',
-          default_text = actions_state.get_current_line(),
-        }
-        if picker and picker.cwd then
-          opts.cwd = picker.cwd
-        end
-        if vim.g.telescope_hidden then
-          local base_cmd = (require('telescope.config').pickers.find_files or {}).find_command
-          local cmd = type(base_cmd) == 'table' and vim.deepcopy(base_cmd) or { 'fd', '--type', 'file' }
-          vim.list_extend(cmd, { '--hidden', '--no-ignore' })
-          for _, dir in ipairs({ '.git', '.devenv', '.direnv', '.cache', 'node_modules', 'dist', 'build', 'target', 'result', '.mypy_cache' }) do
-            vim.list_extend(cmd, { '--exclude', dir })
+    luaConfigRC.telescope-hidden =
+      /*
+      lua
+      */
+      ''
+        function _G.toggle_telescope_hidden()
+          local actions_state = require('telescope.actions.state')
+          local picker = actions_state.get_current_picker()
+          vim.g.telescope_hidden = not vim.g.telescope_hidden
+          local opts = {
+            prompt_title = vim.g.telescope_hidden and 'Find Files (hidden)' or 'Find Files',
+            default_text = actions_state.get_current_line(),
+          }
+          if picker and picker.cwd then
+            opts.cwd = picker.cwd
           end
-          opts.find_command = cmd
+          if vim.g.telescope_hidden then
+            local base_cmd = (require('telescope.config').pickers.find_files or {}).find_command
+            local cmd = type(base_cmd) == 'table' and vim.deepcopy(base_cmd) or { 'fd', '--type', 'file' }
+            vim.list_extend(cmd, { '--hidden', '--no-ignore' })
+            for _, dir in ipairs({ '.git', '.devenv', '.direnv', '.cache', 'node_modules', 'dist', 'build', 'target', 'result', '.mypy_cache' }) do
+              vim.list_extend(cmd, { '--exclude', dir })
+            end
+            opts.find_command = cmd
+          end
+          require('telescope.builtin').find_files(opts)
         end
-        require('telescope.builtin').find_files(opts)
-      end
-    '';
+      '';
     comments.comment-nvim = {
       enable = true;
       mappings.toggleSelectedLine = "<leader>c";

@@ -1,13 +1,10 @@
-{ ... }:
-{
-  flake.nixosModules.python =
-    { pkgs, ... }:
-    {
-      environment.systemPackages = with pkgs; [
-        uv
-      ];
-      # For Python UV
-      environment.localBinInPath = true;
-      programs.nix-ld.enable = true;
-    };
+{...}: {
+  flake.nixosModules.python = {pkgs, ...}: {
+    environment.systemPackages = with pkgs; [
+      uv
+    ];
+    # For Python UV
+    environment.localBinInPath = true;
+    programs.nix-ld.enable = true;
+  };
 }

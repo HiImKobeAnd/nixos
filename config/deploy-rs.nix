@@ -2,10 +2,9 @@
   self,
   inputs,
   ...
-}:
-{
+}: {
   flake = {
-    nixosModules.deploy-rs = { pkgs, ... }: {
+    nixosModules.deploy-rs = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         deploy-rs
       ];
@@ -18,9 +17,10 @@
         path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.server0;
       };
     };
-    checks = builtins.mapAttrs (
-      system: deployLib: deployLib.deployChecks self.deploy
-    ) inputs.deploy-rs.lib;
+    checks =
+      builtins.mapAttrs (
+        system: deployLib: deployLib.deployChecks self.deploy
+      )
+      inputs.deploy-rs.lib;
   };
-
 }

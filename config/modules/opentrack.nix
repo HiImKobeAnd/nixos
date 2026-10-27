@@ -1,10 +1,7 @@
-{ ... }:
-{
-  flake.nixosModules.opentrack =
-    { pkgs, ... }:
-    {
-      environment.systemPackages = with pkgs; [
-        opentrack
-      ];
-    };
+{...}: {
+  flake.nixosModules.opentrack = {pkgs, ...}: {
+    environment.systemPackages = with pkgs; [
+      opentrack
+    ];
+  };
 }

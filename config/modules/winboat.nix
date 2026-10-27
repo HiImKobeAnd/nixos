@@ -1,10 +1,7 @@
-{ ... }:
-{
-  flake.nixosModules.winboat =
-    { pkgs, ... }:
-    {
-      environment.systemPackages = with pkgs; [
-        winboat
-      ];
-    };
+{...}: {
+  flake.nixosModules.winboat = {pkgs, ...}: {
+    environment.systemPackages = with pkgs; [
+      winboat
+    ];
+  };
 }

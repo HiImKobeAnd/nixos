@@ -1,8 +1,5 @@
-{ ... }:
-{
-  flake.nixosModules.freecad =
-    { pkgs, ... }:
-    {
-      environment.systemPackages = [ pkgs.freecad ];
-    };
+{...}: {
+  flake.nixosModules.freecad = {pkgs, ...}: {
+    environment.systemPackages = [pkgs.freecad];
+  };
 }
