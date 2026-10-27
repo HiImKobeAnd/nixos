@@ -26,7 +26,17 @@ _: {
       kernelParams = [
         "mem_sleep_default=deep"
       ];
+      loader.systemd-boot.enable = true;
+      loader.efi.canTouchEfiVariables = true;
+      extraModulePackages = with config.boot.kernelPackages; [
+        # rtl8852bu # For Asus AX55 nano wifi dongle
+        # ddcci-driver # For backlight control
+      ];
+      blacklistedKernelModules = [
+        "ucsi_ccg" # Stops my DGPU from trying to load USB C Drivers which should result in faster startup
+      ];
     };
+
     fileSystems."/" = {
       device = "/dev/disk/by-uuid/984df510-041f-4680-886c-56982c1589b7";
       fsType = "ext4";

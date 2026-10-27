@@ -30,18 +30,24 @@
       # self.nixosModules.docker
     ];
 
-    nix.settings = {
-      substituters = [
-        "https://nix-community.cachix.org"
-      ];
-      trusted-public-keys = [
-        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      ];
+    nix = {
+      settings = {
+        substituters = [
+          "https://nix-community.cachix.org"
+        ];
+        trusted-public-keys = [
+          "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        ];
+        auto-optimise-store = true;
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
+      };
+      optimise.automatic = true;
     };
 
     # Maintenance
-    nix.optimise.automatic = true;
-    nix.settings.auto-optimise-store = true;
 
     # Nixpkgs
     nixpkgs.config.allowUnfree = true;
@@ -49,11 +55,6 @@
     # WSL
     wsl.enable = true;
     wsl.defaultUser = "wsl";
-
-    nix.settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
 
     system.stateVersion = "25.05";
   };

@@ -1,12 +1,7 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+_: {
   flake.nixosModules.server0Hardware = {
     config,
     lib,
-    pkgs,
     modulesPath,
     ...
   }: {
@@ -14,18 +9,20 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-    boot.initrd.availableKernelModules = [
-      "xhci_pci"
-      "ahci"
-      "nvme"
-      "usbhid"
-      "usb_storage"
-      "sd_mod"
-      "sdhci_pci"
-    ];
-    boot.initrd.kernelModules = [];
-    boot.kernelModules = ["kvm-intel"];
-    boot.extraModulePackages = [];
+    boot = {
+      initrd.availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "nvme"
+        "usbhid"
+        "usb_storage"
+        "sd_mod"
+        "sdhci_pci"
+      ];
+      initrd.kernelModules = [];
+      kernelModules = ["kvm-intel"];
+      extraModulePackages = [];
+    };
 
     fileSystems."/" = {
       device = "/dev/disk/by-uuid/4c088eb9-1768-475c-8425-f9841e50eec1";

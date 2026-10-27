@@ -60,22 +60,25 @@
       freecad
     ];
 
+    # Secrets
     sops = {
       defaultSopsFile = ../../../secrets/secrets.yaml;
       defaultSopsFormat = "yaml";
       age.keyFile = "/home/hiimkobeand/.config/sops/age/keys.txt";
     };
 
-    nixpkgs.overlays = [
-      (final: prev: {
-        # pnpm_10_29_2 = final.pnpm_10;
-        # electron_40 = final.electron_41;
-      })
-    ];
-
-    nixpkgs.config.permittedInsecurePackages = [
-      "firefox-esr-140-bin-unwrapped-140.17.0esr"
-    ];
+    nixpkgs = {
+      overlays = [
+        (final: prev: {
+          # pnpm_10_29_2 = final.pnpm_10;
+          # electron_40 = final.electron_41;
+        })
+      ];
+      config.permittedInsecurePackages = [
+        "firefox-esr-140-bin-unwrapped-140.17.0esr"
+      ];
+      config.allowUnfree = true;
+    };
 
     # Sound
     security.rtkit.enable = true;
@@ -84,27 +87,6 @@
       alsa.enable = true;
       pulse.enable = true;
     };
-
-    # Bootloader
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-    boot.extraModulePackages = with config.boot.kernelPackages; [
-      # rtl8852bu # For Asus AX55 nano wifi dongle
-      # ddcci-driver # For backlight control
-    ];
-
-    boot.blacklistedKernelModules = [
-      "ucsi_ccg" # Stops my DGPU from trying to load USB C Drivers which should result in faster startup
-    ];
-
-    # For backlight control
-    services.udev.extraRules = let
-      bash = "${pkgs.bash}/bin/bash";
-      ddcciDev = "NVIDIA i2c adapter 5 at 1:00.0";
-      ddcciNode = "sys/bus/i2c/devices/i2c-14/new_device";
-    in ''
-      SUBSYSTEM=="i2c", ACTION=="add", ATTR{name}=="${ddcciDev}", RUN+="${bash} -c 'sleep 30; printf ddcci\ 0x37 > ${ddcciNode}'"
-    '';
 
     # Bluetooth
     hardware.bluetooth.enable = true;
@@ -128,6 +110,14 @@
       ];
     };
 
+    # For backlight control
+    services.udev.extraRules = let
+      bash = "${pkgs.bash}/bin/bash";
+      ddcciDev = "NVIDIA i2c adapter 5 at 1:00.0";
+      ddcciNode = "sys/bus/i2c/devices/i2c-14/new_device";
+    in ''
+      SUBSYSTEM=="i2c", ACTION=="add", ATTR{name}=="${ddcciDev}", RUN+="${bash} -c 'sleep 30; printf ddcci\ 0x37 > ${ddcciNode}'"
+    '';
     hardware.i2c.enable = true;
 
     virtualisation.libvirtd.enable = true;
@@ -138,7 +128,6 @@
     };
 
     # Nixpkgs
-    nixpkgs.config.allowUnfree = true;
     nix.settings = {
       substituters = [
         "https://nix-community.cachix.org"
