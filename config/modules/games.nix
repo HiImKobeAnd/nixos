@@ -1,4 +1,4 @@
-{inputs, ...}: {
+_: {
   flake.nixosModules.games = {pkgs, ...}: {
     environment.systemPackages = with pkgs; [
       osu-lazer-bin

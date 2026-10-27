@@ -1,9 +1,5 @@
 {inputs, ...}: {
-  flake.nixosModules.helium = {
-    pkgs,
-    system,
-    ...
-  }: {
+  flake.nixosModules.helium = _: {
     imports = [
       inputs.helium.nixosModules.default
     ];

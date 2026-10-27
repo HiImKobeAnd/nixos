@@ -3,12 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.wslConfiguration = {
-    pkgs,
-    lib,
-    config,
-    ...
-  }: {
+  flake.nixosModules.wslConfiguration = {...}: {
     imports = [
       # System
       inputs.nixos-wsl.nixosModules.default

@@ -1,9 +1,5 @@
 _: {
-  flake.nixosModules.headscale = {
-    pkgs,
-    config,
-    ...
-  }: {
+  flake.nixosModules.headscale = {config, ...}: {
     services = {
       headscale = {
         enable = true;
