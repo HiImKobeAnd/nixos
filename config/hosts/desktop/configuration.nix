@@ -6,7 +6,6 @@
   flake.nixosModules.desktopConfiguration = {
     pkgs,
     lib,
-    config,
     ...
   }: {
     imports = [
