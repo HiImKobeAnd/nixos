@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.wslConfiguration = {...}: {
+  flake.nixosModules.wslConfiguration = {pkgs, ...}: {
     imports = [
       # System
       inputs.nixos-wsl.nixosModules.default
@@ -24,6 +24,8 @@
       # Services
       # self.nixosModules.docker
     ];
+
+    environment.systemPackages = with pkgs; [pulseaudio];
 
     # Sound
     security.rtkit.enable = true;
