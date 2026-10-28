@@ -25,6 +25,14 @@
       # self.nixosModules.docker
     ];
 
+    # Sound
+    security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      pulse.enable = true;
+    };
+
     nix = {
       settings = {
         substituters = [
