@@ -32,7 +32,22 @@
     services.pipewire = {
       enable = true;
       alsa.enable = true;
+      alsa.support32Bit = true;
       pulse.enable = true;
+      jack.enable = true;
+    };
+
+    environment.etc = {
+      "asound.conf".text = ''
+          pcm.!default {
+          type pulse
+          server /run/user/1000/pulse/native
+        }
+        ctl.!default {
+          type pulse
+          server /run/user/1000/pulse/native
+        }
+      '';
     };
 
     nix = {
