@@ -3,7 +3,7 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.wslConfiguration = {pkgs, ...}: {
+  flake.nixosModules.wslConfiguration = {...}: {
     imports = [
       # System
       inputs.nixos-wsl.nixosModules.default
@@ -24,35 +24,6 @@
       # Services
       # self.nixosModules.docker
     ];
-
-    environment.systemPackages = with pkgs; [pulseaudio];
-
-    # Sound
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      jack.enable = true;
-    };
-
-    environment.sessionVariables = {
-      PULSE_SERVER = "unix:/mnt/wslg/PulseServer";
-    };
-
-    environment.etc = {
-      "asound.conf".text = ''
-          pcm.!default {
-          type pulse
-          server /run/user/1000/pulse/native
-        }
-        ctl.!default {
-          type pulse
-          server /run/user/1000/pulse/native
-        }
-      '';
-    };
 
     nix = {
       settings = {
