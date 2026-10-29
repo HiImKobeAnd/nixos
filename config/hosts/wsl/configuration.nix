@@ -37,6 +37,10 @@
       jack.enable = true;
     };
 
+    environment.sessionVariables = {
+      PULSE_SERVER = "unix:/mnt/wslg/PulseServer";
+    };
+
     environment.etc = {
       "asound.conf".text = ''
           pcm.!default {
