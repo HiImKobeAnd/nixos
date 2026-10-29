@@ -18,6 +18,8 @@
           [alias]
             st = status;
             aa = add -A;
+            ca = commit --amend
+            pf = push force-with-lease
             ll = log --oneline --decorate --graph;
             last = log -1 HEAD;
             unstage = reset HEAD --;
