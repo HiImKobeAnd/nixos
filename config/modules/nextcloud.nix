@@ -33,6 +33,13 @@ _: {
                   return 444;
                 }
 
+          location = /.well-known/carddav {
+              return 301 $scheme://$host/remote.php/dav;
+          }
+          location = /.well-known/caldav {
+              return 301 $scheme://$host/remote.php/dav;
+          }
+
           allow 100.64.0.0/10;
           allow 127.0.0.1;
           deny all;
