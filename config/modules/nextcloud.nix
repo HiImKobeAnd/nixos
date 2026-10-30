@@ -21,7 +21,7 @@ _: {
 
         extraAppsEnable = true;
         extraApps = {
-          inherit (pkgs.nextcloud35Packages.apps) calendar contacts;
+          inherit (pkgs.nextcloud35Packages.apps) calendar contacts tasks;
         };
       };
       nginx.virtualHosts."cloud.hiimkobeand.net" = {
