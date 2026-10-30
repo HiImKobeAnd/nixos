@@ -53,6 +53,7 @@
     environment.systemPackages = with pkgs; [
       opencode
       thunderbird
+      slack
       vlc
       libreoffice
       pear-desktop
