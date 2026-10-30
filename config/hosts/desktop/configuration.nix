@@ -70,13 +70,13 @@
       overlays = [
         (final: prev: let
           prPkgs = import inputs.nixpkgs-pr-538226 {
-            system = prev.system;
-            config = prev.config;
+            inherit (prev) system;
+            inherit (prev) config;
           };
         in {
           # pnpm_10_29_2 = final.pnpm_10;
           # electron_40 = final.electron_41;
-          steam = prPkgs.steam;
+          steam = prPkgs.steamWithMillennium;
         })
       ];
       config.permittedInsecurePackages = [
