@@ -44,7 +44,8 @@
       self.nixosModules.helium
       self.nixosModules.docker
       self.nixosModules.tailscale
-      self.nixosModules.ollama
+      # self.nixosModules.ollama
+      self.nixosModules.llamacpp
       self.nixosModules.deploy-rs
       inputs.sops-nix.nixosModules.sops
       self.hjemModules.desktop
