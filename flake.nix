@@ -46,10 +46,6 @@
       url = "github:NixOS/nixpkgs/pull/581675/head";
       flake = false;
     };
-    nixpkgs-pr-498572 = {
-      url = "github:NixOS/nixpkgs/pull/498572/head";
-      flake = false;
-    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./config);

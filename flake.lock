@@ -460,23 +460,6 @@
         "url": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst"
       }
     },
-    "nixpkgs-pr-498572": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1793392879,
-        "narHash": "sha256-rnDzw4L5lpQxygYEqVGidIHPgngIqFB3rEizW0eY2/I=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "cbfb4de9fa66840b85c9f6c18cc46f8288313a9f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "pull/498572/head",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-pr-538226": {
       "flake": false,
       "locked": {
@@ -634,7 +617,6 @@
         "nixcord": "nixcord",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_4",
-        "nixpkgs-pr-498572": "nixpkgs-pr-498572",
         "nixpkgs-pr-538226": "nixpkgs-pr-538226",
         "nixpkgs-pr-581675": "nixpkgs-pr-581675",
         "noctalia": "noctalia",
