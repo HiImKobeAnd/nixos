@@ -41,7 +41,7 @@
       self.nixosModules.learning
       self.nixosModules.nixcord
       self.nixosModules.nvf
-      self.nixosModules.helium
+      # self.nixosModules.helium
       self.nixosModules.docker
       self.nixosModules.tailscale
       # self.nixosModules.ollama
@@ -59,6 +59,7 @@
       libreoffice
       pear-desktop
       freecad
+      # helium
     ];
 
     # Secrets
@@ -79,11 +80,16 @@
             system = prev.stdenv.hostPlatform.system;
             inherit (prev) config;
           };
+          heliumPrPkgs = import inputs.nixpkgs-pr-498572 {
+            system = prev.stdenv.hostPlatform.system;
+            inherit (prev) config;
+          };
         in {
           # pnpm_10_29_2 = final.pnpm_10;
           # electron_40 = final.electron_41;
           steam = millenniumPrPkgs.steamWithMillennium;
           hyprlandPlugins.hy3 = hy3PrPkgs.hyprlandPlugins.hy3;
+          helium = heliumPrPkgs.helium;
         })
       ];
       config.permittedInsecurePackages = [
@@ -143,9 +149,11 @@
     nix.settings = {
       substituters = [
         "https://nix-community.cachix.org"
+        "https://nix-helium.cachix.org"
       ];
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        "nix-helium.cachix.org-1:OuGG8wIqw8gGXyOJYwz5n5G8zFdy5XQ3DRwWSc1oetg="
       ];
     };
 
