@@ -8,6 +8,7 @@ _: {
     programs = {
       steam = {
         enable = true;
+        package = pkgs.steamWithMillennium;
         gamescopeSession.enable = true;
         remotePlay.openFirewall = true;
       };
