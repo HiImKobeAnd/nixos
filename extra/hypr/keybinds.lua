@@ -18,7 +18,7 @@ hl.bind(mod .. " + Z", hl.dsp.exec_cmd("zotero"))
 ---- DESKTOP ----
 -----------------
 
-hl.bind(mod .. " + " .. mod .. "_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
+hl.bind(mod .. " + " .. mod .. "_L", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"), { release = true })
 hl.bind(mod .. " + Escape", hl.dsp.exec_cmd(ipc .. "panel-toggle session"))
 hl.bind(mod .. " + D", hl.dsp.exec_cmd(ipc .. "theme-mode-toggle"))
 hl.bind(mod .. " + Q", hl.dsp.window.close())

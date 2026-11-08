@@ -4,6 +4,7 @@ _: {
       anki
       zotero
       obsidian
+      readest
       # super-productivity
     ];
   };
