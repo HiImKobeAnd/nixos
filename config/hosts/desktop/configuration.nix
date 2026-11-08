@@ -75,15 +75,15 @@
             system = prev.stdenv.hostPlatform.system;
             inherit (prev) config;
           };
-          hy3PrPkgs = import inputs.nixpkgs-pr-581675 {
-            system = prev.stdenv.hostPlatform.system;
-            inherit (prev) config;
-          };
+          # hy3PrPkgs = import inputs.nixpkgs-pr-581675 {
+          #   system = prev.stdenv.hostPlatform.system;
+          #   inherit (prev) config;
+          # };
         in {
           # pnpm_10_29_2 = final.pnpm_10;
           # electron_40 = final.electron_41;
           steam = millenniumPrPkgs.steamWithMillennium;
-          hyprlandPlugins.hy3 = hy3PrPkgs.hyprlandPlugins.hy3;
+          # hyprlandPlugins.hy3 = hy3PrPkgs.hyprlandPlugins.hy3;
         })
       ];
       config.permittedInsecurePackages = [
