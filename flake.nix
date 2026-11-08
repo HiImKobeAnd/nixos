@@ -38,14 +38,6 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-pr-538226 = {
-      url = "github:NixOS/nixpkgs/pull/538226/head";
-      flake = false;
-    };
-    nixpkgs-pr-581675 = {
-      url = "github:NixOS/nixpkgs/pull/581675/head";
-      flake = false;
-    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./config);
