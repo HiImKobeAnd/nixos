@@ -33,7 +33,7 @@ _: {
         tunnels = {
           "f4f5023a-047b-4a4e-b6c4-c06c66e09c9f" = {
             default = "http_status:404";
-            credentialsFile = "${config.sops.secrets."server0_tunnel_key".path}";
+            credentialsFile = config.sops.secrets."server0_tunnel_key";
             warp-routing.enabled = true;
           };
         };
