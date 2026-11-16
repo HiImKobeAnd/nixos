@@ -1,5 +1,9 @@
-{config, ...}: {
-  flake.nixosModules.nextcloud = {pkgs, ...}: {
+_: {
+  flake.nixosModules.nextcloud = {
+    config,
+    pkgs,
+    ...
+  }: {
     services = {
       nextcloud = {
         enable = true;
