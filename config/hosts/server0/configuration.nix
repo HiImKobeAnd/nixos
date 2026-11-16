@@ -20,6 +20,7 @@
       secrets."default_nextcloud_admin_pass" = {};
       secrets."cloudflare_dns_key" = {};
       secrets."cloudflare_tunnel_key" = {};
+      secrets."server0_tunnel_key" = {};
     };
 
     boot.loader.systemd-boot.enable = true;
