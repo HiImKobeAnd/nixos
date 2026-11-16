@@ -27,7 +27,8 @@
     security.acme = {
       acceptTerms = true;
       defaults.email = "hiimkobeand@gmail.com";
-      certs."*.${domain}" = {
+      certs."${domain}" = {
+        domain = "*.${domain}";
         dnsProvider = "cloudflare";
         environmentFile = config.sops."cloudflare_dns_key".path;
         dnsResolver = "1.1.1.1:53";
