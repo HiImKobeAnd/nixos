@@ -4,7 +4,7 @@
   ...
 }: {
   flake.nixosModules.server0Configuration = {config, ...}: let
-    domain = "cloud.hiimkobeand.net";
+    domain = "home.hiimkobeand.net";
     vpnIP = "100.64.0.10";
   in {
     imports = [
