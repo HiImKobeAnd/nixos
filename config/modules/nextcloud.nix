@@ -29,7 +29,7 @@ _: {
         };
       };
       cloudflared = {
-        certificateFile = config.sops.secrets."cloudflare_tunnel_key".path;
+        # certificateFile = config.sops.secrets."cloudflare_tunnel_key".path;
         tunnels = {
           "331184be-4ece-4987-8c72-a9651288b692" = {
             default = "http_status:404";
