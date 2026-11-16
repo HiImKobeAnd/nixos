@@ -3,13 +3,16 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.server0Configuration = {...}: {
+  flake.nixosModules.server0Configuration = {config, ...}: let
+    domain = "cloud.hiimkobeand.net";
+    vpnIP = "100.64.0.10";
+  in {
     imports = [
       self.nixosModules.server0Hardware
       self.nixosModules.default-locale
       self.nixosModules.ssh
       self.nixosModules.nextcloud
-      self.nixosModules.cloudflared
+      self.nixosModules.tailscale
       inputs.sops-nix.nixosModules.sops
     ];
 
@@ -19,8 +22,34 @@
       age.keyFile = "/home/server0/.config/sops/age/keys.txt";
       secrets."default_nextcloud_admin_pass" = {};
       secrets."cloudflare_dns_key" = {};
-      secrets."cloudflare_tunnel_key" = {};
-      secrets."server0_tunnel_key" = {};
+    };
+
+    security.acme = {
+      acceptTerms = true;
+      defaults.email = "hiimkobeand@gmail.com";
+      certs."*.${domain}" = {
+        dnsProvider = "cloudflare";
+        environmentFile = config.sops."cloudflare_dns_key".path;
+        dnsResolver = "1.1.1.1:53";
+        group = "nginx";
+      };
+    };
+
+    services.nginx = {
+      enable = true;
+      recommendedProxySettings = true;
+      recommendedTlsSettings = true;
+
+      defaultListenAddresses = [vpnIP];
+
+      virtualHosts."cloud.${domain}" = {
+        forceSSL = true;
+        useACMEHost = domain;
+        locations."/" = {
+          proxyPass = "https://127.0.0.1:80";
+          proxyWebsockets = true;
+        };
+      };
     };
 
     boot.loader.systemd-boot.enable = true;

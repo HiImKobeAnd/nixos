@@ -43,7 +43,7 @@
       self.nixosModules.nvf
       self.nixosModules.helium
       self.nixosModules.docker
-      self.nixosModules.cloudflared
+      self.nixosModules.tailscale
       # self.nixosModules.ollama
       self.nixosModules.llamacpp
       self.nixosModules.deploy-rs
