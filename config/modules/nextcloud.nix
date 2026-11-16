@@ -11,9 +11,9 @@ _: {
         hostName = "cloud.hiimkobeand.net";
         autoUpdateApps.enable = true;
         config.dbtype = "sqlite";
-        https = true;
         settings = {
           trusted_proxies = ["127.0.0.1"];
+          overwriteprotocol = "https";
           maintenance_window_start = 1;
           default_phone_region = "DK";
           log_type = "systemd";
@@ -28,6 +28,14 @@ _: {
           inherit (pkgs.nextcloud35Packages.apps) calendar contacts tasks;
         };
       };
+
+      nginx.virtualHosts."cloud.hiimkobeand.net".listen = [
+        {
+          addr = "127.0.0.1";
+          port = 8080;
+        }
+      ];
+
       cloudflared = {
         certificateFile = config.sops.secrets."cloudflare_tunnel_key".path;
         tunnels = {
@@ -35,7 +43,7 @@ _: {
             default = "http_status:404";
             credentialsFile = config.sops.secrets."server0_tunnel_key".path;
             warp-routing.enabled = true;
-            ingress = {"cloud.hiimkobeand.net" = "http://127.0.0.1:80";};
+            ingress = {"cloud.hiimkobeand.net" = "http://127.0.0.1:8080";};
           };
         };
       };
