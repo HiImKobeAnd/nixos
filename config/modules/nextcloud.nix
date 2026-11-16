@@ -27,6 +27,7 @@
       cloudflared = {
         tunnels = {
           "331184be-4ece-4987-8c72-a9651288b692" = {
+            default = "http_status:404";
             credentialsFile = config.sops.secrets."cloudflare_tunnel_key".path;
             warp-routing.enabled = true;
           };
