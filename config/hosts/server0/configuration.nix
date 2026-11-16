@@ -9,8 +9,7 @@
       self.nixosModules.default-locale
       self.nixosModules.ssh
       self.nixosModules.nextcloud
-      self.nixosModules.headscale
-      self.nixosModules.tailscale
+      self.nixosModules.cloudflared
       inputs.sops-nix.nixosModules.sops
     ];
 
