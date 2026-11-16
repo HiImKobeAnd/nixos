@@ -28,7 +28,7 @@
         tunnels = {
           "331184be-4ece-4987-8c72-a9651288b692" = {
             credentialsFile = config.sops.secrets."cloudflare_tunnel_key".path;
-            warp-routing = true;
+            warp-routing.enabled = true;
           };
         };
       };
