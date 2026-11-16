@@ -8,7 +8,7 @@ _: {
       nextcloud = {
         enable = true;
         package = pkgs.nextcloud35;
-        hostName = "cloud.hiimkobeand.net";
+        hostName = "cloud.home.hiimkobeand.net";
         autoUpdateApps.enable = true;
         config.dbtype = "sqlite";
         settings = {
