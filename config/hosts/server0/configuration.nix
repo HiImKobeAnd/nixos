@@ -19,6 +19,7 @@
       age.keyFile = "/home/server0/.config/sops/age/keys.txt";
       secrets."default_nextcloud_admin_pass" = {};
       secrets."cloudflare_dns_key" = {};
+      secrets."cloudflare_tunnel_key" = {};
     };
 
     boot.loader.systemd-boot.enable = true;
