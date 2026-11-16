@@ -30,7 +30,7 @@
       certs."${domain}" = {
         domain = "*.${domain}";
         dnsProvider = "cloudflare";
-        environmentFile = config.sops."cloudflare_dns_key".path;
+        environmentFile = config.sops.secrets."cloudflare_dns_key".path;
         dnsResolver = "1.1.1.1:53";
         group = "nginx";
       };
