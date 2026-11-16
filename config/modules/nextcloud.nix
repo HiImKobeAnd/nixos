@@ -43,7 +43,7 @@ _: {
             default = "http_status:404";
             credentialsFile = config.sops.secrets."server0_tunnel_key".path;
             warp-routing.enabled = true;
-            ingress = {"cloud.hiimkobeand.net" = "http://127.0.0.1:8080";};
+            # ingress = {"cloud.hiimkobeand.net" = "http://127.0.0.1:8080";};
           };
         };
       };
