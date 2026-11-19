@@ -23,6 +23,7 @@ _: {
           "opcache.interned_strings_buffer" = "32";
         };
 
+        appstoreEnable = true;
         extraAppsEnable = true;
         extraApps = {
           inherit (pkgs.nextcloud35Packages.apps) calendar contacts tasks;
