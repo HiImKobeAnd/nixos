@@ -41,13 +41,10 @@
       recommendedProxySettings = true;
       recommendedTlsSettings = true;
       defaultListenAddresses = [vpnIP];
+
       virtualHosts."cloud.${domain}" = {
         forceSSL = true;
         useACMEHost = domain;
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:80";
-          proxyWebsockets = true;
-        };
       };
     };
 
