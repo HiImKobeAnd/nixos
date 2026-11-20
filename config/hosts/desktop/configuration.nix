@@ -68,6 +68,21 @@
       age.keyFile = "/home/hiimkobeand/.config/sops/age/keys.txt";
     };
 
+    # Japanese input
+    i18n.inputMethod = {
+      enable = true;
+      type = "fcitx5";
+      fcitx5 = {
+        waylandFrontend = true;
+        addons = with pkgs; [fcitx5-mozc fcitx5-gtk];
+      };
+    };
+
+    environment.sessionVariables = {
+      QT_IM_MODULE = "fcitx";
+      XMODIFIERS = "@im=fcitx";
+    };
+
     nixpkgs = {
       overlays = [
         (final: prev: let
