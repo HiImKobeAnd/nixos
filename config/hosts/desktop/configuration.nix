@@ -64,6 +64,7 @@
       enable = true;
       openFirewall = true;
       capSysAdmin = true;
+      autoStart = false;
     };
 
     # Secrets
