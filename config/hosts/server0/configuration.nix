@@ -45,6 +45,9 @@
       virtualHosts."cloud.${domain}" = {
         forceSSL = true;
         useACMEHost = domain;
+        extraConfig = ''
+          add_header Strict-Transport-Security "max-age=15552000; includeSubDomains" always;
+        '';
       };
     };
 
