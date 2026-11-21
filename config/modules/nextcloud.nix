@@ -29,6 +29,16 @@ _: {
           inherit (pkgs.nextcloud35Packages.apps) calendar contacts tasks;
         };
       };
+      postgresql = {
+        enable = true;
+        ensureDatabases = ["nextcloud"];
+        ensureUsers = [
+          {
+            name = "nextcloud";
+            ensureDBOwnership = true;
+          }
+        ];
+      };
     };
   };
 }
