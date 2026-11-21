@@ -10,7 +10,8 @@ _: {
         package = pkgs.nextcloud35;
         hostName = "cloud.home.hiimkobeand.net";
         autoUpdateApps.enable = true;
-        config.dbtype = "sqlite";
+        database.createLocally = true;
+        config.dbtype = "pgsql";
         settings = {
           trusted_proxies = ["127.0.0.1"];
           overwriteprotocol = "https";
