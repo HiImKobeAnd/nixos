@@ -57,7 +57,13 @@
       libreoffice
       pear-desktop
       freecad
+      sunshine
     ];
+
+    services.sunshine = {
+      enable = true;
+      openFirewall = true;
+    };
 
     # Secrets
     sops = {
