@@ -50,17 +50,17 @@ _: {
           }
         ];
       };
-      sops.templates."nextcloud-secrets.json" = {
-        owner = "nextcloud";
-        group = "nextcloud";
-        content = builtins.toJSON {
-          mail_smtppassword = config.sops.placeholder."nextcloud-smtp-password";
-        };
+    };
+    sops.templates."nextcloud-secrets.json" = {
+      owner = "nextcloud";
+      group = "nextcloud";
+      content = builtins.toJSON {
+        mail_smtppassword = config.sops.placeholder."nextcloud-smtp-password";
       };
-      sops.secrets."nextcloud-smtp-password" = {
-        owner = "nextcloud";
-        group = "nextcloud";
-      };
+    };
+    sops.secrets."nextcloud-smtp-password" = {
+      owner = "nextcloud";
+      group = "nextcloud";
     };
   };
 }
