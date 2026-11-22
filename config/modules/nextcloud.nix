@@ -17,7 +17,7 @@ _: {
           overwriteprotocol = "https";
           maintenance_window_start = 1;
           default_phone_region = "DK";
-          log_type = "systemd";
+          log_type = "file";
           serverid = 0;
         };
         phpOptions = {
