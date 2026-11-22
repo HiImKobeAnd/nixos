@@ -18,7 +18,6 @@
             enable = true;
             enableStreamQualityBypass = true;
           };
-          youtubeAdblock.enable = true;
           messageClickActions.enable = true;
           shikiCodeblocks.enable = true;
           volumeBooster.enable = true;
